@@ -1,0 +1,5147 @@
+# vl2mv good_bakery.atom.v 
+# version: 2.4
+# date:    14:24:46 11/06/2014 (CET)
+.model bakery 
+# I/O ports
+.inputs select<0> select<1> 
+.inputs pause
+# ticket [0] = 0
+.names _n2<0>
+0
+.names _n2<1>
+0
+.names _n2<0> _n2<1> _n4
+.def 0
+0 0  1
+.names _n5
+0
+.names _n4 _n1 _n5 ticket$raw_n0<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2<0> _n2<1> _n8
+.def 0
+1 0  1
+.names _n9
+0
+.names _n8 _n1 _n9 ticket$raw_n0<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2<0> _n2<1> _nc
+.def 0
+0 1  1
+.names _nd
+0
+.names _nc _n1 _nd ticket$raw_n0<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1
+0
+# defer [0] = 0
+.names _n11<0>
+0
+.names _n11<1>
+0
+.names _n11<0> _n11<1> _n13
+.def 0
+0 0  1
+.names _n14<0>
+0
+.names _n14<1>
+0
+.names _n14<2>
+0
+.names _n13 _n10<0> _n14<0> defer$raw_nf<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n13 _n10<1> _n14<1> defer$raw_nf<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n13 _n10<2> _n14<2> defer$raw_nf<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n11<0> _n11<1> _n19
+.def 0
+1 0  1
+.names _n1a<0>
+0
+.names _n1a<1>
+0
+.names _n1a<2>
+0
+.names _n19 _n10<0> _n1a<0> defer$raw_nf<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n19 _n10<1> _n1a<1> defer$raw_nf<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n19 _n10<2> _n1a<2> defer$raw_nf<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n11<0> _n11<1> _n1f
+.def 0
+0 1  1
+.names _n20<0>
+0
+.names _n20<1>
+0
+.names _n20<2>
+0
+.names _n1f _n10<0> _n20<0> defer$raw_nf<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1f _n10<1> _n20<1> defer$raw_nf<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1f _n10<2> _n20<2> defer$raw_nf<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n10<0>
+0
+.names _n10<1>
+0
+.names _n10<2>
+0
+# choosing [0] = 0
+.names _n26<0>
+0
+.names _n26<1>
+0
+.names _n26<0> _n26<1> _n28
+.def 0
+0 0  1
+.names _n29
+0
+.names _n28 _n25 _n29 choosing$raw_n24<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n26<0> _n26<1> _n2c
+.def 0
+1 0  1
+.names _n2d
+0
+.names _n2c _n25 _n2d choosing$raw_n24<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n26<0> _n26<1> _n30
+.def 0
+0 1  1
+.names _n31
+0
+.names _n30 _n25 _n31 choosing$raw_n24<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n25
+0
+# pc [0] = 0
+.names _n35<0>
+0
+.names _n35<1>
+0
+.names _n35<0> _n35<1> _n37
+.def 0
+0 0  1
+.names _n38<0>
+0
+.names _n38<1>
+0
+.names _n38<2>
+0
+.names _n38<3>
+0
+.names _n37 _n34<0> _n38<0> pc$raw_n33<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n37 _n34<1> _n38<1> pc$raw_n33<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n37 _n34<2> _n38<2> pc$raw_n33<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n37 _n34<3> _n38<3> pc$raw_n33<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n35<0> _n35<1> _n3e
+.def 0
+1 0  1
+.names _n3f<0>
+0
+.names _n3f<1>
+0
+.names _n3f<2>
+0
+.names _n3f<3>
+0
+.names _n3e _n34<0> _n3f<0> pc$raw_n33<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e _n34<1> _n3f<1> pc$raw_n33<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e _n34<2> _n3f<2> pc$raw_n33<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e _n34<3> _n3f<3> pc$raw_n33<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n35<0> _n35<1> _n45
+.def 0
+0 1  1
+.names _n46<0>
+0
+.names _n46<1>
+0
+.names _n46<2>
+0
+.names _n46<3>
+0
+.names _n45 _n34<0> _n46<0> pc$raw_n33<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n45 _n34<1> _n46<1> pc$raw_n33<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n45 _n34<2> _n46<2> pc$raw_n33<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n45 _n34<3> _n46<3> pc$raw_n33<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n34<0>
+0
+.names _n34<1>
+0
+.names _n34<2>
+0
+.names _n34<3>
+0
+# j [0] = 0
+.names _n4d<0>
+0
+.names _n4d<1>
+0
+.names _n4d<0> _n4d<1> _n4f
+.def 0
+0 0  1
+.names _n50<0>
+0
+.names _n50<1>
+0
+.names _n4f _n4c<0> _n50<0> j$raw_n4b<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4f _n4c<1> _n50<1> j$raw_n4b<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d<0> _n4d<1> _n54
+.def 0
+1 0  1
+.names _n55<0>
+0
+.names _n55<1>
+0
+.names _n54 _n4c<0> _n55<0> j$raw_n4b<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n54 _n4c<1> _n55<1> j$raw_n4b<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d<0> _n4d<1> _n59
+.def 0
+0 1  1
+.names _n5a<0>
+0
+.names _n5a<1>
+0
+.names _n59 _n4c<0> _n5a<0> j$raw_n4b<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n59 _n4c<1> _n5a<1> j$raw_n4b<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4c<0>
+0
+.names _n4c<1>
+0
+# ticket [1] = 0
+.names _n5f<0>
+1
+.names _n5f<1>
+0
+.names _n5f<0> _n5f<1> _n61
+.def 0
+0 0  1
+.names _n61 _n5e ticket$raw_n0<*0*> ticket$raw_n5d<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n5f<0> _n5f<1> _n64
+.def 0
+1 0  1
+.names _n64 _n5e ticket$raw_n0<*1*> ticket$raw_n5d<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n5f<0> _n5f<1> _n67
+.def 0
+0 1  1
+.names _n67 _n5e ticket$raw_n0<*2*> ticket$raw_n5d<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n5e
+0
+# defer [1] = 0
+.names _n6b<0>
+1
+.names _n6b<1>
+0
+.names _n6b<0> _n6b<1> _n6d
+.def 0
+0 0  1
+.names _n6d _n6a<0> defer$raw_nf<*0*><0> defer$raw_n69<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6d _n6a<1> defer$raw_nf<*0*><1> defer$raw_n69<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6d _n6a<2> defer$raw_nf<*0*><2> defer$raw_n69<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6b<0> _n6b<1> _n72
+.def 0
+1 0  1
+.names _n72 _n6a<0> defer$raw_nf<*1*><0> defer$raw_n69<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n72 _n6a<1> defer$raw_nf<*1*><1> defer$raw_n69<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n72 _n6a<2> defer$raw_nf<*1*><2> defer$raw_n69<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6b<0> _n6b<1> _n77
+.def 0
+0 1  1
+.names _n77 _n6a<0> defer$raw_nf<*2*><0> defer$raw_n69<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n77 _n6a<1> defer$raw_nf<*2*><1> defer$raw_n69<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n77 _n6a<2> defer$raw_nf<*2*><2> defer$raw_n69<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6a<0>
+0
+.names _n6a<1>
+0
+.names _n6a<2>
+0
+# choosing [1] = 0
+.names _n7d<0>
+1
+.names _n7d<1>
+0
+.names _n7d<0> _n7d<1> _n7f
+.def 0
+0 0  1
+.names _n7f _n7c choosing$raw_n24<*0*> choosing$raw_n7b<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n7d<0> _n7d<1> _n82
+.def 0
+1 0  1
+.names _n82 _n7c choosing$raw_n24<*1*> choosing$raw_n7b<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n7d<0> _n7d<1> _n85
+.def 0
+0 1  1
+.names _n85 _n7c choosing$raw_n24<*2*> choosing$raw_n7b<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n7c
+0
+# pc [1] = 0
+.names _n89<0>
+1
+.names _n89<1>
+0
+.names _n89<0> _n89<1> _n8b
+.def 0
+0 0  1
+.names _n8b _n88<0> pc$raw_n33<*0*><0> pc$raw_n87<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n8b _n88<1> pc$raw_n33<*0*><1> pc$raw_n87<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n8b _n88<2> pc$raw_n33<*0*><2> pc$raw_n87<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n8b _n88<3> pc$raw_n33<*0*><3> pc$raw_n87<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n89<0> _n89<1> _n91
+.def 0
+1 0  1
+.names _n91 _n88<0> pc$raw_n33<*1*><0> pc$raw_n87<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n91 _n88<1> pc$raw_n33<*1*><1> pc$raw_n87<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n91 _n88<2> pc$raw_n33<*1*><2> pc$raw_n87<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n91 _n88<3> pc$raw_n33<*1*><3> pc$raw_n87<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n89<0> _n89<1> _n97
+.def 0
+0 1  1
+.names _n97 _n88<0> pc$raw_n33<*2*><0> pc$raw_n87<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n97 _n88<1> pc$raw_n33<*2*><1> pc$raw_n87<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n97 _n88<2> pc$raw_n33<*2*><2> pc$raw_n87<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n97 _n88<3> pc$raw_n33<*2*><3> pc$raw_n87<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n88<0>
+0
+.names _n88<1>
+0
+.names _n88<2>
+0
+.names _n88<3>
+0
+# j [1] = 0
+.names _n9e<0>
+1
+.names _n9e<1>
+0
+.names _n9e<0> _n9e<1> _na0
+.def 0
+0 0  1
+.names _na0 _n9d<0> j$raw_n4b<*0*><0> j$raw_n9c<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _na0 _n9d<1> j$raw_n4b<*0*><1> j$raw_n9c<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n9e<0> _n9e<1> _na4
+.def 0
+1 0  1
+.names _na4 _n9d<0> j$raw_n4b<*1*><0> j$raw_n9c<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _na4 _n9d<1> j$raw_n4b<*1*><1> j$raw_n9c<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n9e<0> _n9e<1> _na8
+.def 0
+0 1  1
+.names _na8 _n9d<0> j$raw_n4b<*2*><0> j$raw_n9c<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _na8 _n9d<1> j$raw_n4b<*2*><1> j$raw_n9c<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n9d<0>
+0
+.names _n9d<1>
+0
+# ticket [2] = 0
+.names _nad<0>
+0
+.names _nad<1>
+1
+.names _nad<0> _nad<1> _naf
+.def 0
+0 0  1
+.names _naf _nac ticket$raw_n5d<*0*> ticket$raw_nab<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nad<0> _nad<1> _nb2
+.def 0
+1 0  1
+.names _nb2 _nac ticket$raw_n5d<*1*> ticket$raw_nab<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nad<0> _nad<1> _nb5
+.def 0
+0 1  1
+.names _nb5 _nac ticket$raw_n5d<*2*> ticket$raw_nab<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nac
+0
+# defer [2] = 0
+.names _nb9<0>
+0
+.names _nb9<1>
+1
+.names _nb9<0> _nb9<1> _nbb
+.def 0
+0 0  1
+.names _nbb _nb8<0> defer$raw_n69<*0*><0> defer$raw_nb7<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nbb _nb8<1> defer$raw_n69<*0*><1> defer$raw_nb7<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nbb _nb8<2> defer$raw_n69<*0*><2> defer$raw_nb7<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nb9<0> _nb9<1> _nc0
+.def 0
+1 0  1
+.names _nc0 _nb8<0> defer$raw_n69<*1*><0> defer$raw_nb7<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nc0 _nb8<1> defer$raw_n69<*1*><1> defer$raw_nb7<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nc0 _nb8<2> defer$raw_n69<*1*><2> defer$raw_nb7<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nb9<0> _nb9<1> _nc5
+.def 0
+0 1  1
+.names _nc5 _nb8<0> defer$raw_n69<*2*><0> defer$raw_nb7<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nc5 _nb8<1> defer$raw_n69<*2*><1> defer$raw_nb7<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nc5 _nb8<2> defer$raw_n69<*2*><2> defer$raw_nb7<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nb8<0>
+0
+.names _nb8<1>
+0
+.names _nb8<2>
+0
+# choosing [2] = 0
+.names _ncb<0>
+0
+.names _ncb<1>
+1
+.names _ncb<0> _ncb<1> _ncd
+.def 0
+0 0  1
+.names _ncd _nca choosing$raw_n7b<*0*> choosing$raw_nc9<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ncb<0> _ncb<1> _nd0
+.def 0
+1 0  1
+.names _nd0 _nca choosing$raw_n7b<*1*> choosing$raw_nc9<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ncb<0> _ncb<1> _nd3
+.def 0
+0 1  1
+.names _nd3 _nca choosing$raw_n7b<*2*> choosing$raw_nc9<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nca
+0
+# pc [2] = 0
+.names _nd7<0>
+0
+.names _nd7<1>
+1
+.names _nd7<0> _nd7<1> _nd9
+.def 0
+0 0  1
+.names _nd9 _nd6<0> pc$raw_n87<*0*><0> pc$raw_nd5<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nd9 _nd6<1> pc$raw_n87<*0*><1> pc$raw_nd5<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nd9 _nd6<2> pc$raw_n87<*0*><2> pc$raw_nd5<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nd9 _nd6<3> pc$raw_n87<*0*><3> pc$raw_nd5<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nd7<0> _nd7<1> _ndf
+.def 0
+1 0  1
+.names _ndf _nd6<0> pc$raw_n87<*1*><0> pc$raw_nd5<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ndf _nd6<1> pc$raw_n87<*1*><1> pc$raw_nd5<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ndf _nd6<2> pc$raw_n87<*1*><2> pc$raw_nd5<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ndf _nd6<3> pc$raw_n87<*1*><3> pc$raw_nd5<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nd7<0> _nd7<1> _ne5
+.def 0
+0 1  1
+.names _ne5 _nd6<0> pc$raw_n87<*2*><0> pc$raw_nd5<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ne5 _nd6<1> pc$raw_n87<*2*><1> pc$raw_nd5<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ne5 _nd6<2> pc$raw_n87<*2*><2> pc$raw_nd5<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _ne5 _nd6<3> pc$raw_n87<*2*><3> pc$raw_nd5<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nd6<0>
+0
+.names _nd6<1>
+0
+.names _nd6<2>
+0
+.names _nd6<3>
+0
+# j [2] = 0
+.names _nec<0>
+0
+.names _nec<1>
+1
+.names _nec<0> _nec<1> _nee
+.def 0
+0 0  1
+.names _nee _neb<0> j$raw_n9c<*0*><0> j$raw_nea<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nee _neb<1> j$raw_n9c<*0*><1> j$raw_nea<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nec<0> _nec<1> _nf2
+.def 0
+1 0  1
+.names _nf2 _neb<0> j$raw_n9c<*1*><0> j$raw_nea<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nf2 _neb<1> j$raw_n9c<*1*><1> j$raw_nea<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nec<0> _nec<1> _nf6
+.def 0
+0 1  1
+.names _nf6 _neb<0> j$raw_n9c<*2*><0> j$raw_nea<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _nf6 _neb<1> j$raw_n9c<*2*><1> j$raw_nea<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _neb<0>
+0
+.names _neb<1>
+0
+# k  = 0
+.names k$raw_nf9<0>
+0
+.names k$raw_nf9<1>
+0
+# selReg  = 0
+.names selReg$raw_nfa<0>
+0
+.names selReg$raw_nfa<1>
+0
+# defSel  = 0
+.names defSel$raw_nfb<0>
+0
+.names defSel$raw_nfb<1>
+0
+.names defSel$raw_nfb<2>
+0
+# defK  = 0
+.names defK$raw_nfc<0>
+0
+.names defK$raw_nfc<1>
+0
+.names defK$raw_nfc<2>
+0
+# defSelK  = 0
+.names defSelK$raw_nfd
+0
+# defKSel  = 0
+.names defKSel$raw_nfe
+0
+# break  = 0
+.names break$raw_nff
+0
+# non-blocking assignments for initial
+.names _n100<0>
+0
+.names _n100<1>
+1
+# select  > 2
+.names _n103
+0
+.names select<0> _n100<0> _n103 _n102<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n105
+0
+.names select<0> _n100<0> _n105 _n104
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names select<1> _n100<1> _n104 _n102<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names select<1> _n100<1> _n104 _n106
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n102<0> _n102<1> _n107
+.def 0
+0 0 1
+.names _n106 _n107 _n108
+.def 1
+0 0 0
+.names _n108 _n101
+0 1  
+1 0  
+.names _n101 _n109
+- =_n101
+# selReg  = 0
+.names selReg$_n101_n10a$true<0>
+0
+.names selReg$_n101_n10a$true<1>
+0
+# selReg  = select 
+.names select<0> selReg$_n101_n10b$false<0>
+- =select<0>
+.names select<1> selReg$_n101_n10b$false<1>
+- =select<1>
+# if/else (select  > 2)
+.names _n101 selReg$_n101_n10a$true<0> selReg$_n101_n10b$false<0> selReg$_n101$raw_n10d<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n101 selReg$_n101_n10a$true<1> selReg$_n101_n10b$false<1> selReg$_n101$raw_n10d<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> pc<*0*><0> pc<*1*><0> pc<*2*><0> _n112<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> pc<*0*><1> pc<*1*><1> pc<*2*><1> _n112<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> pc<*0*><2> pc<*1*><2> pc<*2*><2> _n112<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> pc<*0*><3> pc<*1*><3> pc<*2*><3> _n112<3>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n115<0>
+0
+.names _n115<1>
+0
+.names _n115<2>
+0
+.names _n115<3>
+0
+.names _n112<0> _n115<0> _n116<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n115<1> _n116<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n115<2> _n116<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n115<3> _n116<3>
+.def 0
+0 1 1
+1 0 1
+.names _n116<0> _n116<1> _n116<2> _n116<3> _n117
+.def 1
+0 0 0 0 0
+.names _n117 _n114
+0 1  
+1 0  
+.names _n114  _n113
+.def 1
+0 0
+# choosing [selReg ] = 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n11b
+.def 0
+0 0  1
+.names _n11b _n119 choosing<*0*> choosing$_n113_n118$true<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n11e
+.def 0
+1 0  1
+.names _n11e _n119 choosing<*1*> choosing$_n113_n118$true<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n121
+.def 0
+0 1  1
+.names _n121 _n119 choosing<*2*> choosing$_n113_n118$true<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n119
+1
+# pc [selReg ] = 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n126
+.def 0
+0 0  1
+.names _n126 _n124<0> pc<*0*><0> pc$_n113_n123$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n126 _n124<1> pc<*0*><1> pc$_n113_n123$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n126 _n124<2> pc<*0*><2> pc$_n113_n123$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n126 _n124<3> pc<*0*><3> pc$_n113_n123$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n12c
+.def 0
+1 0  1
+.names _n12c _n124<0> pc<*1*><0> pc$_n113_n123$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n12c _n124<1> pc<*1*><1> pc$_n113_n123$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n12c _n124<2> pc<*1*><2> pc$_n113_n123$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n12c _n124<3> pc<*1*><3> pc$_n113_n123$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n132
+.def 0
+0 1  1
+.names _n132 _n124<0> pc<*2*><0> pc$_n113_n123$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n132 _n124<1> pc<*2*><1> pc$_n113_n123$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n132 _n124<2> pc<*2*><2> pc$_n113_n123$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n132 _n124<3> pc<*2*><3> pc$_n113_n123$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n124<0>
+1
+.names _n124<1>
+0
+.names _n124<2>
+0
+.names _n124<3>
+0
+.names _n139<0>
+1
+.names _n139<1>
+0
+.names _n139<2>
+0
+.names _n139<3>
+0
+.names _n112<0> _n139<0> _n13a<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n139<1> _n13a<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n139<2> _n13a<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n139<3> _n13a<3>
+.def 0
+0 1 1
+1 0 1
+.names _n13a<0> _n13a<1> _n13a<2> _n13a<3> _n13b
+.def 1
+0 0 0 0 0
+.names _n13b _n138
+0 1  
+1 0  
+.names _n138  _n137
+.def 1
+0 0
+# defSel  = 0
+.names defSel$_n137_n13c$true<0>
+0
+.names defSel$_n137_n13c$true<1>
+0
+.names defSel$_n137_n13c$true<2>
+0
+# defSel  = {ticket [0], defSel [2 : 1]}
+.names defSel$_n137_n13c$true<1> _n13e<0>
+- =defSel$_n137_n13c$true<1>
+.names defSel$_n137_n13c$true<2> _n13e<1>
+- =defSel$_n137_n13c$true<2>
+.names _n13f<0>
+0
+.names _n13f<1>
+0
+.names _n13f<1> _n13f<0> ticket<*0*> ticket<*1*> ticket<*2*> _n140
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n140 _n13e<2>
+- =_n140
+.names _n141
+0
+.names _n13e<0> defSel$_n137_n13d$true<0>
+- =_n13e<0>
+.names _n13e<1> defSel$_n137_n13d$true<1>
+- =_n13e<1>
+.names _n13e<2> defSel$_n137_n13d$true<2>
+- =_n13e<2>
+# defSel  = {ticket [1], defSel [2 : 1]}
+.names defSel$_n137_n13d$true<1> _n143<0>
+- =defSel$_n137_n13d$true<1>
+.names defSel$_n137_n13d$true<2> _n143<1>
+- =defSel$_n137_n13d$true<2>
+.names _n144<0>
+1
+.names _n144<1>
+0
+.names _n144<1> _n144<0> ticket<*0*> ticket<*1*> ticket<*2*> _n145
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n145 _n143<2>
+- =_n145
+.names _n146
+0
+.names _n143<0> defSel$_n137_n142$true<0>
+- =_n143<0>
+.names _n143<1> defSel$_n137_n142$true<1>
+- =_n143<1>
+.names _n143<2> defSel$_n137_n142$true<2>
+- =_n143<2>
+# defSel  = {ticket [2], defSel [2 : 1]}
+.names defSel$_n137_n142$true<1> _n148<0>
+- =defSel$_n137_n142$true<1>
+.names defSel$_n137_n142$true<2> _n148<1>
+- =defSel$_n137_n142$true<2>
+.names _n149<0>
+0
+.names _n149<1>
+1
+.names _n149<1> _n149<0> ticket<*0*> ticket<*1*> ticket<*2*> _n14a
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n14a _n148<2>
+- =_n14a
+.names _n14b
+0
+.names _n148<0> defSel$_n137_n147$true<0>
+- =_n148<0>
+.names _n148<1> defSel$_n137_n147$true<1>
+- =_n148<1>
+.names _n148<2> defSel$_n137_n147$true<2>
+- =_n148<2>
+# defer [selReg ] = defSel 
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n14f
+.def 0
+0 0  1
+.names _n14f _n14d<0> defer<*0*><0> defer$_n137_n14c$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n14f _n14d<1> defer<*0*><1> defer$_n137_n14c$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n14f _n14d<2> defer<*0*><2> defer$_n137_n14c$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n154
+.def 0
+1 0  1
+.names _n154 _n14d<0> defer<*1*><0> defer$_n137_n14c$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n154 _n14d<1> defer<*1*><1> defer$_n137_n14c$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n154 _n14d<2> defer<*1*><2> defer$_n137_n14c$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n159
+.def 0
+0 1  1
+.names _n159 _n14d<0> defer<*2*><0> defer$_n137_n14c$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n159 _n14d<1> defer<*2*><1> defer$_n137_n14c$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n159 _n14d<2> defer<*2*><2> defer$_n137_n14c$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names defSel$_n137_n147$true<0> _n14d<0>
+- =defSel$_n137_n147$true<0>
+.names defSel$_n137_n147$true<1> _n14d<1>
+- =defSel$_n137_n147$true<1>
+.names defSel$_n137_n147$true<2> _n14d<2>
+- =defSel$_n137_n147$true<2>
+# ticket [selReg ] = 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n160
+.def 0
+0 0  1
+.names _n160 _n15e ticket<*0*> ticket$_n137_n15d$true<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n163
+.def 0
+1 0  1
+.names _n163 _n15e ticket<*1*> ticket$_n137_n15d$true<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n166
+.def 0
+0 1  1
+.names _n166 _n15e ticket<*2*> ticket$_n137_n15d$true<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n15e
+1
+# j [selReg ] = 0
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n16b
+.def 0
+0 0  1
+.names _n16b _n169<0> j<*0*><0> j$_n137_n168$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n16b _n169<1> j<*0*><1> j$_n137_n168$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n16f
+.def 0
+1 0  1
+.names _n16f _n169<0> j<*1*><0> j$_n137_n168$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n16f _n169<1> j<*1*><1> j$_n137_n168$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n173
+.def 0
+0 1  1
+.names _n173 _n169<0> j<*2*><0> j$_n137_n168$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n173 _n169<1> j<*2*><1> j$_n137_n168$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n169<0>
+0
+.names _n169<1>
+0
+# pc [selReg ] = 2
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n179
+.def 0
+0 0  1
+.names _n179 _n177<0> pc<*0*><0> pc$_n137_n176$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n179 _n177<1> pc<*0*><1> pc$_n137_n176$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n179 _n177<2> pc<*0*><2> pc$_n137_n176$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n179 _n177<3> pc<*0*><3> pc$_n137_n176$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n17f
+.def 0
+1 0  1
+.names _n17f _n177<0> pc<*1*><0> pc$_n137_n176$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n17f _n177<1> pc<*1*><1> pc$_n137_n176$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n17f _n177<2> pc<*1*><2> pc$_n137_n176$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n17f _n177<3> pc<*1*><3> pc$_n137_n176$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n185
+.def 0
+0 1  1
+.names _n185 _n177<0> pc<*2*><0> pc$_n137_n176$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n185 _n177<1> pc<*2*><1> pc$_n137_n176$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n185 _n177<2> pc<*2*><2> pc$_n137_n176$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n185 _n177<3> pc<*2*><3> pc$_n137_n176$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n177<0>
+0
+.names _n177<1>
+1
+.names _n177<2>
+0
+.names _n177<3>
+0
+.names _n18c<0>
+0
+.names _n18c<1>
+1
+.names _n18c<2>
+0
+.names _n18c<3>
+0
+.names _n112<0> _n18c<0> _n18d<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n18c<1> _n18d<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n18c<2> _n18d<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n18c<3> _n18d<3>
+.def 0
+0 1 1
+1 0 1
+.names _n18d<0> _n18d<1> _n18d<2> _n18d<3> _n18e
+.def 1
+0 0 0 0 0
+.names _n18e _n18b
+0 1  
+1 0  
+.names _n18b  _n18a
+.def 1
+0 0
+# choosing [selReg ] = 0
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n192
+.def 0
+0 0  1
+.names _n192 _n190 choosing<*0*> choosing$_n18a_n18f$true<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n195
+.def 0
+1 0  1
+.names _n195 _n190 choosing<*1*> choosing$_n18a_n18f$true<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n198
+.def 0
+0 1  1
+.names _n198 _n190 choosing<*2*> choosing$_n18a_n18f$true<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n190
+0
+# pc [selReg ] = 3
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n19d
+.def 0
+0 0  1
+.names _n19d _n19b<0> pc<*0*><0> pc$_n18a_n19a$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n19d _n19b<1> pc<*0*><1> pc$_n18a_n19a$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n19d _n19b<2> pc<*0*><2> pc$_n18a_n19a$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n19d _n19b<3> pc<*0*><3> pc$_n18a_n19a$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n1a3
+.def 0
+1 0  1
+.names _n1a3 _n19b<0> pc<*1*><0> pc$_n18a_n19a$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1a3 _n19b<1> pc<*1*><1> pc$_n18a_n19a$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1a3 _n19b<2> pc<*1*><2> pc$_n18a_n19a$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1a3 _n19b<3> pc<*1*><3> pc$_n18a_n19a$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n1a9
+.def 0
+0 1  1
+.names _n1a9 _n19b<0> pc<*2*><0> pc$_n18a_n19a$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1a9 _n19b<1> pc<*2*><1> pc$_n18a_n19a$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1a9 _n19b<2> pc<*2*><2> pc$_n18a_n19a$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1a9 _n19b<3> pc<*2*><3> pc$_n18a_n19a$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n19b<0>
+1
+.names _n19b<1>
+1
+.names _n19b<2>
+0
+.names _n19b<3>
+0
+.names _n1b0<0>
+1
+.names _n1b0<1>
+1
+.names _n1b0<2>
+0
+.names _n1b0<3>
+0
+.names _n112<0> _n1b0<0> _n1b1<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n1b0<1> _n1b1<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n1b0<2> _n1b1<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n1b0<3> _n1b1<3>
+.def 0
+0 1 1
+1 0 1
+.names _n1b1<0> _n1b1<1> _n1b1<2> _n1b1<3> _n1b2
+.def 1
+0 0 0 0 0
+.names _n1b2 _n1af
+0 1  
+1 0  
+.names _n1af  _n1ae
+.def 1
+0 0
+# break  = 0
+.names break$_n1ae_n1b3$true
+0
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> j<*0*><0> j<*1*><0> j<*2*><0> _n1b4<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> j<*0*><1> j<*1*><1> j<*2*><1> _n1b4<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n1b5<0>
+0
+.names _n1b5<1>
+0
+# j [selReg ] <= 0
+.names _n1b8
+0
+.names _n1b4<0> _n1b5<0> _n1b8 _n1b7<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n1ba
+0
+.names _n1b4<0> _n1b5<0> _n1ba _n1b9
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n1b4<1> _n1b5<1> _n1b9 _n1b7<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n1b4<1> _n1b5<1> _n1b9 _n1bb
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n1b7<0> _n1b7<1> _n1bc
+.def 0
+0 0 1
+.names _n1bb _n1bc _n1b6
+.def 1
+0 0 0
+.names break$_n1ae_n1b3$true _n1bd
+0 1  
+1 0  
+# j [selReg ] <= 0 && !break 
+.names _n1b6 _n1bd _n1be
+.def 0
+1 1 1
+.names _n1be _n1bf
+- =_n1be
+.names _n1c0<0>
+0
+.names _n1c0<1>
+0
+.names _n1c0<1> _n1c0<0> choosing<*0*> choosing<*1*> choosing<*2*> _n1c1
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n1c1 _n1c2
+- =_n1c1
+# j [selReg ] = 0
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n1c6
+.def 0
+0 0  1
+.names _n1c6 _n1c4<0> j<*0*><0> j$_n1c1_n1c3$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c6 _n1c4<1> j<*0*><1> j$_n1c1_n1c3$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n1ca
+.def 0
+1 0  1
+.names _n1ca _n1c4<0> j<*1*><0> j$_n1c1_n1c3$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ca _n1c4<1> j<*1*><1> j$_n1c1_n1c3$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n1ce
+.def 0
+0 1  1
+.names _n1ce _n1c4<0> j<*2*><0> j$_n1c1_n1c3$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ce _n1c4<1> j<*2*><1> j$_n1c1_n1c3$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c4<0>
+0
+.names _n1c4<1>
+0
+# break  = 1
+.names break$_n1c1_n1d1$true
+1
+# defSel  = defer [selReg ]
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n1d3<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n1d3<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n1d3<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n1d3<0> defSel$_n1c1_n1d2$false<0>
+- =_n1d3<0>
+.names _n1d3<1> defSel$_n1c1_n1d2$false<1>
+- =_n1d3<1>
+.names _n1d3<2> defSel$_n1c1_n1d2$false<2>
+- =_n1d3<2>
+# if/else (choosing [0])
+.names _n1c1 break$_n1c1_n1d1$true break$_n1ae_n1b3$true break$_n1c1$raw_n1d4
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 j$_n1c1_n1c3$true<*0*><0> j<*0*><0> j$_n1c1$raw_n1dd<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 j$_n1c1_n1c3$true<*0*><1> j<*0*><1> j$_n1c1$raw_n1dd<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 j$_n1c1_n1c3$true<*1*><0> j<*1*><0> j$_n1c1$raw_n1dd<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 j$_n1c1_n1c3$true<*1*><1> j<*1*><1> j$_n1c1$raw_n1dd<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 j$_n1c1_n1c3$true<*2*><0> j<*2*><0> j$_n1c1$raw_n1dd<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 j$_n1c1_n1c3$true<*2*><1> j<*2*><1> j$_n1c1$raw_n1dd<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 defSel<0> defSel$_n1c1_n1d2$false<0> defSel$_n1c1$raw_n1e4<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 defSel<1> defSel$_n1c1_n1d2$false<1> defSel$_n1c1$raw_n1e4<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1c1 defSel<2> defSel$_n1c1_n1d2$false<2> defSel$_n1c1$raw_n1e4<2>
+.def 0
+1 1 - 1
+0 - 1 1
+# defK  = defer [0]
+.names _n1eb<0>
+0
+.names _n1eb<1>
+0
+.names _n1eb<1> _n1eb<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n1ec<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n1eb<1> _n1eb<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n1ec<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n1eb<1> _n1eb<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n1ec<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n1ec<0> defK$_n1be_n1ea$true<0>
+- =_n1ec<0>
+.names _n1ec<1> defK$_n1be_n1ea$true<1>
+- =_n1ec<1>
+.names _n1ec<2> defK$_n1be_n1ea$true<2>
+- =_n1ec<2>
+# defSelK  = defSel [0]
+.names defSel$_n1c1$raw_n1e4<0> defSelK$_n1be_n1ed$true
+- =defSel$_n1c1$raw_n1e4<0>
+# defKSel  = extract  (defK ,selReg ) 
+.subckt extract _n1f0 extract<0>=_n1ef<0> in<0>=defK$_n1be_n1ea$true<0> in<1>=defK$_n1be_n1ea$true<1> in<2>=defK$_n1be_n1ea$true<2> index<0>=selReg$_n101$raw_n10d<0> index<1>=selReg$_n101$raw_n10d<1> 
+.names _n1ef<0> defKSel$_n1be_n1ee$true
+- =_n1ef<0>
+.names _n1f1<0>
+0
+.names _n1f1<1>
+0
+.names _n1f1<1> _n1f1<0> ticket<*0*> ticket<*1*> ticket<*2*> _n1f2
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names defKSel$_n1be_n1ee$true _n1f3
+0 1  
+1 0  
+.names _n1f4<0>
+0
+.names _n1f4<1>
+0
+# 0 < selReg 
+.names _n1f7
+0
+.names _n1f4<0> selReg$_n101$raw_n10d<0> _n1f7 _n1f6<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n1f9
+0
+.names _n1f4<0> selReg$_n101$raw_n10d<0> _n1f9 _n1f8
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n1f4<1> selReg$_n101$raw_n10d<1> _n1f8 _n1f6<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n1f4<1> selReg$_n101$raw_n10d<1> _n1f8 _n1fa
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n1f6<0> _n1f6<1> _n1fb
+.def 1
+0 0 0
+.names _n1fa _n1fb _n1f5
+.def 0
+1 1 1
+# !defKSel  && 0 < selReg 
+.names _n1f3 _n1f5 _n1fc
+.def 0
+1 1 1
+# defSelK  || (!defKSel  && 0 < selReg )
+.names defSelK$_n1be_n1ed$true _n1fc _n1fd
+.def 1
+0 0 0
+# ticket [0] && (defSelK  || (!defKSel  && 0 < selReg ))
+.names _n1f2 _n1fd _n1fe
+.def 0
+1 1 1
+.names _n1fe _n1ff
+- =_n1fe
+# j [selReg ] = 0
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n203
+.def 0
+0 0  1
+.names _n203 _n201<0> j$_n1c1$raw_n1dd<*0*><0> j$_n1fe_n200$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n203 _n201<1> j$_n1c1$raw_n1dd<*0*><1> j$_n1fe_n200$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n207
+.def 0
+1 0  1
+.names _n207 _n201<0> j$_n1c1$raw_n1dd<*1*><0> j$_n1fe_n200$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n207 _n201<1> j$_n1c1$raw_n1dd<*1*><1> j$_n1fe_n200$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n20b
+.def 0
+0 1  1
+.names _n20b _n201<0> j$_n1c1$raw_n1dd<*2*><0> j$_n1fe_n200$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n20b _n201<1> j$_n1c1$raw_n1dd<*2*><1> j$_n1fe_n200$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n201<0>
+0
+.names _n201<1>
+0
+# break  = 1
+.names break$_n1fe_n20e$true
+1
+# if/else (ticket [0] && (defSelK  || (!defKSel  && 0 < selReg )))
+.names _n1fe break$_n1fe_n20e$true break$_n1c1$raw_n1d4 break$_n1fe$raw_n20f
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1fe j$_n1fe_n200$true<*0*><0> j$_n1c1$raw_n1dd<*0*><0> j$_n1fe$raw_n215<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1fe j$_n1fe_n200$true<*0*><1> j$_n1c1$raw_n1dd<*0*><1> j$_n1fe$raw_n215<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1fe j$_n1fe_n200$true<*1*><0> j$_n1c1$raw_n1dd<*1*><0> j$_n1fe$raw_n215<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1fe j$_n1fe_n200$true<*1*><1> j$_n1c1$raw_n1dd<*1*><1> j$_n1fe$raw_n215<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1fe j$_n1fe_n200$true<*2*><0> j$_n1c1$raw_n1dd<*2*><0> j$_n1fe$raw_n215<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1fe j$_n1fe_n200$true<*2*><1> j$_n1c1$raw_n1dd<*2*><1> j$_n1fe$raw_n215<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (j [selReg ] <= 0 && !break )
+.names _n1be break$_n1fe$raw_n20f break$_n1ae_n1b3$true break$_n1be$raw_n234
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defSel$_n1c1$raw_n1e4<0> defSel<0> defSel$_n1be$raw_n241<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defSel$_n1c1$raw_n1e4<1> defSel<1> defSel$_n1be$raw_n241<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defSel$_n1c1$raw_n1e4<2> defSel<2> defSel$_n1be$raw_n241<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defSelK$_n1be_n1ed$true defSelK defSelK$_n1be$raw_n247
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defK$_n1be_n1ea$true<0> defK<0> defK$_n1be$raw_n249<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defK$_n1be_n1ea$true<1> defK<1> defK$_n1be$raw_n249<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defK$_n1be_n1ea$true<2> defK<2> defK$_n1be$raw_n249<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be j$_n1fe$raw_n215<*0*><0> j<*0*><0> j$_n1be$raw_n24d<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be j$_n1fe$raw_n215<*0*><1> j<*0*><1> j$_n1be$raw_n24d<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be j$_n1fe$raw_n215<*1*><0> j<*1*><0> j$_n1be$raw_n24d<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be j$_n1fe$raw_n215<*1*><1> j<*1*><1> j$_n1be$raw_n24d<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be j$_n1fe$raw_n215<*2*><0> j<*2*><0> j$_n1be$raw_n24d<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be j$_n1fe$raw_n215<*2*><1> j<*2*><1> j$_n1be$raw_n24d<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1be defKSel$_n1be_n1ee$true defKSel defKSel$_n1be$raw_n254
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> j$_n1be$raw_n24d<*0*><0> j$_n1be$raw_n24d<*1*><0> j$_n1be$raw_n24d<*2*><0> _n258<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> j$_n1be$raw_n24d<*0*><1> j$_n1be$raw_n24d<*1*><1> j$_n1be$raw_n24d<*2*><1> _n258<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n259<0>
+1
+.names _n259<1>
+0
+# j [selReg ] <= 1
+.names _n25c
+0
+.names _n258<0> _n259<0> _n25c _n25b<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n25e
+0
+.names _n258<0> _n259<0> _n25e _n25d
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n258<1> _n259<1> _n25d _n25b<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n258<1> _n259<1> _n25d _n25f
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n25b<0> _n25b<1> _n260
+.def 0
+0 0 1
+.names _n25f _n260 _n25a
+.def 1
+0 0 0
+.names break$_n1be$raw_n234 _n261
+0 1  
+1 0  
+# j [selReg ] <= 1 && !break 
+.names _n25a _n261 _n262
+.def 0
+1 1 1
+.names _n262 _n263
+- =_n262
+.names _n264<0>
+1
+.names _n264<1>
+0
+.names _n264<1> _n264<0> choosing<*0*> choosing<*1*> choosing<*2*> _n265
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n265 _n266
+- =_n265
+# j [selReg ] = 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n26a
+.def 0
+0 0  1
+.names _n26a _n268<0> j$_n1be$raw_n24d<*0*><0> j$_n265_n267$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n26a _n268<1> j$_n1be$raw_n24d<*0*><1> j$_n265_n267$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n26e
+.def 0
+1 0  1
+.names _n26e _n268<0> j$_n1be$raw_n24d<*1*><0> j$_n265_n267$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n26e _n268<1> j$_n1be$raw_n24d<*1*><1> j$_n265_n267$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n272
+.def 0
+0 1  1
+.names _n272 _n268<0> j$_n1be$raw_n24d<*2*><0> j$_n265_n267$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n272 _n268<1> j$_n1be$raw_n24d<*2*><1> j$_n265_n267$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n268<0>
+1
+.names _n268<1>
+0
+# break  = 1
+.names break$_n265_n275$true
+1
+# defSel  = defer [selReg ]
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n277<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n277<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n277<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n277<0> defSel$_n265_n276$false<0>
+- =_n277<0>
+.names _n277<1> defSel$_n265_n276$false<1>
+- =_n277<1>
+.names _n277<2> defSel$_n265_n276$false<2>
+- =_n277<2>
+# if/else (choosing [1])
+.names _n265 defSel$_n1be$raw_n241<0> defSel$_n265_n276$false<0> defSel$_n265$raw_n278<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 defSel$_n1be$raw_n241<1> defSel$_n265_n276$false<1> defSel$_n265$raw_n278<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 defSel$_n1be$raw_n241<2> defSel$_n265_n276$false<2> defSel$_n265$raw_n278<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 break$_n265_n275$true break$_n1be$raw_n234 break$_n265$raw_n27c
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 j$_n265_n267$true<*0*><0> j$_n1be$raw_n24d<*0*><0> j$_n265$raw_n281<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 j$_n265_n267$true<*0*><1> j$_n1be$raw_n24d<*0*><1> j$_n265$raw_n281<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 j$_n265_n267$true<*1*><0> j$_n1be$raw_n24d<*1*><0> j$_n265$raw_n281<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 j$_n265_n267$true<*1*><1> j$_n1be$raw_n24d<*1*><1> j$_n265$raw_n281<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 j$_n265_n267$true<*2*><0> j$_n1be$raw_n24d<*2*><0> j$_n265$raw_n281<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n265 j$_n265_n267$true<*2*><1> j$_n1be$raw_n24d<*2*><1> j$_n265$raw_n281<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+# defK  = defer [1]
+.names _n29f<0>
+1
+.names _n29f<1>
+0
+.names _n29f<1> _n29f<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n2a0<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n29f<1> _n29f<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n2a0<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n29f<1> _n29f<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n2a0<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n2a0<0> defK$_n262_n29e$true<0>
+- =_n2a0<0>
+.names _n2a0<1> defK$_n262_n29e$true<1>
+- =_n2a0<1>
+.names _n2a0<2> defK$_n262_n29e$true<2>
+- =_n2a0<2>
+# defSelK  = defSel [1]
+.names defSel$_n265$raw_n278<1> defSelK$_n262_n2a1$true
+- =defSel$_n265$raw_n278<1>
+# defKSel  = extract  (defK ,selReg ) 
+.subckt extract _n2a4 extract<0>=_n2a3<0> in<0>=defK$_n262_n29e$true<0> in<1>=defK$_n262_n29e$true<1> in<2>=defK$_n262_n29e$true<2> index<0>=selReg$_n101$raw_n10d<0> index<1>=selReg$_n101$raw_n10d<1> 
+.names _n2a3<0> defKSel$_n262_n2a2$true
+- =_n2a3<0>
+.names _n2a5<0>
+1
+.names _n2a5<1>
+0
+.names _n2a5<1> _n2a5<0> ticket<*0*> ticket<*1*> ticket<*2*> _n2a6
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names defKSel$_n262_n2a2$true _n2a7
+0 1  
+1 0  
+.names _n2a8<0>
+1
+.names _n2a8<1>
+0
+# 1 < selReg 
+.names _n2ab
+0
+.names _n2a8<0> selReg$_n101$raw_n10d<0> _n2ab _n2aa<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n2ad
+0
+.names _n2a8<0> selReg$_n101$raw_n10d<0> _n2ad _n2ac
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n2a8<1> selReg$_n101$raw_n10d<1> _n2ac _n2aa<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n2a8<1> selReg$_n101$raw_n10d<1> _n2ac _n2ae
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n2aa<0> _n2aa<1> _n2af
+.def 1
+0 0 0
+.names _n2ae _n2af _n2a9
+.def 0
+1 1 1
+# !defKSel  && 1 < selReg 
+.names _n2a7 _n2a9 _n2b0
+.def 0
+1 1 1
+# defSelK  || (!defKSel  && 1 < selReg )
+.names defSelK$_n262_n2a1$true _n2b0 _n2b1
+.def 1
+0 0 0
+# ticket [1] && (defSelK  || (!defKSel  && 1 < selReg ))
+.names _n2a6 _n2b1 _n2b2
+.def 0
+1 1 1
+.names _n2b2 _n2b3
+- =_n2b2
+# j [selReg ] = 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n2b7
+.def 0
+0 0  1
+.names _n2b7 _n2b5<0> j$_n265$raw_n281<*0*><0> j$_n2b2_n2b4$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b7 _n2b5<1> j$_n265$raw_n281<*0*><1> j$_n2b2_n2b4$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n2bb
+.def 0
+1 0  1
+.names _n2bb _n2b5<0> j$_n265$raw_n281<*1*><0> j$_n2b2_n2b4$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2bb _n2b5<1> j$_n265$raw_n281<*1*><1> j$_n2b2_n2b4$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n2bf
+.def 0
+0 1  1
+.names _n2bf _n2b5<0> j$_n265$raw_n281<*2*><0> j$_n2b2_n2b4$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2bf _n2b5<1> j$_n265$raw_n281<*2*><1> j$_n2b2_n2b4$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b5<0>
+1
+.names _n2b5<1>
+0
+# break  = 1
+.names break$_n2b2_n2c2$true
+1
+# if/else (ticket [1] && (defSelK  || (!defKSel  && 1 < selReg )))
+.names _n2b2 break$_n2b2_n2c2$true break$_n265$raw_n27c break$_n2b2$raw_n2c4
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b2 j$_n2b2_n2b4$true<*0*><0> j$_n265$raw_n281<*0*><0> j$_n2b2$raw_n2c9<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b2 j$_n2b2_n2b4$true<*0*><1> j$_n265$raw_n281<*0*><1> j$_n2b2$raw_n2c9<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b2 j$_n2b2_n2b4$true<*1*><0> j$_n265$raw_n281<*1*><0> j$_n2b2$raw_n2c9<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b2 j$_n2b2_n2b4$true<*1*><1> j$_n265$raw_n281<*1*><1> j$_n2b2$raw_n2c9<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b2 j$_n2b2_n2b4$true<*2*><0> j$_n265$raw_n281<*2*><0> j$_n2b2$raw_n2c9<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n2b2 j$_n2b2_n2b4$true<*2*><1> j$_n265$raw_n281<*2*><1> j$_n2b2$raw_n2c9<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (j [selReg ] <= 1 && !break )
+.names _n262 break$_n2b2$raw_n2c4 break$_n1be$raw_n234 break$_n262$raw_n2e7
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defSel$_n265$raw_n278<0> defSel$_n1be$raw_n241<0> defSel$_n262$raw_n2e9<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defSel$_n265$raw_n278<1> defSel$_n1be$raw_n241<1> defSel$_n262$raw_n2e9<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defSel$_n265$raw_n278<2> defSel$_n1be$raw_n241<2> defSel$_n262$raw_n2e9<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defSelK$_n262_n2a1$true defSelK$_n1be$raw_n247 defSelK$_n262$raw_n2ed
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defK$_n262_n29e$true<0> defK$_n1be$raw_n249<0> defK$_n262$raw_n2ef<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defK$_n262_n29e$true<1> defK$_n1be$raw_n249<1> defK$_n262$raw_n2ef<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defK$_n262_n29e$true<2> defK$_n1be$raw_n249<2> defK$_n262$raw_n2ef<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 j$_n2b2$raw_n2c9<*0*><0> j$_n1be$raw_n24d<*0*><0> j$_n262$raw_n2f3<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 j$_n2b2$raw_n2c9<*0*><1> j$_n1be$raw_n24d<*0*><1> j$_n262$raw_n2f3<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 j$_n2b2$raw_n2c9<*1*><0> j$_n1be$raw_n24d<*1*><0> j$_n262$raw_n2f3<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 j$_n2b2$raw_n2c9<*1*><1> j$_n1be$raw_n24d<*1*><1> j$_n262$raw_n2f3<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 j$_n2b2$raw_n2c9<*2*><0> j$_n1be$raw_n24d<*2*><0> j$_n262$raw_n2f3<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 j$_n2b2$raw_n2c9<*2*><1> j$_n1be$raw_n24d<*2*><1> j$_n262$raw_n2f3<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n262 defKSel$_n262_n2a2$true defKSel$_n1be$raw_n254 defKSel$_n262$raw_n2fa
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> j$_n262$raw_n2f3<*0*><0> j$_n262$raw_n2f3<*1*><0> j$_n262$raw_n2f3<*2*><0> _n311<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> j$_n262$raw_n2f3<*0*><1> j$_n262$raw_n2f3<*1*><1> j$_n262$raw_n2f3<*2*><1> _n311<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n312<0>
+0
+.names _n312<1>
+1
+# j [selReg ] <= 2
+.names _n315
+0
+.names _n311<0> _n312<0> _n315 _n314<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n317
+0
+.names _n311<0> _n312<0> _n317 _n316
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n311<1> _n312<1> _n316 _n314<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n311<1> _n312<1> _n316 _n318
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n314<0> _n314<1> _n319
+.def 0
+0 0 1
+.names _n318 _n319 _n313
+.def 1
+0 0 0
+.names break$_n262$raw_n2e7 _n31a
+0 1  
+1 0  
+# j [selReg ] <= 2 && !break 
+.names _n313 _n31a _n31b
+.def 0
+1 1 1
+.names _n31b _n31c
+- =_n31b
+.names _n31d<0>
+0
+.names _n31d<1>
+1
+.names _n31d<1> _n31d<0> choosing<*0*> choosing<*1*> choosing<*2*> _n31e
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n31e _n31f
+- =_n31e
+# j [selReg ] = 2
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n323
+.def 0
+0 0  1
+.names _n323 _n321<0> j$_n262$raw_n2f3<*0*><0> j$_n31e_n320$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n323 _n321<1> j$_n262$raw_n2f3<*0*><1> j$_n31e_n320$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n327
+.def 0
+1 0  1
+.names _n327 _n321<0> j$_n262$raw_n2f3<*1*><0> j$_n31e_n320$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n327 _n321<1> j$_n262$raw_n2f3<*1*><1> j$_n31e_n320$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n32b
+.def 0
+0 1  1
+.names _n32b _n321<0> j$_n262$raw_n2f3<*2*><0> j$_n31e_n320$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n32b _n321<1> j$_n262$raw_n2f3<*2*><1> j$_n31e_n320$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n321<0>
+0
+.names _n321<1>
+1
+# break  = 1
+.names break$_n31e_n32e$true
+1
+# defSel  = defer [selReg ]
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n330<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n330<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names selReg$_n101$raw_n10d<1> selReg$_n101$raw_n10d<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n330<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n330<0> defSel$_n31e_n32f$false<0>
+- =_n330<0>
+.names _n330<1> defSel$_n31e_n32f$false<1>
+- =_n330<1>
+.names _n330<2> defSel$_n31e_n32f$false<2>
+- =_n330<2>
+# if/else (choosing [2])
+.names _n31e defSel$_n262$raw_n2e9<0> defSel$_n31e_n32f$false<0> defSel$_n31e$raw_n331<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e defSel$_n262$raw_n2e9<1> defSel$_n31e_n32f$false<1> defSel$_n31e$raw_n331<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e defSel$_n262$raw_n2e9<2> defSel$_n31e_n32f$false<2> defSel$_n31e$raw_n331<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e break$_n31e_n32e$true break$_n262$raw_n2e7 break$_n31e$raw_n335
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e j$_n31e_n320$true<*0*><0> j$_n262$raw_n2f3<*0*><0> j$_n31e$raw_n33a<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e j$_n31e_n320$true<*0*><1> j$_n262$raw_n2f3<*0*><1> j$_n31e$raw_n33a<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e j$_n31e_n320$true<*1*><0> j$_n262$raw_n2f3<*1*><0> j$_n31e$raw_n33a<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e j$_n31e_n320$true<*1*><1> j$_n262$raw_n2f3<*1*><1> j$_n31e$raw_n33a<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e j$_n31e_n320$true<*2*><0> j$_n262$raw_n2f3<*2*><0> j$_n31e$raw_n33a<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31e j$_n31e_n320$true<*2*><1> j$_n262$raw_n2f3<*2*><1> j$_n31e$raw_n33a<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+# defK  = defer [2]
+.names _n358<0>
+0
+.names _n358<1>
+1
+.names _n358<1> _n358<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n359<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n358<1> _n358<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n359<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n358<1> _n358<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n359<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n359<0> defK$_n31b_n357$true<0>
+- =_n359<0>
+.names _n359<1> defK$_n31b_n357$true<1>
+- =_n359<1>
+.names _n359<2> defK$_n31b_n357$true<2>
+- =_n359<2>
+# defSelK  = defSel [2]
+.names defSel$_n31e$raw_n331<2> defSelK$_n31b_n35a$true
+- =defSel$_n31e$raw_n331<2>
+# defKSel  = extract  (defK ,selReg ) 
+.subckt extract _n35d extract<0>=_n35c<0> in<0>=defK$_n31b_n357$true<0> in<1>=defK$_n31b_n357$true<1> in<2>=defK$_n31b_n357$true<2> index<0>=selReg$_n101$raw_n10d<0> index<1>=selReg$_n101$raw_n10d<1> 
+.names _n35c<0> defKSel$_n31b_n35b$true
+- =_n35c<0>
+.names _n35e<0>
+0
+.names _n35e<1>
+1
+.names _n35e<1> _n35e<0> ticket<*0*> ticket<*1*> ticket<*2*> _n35f
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names defKSel$_n31b_n35b$true _n360
+0 1  
+1 0  
+.names _n361<0>
+0
+.names _n361<1>
+1
+# 2 < selReg 
+.names _n364
+0
+.names _n361<0> selReg$_n101$raw_n10d<0> _n364 _n363<0>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n366
+0
+.names _n361<0> selReg$_n101$raw_n10d<0> _n366 _n365
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n361<1> selReg$_n101$raw_n10d<1> _n365 _n363<1>
+.def 0
+0 0 1 1
+0 1 0 1
+1 0 0 1
+1 1 1 1
+# carry/borrow
+.names _n361<1> selReg$_n101$raw_n10d<1> _n365 _n367
+.def 0
+0 - 1 1
+0 1 - 1
+- 1 1 1
+.names _n363<0> _n363<1> _n368
+.def 1
+0 0 0
+.names _n367 _n368 _n362
+.def 0
+1 1 1
+# !defKSel  && 2 < selReg 
+.names _n360 _n362 _n369
+.def 0
+1 1 1
+# defSelK  || (!defKSel  && 2 < selReg )
+.names defSelK$_n31b_n35a$true _n369 _n36a
+.def 1
+0 0 0
+# ticket [2] && (defSelK  || (!defKSel  && 2 < selReg ))
+.names _n35f _n36a _n36b
+.def 0
+1 1 1
+.names _n36b _n36c
+- =_n36b
+# j [selReg ] = 2
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n370
+.def 0
+0 0  1
+.names _n370 _n36e<0> j$_n31e$raw_n33a<*0*><0> j$_n36b_n36d$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n370 _n36e<1> j$_n31e$raw_n33a<*0*><1> j$_n36b_n36d$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n374
+.def 0
+1 0  1
+.names _n374 _n36e<0> j$_n31e$raw_n33a<*1*><0> j$_n36b_n36d$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n374 _n36e<1> j$_n31e$raw_n33a<*1*><1> j$_n36b_n36d$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n378
+.def 0
+0 1  1
+.names _n378 _n36e<0> j$_n31e$raw_n33a<*2*><0> j$_n36b_n36d$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n378 _n36e<1> j$_n31e$raw_n33a<*2*><1> j$_n36b_n36d$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36e<0>
+0
+.names _n36e<1>
+1
+# break  = 1
+.names break$_n36b_n37b$true
+1
+# if/else (ticket [2] && (defSelK  || (!defKSel  && 2 < selReg )))
+.names _n36b break$_n36b_n37b$true break$_n31e$raw_n335 break$_n36b$raw_n37d
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36b j$_n36b_n36d$true<*0*><0> j$_n31e$raw_n33a<*0*><0> j$_n36b$raw_n382<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36b j$_n36b_n36d$true<*0*><1> j$_n31e$raw_n33a<*0*><1> j$_n36b$raw_n382<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36b j$_n36b_n36d$true<*1*><0> j$_n31e$raw_n33a<*1*><0> j$_n36b$raw_n382<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36b j$_n36b_n36d$true<*1*><1> j$_n31e$raw_n33a<*1*><1> j$_n36b$raw_n382<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36b j$_n36b_n36d$true<*2*><0> j$_n31e$raw_n33a<*2*><0> j$_n36b$raw_n382<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n36b j$_n36b_n36d$true<*2*><1> j$_n31e$raw_n33a<*2*><1> j$_n36b$raw_n382<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (j [selReg ] <= 2 && !break )
+.names _n31b break$_n36b$raw_n37d break$_n262$raw_n2e7 break$_n31b$raw_n3a0
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defSel$_n31e$raw_n331<0> defSel$_n262$raw_n2e9<0> defSel$_n31b$raw_n3a2<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defSel$_n31e$raw_n331<1> defSel$_n262$raw_n2e9<1> defSel$_n31b$raw_n3a2<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defSel$_n31e$raw_n331<2> defSel$_n262$raw_n2e9<2> defSel$_n31b$raw_n3a2<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defSelK$_n31b_n35a$true defSelK$_n262$raw_n2ed defSelK$_n31b$raw_n3a6
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defK$_n31b_n357$true<0> defK$_n262$raw_n2ef<0> defK$_n31b$raw_n3a8<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defK$_n31b_n357$true<1> defK$_n262$raw_n2ef<1> defK$_n31b$raw_n3a8<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defK$_n31b_n357$true<2> defK$_n262$raw_n2ef<2> defK$_n31b$raw_n3a8<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b j$_n36b$raw_n382<*0*><0> j$_n262$raw_n2f3<*0*><0> j$_n31b$raw_n3ac<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b j$_n36b$raw_n382<*0*><1> j$_n262$raw_n2f3<*0*><1> j$_n31b$raw_n3ac<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b j$_n36b$raw_n382<*1*><0> j$_n262$raw_n2f3<*1*><0> j$_n31b$raw_n3ac<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b j$_n36b$raw_n382<*1*><1> j$_n262$raw_n2f3<*1*><1> j$_n31b$raw_n3ac<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b j$_n36b$raw_n382<*2*><0> j$_n262$raw_n2f3<*2*><0> j$_n31b$raw_n3ac<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b j$_n36b$raw_n382<*2*><1> j$_n262$raw_n2f3<*2*><1> j$_n31b$raw_n3ac<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n31b defKSel$_n31b_n35b$true defKSel$_n262$raw_n2fa defKSel$_n31b$raw_n3b3
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 _n3ca
+- =break$_n31b$raw_n3a0
+# pc [selReg ] = 3
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n3ce
+.def 0
+0 0  1
+.names _n3ce _n3cc<0> pc<*0*><0> pc$break$_n31b$raw_n3a0_n3cb$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3ce _n3cc<1> pc<*0*><1> pc$break$_n31b$raw_n3a0_n3cb$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3ce _n3cc<2> pc<*0*><2> pc$break$_n31b$raw_n3a0_n3cb$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3ce _n3cc<3> pc<*0*><3> pc$break$_n31b$raw_n3a0_n3cb$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n3d4
+.def 0
+1 0  1
+.names _n3d4 _n3cc<0> pc<*1*><0> pc$break$_n31b$raw_n3a0_n3cb$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3d4 _n3cc<1> pc<*1*><1> pc$break$_n31b$raw_n3a0_n3cb$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3d4 _n3cc<2> pc<*1*><2> pc$break$_n31b$raw_n3a0_n3cb$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3d4 _n3cc<3> pc<*1*><3> pc$break$_n31b$raw_n3a0_n3cb$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n3da
+.def 0
+0 1  1
+.names _n3da _n3cc<0> pc<*2*><0> pc$break$_n31b$raw_n3a0_n3cb$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3da _n3cc<1> pc<*2*><1> pc$break$_n31b$raw_n3a0_n3cb$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3da _n3cc<2> pc<*2*><2> pc$break$_n31b$raw_n3a0_n3cb$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3da _n3cc<3> pc<*2*><3> pc$break$_n31b$raw_n3a0_n3cb$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3cc<0>
+1
+.names _n3cc<1>
+1
+.names _n3cc<2>
+0
+.names _n3cc<3>
+0
+# pc [selReg ] = 4
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n3e2
+.def 0
+0 0  1
+.names _n3e2 _n3e0<0> pc<*0*><0> pc$break$_n31b$raw_n3a0_n3df$false<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e2 _n3e0<1> pc<*0*><1> pc$break$_n31b$raw_n3a0_n3df$false<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e2 _n3e0<2> pc<*0*><2> pc$break$_n31b$raw_n3a0_n3df$false<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e2 _n3e0<3> pc<*0*><3> pc$break$_n31b$raw_n3a0_n3df$false<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n3e8
+.def 0
+1 0  1
+.names _n3e8 _n3e0<0> pc<*1*><0> pc$break$_n31b$raw_n3a0_n3df$false<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e8 _n3e0<1> pc<*1*><1> pc$break$_n31b$raw_n3a0_n3df$false<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e8 _n3e0<2> pc<*1*><2> pc$break$_n31b$raw_n3a0_n3df$false<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e8 _n3e0<3> pc<*1*><3> pc$break$_n31b$raw_n3a0_n3df$false<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n3ee
+.def 0
+0 1  1
+.names _n3ee _n3e0<0> pc<*2*><0> pc$break$_n31b$raw_n3a0_n3df$false<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3ee _n3e0<1> pc<*2*><1> pc$break$_n31b$raw_n3a0_n3df$false<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3ee _n3e0<2> pc<*2*><2> pc$break$_n31b$raw_n3a0_n3df$false<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3ee _n3e0<3> pc<*2*><3> pc$break$_n31b$raw_n3a0_n3df$false<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n3e0<0>
+0
+.names _n3e0<1>
+0
+.names _n3e0<2>
+1
+.names _n3e0<3>
+0
+# if/else (break )
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*0*><0> pc$break$_n31b$raw_n3a0_n3df$false<*0*><0> pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*0*><1> pc$break$_n31b$raw_n3a0_n3df$false<*0*><1> pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*0*><2> pc$break$_n31b$raw_n3a0_n3df$false<*0*><2> pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*0*><3> pc$break$_n31b$raw_n3a0_n3df$false<*0*><3> pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*1*><0> pc$break$_n31b$raw_n3a0_n3df$false<*1*><0> pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*1*><1> pc$break$_n31b$raw_n3a0_n3df$false<*1*><1> pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*1*><2> pc$break$_n31b$raw_n3a0_n3df$false<*1*><2> pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*1*><3> pc$break$_n31b$raw_n3a0_n3df$false<*1*><3> pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*2*><0> pc$break$_n31b$raw_n3a0_n3df$false<*2*><0> pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*2*><1> pc$break$_n31b$raw_n3a0_n3df$false<*2*><1> pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*2*><2> pc$break$_n31b$raw_n3a0_n3df$false<*2*><2> pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names break$_n31b$raw_n3a0 pc$break$_n31b$raw_n3a0_n3cb$true<*2*><3> pc$break$_n31b$raw_n3a0_n3df$false<*2*><3> pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n421<0>
+0
+.names _n421<1>
+0
+.names _n421<2>
+1
+.names _n421<3>
+0
+.names _n112<0> _n421<0> _n422<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n421<1> _n422<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n421<2> _n422<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n421<3> _n422<3>
+.def 0
+0 1 1
+1 0 1
+.names _n422<0> _n422<1> _n422<2> _n422<3> _n423
+.def 1
+0 0 0 0 0
+.names _n423 _n420
+0 1  
+1 0  
+.names _n420  _n41f
+.def 1
+0 0
+.names pause _n424
+- =pause
+# pc [selReg ] = 4
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n428
+.def 0
+0 0  1
+.names _n428 _n426<0> pc<*0*><0> pc$pause_n425$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n428 _n426<1> pc<*0*><1> pc$pause_n425$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n428 _n426<2> pc<*0*><2> pc$pause_n425$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n428 _n426<3> pc<*0*><3> pc$pause_n425$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n42e
+.def 0
+1 0  1
+.names _n42e _n426<0> pc<*1*><0> pc$pause_n425$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n42e _n426<1> pc<*1*><1> pc$pause_n425$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n42e _n426<2> pc<*1*><2> pc$pause_n425$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n42e _n426<3> pc<*1*><3> pc$pause_n425$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n434
+.def 0
+0 1  1
+.names _n434 _n426<0> pc<*2*><0> pc$pause_n425$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n434 _n426<1> pc<*2*><1> pc$pause_n425$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n434 _n426<2> pc<*2*><2> pc$pause_n425$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n434 _n426<3> pc<*2*><3> pc$pause_n425$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n426<0>
+0
+.names _n426<1>
+0
+.names _n426<2>
+1
+.names _n426<3>
+0
+# pc [selReg ] = 5
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n43c
+.def 0
+0 0  1
+.names _n43c _n43a<0> pc<*0*><0> pc$pause_n439$false<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n43c _n43a<1> pc<*0*><1> pc$pause_n439$false<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n43c _n43a<2> pc<*0*><2> pc$pause_n439$false<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n43c _n43a<3> pc<*0*><3> pc$pause_n439$false<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n442
+.def 0
+1 0  1
+.names _n442 _n43a<0> pc<*1*><0> pc$pause_n439$false<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n442 _n43a<1> pc<*1*><1> pc$pause_n439$false<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n442 _n43a<2> pc<*1*><2> pc$pause_n439$false<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n442 _n43a<3> pc<*1*><3> pc$pause_n439$false<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n448
+.def 0
+0 1  1
+.names _n448 _n43a<0> pc<*2*><0> pc$pause_n439$false<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n448 _n43a<1> pc<*2*><1> pc$pause_n439$false<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n448 _n43a<2> pc<*2*><2> pc$pause_n439$false<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n448 _n43a<3> pc<*2*><3> pc$pause_n439$false<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n43a<0>
+1
+.names _n43a<1>
+0
+.names _n43a<2>
+1
+.names _n43a<3>
+0
+# if/else (pause )
+.names pause pc$pause_n425$true<*0*><0> pc$pause_n439$false<*0*><0> pc$pause$raw_n450<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*0*><1> pc$pause_n439$false<*0*><1> pc$pause$raw_n450<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*0*><2> pc$pause_n439$false<*0*><2> pc$pause$raw_n450<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*0*><3> pc$pause_n439$false<*0*><3> pc$pause$raw_n450<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*1*><0> pc$pause_n439$false<*1*><0> pc$pause$raw_n450<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*1*><1> pc$pause_n439$false<*1*><1> pc$pause$raw_n450<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*1*><2> pc$pause_n439$false<*1*><2> pc$pause$raw_n450<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*1*><3> pc$pause_n439$false<*1*><3> pc$pause$raw_n450<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*2*><0> pc$pause_n439$false<*2*><0> pc$pause$raw_n450<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*2*><1> pc$pause_n439$false<*2*><1> pc$pause$raw_n450<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*2*><2> pc$pause_n439$false<*2*><2> pc$pause$raw_n450<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n425$true<*2*><3> pc$pause_n439$false<*2*><3> pc$pause$raw_n450<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n463<0>
+1
+.names _n463<1>
+0
+.names _n463<2>
+1
+.names _n463<3>
+0
+.names _n112<0> _n463<0> _n464<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n463<1> _n464<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n463<2> _n464<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n463<3> _n464<3>
+.def 0
+0 1 1
+1 0 1
+.names _n464<0> _n464<1> _n464<2> _n464<3> _n465
+.def 1
+0 0 0 0 0
+.names _n465 _n462
+0 1  
+1 0  
+.names _n462  _n461
+.def 1
+0 0
+# ticket [selReg ] = 0
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n469
+.def 0
+0 0  1
+.names _n469 _n467 ticket<*0*> ticket$_n461_n466$true<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n46c
+.def 0
+1 0  1
+.names _n46c _n467 ticket<*1*> ticket$_n461_n466$true<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n46f
+.def 0
+0 1  1
+.names _n46f _n467 ticket<*2*> ticket$_n461_n466$true<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n467
+0
+# defK  = defer [0]
+.names _n472<0>
+0
+.names _n472<1>
+0
+.names _n472<1> _n472<0> defer<*0*><0> defer<*1*><0> defer<*2*><0> _n473<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n472<1> _n472<0> defer<*0*><1> defer<*1*><1> defer<*2*><1> _n473<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n472<1> _n472<0> defer<*0*><2> defer<*1*><2> defer<*2*><2> _n473<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n473<0> defK$_n461_n471$true<0>
+- =_n473<0>
+.names _n473<1> defK$_n461_n471$true<1>
+- =_n473<1>
+.names _n473<2> defK$_n461_n471$true<2>
+- =_n473<2>
+# defer [0] = clearBit  (defK ,selReg ) 
+.names _n476<0>
+0
+.names _n476<1>
+0
+.names _n476<0> _n476<1> _n478
+.def 0
+0 0  1
+.names _n478 _n475<0> defer<*0*><0> defer$_n461_n474$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n478 _n475<1> defer<*0*><1> defer$_n461_n474$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n478 _n475<2> defer<*0*><2> defer$_n461_n474$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n476<0> _n476<1> _n47d
+.def 0
+1 0  1
+.names _n47d _n475<0> defer<*1*><0> defer$_n461_n474$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n47d _n475<1> defer<*1*><1> defer$_n461_n474$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n47d _n475<2> defer<*1*><2> defer$_n461_n474$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n476<0> _n476<1> _n482
+.def 0
+0 1  1
+.names _n482 _n475<0> defer<*2*><0> defer$_n461_n474$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n482 _n475<1> defer<*2*><1> defer$_n461_n474$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n482 _n475<2> defer<*2*><2> defer$_n461_n474$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.subckt clearBit _n487 clearBit<0>=_n486<0> clearBit<1>=_n486<1> clearBit<2>=_n486<2> in<0>=defK$_n461_n471$true<0> in<1>=defK$_n461_n471$true<1> in<2>=defK$_n461_n471$true<2> index<0>=selReg$_n101$raw_n10d<0> index<1>=selReg$_n101$raw_n10d<1> 
+.names _n486<0> _n475<0>
+- =_n486<0>
+.names _n486<1> _n475<1>
+- =_n486<1>
+.names _n486<2> _n475<2>
+- =_n486<2>
+# defK  = defer [1]
+.names _n489<0>
+1
+.names _n489<1>
+0
+.names _n489<1> _n489<0> defer$_n461_n474$true<*0*><0> defer$_n461_n474$true<*1*><0> defer$_n461_n474$true<*2*><0> _n48a<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n489<1> _n489<0> defer$_n461_n474$true<*0*><1> defer$_n461_n474$true<*1*><1> defer$_n461_n474$true<*2*><1> _n48a<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n489<1> _n489<0> defer$_n461_n474$true<*0*><2> defer$_n461_n474$true<*1*><2> defer$_n461_n474$true<*2*><2> _n48a<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n48a<0> defK$_n461_n488$true<0>
+- =_n48a<0>
+.names _n48a<1> defK$_n461_n488$true<1>
+- =_n48a<1>
+.names _n48a<2> defK$_n461_n488$true<2>
+- =_n48a<2>
+# defer [1] = clearBit  (defK ,selReg ) 
+.names _n48d<0>
+1
+.names _n48d<1>
+0
+.names _n48d<0> _n48d<1> _n48f
+.def 0
+0 0  1
+.names _n48f _n48c<0> defer$_n461_n474$true<*0*><0> defer$_n461_n48b$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n48f _n48c<1> defer$_n461_n474$true<*0*><1> defer$_n461_n48b$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n48f _n48c<2> defer$_n461_n474$true<*0*><2> defer$_n461_n48b$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n48d<0> _n48d<1> _n494
+.def 0
+1 0  1
+.names _n494 _n48c<0> defer$_n461_n474$true<*1*><0> defer$_n461_n48b$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n494 _n48c<1> defer$_n461_n474$true<*1*><1> defer$_n461_n48b$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n494 _n48c<2> defer$_n461_n474$true<*1*><2> defer$_n461_n48b$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n48d<0> _n48d<1> _n499
+.def 0
+0 1  1
+.names _n499 _n48c<0> defer$_n461_n474$true<*2*><0> defer$_n461_n48b$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n499 _n48c<1> defer$_n461_n474$true<*2*><1> defer$_n461_n48b$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n499 _n48c<2> defer$_n461_n474$true<*2*><2> defer$_n461_n48b$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.subckt clearBit _n49e clearBit<0>=_n49d<0> clearBit<1>=_n49d<1> clearBit<2>=_n49d<2> in<0>=defK$_n461_n488$true<0> in<1>=defK$_n461_n488$true<1> in<2>=defK$_n461_n488$true<2> index<0>=selReg$_n101$raw_n10d<0> index<1>=selReg$_n101$raw_n10d<1> 
+.names _n49d<0> _n48c<0>
+- =_n49d<0>
+.names _n49d<1> _n48c<1>
+- =_n49d<1>
+.names _n49d<2> _n48c<2>
+- =_n49d<2>
+# defK  = defer [2]
+.names _n4a0<0>
+0
+.names _n4a0<1>
+1
+.names _n4a0<1> _n4a0<0> defer$_n461_n48b$true<*0*><0> defer$_n461_n48b$true<*1*><0> defer$_n461_n48b$true<*2*><0> _n4a1<0>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n4a0<1> _n4a0<0> defer$_n461_n48b$true<*0*><1> defer$_n461_n48b$true<*1*><1> defer$_n461_n48b$true<*2*><1> _n4a1<1>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n4a0<1> _n4a0<0> defer$_n461_n48b$true<*0*><2> defer$_n461_n48b$true<*1*><2> defer$_n461_n48b$true<*2*><2> _n4a1<2>
+.def 0
+0 0 1 - - 1
+0 1 - 1 - 1
+1 0 - - 1 1
+.names _n4a1<0> defK$_n461_n49f$true<0>
+- =_n4a1<0>
+.names _n4a1<1> defK$_n461_n49f$true<1>
+- =_n4a1<1>
+.names _n4a1<2> defK$_n461_n49f$true<2>
+- =_n4a1<2>
+# defer [2] = clearBit  (defK ,selReg ) 
+.names _n4a4<0>
+0
+.names _n4a4<1>
+1
+.names _n4a4<0> _n4a4<1> _n4a6
+.def 0
+0 0  1
+.names _n4a6 _n4a3<0> defer$_n461_n48b$true<*0*><0> defer$_n461_n4a2$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4a6 _n4a3<1> defer$_n461_n48b$true<*0*><1> defer$_n461_n4a2$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4a6 _n4a3<2> defer$_n461_n48b$true<*0*><2> defer$_n461_n4a2$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4a4<0> _n4a4<1> _n4ab
+.def 0
+1 0  1
+.names _n4ab _n4a3<0> defer$_n461_n48b$true<*1*><0> defer$_n461_n4a2$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ab _n4a3<1> defer$_n461_n48b$true<*1*><1> defer$_n461_n4a2$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ab _n4a3<2> defer$_n461_n48b$true<*1*><2> defer$_n461_n4a2$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4a4<0> _n4a4<1> _n4b0
+.def 0
+0 1  1
+.names _n4b0 _n4a3<0> defer$_n461_n48b$true<*2*><0> defer$_n461_n4a2$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4b0 _n4a3<1> defer$_n461_n48b$true<*2*><1> defer$_n461_n4a2$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4b0 _n4a3<2> defer$_n461_n48b$true<*2*><2> defer$_n461_n4a2$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.subckt clearBit _n4b5 clearBit<0>=_n4b4<0> clearBit<1>=_n4b4<1> clearBit<2>=_n4b4<2> in<0>=defK$_n461_n49f$true<0> in<1>=defK$_n461_n49f$true<1> in<2>=defK$_n461_n49f$true<2> index<0>=selReg$_n101$raw_n10d<0> index<1>=selReg$_n101$raw_n10d<1> 
+.names _n4b4<0> _n4a3<0>
+- =_n4b4<0>
+.names _n4b4<1> _n4a3<1>
+- =_n4b4<1>
+.names _n4b4<2> _n4a3<2>
+- =_n4b4<2>
+# pc [selReg ] = 6
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4b9
+.def 0
+0 0  1
+.names _n4b9 _n4b7<0> pc<*0*><0> pc$_n461_n4b6$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4b9 _n4b7<1> pc<*0*><1> pc$_n461_n4b6$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4b9 _n4b7<2> pc<*0*><2> pc$_n461_n4b6$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4b9 _n4b7<3> pc<*0*><3> pc$_n461_n4b6$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4bf
+.def 0
+1 0  1
+.names _n4bf _n4b7<0> pc<*1*><0> pc$_n461_n4b6$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4bf _n4b7<1> pc<*1*><1> pc$_n461_n4b6$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4bf _n4b7<2> pc<*1*><2> pc$_n461_n4b6$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4bf _n4b7<3> pc<*1*><3> pc$_n461_n4b6$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4c5
+.def 0
+0 1  1
+.names _n4c5 _n4b7<0> pc<*2*><0> pc$_n461_n4b6$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4c5 _n4b7<1> pc<*2*><1> pc$_n461_n4b6$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4c5 _n4b7<2> pc<*2*><2> pc$_n461_n4b6$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4c5 _n4b7<3> pc<*2*><3> pc$_n461_n4b6$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4b7<0>
+0
+.names _n4b7<1>
+1
+.names _n4b7<2>
+1
+.names _n4b7<3>
+0
+.names _n4cc<0>
+0
+.names _n4cc<1>
+1
+.names _n4cc<2>
+1
+.names _n4cc<3>
+0
+.names _n112<0> _n4cc<0> _n4cd<0>
+.def 0
+0 1 1
+1 0 1
+.names _n112<1> _n4cc<1> _n4cd<1>
+.def 0
+0 1 1
+1 0 1
+.names _n112<2> _n4cc<2> _n4cd<2>
+.def 0
+0 1 1
+1 0 1
+.names _n112<3> _n4cc<3> _n4cd<3>
+.def 0
+0 1 1
+1 0 1
+.names _n4cd<0> _n4cd<1> _n4cd<2> _n4cd<3> _n4ce
+.def 1
+0 0 0 0 0
+.names _n4ce _n4cb
+0 1  
+1 0  
+.names _n4cb  _n4ca
+.def 1
+0 0
+.names pause _n4cf
+- =pause
+# pc [selReg ] = 6
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4d3
+.def 0
+0 0  1
+.names _n4d3 _n4d1<0> pc<*0*><0> pc$pause_n4d0$true<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d3 _n4d1<1> pc<*0*><1> pc$pause_n4d0$true<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d3 _n4d1<2> pc<*0*><2> pc$pause_n4d0$true<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d3 _n4d1<3> pc<*0*><3> pc$pause_n4d0$true<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4d9
+.def 0
+1 0  1
+.names _n4d9 _n4d1<0> pc<*1*><0> pc$pause_n4d0$true<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d9 _n4d1<1> pc<*1*><1> pc$pause_n4d0$true<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d9 _n4d1<2> pc<*1*><2> pc$pause_n4d0$true<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d9 _n4d1<3> pc<*1*><3> pc$pause_n4d0$true<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4df
+.def 0
+0 1  1
+.names _n4df _n4d1<0> pc<*2*><0> pc$pause_n4d0$true<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4df _n4d1<1> pc<*2*><1> pc$pause_n4d0$true<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4df _n4d1<2> pc<*2*><2> pc$pause_n4d0$true<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4df _n4d1<3> pc<*2*><3> pc$pause_n4d0$true<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4d1<0>
+0
+.names _n4d1<1>
+1
+.names _n4d1<2>
+1
+.names _n4d1<3>
+0
+# pc [selReg ] = 0
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4e7
+.def 0
+0 0  1
+.names _n4e7 _n4e5<0> pc<*0*><0> pc$pause_n4e4$false<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4e7 _n4e5<1> pc<*0*><1> pc$pause_n4e4$false<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4e7 _n4e5<2> pc<*0*><2> pc$pause_n4e4$false<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4e7 _n4e5<3> pc<*0*><3> pc$pause_n4e4$false<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4ed
+.def 0
+1 0  1
+.names _n4ed _n4e5<0> pc<*1*><0> pc$pause_n4e4$false<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ed _n4e5<1> pc<*1*><1> pc$pause_n4e4$false<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ed _n4e5<2> pc<*1*><2> pc$pause_n4e4$false<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ed _n4e5<3> pc<*1*><3> pc$pause_n4e4$false<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> _n4f3
+.def 0
+0 1  1
+.names _n4f3 _n4e5<0> pc<*2*><0> pc$pause_n4e4$false<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4f3 _n4e5<1> pc<*2*><1> pc$pause_n4e4$false<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4f3 _n4e5<2> pc<*2*><2> pc$pause_n4e4$false<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4f3 _n4e5<3> pc<*2*><3> pc$pause_n4e4$false<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4e5<0>
+0
+.names _n4e5<1>
+0
+.names _n4e5<2>
+0
+.names _n4e5<3>
+0
+# if/else (pause )
+.names pause pc$pause_n4d0$true<*0*><0> pc$pause_n4e4$false<*0*><0> pc$pause$raw_n4fb<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*0*><1> pc$pause_n4e4$false<*0*><1> pc$pause$raw_n4fb<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*0*><2> pc$pause_n4e4$false<*0*><2> pc$pause$raw_n4fb<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*0*><3> pc$pause_n4e4$false<*0*><3> pc$pause$raw_n4fb<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*1*><0> pc$pause_n4e4$false<*1*><0> pc$pause$raw_n4fb<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*1*><1> pc$pause_n4e4$false<*1*><1> pc$pause$raw_n4fb<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*1*><2> pc$pause_n4e4$false<*1*><2> pc$pause$raw_n4fb<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*1*><3> pc$pause_n4e4$false<*1*><3> pc$pause$raw_n4fb<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*2*><0> pc$pause_n4e4$false<*2*><0> pc$pause$raw_n4fb<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*2*><1> pc$pause_n4e4$false<*2*><1> pc$pause$raw_n4fb<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*2*><2> pc$pause_n4e4$false<*2*><2> pc$pause$raw_n4fb<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names pause pc$pause_n4d0$true<*2*><3> pc$pause_n4e4$false<*2*><3> pc$pause$raw_n4fb<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+# case (pc [selReg ])
+.names _n4ca pc$pause$raw_n4fb<*0*><0> pc<*0*><0> pc$_n4ca$raw_n511<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*0*><1> pc<*0*><1> pc$_n4ca$raw_n511<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*0*><2> pc<*0*><2> pc$_n4ca$raw_n511<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*0*><3> pc<*0*><3> pc$_n4ca$raw_n511<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*1*><0> pc<*1*><0> pc$_n4ca$raw_n511<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*1*><1> pc<*1*><1> pc$_n4ca$raw_n511<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*1*><2> pc<*1*><2> pc$_n4ca$raw_n511<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*1*><3> pc<*1*><3> pc$_n4ca$raw_n511<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*2*><0> pc<*2*><0> pc$_n4ca$raw_n511<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*2*><1> pc<*2*><1> pc$_n4ca$raw_n511<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*2*><2> pc<*2*><2> pc$_n4ca$raw_n511<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n4ca pc$pause$raw_n4fb<*2*><3> pc<*2*><3> pc$_n4ca$raw_n511<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*0*><0> pc$_n4ca$raw_n511<*0*><0> pc$_n461$raw_n520<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*0*><1> pc$_n4ca$raw_n511<*0*><1> pc$_n461$raw_n520<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*0*><2> pc$_n4ca$raw_n511<*0*><2> pc$_n461$raw_n520<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*0*><3> pc$_n4ca$raw_n511<*0*><3> pc$_n461$raw_n520<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*1*><0> pc$_n4ca$raw_n511<*1*><0> pc$_n461$raw_n520<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*1*><1> pc$_n4ca$raw_n511<*1*><1> pc$_n461$raw_n520<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*1*><2> pc$_n4ca$raw_n511<*1*><2> pc$_n461$raw_n520<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*1*><3> pc$_n4ca$raw_n511<*1*><3> pc$_n461$raw_n520<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*2*><0> pc$_n4ca$raw_n511<*2*><0> pc$_n461$raw_n520<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*2*><1> pc$_n4ca$raw_n511<*2*><1> pc$_n461$raw_n520<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*2*><2> pc$_n4ca$raw_n511<*2*><2> pc$_n461$raw_n520<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 pc$_n461_n4b6$true<*2*><3> pc$_n4ca$raw_n511<*2*><3> pc$_n461$raw_n520<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 ticket$_n461_n466$true<*0*> ticket<*0*> ticket$_n461$raw_n537<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 ticket$_n461_n466$true<*1*> ticket<*1*> ticket$_n461$raw_n537<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 ticket$_n461_n466$true<*2*> ticket<*2*> ticket$_n461$raw_n537<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defK$_n461_n49f$true<0> defK<0> defK$_n461$raw_n53b<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defK$_n461_n49f$true<1> defK<1> defK$_n461$raw_n53b<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defK$_n461_n49f$true<2> defK<2> defK$_n461$raw_n53b<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*0*><0> defer<*0*><0> defer$_n461$raw_n53f<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*0*><1> defer<*0*><1> defer$_n461$raw_n53f<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*0*><2> defer<*0*><2> defer$_n461$raw_n53f<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*1*><0> defer<*1*><0> defer$_n461$raw_n53f<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*1*><1> defer<*1*><1> defer$_n461$raw_n53f<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*1*><2> defer<*1*><2> defer$_n461$raw_n53f<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*2*><0> defer<*2*><0> defer$_n461$raw_n53f<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*2*><1> defer<*2*><1> defer$_n461$raw_n53f<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n461 defer$_n461_n4a2$true<*2*><2> defer<*2*><2> defer$_n461$raw_n53f<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*0*><0> pc$_n461$raw_n520<*0*><0> pc$_n41f$raw_n54c<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*0*><1> pc$_n461$raw_n520<*0*><1> pc$_n41f$raw_n54c<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*0*><2> pc$_n461$raw_n520<*0*><2> pc$_n41f$raw_n54c<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*0*><3> pc$_n461$raw_n520<*0*><3> pc$_n41f$raw_n54c<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*1*><0> pc$_n461$raw_n520<*1*><0> pc$_n41f$raw_n54c<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*1*><1> pc$_n461$raw_n520<*1*><1> pc$_n41f$raw_n54c<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*1*><2> pc$_n461$raw_n520<*1*><2> pc$_n41f$raw_n54c<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*1*><3> pc$_n461$raw_n520<*1*><3> pc$_n41f$raw_n54c<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*2*><0> pc$_n461$raw_n520<*2*><0> pc$_n41f$raw_n54c<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*2*><1> pc$_n461$raw_n520<*2*><1> pc$_n41f$raw_n54c<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*2*><2> pc$_n461$raw_n520<*2*><2> pc$_n41f$raw_n54c<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f pc$pause$raw_n450<*2*><3> pc$_n461$raw_n520<*2*><3> pc$_n41f$raw_n54c<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f ticket<*0*> ticket$_n461$raw_n537<*0*> ticket$_n41f$raw_n55f<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f ticket<*1*> ticket$_n461$raw_n537<*1*> ticket$_n41f$raw_n55f<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f ticket<*2*> ticket$_n461$raw_n537<*2*> ticket$_n41f$raw_n55f<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defK<0> defK$_n461$raw_n53b<0> defK$_n41f$raw_n563<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defK<1> defK$_n461$raw_n53b<1> defK$_n41f$raw_n563<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defK<2> defK$_n461$raw_n53b<2> defK$_n41f$raw_n563<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*0*><0> defer$_n461$raw_n53f<*0*><0> defer$_n41f$raw_n567<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*0*><1> defer$_n461$raw_n53f<*0*><1> defer$_n41f$raw_n567<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*0*><2> defer$_n461$raw_n53f<*0*><2> defer$_n41f$raw_n567<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*1*><0> defer$_n461$raw_n53f<*1*><0> defer$_n41f$raw_n567<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*1*><1> defer$_n461$raw_n53f<*1*><1> defer$_n41f$raw_n567<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*1*><2> defer$_n461$raw_n53f<*1*><2> defer$_n41f$raw_n567<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*2*><0> defer$_n461$raw_n53f<*2*><0> defer$_n41f$raw_n567<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*2*><1> defer$_n461$raw_n53f<*2*><1> defer$_n41f$raw_n567<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n41f defer<*2*><2> defer$_n461$raw_n53f<*2*><2> defer$_n41f$raw_n567<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><0> pc$_n41f$raw_n54c<*0*><0> pc$_n1ae$raw_n574<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><1> pc$_n41f$raw_n54c<*0*><1> pc$_n1ae$raw_n574<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><2> pc$_n41f$raw_n54c<*0*><2> pc$_n1ae$raw_n574<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*0*><3> pc$_n41f$raw_n54c<*0*><3> pc$_n1ae$raw_n574<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><0> pc$_n41f$raw_n54c<*1*><0> pc$_n1ae$raw_n574<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><1> pc$_n41f$raw_n54c<*1*><1> pc$_n1ae$raw_n574<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><2> pc$_n41f$raw_n54c<*1*><2> pc$_n1ae$raw_n574<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*1*><3> pc$_n41f$raw_n54c<*1*><3> pc$_n1ae$raw_n574<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><0> pc$_n41f$raw_n54c<*2*><0> pc$_n1ae$raw_n574<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><1> pc$_n41f$raw_n54c<*2*><1> pc$_n1ae$raw_n574<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><2> pc$_n41f$raw_n54c<*2*><2> pc$_n1ae$raw_n574<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae pc$break$_n31b$raw_n3a0$raw_n3fe<*2*><3> pc$_n41f$raw_n54c<*2*><3> pc$_n1ae$raw_n574<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defK$_n31b$raw_n3a8<0> defK$_n41f$raw_n563<0> defK$_n1ae$raw_n582<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defK$_n31b$raw_n3a8<1> defK$_n41f$raw_n563<1> defK$_n1ae$raw_n582<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defK$_n31b$raw_n3a8<2> defK$_n41f$raw_n563<2> defK$_n1ae$raw_n582<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defSel$_n31b$raw_n3a2<0> defSel<0> defSel$_n1ae$raw_n590<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defSel$_n31b$raw_n3a2<1> defSel<1> defSel$_n1ae$raw_n590<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defSel$_n31b$raw_n3a2<2> defSel<2> defSel$_n1ae$raw_n590<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae break$_n31b$raw_n3a0 break break$_n1ae$raw_n594
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defSelK$_n31b$raw_n3a6 defSelK defSelK$_n1ae$raw_n598
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae j$_n31b$raw_n3ac<*0*><0> j<*0*><0> j$_n1ae$raw_n59b<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae j$_n31b$raw_n3ac<*0*><1> j<*0*><1> j$_n1ae$raw_n59b<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae j$_n31b$raw_n3ac<*1*><0> j<*1*><0> j$_n1ae$raw_n59b<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae j$_n31b$raw_n3ac<*1*><1> j<*1*><1> j$_n1ae$raw_n59b<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae j$_n31b$raw_n3ac<*2*><0> j<*2*><0> j$_n1ae$raw_n59b<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae j$_n31b$raw_n3ac<*2*><1> j<*2*><1> j$_n1ae$raw_n59b<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defKSel$_n31b$raw_n3b3 defKSel defKSel$_n1ae$raw_n5a2
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae ticket<*0*> ticket$_n41f$raw_n55f<*0*> ticket$_n1ae$raw_n5a6<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae ticket<*1*> ticket$_n41f$raw_n55f<*1*> ticket$_n1ae$raw_n5a6<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae ticket<*2*> ticket$_n41f$raw_n55f<*2*> ticket$_n1ae$raw_n5a6<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*0*><0> defer$_n41f$raw_n567<*0*><0> defer$_n1ae$raw_n5ab<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*0*><1> defer$_n41f$raw_n567<*0*><1> defer$_n1ae$raw_n5ab<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*0*><2> defer$_n41f$raw_n567<*0*><2> defer$_n1ae$raw_n5ab<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*1*><0> defer$_n41f$raw_n567<*1*><0> defer$_n1ae$raw_n5ab<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*1*><1> defer$_n41f$raw_n567<*1*><1> defer$_n1ae$raw_n5ab<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*1*><2> defer$_n41f$raw_n567<*1*><2> defer$_n1ae$raw_n5ab<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*2*><0> defer$_n41f$raw_n567<*2*><0> defer$_n1ae$raw_n5ab<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*2*><1> defer$_n41f$raw_n567<*2*><1> defer$_n1ae$raw_n5ab<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n1ae defer<*2*><2> defer$_n41f$raw_n567<*2*><2> defer$_n1ae$raw_n5ab<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*0*><0> pc$_n1ae$raw_n574<*0*><0> pc$_n18a$raw_n5b6<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*0*><1> pc$_n1ae$raw_n574<*0*><1> pc$_n18a$raw_n5b6<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*0*><2> pc$_n1ae$raw_n574<*0*><2> pc$_n18a$raw_n5b6<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*0*><3> pc$_n1ae$raw_n574<*0*><3> pc$_n18a$raw_n5b6<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*1*><0> pc$_n1ae$raw_n574<*1*><0> pc$_n18a$raw_n5b6<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*1*><1> pc$_n1ae$raw_n574<*1*><1> pc$_n18a$raw_n5b6<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*1*><2> pc$_n1ae$raw_n574<*1*><2> pc$_n18a$raw_n5b6<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*1*><3> pc$_n1ae$raw_n574<*1*><3> pc$_n18a$raw_n5b6<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*2*><0> pc$_n1ae$raw_n574<*2*><0> pc$_n18a$raw_n5b6<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*2*><1> pc$_n1ae$raw_n574<*2*><1> pc$_n18a$raw_n5b6<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*2*><2> pc$_n1ae$raw_n574<*2*><2> pc$_n18a$raw_n5b6<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a pc$_n18a_n19a$true<*2*><3> pc$_n1ae$raw_n574<*2*><3> pc$_n18a$raw_n5b6<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a choosing$_n18a_n18f$true<*0*> choosing<*0*> choosing$_n18a$raw_n5c9<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a choosing$_n18a_n18f$true<*1*> choosing<*1*> choosing$_n18a$raw_n5c9<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a choosing$_n18a_n18f$true<*2*> choosing<*2*> choosing$_n18a$raw_n5c9<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defSel<0> defSel$_n1ae$raw_n590<0> defSel$_n18a$raw_n5ce<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defSel<1> defSel$_n1ae$raw_n590<1> defSel$_n18a$raw_n5ce<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defSel<2> defSel$_n1ae$raw_n590<2> defSel$_n18a$raw_n5ce<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a break break$_n1ae$raw_n594 break$_n18a$raw_n5d2
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a ticket<*0*> ticket$_n1ae$raw_n5a6<*0*> ticket$_n18a$raw_n5d5<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a ticket<*1*> ticket$_n1ae$raw_n5a6<*1*> ticket$_n18a$raw_n5d5<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a ticket<*2*> ticket$_n1ae$raw_n5a6<*2*> ticket$_n18a$raw_n5d5<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defSelK defSelK$_n1ae$raw_n598 defSelK$_n18a$raw_n5d9
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defK<0> defK$_n1ae$raw_n582<0> defK$_n18a$raw_n5db<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defK<1> defK$_n1ae$raw_n582<1> defK$_n18a$raw_n5db<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defK<2> defK$_n1ae$raw_n582<2> defK$_n18a$raw_n5db<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a j<*0*><0> j$_n1ae$raw_n59b<*0*><0> j$_n18a$raw_n5df<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a j<*0*><1> j$_n1ae$raw_n59b<*0*><1> j$_n18a$raw_n5df<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a j<*1*><0> j$_n1ae$raw_n59b<*1*><0> j$_n18a$raw_n5df<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a j<*1*><1> j$_n1ae$raw_n59b<*1*><1> j$_n18a$raw_n5df<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a j<*2*><0> j$_n1ae$raw_n59b<*2*><0> j$_n18a$raw_n5df<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a j<*2*><1> j$_n1ae$raw_n59b<*2*><1> j$_n18a$raw_n5df<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defKSel defKSel$_n1ae$raw_n5a2 defKSel$_n18a$raw_n5e6
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*0*><0> defer$_n1ae$raw_n5ab<*0*><0> defer$_n18a$raw_n5e8<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*0*><1> defer$_n1ae$raw_n5ab<*0*><1> defer$_n18a$raw_n5e8<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*0*><2> defer$_n1ae$raw_n5ab<*0*><2> defer$_n18a$raw_n5e8<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*1*><0> defer$_n1ae$raw_n5ab<*1*><0> defer$_n18a$raw_n5e8<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*1*><1> defer$_n1ae$raw_n5ab<*1*><1> defer$_n18a$raw_n5e8<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*1*><2> defer$_n1ae$raw_n5ab<*1*><2> defer$_n18a$raw_n5e8<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*2*><0> defer$_n1ae$raw_n5ab<*2*><0> defer$_n18a$raw_n5e8<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*2*><1> defer$_n1ae$raw_n5ab<*2*><1> defer$_n18a$raw_n5e8<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n18a defer<*2*><2> defer$_n1ae$raw_n5ab<*2*><2> defer$_n18a$raw_n5e8<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defSel$_n137_n147$true<0> defSel$_n18a$raw_n5ce<0> defSel$_n137$raw_n5f2<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defSel$_n137_n147$true<1> defSel$_n18a$raw_n5ce<1> defSel$_n137$raw_n5f2<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defSel$_n137_n147$true<2> defSel$_n18a$raw_n5ce<2> defSel$_n137$raw_n5f2<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*0*><0> pc$_n18a$raw_n5b6<*0*><0> pc$_n137$raw_n5f7<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*0*><1> pc$_n18a$raw_n5b6<*0*><1> pc$_n137$raw_n5f7<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*0*><2> pc$_n18a$raw_n5b6<*0*><2> pc$_n137$raw_n5f7<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*0*><3> pc$_n18a$raw_n5b6<*0*><3> pc$_n137$raw_n5f7<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*1*><0> pc$_n18a$raw_n5b6<*1*><0> pc$_n137$raw_n5f7<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*1*><1> pc$_n18a$raw_n5b6<*1*><1> pc$_n137$raw_n5f7<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*1*><2> pc$_n18a$raw_n5b6<*1*><2> pc$_n137$raw_n5f7<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*1*><3> pc$_n18a$raw_n5b6<*1*><3> pc$_n137$raw_n5f7<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*2*><0> pc$_n18a$raw_n5b6<*2*><0> pc$_n137$raw_n5f7<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*2*><1> pc$_n18a$raw_n5b6<*2*><1> pc$_n137$raw_n5f7<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*2*><2> pc$_n18a$raw_n5b6<*2*><2> pc$_n137$raw_n5f7<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 pc$_n137_n176$true<*2*><3> pc$_n18a$raw_n5b6<*2*><3> pc$_n137$raw_n5f7<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 ticket$_n137_n15d$true<*0*> ticket$_n18a$raw_n5d5<*0*> ticket$_n137$raw_n604<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 ticket$_n137_n15d$true<*1*> ticket$_n18a$raw_n5d5<*1*> ticket$_n137$raw_n604<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 ticket$_n137_n15d$true<*2*> ticket$_n18a$raw_n5d5<*2*> ticket$_n137$raw_n604<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 j$_n137_n168$true<*0*><0> j$_n18a$raw_n5df<*0*><0> j$_n137$raw_n608<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 j$_n137_n168$true<*0*><1> j$_n18a$raw_n5df<*0*><1> j$_n137$raw_n608<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 j$_n137_n168$true<*1*><0> j$_n18a$raw_n5df<*1*><0> j$_n137$raw_n608<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 j$_n137_n168$true<*1*><1> j$_n18a$raw_n5df<*1*><1> j$_n137$raw_n608<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 j$_n137_n168$true<*2*><0> j$_n18a$raw_n5df<*2*><0> j$_n137$raw_n608<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 j$_n137_n168$true<*2*><1> j$_n18a$raw_n5df<*2*><1> j$_n137$raw_n608<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*0*><0> defer$_n18a$raw_n5e8<*0*><0> defer$_n137$raw_n60f<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*0*><1> defer$_n18a$raw_n5e8<*0*><1> defer$_n137$raw_n60f<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*0*><2> defer$_n18a$raw_n5e8<*0*><2> defer$_n137$raw_n60f<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*1*><0> defer$_n18a$raw_n5e8<*1*><0> defer$_n137$raw_n60f<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*1*><1> defer$_n18a$raw_n5e8<*1*><1> defer$_n137$raw_n60f<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*1*><2> defer$_n18a$raw_n5e8<*1*><2> defer$_n137$raw_n60f<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*2*><0> defer$_n18a$raw_n5e8<*2*><0> defer$_n137$raw_n60f<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*2*><1> defer$_n18a$raw_n5e8<*2*><1> defer$_n137$raw_n60f<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defer$_n137_n14c$true<*2*><2> defer$_n18a$raw_n5e8<*2*><2> defer$_n137$raw_n60f<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 break break$_n18a$raw_n5d2 break$_n137$raw_n627
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 choosing<*0*> choosing$_n18a$raw_n5c9<*0*> choosing$_n137$raw_n62a<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 choosing<*1*> choosing$_n18a$raw_n5c9<*1*> choosing$_n137$raw_n62a<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 choosing<*2*> choosing$_n18a$raw_n5c9<*2*> choosing$_n137$raw_n62a<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defSelK defSelK$_n18a$raw_n5d9 defSelK$_n137$raw_n62f
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defK<0> defK$_n18a$raw_n5db<0> defK$_n137$raw_n631<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defK<1> defK$_n18a$raw_n5db<1> defK$_n137$raw_n631<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defK<2> defK$_n18a$raw_n5db<2> defK$_n137$raw_n631<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n137 defKSel defKSel$_n18a$raw_n5e6 defKSel$_n137$raw_n636
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*0*><0> pc$_n137$raw_n5f7<*0*><0> pc$_n113$raw_n63a<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*0*><1> pc$_n137$raw_n5f7<*0*><1> pc$_n113$raw_n63a<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*0*><2> pc$_n137$raw_n5f7<*0*><2> pc$_n113$raw_n63a<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*0*><3> pc$_n137$raw_n5f7<*0*><3> pc$_n113$raw_n63a<*0*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*1*><0> pc$_n137$raw_n5f7<*1*><0> pc$_n113$raw_n63a<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*1*><1> pc$_n137$raw_n5f7<*1*><1> pc$_n113$raw_n63a<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*1*><2> pc$_n137$raw_n5f7<*1*><2> pc$_n113$raw_n63a<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*1*><3> pc$_n137$raw_n5f7<*1*><3> pc$_n113$raw_n63a<*1*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*2*><0> pc$_n137$raw_n5f7<*2*><0> pc$_n113$raw_n63a<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*2*><1> pc$_n137$raw_n5f7<*2*><1> pc$_n113$raw_n63a<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*2*><2> pc$_n137$raw_n5f7<*2*><2> pc$_n113$raw_n63a<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 pc$_n113_n123$true<*2*><3> pc$_n137$raw_n5f7<*2*><3> pc$_n113$raw_n63a<*2*><3>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 choosing$_n113_n118$true<*0*> choosing$_n137$raw_n62a<*0*> choosing$_n113$raw_n647<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 choosing$_n113_n118$true<*1*> choosing$_n137$raw_n62a<*1*> choosing$_n113$raw_n647<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 choosing$_n113_n118$true<*2*> choosing$_n137$raw_n62a<*2*> choosing$_n113$raw_n647<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defSel<0> defSel$_n137$raw_n5f2<0> defSel$_n113$raw_n652<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defSel<1> defSel$_n137$raw_n5f2<1> defSel$_n113$raw_n652<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defSel<2> defSel$_n137$raw_n5f2<2> defSel$_n113$raw_n652<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 break break$_n137$raw_n627 break$_n113$raw_n656
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 ticket<*0*> ticket$_n137$raw_n604<*0*> ticket$_n113$raw_n65a<*0*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 ticket<*1*> ticket$_n137$raw_n604<*1*> ticket$_n113$raw_n65a<*1*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 ticket<*2*> ticket$_n137$raw_n604<*2*> ticket$_n113$raw_n65a<*2*>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defSelK defSelK$_n137$raw_n62f defSelK$_n113$raw_n65e
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defK<0> defK$_n137$raw_n631<0> defK$_n113$raw_n660<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defK<1> defK$_n137$raw_n631<1> defK$_n113$raw_n660<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defK<2> defK$_n137$raw_n631<2> defK$_n113$raw_n660<2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 j<*0*><0> j$_n137$raw_n608<*0*><0> j$_n113$raw_n664<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 j<*0*><1> j$_n137$raw_n608<*0*><1> j$_n113$raw_n664<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 j<*1*><0> j$_n137$raw_n608<*1*><0> j$_n113$raw_n664<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 j<*1*><1> j$_n137$raw_n608<*1*><1> j$_n113$raw_n664<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 j<*2*><0> j$_n137$raw_n608<*2*><0> j$_n113$raw_n664<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 j<*2*><1> j$_n137$raw_n608<*2*><1> j$_n113$raw_n664<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defKSel defKSel$_n137$raw_n636 defKSel$_n113$raw_n66b
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*0*><0> defer$_n137$raw_n60f<*0*><0> defer$_n113$raw_n66d<*0*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*0*><1> defer$_n137$raw_n60f<*0*><1> defer$_n113$raw_n66d<*0*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*0*><2> defer$_n137$raw_n60f<*0*><2> defer$_n113$raw_n66d<*0*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*1*><0> defer$_n137$raw_n60f<*1*><0> defer$_n113$raw_n66d<*1*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*1*><1> defer$_n137$raw_n60f<*1*><1> defer$_n113$raw_n66d<*1*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*1*><2> defer$_n137$raw_n60f<*1*><2> defer$_n113$raw_n66d<*1*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*2*><0> defer$_n137$raw_n60f<*2*><0> defer$_n113$raw_n66d<*2*><0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*2*><1> defer$_n137$raw_n60f<*2*><1> defer$_n113$raw_n66d<*2*><1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n113 defer<*2*><2> defer$_n137$raw_n60f<*2*><2> defer$_n113$raw_n66d<*2*><2>
+.def 0
+1 1 - 1
+0 - 1 1
+# conflict arbitrators
+.names _n113 _n137 _n18a _n1ae _n1bf _n1c2 _n1ff _n263 _n266 _n2b3 _n31c _n31f _n36c _n677
+.def 0
+ 0 0 0 1 - - - - - - - - - 1
+ 0 0 0 1 1 1 - - - - - - - 1
+ 0 0 0 1 1 - 1 - - - - - - 1
+ 0 0 0 1 - - - 1 1 - - - - 1
+ 0 0 0 1 - - - 1 - 1 - - - 1
+ 0 0 0 1 - - - - - - 1 1 - 1
+ 0 0 0 1 - - - - - - 1 - 1 1
+.names _n677 break$_n113$raw_n656 break _n678 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n113 _n137 _n18a _n1ae _n1bf _n1c2 _n263 _n266 _n31c _n31f _n679
+.def 0
+ 0 1 - - - - - - - - 1
+ 0 1 - - - - - - - - 1
+ 0 1 - - - - - - - - 1
+ 0 1 - - - - - - - - 1
+ 0 0 0 1 1 0 - - - - 1
+ 0 0 0 1 - - 1 0 - - 1
+ 0 0 0 1 - - - - 1 0 1
+.names _n679 defSel$_n113$raw_n652<0> defSel$_n113$raw_n652<1> defSel$_n113$raw_n652<2> defSel<0> defSel<1> defSel<2> -> _n67a<0> _n67a<1> _n67a<2> 
+1 - - - - - - =defSel$_n113$raw_n652<0> =defSel$_n113$raw_n652<1> =defSel$_n113$raw_n652<2> 
+0 - - - - - - =defSel<0> =defSel<1> =defSel<2> 
+.names _n109 _n67b
+.def 0
+ 1 1
+ 0 1
+.names _n67b selReg$_n101$raw_n10d<0> selReg$_n101$raw_n10d<1> selReg<0> selReg<1> -> _n67c<0> _n67c<1> 
+1 - - - - =selReg$_n101$raw_n10d<0> =selReg$_n101$raw_n10d<1> 
+0 - - - - =selReg<0> =selReg<1> 
+.names _n113 _n137 _n18a _n1ae _n3ca _n41f _n424 _n461 _n4ca _n4cf _n67d
+.def 0
+ 1 - - - - - - - - - 1
+ 0 1 - - - - - - - - 1
+ 0 0 1 - - - - - - - 1
+ 0 0 0 1 1 - - - - - 1
+ 0 0 0 1 0 - - - - - 1
+ 0 0 0 0 - 1 1 - - - 1
+ 0 0 0 0 - 1 0 - - - 1
+ 0 0 0 0 - 0 - 1 - - 1
+ 0 0 0 0 - 0 - 0 1 1 1
+ 0 0 0 0 - 0 - 0 1 0 1
+.names _n67d pc$_n113$raw_n63a<*0*><0> pc$_n113$raw_n63a<*0*><1> pc$_n113$raw_n63a<*0*><2> pc$_n113$raw_n63a<*0*><3> pc<*0*><0> pc<*0*><1> pc<*0*><2> pc<*0*><3> -> _n67e<*0*><0> _n67e<*0*><1> _n67e<*0*><2> _n67e<*0*><3> 
+1 - - - - - - - - =pc$_n113$raw_n63a<*0*><0> =pc$_n113$raw_n63a<*0*><1> =pc$_n113$raw_n63a<*0*><2> =pc$_n113$raw_n63a<*0*><3> 
+0 - - - - - - - - =pc<*0*><0> =pc<*0*><1> =pc<*0*><2> =pc<*0*><3> 
+.names _n67d pc$_n113$raw_n63a<*1*><0> pc$_n113$raw_n63a<*1*><1> pc$_n113$raw_n63a<*1*><2> pc$_n113$raw_n63a<*1*><3> pc<*1*><0> pc<*1*><1> pc<*1*><2> pc<*1*><3> -> _n67e<*1*><0> _n67e<*1*><1> _n67e<*1*><2> _n67e<*1*><3> 
+1 - - - - - - - - =pc$_n113$raw_n63a<*1*><0> =pc$_n113$raw_n63a<*1*><1> =pc$_n113$raw_n63a<*1*><2> =pc$_n113$raw_n63a<*1*><3> 
+0 - - - - - - - - =pc<*1*><0> =pc<*1*><1> =pc<*1*><2> =pc<*1*><3> 
+.names _n67d pc$_n113$raw_n63a<*2*><0> pc$_n113$raw_n63a<*2*><1> pc$_n113$raw_n63a<*2*><2> pc$_n113$raw_n63a<*2*><3> pc<*2*><0> pc<*2*><1> pc<*2*><2> pc<*2*><3> -> _n67e<*2*><0> _n67e<*2*><1> _n67e<*2*><2> _n67e<*2*><3> 
+1 - - - - - - - - =pc$_n113$raw_n63a<*2*><0> =pc$_n113$raw_n63a<*2*><1> =pc$_n113$raw_n63a<*2*><2> =pc$_n113$raw_n63a<*2*><3> 
+0 - - - - - - - - =pc<*2*><0> =pc<*2*><1> =pc<*2*><2> =pc<*2*><3> 
+.names _n113 _n137 _n18a _n67f
+.def 0
+ 1 - - 1
+ 0 0 1 1
+.names _n67f choosing$_n113$raw_n647<*0*> choosing<*0*> _n680<*0*> 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n67f choosing$_n113$raw_n647<*1*> choosing<*1*> _n680<*1*> 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n67f choosing$_n113$raw_n647<*2*> choosing<*2*> _n680<*2*> 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n113 _n137 _n18a _n1ae _n1bf _n263 _n31c _n681
+.def 0
+ 0 0 0 1 1 - - 1
+ 0 0 0 1 - 1 - 1
+ 0 0 0 1 - - 1 1
+.names _n681 defSelK$_n113$raw_n65e defSelK _n682 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n113 _n137 _n18a _n1ae _n41f _n461 _n683
+.def 0
+ 0 1 - - - - 1
+ 0 0 0 0 0 1 1
+.names _n683 ticket$_n113$raw_n65a<*0*> ticket<*0*> _n684<*0*> 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n683 ticket$_n113$raw_n65a<*1*> ticket<*1*> _n684<*1*> 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n683 ticket$_n113$raw_n65a<*2*> ticket<*2*> _n684<*2*> 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names _n113 _n137 _n18a _n1ae _n1bf _n263 _n31c _n41f _n461 _n685
+.def 0
+ 0 0 0 1 1 - - - - 1
+ 0 0 0 1 - 1 - - - 1
+ 0 0 0 1 - - 1 - - 1
+ 0 0 0 0 - - - 0 1 1
+ 0 0 0 0 - - - 0 1 1
+ 0 0 0 0 - - - 0 1 1
+.names _n685 defK$_n113$raw_n660<0> defK$_n113$raw_n660<1> defK$_n113$raw_n660<2> defK<0> defK<1> defK<2> -> _n686<0> _n686<1> _n686<2> 
+1 - - - - - - =defK$_n113$raw_n660<0> =defK$_n113$raw_n660<1> =defK$_n113$raw_n660<2> 
+0 - - - - - - =defK<0> =defK<1> =defK<2> 
+.names _n113 _n137 _n18a _n1ae _n1bf _n1c2 _n1ff _n263 _n266 _n2b3 _n31c _n31f _n36c _n687
+.def 0
+ 0 1 - - - - - - - - - - - 1
+ 0 0 0 1 1 1 - - - - - - - 1
+ 0 0 0 1 1 - 1 - - - - - - 1
+ 0 0 0 1 - - - 1 1 - - - - 1
+ 0 0 0 1 - - - 1 - 1 - - - 1
+ 0 0 0 1 - - - - - - 1 1 - 1
+ 0 0 0 1 - - - - - - 1 - 1 1
+.names _n687 j$_n113$raw_n664<*0*><0> j$_n113$raw_n664<*0*><1> j<*0*><0> j<*0*><1> -> _n688<*0*><0> _n688<*0*><1> 
+1 - - - - =j$_n113$raw_n664<*0*><0> =j$_n113$raw_n664<*0*><1> 
+0 - - - - =j<*0*><0> =j<*0*><1> 
+.names _n687 j$_n113$raw_n664<*1*><0> j$_n113$raw_n664<*1*><1> j<*1*><0> j<*1*><1> -> _n688<*1*><0> _n688<*1*><1> 
+1 - - - - =j$_n113$raw_n664<*1*><0> =j$_n113$raw_n664<*1*><1> 
+0 - - - - =j<*1*><0> =j<*1*><1> 
+.names _n687 j$_n113$raw_n664<*2*><0> j$_n113$raw_n664<*2*><1> j<*2*><0> j<*2*><1> -> _n688<*2*><0> _n688<*2*><1> 
+1 - - - - =j$_n113$raw_n664<*2*><0> =j$_n113$raw_n664<*2*><1> 
+0 - - - - =j<*2*><0> =j<*2*><1> 
+.names _n113 _n137 _n18a _n1ae _n1bf _n263 _n31c _n689
+.def 0
+ 0 0 0 1 1 - - 1
+ 0 0 0 1 - 1 - 1
+ 0 0 0 1 - - 1 1
+.names _n689 defKSel$_n113$raw_n66b defKSel _n68a 
+1 0 - 0
+1 1 - 1
+0 - 0 0
+0 - 1 1
+.names k<0> k<1> -> _n68b<0> _n68b<1> 
+- - =k<0> =k<1> 
+.names _n113 _n137 _n18a _n1ae _n41f _n461 _n68c
+.def 0
+ 0 1 - - - - 1
+ 0 0 0 0 0 1 1
+ 0 0 0 0 0 1 1
+ 0 0 0 0 0 1 1
+.names _n68c defer$_n113$raw_n66d<*0*><0> defer$_n113$raw_n66d<*0*><1> defer$_n113$raw_n66d<*0*><2> defer<*0*><0> defer<*0*><1> defer<*0*><2> -> _n68d<*0*><0> _n68d<*0*><1> _n68d<*0*><2> 
+1 - - - - - - =defer$_n113$raw_n66d<*0*><0> =defer$_n113$raw_n66d<*0*><1> =defer$_n113$raw_n66d<*0*><2> 
+0 - - - - - - =defer<*0*><0> =defer<*0*><1> =defer<*0*><2> 
+.names _n68c defer$_n113$raw_n66d<*1*><0> defer$_n113$raw_n66d<*1*><1> defer$_n113$raw_n66d<*1*><2> defer<*1*><0> defer<*1*><1> defer<*1*><2> -> _n68d<*1*><0> _n68d<*1*><1> _n68d<*1*><2> 
+1 - - - - - - =defer$_n113$raw_n66d<*1*><0> =defer$_n113$raw_n66d<*1*><1> =defer$_n113$raw_n66d<*1*><2> 
+0 - - - - - - =defer<*1*><0> =defer<*1*><1> =defer<*1*><2> 
+.names _n68c defer$_n113$raw_n66d<*2*><0> defer$_n113$raw_n66d<*2*><1> defer$_n113$raw_n66d<*2*><2> defer<*2*><0> defer<*2*><1> defer<*2*><2> -> _n68d<*2*><0> _n68d<*2*><1> _n68d<*2*><2> 
+1 - - - - - - =defer$_n113$raw_n66d<*2*><0> =defer$_n113$raw_n66d<*2*><1> =defer$_n113$raw_n66d<*2*><2> 
+0 - - - - - - =defer<*2*><0> =defer<*2*><1> =defer<*2*><2> 
+# non-blocking assignments 
+# latches
+.r selReg$raw_nfa<0> selReg<0>
+.def 0
+1 1
+.r selReg$raw_nfa<1> selReg<1>
+.def 0
+1 1
+.latch _n67c<0> selReg<0>
+.latch _n67c<1> selReg<1>
+.r defSel$raw_nfb<0> defSel<0>
+.def 0
+1 1
+.r defSel$raw_nfb<1> defSel<1>
+.def 0
+1 1
+.r defSel$raw_nfb<2> defSel<2>
+.def 0
+1 1
+.latch _n67a<0> defSel<0>
+.latch _n67a<1> defSel<1>
+.latch _n67a<2> defSel<2>
+.r break$raw_nff break
+0 0
+1 1
+.latch _n678 break
+.r choosing$raw_nc9<*0*> choosing<*0*>
+.def 0
+1 1
+.r choosing$raw_nc9<*1*> choosing<*1*>
+.def 0
+1 1
+.r choosing$raw_nc9<*2*> choosing<*2*>
+.def 0
+1 1
+.latch _n680<*0*> choosing<*0*>
+.latch _n680<*1*> choosing<*1*>
+.latch _n680<*2*> choosing<*2*>
+.r pc$raw_nd5<*0*><0> pc<*0*><0>
+.def 0
+1 1
+.r pc$raw_nd5<*1*><0> pc<*1*><0>
+.def 0
+1 1
+.r pc$raw_nd5<*2*><0> pc<*2*><0>
+.def 0
+1 1
+.r pc$raw_nd5<*0*><1> pc<*0*><1>
+.def 0
+1 1
+.r pc$raw_nd5<*1*><1> pc<*1*><1>
+.def 0
+1 1
+.r pc$raw_nd5<*2*><1> pc<*2*><1>
+.def 0
+1 1
+.r pc$raw_nd5<*0*><2> pc<*0*><2>
+.def 0
+1 1
+.r pc$raw_nd5<*1*><2> pc<*1*><2>
+.def 0
+1 1
+.r pc$raw_nd5<*2*><2> pc<*2*><2>
+.def 0
+1 1
+.r pc$raw_nd5<*0*><3> pc<*0*><3>
+.def 0
+1 1
+.r pc$raw_nd5<*1*><3> pc<*1*><3>
+.def 0
+1 1
+.r pc$raw_nd5<*2*><3> pc<*2*><3>
+.def 0
+1 1
+.latch _n67e<*0*><0> pc<*0*><0>
+.latch _n67e<*1*><0> pc<*1*><0>
+.latch _n67e<*2*><0> pc<*2*><0>
+.latch _n67e<*0*><1> pc<*0*><1>
+.latch _n67e<*1*><1> pc<*1*><1>
+.latch _n67e<*2*><1> pc<*2*><1>
+.latch _n67e<*0*><2> pc<*0*><2>
+.latch _n67e<*1*><2> pc<*1*><2>
+.latch _n67e<*2*><2> pc<*2*><2>
+.latch _n67e<*0*><3> pc<*0*><3>
+.latch _n67e<*1*><3> pc<*1*><3>
+.latch _n67e<*2*><3> pc<*2*><3>
+.r ticket$raw_nab<*0*> ticket<*0*>
+.def 0
+1 1
+.r ticket$raw_nab<*1*> ticket<*1*>
+.def 0
+1 1
+.r ticket$raw_nab<*2*> ticket<*2*>
+.def 0
+1 1
+.latch _n684<*0*> ticket<*0*>
+.latch _n684<*1*> ticket<*1*>
+.latch _n684<*2*> ticket<*2*>
+.r defSelK$raw_nfd defSelK
+0 0
+1 1
+.latch _n682 defSelK
+.r defK$raw_nfc<0> defK<0>
+.def 0
+1 1
+.r defK$raw_nfc<1> defK<1>
+.def 0
+1 1
+.r defK$raw_nfc<2> defK<2>
+.def 0
+1 1
+.latch _n686<0> defK<0>
+.latch _n686<1> defK<1>
+.latch _n686<2> defK<2>
+.r j$raw_nea<*0*><0> j<*0*><0>
+.def 0
+1 1
+.r j$raw_nea<*1*><0> j<*1*><0>
+.def 0
+1 1
+.r j$raw_nea<*2*><0> j<*2*><0>
+.def 0
+1 1
+.r j$raw_nea<*0*><1> j<*0*><1>
+.def 0
+1 1
+.r j$raw_nea<*1*><1> j<*1*><1>
+.def 0
+1 1
+.r j$raw_nea<*2*><1> j<*2*><1>
+.def 0
+1 1
+.latch _n688<*0*><0> j<*0*><0>
+.latch _n688<*1*><0> j<*1*><0>
+.latch _n688<*2*><0> j<*2*><0>
+.latch _n688<*0*><1> j<*0*><1>
+.latch _n688<*1*><1> j<*1*><1>
+.latch _n688<*2*><1> j<*2*><1>
+.r k$raw_nf9<0> k<0>
+.def 0
+1 1
+.r k$raw_nf9<1> k<1>
+.def 0
+1 1
+.latch _n68b<0> k<0>
+.latch _n68b<1> k<1>
+.r defKSel$raw_nfe defKSel
+0 0
+1 1
+.latch _n68a defKSel
+.r defer$raw_nb7<*0*><0> defer<*0*><0>
+.def 0
+1 1
+.r defer$raw_nb7<*1*><0> defer<*1*><0>
+.def 0
+1 1
+.r defer$raw_nb7<*2*><0> defer<*2*><0>
+.def 0
+1 1
+.r defer$raw_nb7<*0*><1> defer<*0*><1>
+.def 0
+1 1
+.r defer$raw_nb7<*1*><1> defer<*1*><1>
+.def 0
+1 1
+.r defer$raw_nb7<*2*><1> defer<*2*><1>
+.def 0
+1 1
+.r defer$raw_nb7<*0*><2> defer<*0*><2>
+.def 0
+1 1
+.r defer$raw_nb7<*1*><2> defer<*1*><2>
+.def 0
+1 1
+.r defer$raw_nb7<*2*><2> defer<*2*><2>
+.def 0
+1 1
+.latch _n68d<*0*><0> defer<*0*><0>
+.latch _n68d<*1*><0> defer<*1*><0>
+.latch _n68d<*2*><0> defer<*2*><0>
+.latch _n68d<*0*><1> defer<*0*><1>
+.latch _n68d<*1*><1> defer<*1*><1>
+.latch _n68d<*2*><1> defer<*2*><1>
+.latch _n68d<*0*><2> defer<*0*><2>
+.latch _n68d<*1*><2> defer<*1*><2>
+.latch _n68d<*2*><2> defer<*2*><2>
+# quasi-continuous assignment
+.end
+.model extract 
+# I/O ports
+.outputs extract<0> 
+.inputs index<0> index<1> 
+.inputs in<0> in<1> in<2> 
+.names _n68f<0>
+0
+.names _n68f<1>
+0
+# index  == 0
+.names index<0> _n68f<0> _n690<0>
+.def 0
+0 1 1
+1 0 1
+.names index<1> _n68f<1> _n690<1>
+.def 0
+0 1 1
+1 0 1
+.names _n690<0> _n690<1> _n691
+.def 1
+0 0 0
+.names _n691 _n68e
+0 1  
+1 0  
+.names _n68e _n692
+- =_n68e
+# extract  = in [0]
+.names in<0> extract$_n68e_n693$true<0>
+- =in<0>
+.names _n695<0>
+1
+.names _n695<1>
+0
+# index  == 1
+.names index<0> _n695<0> _n696<0>
+.def 0
+0 1 1
+1 0 1
+.names index<1> _n695<1> _n696<1>
+.def 0
+0 1 1
+1 0 1
+.names _n696<0> _n696<1> _n697
+.def 1
+0 0 0
+.names _n697 _n694
+0 1  
+1 0  
+.names _n694 _n698
+- =_n694
+# extract  = in [1]
+.names in<1> extract$_n694_n699$true<0>
+- =in<1>
+.names _n69b<0>
+0
+.names _n69b<1>
+1
+# index  == 2
+.names index<0> _n69b<0> _n69c<0>
+.def 0
+0 1 1
+1 0 1
+.names index<1> _n69b<1> _n69c<1>
+.def 0
+0 1 1
+1 0 1
+.names _n69c<0> _n69c<1> _n69d
+.def 1
+0 0 0
+.names _n69d _n69a
+0 1  
+1 0  
+.names _n69a _n69e
+- =_n69a
+# extract  = in [2]
+.names in<2> extract$_n69a_n69f$true<0>
+- =in<2>
+# extract  = 0
+.names extract$_n69a_n6a0$false<0>
+0
+# if/else (index  == 2)
+.names _n69a extract$_n69a_n69f$true<0> extract$_n69a_n6a0$false<0> extract$_n69a$raw_n6a2<0>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (index  == 1)
+.names _n694 extract$_n694_n699$true<0> extract$_n69a$raw_n6a2<0> extract$_n694$raw_n6a7<0>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (index  == 0)
+.names _n68e extract$_n68e_n693$true<0> extract$_n694$raw_n6a7<0> extract$_n68e$raw_n6ac<0>
+.def 0
+1 1 - 1
+0 - 1 1
+# conflict arbitrators
+.names extract$_n68e$raw_n6ac<0>  extract<0>
+- =extract$_n68e$raw_n6ac<0>
+.end
+
+
+.model clearBit 
+# I/O ports
+.outputs clearBit<0> clearBit<1> clearBit<2> 
+.inputs index<0> index<1> 
+.inputs in<0> in<1> in<2> 
+# clearBit  = in 
+.names in<0> clearBit$raw_n6b0<0>
+- =in<0>
+.names in<1> clearBit$raw_n6b0<1>
+- =in<1>
+.names in<2> clearBit$raw_n6b0<2>
+- =in<2>
+.names _n6b2<0>
+0
+.names _n6b2<1>
+0
+# index  == 0
+.names index<0> _n6b2<0> _n6b3<0>
+.def 0
+0 1 1
+1 0 1
+.names index<1> _n6b2<1> _n6b3<1>
+.def 0
+0 1 1
+1 0 1
+.names _n6b3<0> _n6b3<1> _n6b4
+.def 1
+0 0 0
+.names _n6b4 _n6b1
+0 1  
+1 0  
+.names _n6b1 _n6b5
+- =_n6b1
+# clearBit [0] = 0
+.names clearBit$_n6b1_n6b6$true<0>
+0
+.names clearBit$raw_n6b0<1> clearBit$_n6b1_n6b6$true<1>
+- =clearBit$raw_n6b0<1>
+.names clearBit$raw_n6b0<2> clearBit$_n6b1_n6b6$true<2>
+- =clearBit$raw_n6b0<2>
+.names _n6b8<0>
+1
+.names _n6b8<1>
+0
+# index  == 1
+.names index<0> _n6b8<0> _n6b9<0>
+.def 0
+0 1 1
+1 0 1
+.names index<1> _n6b8<1> _n6b9<1>
+.def 0
+0 1 1
+1 0 1
+.names _n6b9<0> _n6b9<1> _n6ba
+.def 1
+0 0 0
+.names _n6ba _n6b7
+0 1  
+1 0  
+.names _n6b7 _n6bb
+- =_n6b7
+# clearBit [1] = 0
+.names clearBit$_n6b7_n6bc$true<1>
+0
+.names clearBit$raw_n6b0<0> clearBit$_n6b7_n6bc$true<0>
+- =clearBit$raw_n6b0<0>
+.names clearBit$raw_n6b0<2> clearBit$_n6b7_n6bc$true<2>
+- =clearBit$raw_n6b0<2>
+.names _n6be<0>
+0
+.names _n6be<1>
+1
+# index  == 2
+.names index<0> _n6be<0> _n6bf<0>
+.def 0
+0 1 1
+1 0 1
+.names index<1> _n6be<1> _n6bf<1>
+.def 0
+0 1 1
+1 0 1
+.names _n6bf<0> _n6bf<1> _n6c0
+.def 1
+0 0 0
+.names _n6c0 _n6bd
+0 1  
+1 0  
+.names _n6bd _n6c1
+- =_n6bd
+# clearBit [2] = 0
+.names clearBit$_n6bd_n6c2$true<2>
+0
+.names clearBit$raw_n6b0<0> clearBit$_n6bd_n6c2$true<0>
+- =clearBit$raw_n6b0<0>
+.names clearBit$raw_n6b0<1> clearBit$_n6bd_n6c2$true<1>
+- =clearBit$raw_n6b0<1>
+# if/else (index  == 2)
+.names _n6bd clearBit$_n6bd_n6c2$true<0> clearBit$raw_n6b0<0> clearBit$_n6bd$raw_n6c3<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6bd clearBit$_n6bd_n6c2$true<1> clearBit$raw_n6b0<1> clearBit$_n6bd$raw_n6c3<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6bd clearBit$_n6bd_n6c2$true<2> clearBit$raw_n6b0<2> clearBit$_n6bd$raw_n6c3<2>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (index  == 1)
+.names _n6b7 clearBit$_n6b7_n6bc$true<0> clearBit$_n6bd$raw_n6c3<0> clearBit$_n6b7$raw_n6ca<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6b7 clearBit$_n6b7_n6bc$true<1> clearBit$_n6bd$raw_n6c3<1> clearBit$_n6b7$raw_n6ca<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6b7 clearBit$_n6b7_n6bc$true<2> clearBit$_n6bd$raw_n6c3<2> clearBit$_n6b7$raw_n6ca<2>
+.def 0
+1 1 - 1
+0 - 1 1
+# if/else (index  == 0)
+.names _n6b1 clearBit$_n6b1_n6b6$true<0> clearBit$_n6b7$raw_n6ca<0> clearBit$_n6b1$raw_n6d1<0>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6b1 clearBit$_n6b1_n6b6$true<1> clearBit$_n6b7$raw_n6ca<1> clearBit$_n6b1$raw_n6d1<1>
+.def 0
+1 1 - 1
+0 - 1 1
+.names _n6b1 clearBit$_n6b1_n6b6$true<2> clearBit$_n6b7$raw_n6ca<2> clearBit$_n6b1$raw_n6d1<2>
+.def 0
+1 1 - 1
+0 - 1 1
+# conflict arbitrators
+.names clearBit$_n6b1$raw_n6d1<0>  clearBit<0>
+- =clearBit$_n6b1$raw_n6d1<0>
+.names clearBit$_n6b1$raw_n6d1<1>  clearBit<1>
+- =clearBit$_n6b1$raw_n6d1<1>
+.names clearBit$_n6b1$raw_n6d1<2>  clearBit<2>
+- =clearBit$_n6b1$raw_n6d1<2>
+.end
+
+

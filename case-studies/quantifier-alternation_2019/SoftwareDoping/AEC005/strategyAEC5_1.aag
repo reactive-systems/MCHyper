@@ -1,0 +1,45 @@
+aag 0 0 0 22 0
+0
+1
+0
+1
+0
+1
+0
+0
+1
+0
+0
+0
+0
+1
+0
+1
+0
+1
+0
+1
+0
+1
+o0 throttle@0_0
+o1 throttle@1_0
+o2 throttle@2_0
+o3 throttle@3_0
+o4 throttle@4_0
+o5 NOx@0_0
+o6 NOx@1_0
+o7 NOx@2_0
+o8 NOx@3_0
+o9 NOx@4_0
+o10 NOx@5_0
+o11 throttle@0_1
+o12 throttle@1_1
+o13 throttle@2_1
+o14 throttle@3_1
+o15 throttle@4_1
+o16 NOx@0_1
+o17 NOx@1_1
+o18 NOx@2_1
+o19 NOx@3_1
+o20 NOx@4_1
+o21 NOx@5_1

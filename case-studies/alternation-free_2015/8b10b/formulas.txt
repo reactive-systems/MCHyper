@@ -1,0 +1,282 @@
+
+Experiment 8b10b_1: Different outputs means that some input data was different. Finds a CE within less than a second (because of the reset logic). experiment1.cex
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (F (Neq (AP \"enc_8b10b.JO\" 0) (AP \"enc_8b10b.JO\" 1))) \
+        (F (Neg \
+            (And (Eq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                 (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) \
+            ))))))) ) ) ))" ./8b10b_enc.aag -pdr -cex
+
+Experiment 8b10b_2: Exclude resets and control inputs. Property proven in about a second. See experiment2.inv.
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (F (Neq (AP \"enc_8b10b.JO\" 0) (AP \"enc_8b10b.JO\" 1))) \
+             (G (And (Neg (AP \"enc_8b10b.KI\" 0)) \
+                (And (Neg (AP \"enc_8b10b.KI\" 1)) \
+                (And (Neg (AP \"enc_8b10b.RESET\" 0)) \
+                     (Neg (AP \"enc_8b10b.RESET\" 1)) ))))) \
+        (F (Neg \
+            (And (Eq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+            (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                 (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) \
+            ))))))) ) ) ))" ./8b10b_enc.aag -pdr -cex
+
+
+Experiment 8b10b_3: Checking for error resistance against a single bit-flip, which should not be fulfilled. Finds a CE: experiment3.cex
+
+./../../../mchyper.py -f "Exists (Exists \
+    (And \
+        (Until \
+            (    And (Eq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                     (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) ))))))) \
+            (And    (And (Neq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                         (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) ))))))) \
+                (X (G \
+                    (And (Eq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                         (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) ))))))) )) \
+                ) \
+            ) \
+        (G  (And (Eq (AP \"enc_8b10b.AO\" 0) (AP \"enc_8b10b.AO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.BO\" 0) (AP \"enc_8b10b.BO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.CO\" 0) (AP \"enc_8b10b.CO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.DO\" 0) (AP \"enc_8b10b.DO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.EO\" 0) (AP \"enc_8b10b.EO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.FO\" 0) (AP \"enc_8b10b.FO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.GO\" 0) (AP \"enc_8b10b.GO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.HO\" 0) (AP \"enc_8b10b.HO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.IO\" 0) (AP \"enc_8b10b.IO\" 1)) \
+                 (Eq (AP \"enc_8b10b.JO\" 0) (AP \"enc_8b10b.JO\" 1)) ))))))))) ) ))" \
+    ./8b10b_enc.aag -pdr -cex
+    
+    
+Experiment not used in the paper: We additionally require that the reset signal is not used. CE still possible.
+
+./../../../mchyper.py -f "Exists (Exists \
+    (And (G (And (Neg (AP \"enc_8b10b.RESET\" 0)) \
+                 (Neg (AP \"enc_8b10b.RESET\" 1)) )) \
+    (And 
+        (Until \
+            (    And (Eq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+                (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                     (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) ))))))) \
+            (And    (And (Neq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                         (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) ))))))) \
+                (X (G \
+                    (And (Eq (AP \"enc_8b10b.AI\" 0) (AP \"enc_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.BI\" 0) (AP \"enc_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.CI\" 0) (AP \"enc_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.DI\" 0) (AP \"enc_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.EI\" 0) (AP \"enc_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.FI\" 0) (AP \"enc_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"enc_8b10b.GI\" 0) (AP \"enc_8b10b.GI\" 1)) \
+                         (Eq (AP \"enc_8b10b.HI\" 0) (AP \"enc_8b10b.HI\" 1)) ))))))) )) \
+                ) \
+            ) \
+        (G  (And (Eq (AP \"enc_8b10b.AO\" 0) (AP \"enc_8b10b.AO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.BO\" 0) (AP \"enc_8b10b.BO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.CO\" 0) (AP \"enc_8b10b.CO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.DO\" 0) (AP \"enc_8b10b.DO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.EO\" 0) (AP \"enc_8b10b.EO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.FO\" 0) (AP \"enc_8b10b.FO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.GO\" 0) (AP \"enc_8b10b.GO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.HO\" 0) (AP \"enc_8b10b.HO\" 1)) \
+            (And (Eq (AP \"enc_8b10b.IO\" 0) (AP \"enc_8b10b.IO\" 1)) \
+                 (Eq (AP \"enc_8b10b.JO\" 0) (AP \"enc_8b10b.JO\" 1)) ))))))))) )) ))" \
+    ./8b10b_enc.aag -pdr -cex
+
+
+Not used in the paper: Does it hold that all input pairs with hamming distance 1 (differing in input A) produce the same output word? Finds a counterexample.
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (G (And (Neg (AP \"dec_8b10b.RESET\" 0)) \
+                  (Neg (AP \"dec_8b10b.RESET\" 1)) )) \
+          (Until \
+            (    And (Eq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                     (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) \
+            (And    (And (Neq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                         (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) \
+                (X (G \
+                    (And (Eq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                         (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) )) \
+                ) \
+            ) \
+          ) \
+        (G  (And (Eq (AP \"dec_8b10b.AO\" 0) (AP \"dec_8b10b.AO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.BO\" 0) (AP \"dec_8b10b.BO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.CO\" 0) (AP \"dec_8b10b.CO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.DO\" 0) (AP \"dec_8b10b.DO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.EO\" 0) (AP \"dec_8b10b.EO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.FO\" 0) (AP \"dec_8b10b.FO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.GO\" 0) (AP \"dec_8b10b.GO\" 1)) \
+                 (Eq (AP \"dec_8b10b.HO\" 0) (AP \"dec_8b10b.HO\" 1)) \
+            ))))))) ) ))" ./8b10b_dec.aag -pdr -cex
+
+
+Experiment 8b10b_4: Is there such a pair of paths that have hamming distance 1 inputs, but map to the same output nevertheless? No, see experiment4.inv.
+
+./../../../mchyper.py -f "Exists (Exists \
+    (And \
+        (And (G (And (Neg (AP \"dec_8b10b.RESET\" 0)) \
+                  (Neg (AP \"dec_8b10b.RESET\" 1)) )) \
+          (Until \
+            (    And (Eq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                     (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) \
+            (And    (And (Neq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                         (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) \
+                (X (G \
+                    (And (Eq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                         (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) )) \
+                ) \
+            ) \
+          ) \
+        (G  (And (Eq (AP \"dec_8b10b.AO\" 0) (AP \"dec_8b10b.AO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.BO\" 0) (AP \"dec_8b10b.BO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.CO\" 0) (AP \"dec_8b10b.CO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.DO\" 0) (AP \"dec_8b10b.DO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.EO\" 0) (AP \"dec_8b10b.EO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.FO\" 0) (AP \"dec_8b10b.FO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.GO\" 0) (AP \"dec_8b10b.GO\" 1)) \
+                 (Eq (AP \"dec_8b10b.HO\" 0) (AP \"dec_8b10b.HO\" 1)) \
+            ))))))) ) ))" ./8b10b_dec.aag -pdr -cex
+
+
+This experiment was not used in the paper: If inputs are the same, outputs should agree as well. Egual to input-deterministy. 
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (Const True) \
+        (And (G (And (Neg (AP \"dec_8b10b.RESET\" 0)) \
+                  (Neg (AP \"dec_8b10b.RESET\" 1)) )) \
+          (Until \
+            (    And (Eq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                     (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) \
+            (And    (And (Neq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                         (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) \
+                (X (G \
+                    (And (Eq (AP \"dec_8b10b.AI\" 0) (AP \"dec_8b10b.AI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.BI\" 0) (AP \"dec_8b10b.BI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.CI\" 0) (AP \"dec_8b10b.CI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.DI\" 0) (AP \"dec_8b10b.DI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.EI\" 0) (AP \"dec_8b10b.EI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.FI\" 0) (AP \"dec_8b10b.FI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.GI\" 0) (AP \"dec_8b10b.GI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.HI\" 0) (AP \"dec_8b10b.HI\" 1)) \
+                    (And (Eq (AP \"dec_8b10b.II\" 0) (AP \"dec_8b10b.II\" 1)) \
+                         (Eq (AP \"dec_8b10b.JI\" 0) (AP \"dec_8b10b.JI\" 1)) ))))))))) )) \
+                ) \
+            ) \
+          )) \
+        (G  (And (Eq (AP \"dec_8b10b.AO\" 0) (AP \"dec_8b10b.AO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.BO\" 0) (AP \"dec_8b10b.BO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.CO\" 0) (AP \"dec_8b10b.CO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.DO\" 0) (AP \"dec_8b10b.DO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.EO\" 0) (AP \"dec_8b10b.EO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.FO\" 0) (AP \"dec_8b10b.FO\" 1)) \
+            (And (Eq (AP \"dec_8b10b.GO\" 0) (AP \"dec_8b10b.GO\" 1)) \
+                 (Eq (AP \"dec_8b10b.HO\" 0) (AP \"dec_8b10b.HO\" 1)) \
+            ))))))) ) ))" ./8b10b_dec.aag -pdr -cex

@@ -1,0 +1,437 @@
+
+
+Experiment IF1: Core input for addressing of slaves does not affect sda or scl (output to slave) - false. 
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G \
+            (SameInputsExcept 0 1 [\"i2c_master_top.wb_adr_i[0]\",\"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+        ) \
+        (G \
+            (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\",\"i2c_master_top.scl_pad_o\",\"i2c_master_top.scl_padoen_o\"]) \
+        ) \
+        ))" ./i2c.aag -pdr -cex
+
+
+Experiment IF2: Core data does not affect sda or scl (output to slave) - false. 
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G \
+            (SameInputsExcept 0 1 [\"i2c_master_top.wb_dat_i[7]\",\"i2c_master_top.wb_dat_i[0]\",\"i2c_master_top.wb_dat_i[1]\", \
+            \"i2c_master_top.wb_dat_i[2]\",\"i2c_master_top.wb_dat_i[3]\",\"i2c_master_top.wb_dat_i[4]\", \
+            \"i2c_master_top.wb_dat_i[5]\",\"i2c_master_top.wb_dat_i[6]\",\"i2c_master_top.wb_dat_i[7]\"]) \
+        ) \
+        (G \
+            (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\",\"i2c_master_top.scl_pad_o\",\"i2c_master_top.scl_padoen_o\"]) \
+        ) \
+        ))" ./i2c.aag -pdr -cex
+        
+
+
+Experiment IF3: Core data can be visible on the bus when the write enable is not set. Nope! 
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And \
+            (G \
+                (SameInputsExcept 0 1 [\"i2c_master_top.wb_dat_i[0]\",\"i2c_master_top.wb_dat_i[1]\", \
+                \"i2c_master_top.wb_dat_i[2]\",\"i2c_master_top.wb_dat_i[3]\",\"i2c_master_top.wb_dat_i[4]\", \
+                \"i2c_master_top.wb_dat_i[5]\",\"i2c_master_top.wb_dat_i[6]\",\"i2c_master_top.wb_dat_i[7]\"]) \
+            ) \
+            (G (Neg (AP \"i2c_master_top.wb_we_i\" 0)))
+        ) \
+        (G \
+            (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\",\"i2c_master_top.scl_pad_o\",\"i2c_master_top.scl_padoen_o\"]) \
+        ) \
+        ))" ./i2c.aag -pdr -cex        
+
+
+Experiment IF4: Slaves cannot affect the data output to core. false. 
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G \
+            (SameInputsExcept 0 1 [\"i2c_master_top.sda_pad_i\",\"i2c_master_top.scl_pad_i\"]) \
+        ) \
+        (G \
+            (EqualOn 0 1 [\"i2c_master_top.wb_dat_o[7]\",\"i2c_master_top.wb_dat_o[0]\",\"i2c_master_top.wb_dat_o[1]\", \
+            \"i2c_master_top.wb_dat_o[2]\",\"i2c_master_top.wb_dat_o[3]\",\"i2c_master_top.wb_dat_o[4]\", \
+            \"i2c_master_top.wb_dat_o[5]\",\"i2c_master_top.wb_dat_o[6]\",\"i2c_master_top.wb_dat_o[7]\"]) \
+        ) \
+        ))" ./i2c.aag -pdr -cex
+        
+
+Experiment IF5: Can data output be influenced by slave input that is sent when the master sends data. Note that this is a branching time property, due to statement requiring the equality on states. Information flow is still possible. 
+
+./../../../mchyper.py -f "Forall (Forall \
+    (G (Implies \
+         (AP \"i2c_master_top.scl_padoen_o\" 0) \
+         (Implies \
+                (And (SameState 0 1) \
+                (And (G (SameInputsExcept 0 1 [\"i2c_master_top.sda_pad_i\"])) \
+                     (X (G (SameInputsExcept 0 1 []))) \
+                )) \
+                (G (EqualOn 0 1 [\"i2c_master_top.wb_dat_o[7]\",\"i2c_master_top.wb_dat_o[0]\",
+                    \"i2c_master_top.wb_dat_o[1]\",\"i2c_master_top.wb_dat_o[2]\",
+                    \"i2c_master_top.wb_dat_o[3]\",\"i2c_master_top.wb_dat_o[4]\", \
+                    \"i2c_master_top.wb_dat_o[5]\",\"i2c_master_top.wb_dat_o[6]\",
+                    \"i2c_master_top.wb_dat_o[7]\"]) \
+                ) \
+            ) \
+    )))" ./i2c.aag -pdr -cex
+        
+        
+Experiment IF6. SDA input does not affect sda output. false!
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G \
+            (SameInputsExcept 0 1 [\"i2c_master_top.sda_pad_i\",\"i2c_master_top.scl_pad_i\"]) \
+        ) \
+        (G \
+            (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\",\"i2c_master_top.scl_pad_o\",\"i2c_master_top.scl_padoen_o\"]) \
+        ) \
+        ))" ./i2c.aag -pdr -cex
+        
+
+Experiment IF7: Can input from the core affect the slaves in a future beyond any bound?
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G (SameInputsExcept 0 1 [\"i2c_master_top.wb_dat_i[0]\",\"i2c_master_top.wb_dat_i[1]\", \
+                \"i2c_master_top.wb_dat_i[2]\",\"i2c_master_top.wb_dat_i[3]\",\"i2c_master_top.wb_dat_i[4]\", \
+                \"i2c_master_top.wb_dat_i[5]\",\"i2c_master_top.wb_dat_i[6]\",\"i2c_master_top.wb_dat_i[7]\"])) \
+        (G (Implies \
+            (G (SameInputsExcept 0 1 [])) \
+            (F (G \
+                (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\",\"i2c_master_top.scl_pad_o\",\"i2c_master_top.scl_padoen_o\"]) \
+            )) \
+        ) \
+    )))" ./i2c.aag -pdr -cex
+
+
+
+Experiment IF8: Can input from slaves have an effect on the output to the core beyond any time bound?
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G (SameInputsExcept 0 1 [\"i2c_master_top.sda_pad_i\",\"i2c_master_top.scl_pad_i\"])) \
+        (G (Implies \
+            (G (SameInputsExcept 0 1 [])) \
+            (F (G \
+                (EqualOn 0 1 [\"i2c_master_top.wb_dat_o[0]\",\"i2c_master_top.wb_dat_o[1]\", \
+                \"i2c_master_top.wb_dat_o[2]\",\"i2c_master_top.wb_dat_o[3]\",\"i2c_master_top.wb_dat_o[4]\", \
+                \"i2c_master_top.wb_dat_o[5]\",\"i2c_master_top.wb_dat_o[6]\",\"i2c_master_top.wb_dat_o[7]\"]) \
+            )) \
+        ) \
+    )))" ./i2c.aag -pdr -cex
+
+
+Experiment [Not used in the paper]: Quantitative Information. 2 bit can flow from from controller address to bus
+
+
+./../../../mchyper.py -f "Forall (Forall (Forall (Forall \
+    (Implies \
+        (G \
+            (And (SameInputsExcept 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (SameInputsExcept 0 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                 (SameInputsExcept 0 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            )) \
+        ) \
+            (Or (G (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+                (G (EqualOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            ))))) \
+        ))))" ./i2c.aag -pdr -cex
+        
+Experiment [Not used in the paper] (QNI1): Quantitative Information. 3 bit can flow from from address to bus    ?/548.39/38.52
+        
+./../../../mchyper.py -f "Forall (Forall (Forall (Forall (Forall (Forall (Forall (Forall \
+    (Implies \
+        (G \
+            (And (SameInputsExcept 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (SameInputsExcept 0 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (SameInputsExcept 0 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (SameInputsExcept 0 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (SameInputsExcept 0 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (SameInputsExcept 0 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                 (SameInputsExcept 0 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            )))))) \
+        ) \
+            (Or (G (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 5 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 5 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+                (G (EqualOn 6 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            ))))))))))))))))))))))))))) \
+        ))))))))" ./i2c.aag -pdr -cex
+
+
+Experiment [Not used in the paper] (QNI2): More than 3 bit? reading restricted to the first cycle. Unable to verify this. But: No error within 15 steps, verified in 2781.47 seconds by BMC3 (other counterexamples for QNI were within 9 to 12 steps)
+
+
+./../../../mchyper.py -f "Forall (Forall (Forall (Forall (Forall (Forall (Forall (Forall (Forall \
+    (Implies \
+        (And 
+            (G \
+                (And (SameInputsExcept 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                     (SameInputsExcept 0 8 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                ))))))) \
+            ) \
+            (X (G 
+                (And (EqualOn 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                     (EqualOn 0 8 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                ))))))) \
+            )) \
+        ) \
+            (Or (G (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 5 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 5 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 6 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 0 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 1 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 2 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 3 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 4 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 5 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            (Or (G (EqualOn 6 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+                (G (EqualOn 7 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+            ))))))))))))))))))))))))))))))))))) \
+        )))))))))" ./i2c.aag -pdr -cex
+        
+        
+        
+
+Experiment [Not used in the paper] (QNI3): Better encoding than QNI2. 
+
+./../../../mchyper.py -f "Exists (Exists (Exists (Exists (Exists (Exists (Exists (Exists (Exists \
+    (And \
+        (And \
+            (G \
+                (And (SameInputsExcept 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (SameInputsExcept 0 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                     (SameInputsExcept 0 8 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                ))))))) \
+            ) \
+            (X (G \
+                (And (EqualOn 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                (And (EqualOn 0 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                     (EqualOn 0 8 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+                ))))))) \
+            )) \
+        ) \
+        (And (Until \
+            (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (EqualOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (EqualOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (EqualOn 3 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 3 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (EqualOn 4 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 4 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (EqualOn 5 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 5 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (EqualOn 6 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 6 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+             (Until \
+            (EqualOn 7 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            (GreaterOn 7 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        ))))))) \
+        )))))))))" ./i2c.aag -pdr -cex
+        
+        
+        
+        
+
+Experiment [Not used in the paper] (QNI4): Better encoding than QNI3. Liveness-free encoding. (Broken! Once some pairs of paths are "Greater", their input synchronization is lost. With past operators, we could merge them into one until operator and thereby fix this issue.)
+
+./../../../mchyper.py -f "Exists (Exists (Exists (Exists (Exists (Exists (Exists (Exists (Exists \
+        (And (Until \
+            (And (SameInputsExcept 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 0 1 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 0 1 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (And (SameInputsExcept 1 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 1 2 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 1 2 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (And (SameInputsExcept 2 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 2 3 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 2 3 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (And (SameInputsExcept 3 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 3 4 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 3 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 3 4 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (And (SameInputsExcept 4 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 4 5 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 4 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 4 5 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (And (SameInputsExcept 5 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 5 6 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 5 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 5 6 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        (And (Until \
+            (And (SameInputsExcept 6 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 6 7 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 6 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 6 7 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+          (Until \
+            (And (SameInputsExcept 7 8 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"]) \
+            (And (X (EqualOn 7 8 [\"i2c_master_top.wb_adr_i[0]\", \
+                    \"i2c_master_top.wb_adr_i[1]\",\"i2c_master_top.wb_adr_i[2]\"])) \
+                (EqualOn 7 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"]) \
+            )) \
+            (GreaterOn 7 8 [\"i2c_master_top.sda_pad_o\",\"i2c_master_top.sda_padoen_o\"])) \
+        ))))))) \
+        ))))))))" ./i2c.aag -pdr -cex

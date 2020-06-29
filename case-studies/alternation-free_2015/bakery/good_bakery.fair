@@ -1,0 +1,13 @@
+# Each process is enabled infinitely often.
+selReg[1:0]=0;
+selReg[1:0]=1;
+selReg[1:0]=2;
+
+# No process dwells forever in either the critical section or the
+# non-critical section.
+!(pc<*0*>=L9);
+!(pc<*0*>=L11);
+!(pc<*1*>=L9);
+!(pc<*1*>=L11);
+!(pc<*2*>=L9);
+!(pc<*2*>=L11);

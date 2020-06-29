@@ -1,0 +1,629 @@
+.model BLIF
+.inputs enc_8b10b.RESET
+.inputs enc_8b10b.KI
+.inputs enc_8b10b.AI
+.inputs enc_8b10b.BI
+.inputs enc_8b10b.CI
+.inputs enc_8b10b.DI
+.inputs enc_8b10b.EI
+.inputs enc_8b10b.FI
+.inputs enc_8b10b.GI
+.inputs enc_8b10b.HI
+.outputs enc_8b10b.JO
+.outputs enc_8b10b.HO
+.outputs enc_8b10b.GO
+.outputs enc_8b10b.FO
+.outputs enc_8b10b.IO
+.outputs enc_8b10b.EO
+.outputs enc_8b10b.DO
+.outputs enc_8b10b.CO
+.outputs enc_8b10b.BO
+.outputs enc_8b10b.AO
+.names periscope_single_clock
+0
+.names Supply1
+1
+.names Supply0
+0
+.names transformNet_91 enc_8b10b.SBYTECLK
+1 1
+.names Supply0 tmp_JO_7 enc_8b10b.LRESET enc_8b10b.JO
+1-1 1
+-10 1
+.names Supply0 tmp_HO_12 enc_8b10b.LRESET enc_8b10b.HO
+1-1 1
+-10 1
+.names Supply0 tmp_GO_17 enc_8b10b.LRESET enc_8b10b.GO
+1-1 1
+-10 1
+.names Supply0 tmp_FO_22 enc_8b10b.LRESET enc_8b10b.FO
+1-1 1
+-10 1
+.names Supply0 tmp_IO_30 enc_8b10b.LRESET enc_8b10b.IO
+1-1 1
+-10 1
+.names Supply0 tmp_EO_35 enc_8b10b.LRESET enc_8b10b.EO
+1-1 1
+-10 1
+.names Supply0 tmp_DO_40 enc_8b10b.LRESET enc_8b10b.DO
+1-1 1
+-10 1
+.names Supply0 tmp_CO_45 enc_8b10b.LRESET enc_8b10b.CO
+1-1 1
+-10 1
+.names Supply0 tmp_BO_50 enc_8b10b.LRESET enc_8b10b.BO
+1-1 1
+-10 1
+.names Supply0 tmp_AO_55 enc_8b10b.LRESET enc_8b10b.AO
+1-1 1
+-10 1
+.names tmp_XLRESET_57 tmp_XLRESET_58 transformNet_23 enc_8b10b.XLRESET
+1-1 1
+-10 1
+.names tmp_LRESET_60 tmp_LRESET_61 transformNet_0 enc_8b10b.LRESET
+1-1 1
+-10 1
+.names enc_8b10b.rtlc_N38 enc_8b10b.DI enc_8b10b.L40
+11 1
+.names enc_8b10b.rtlc_N14 enc_8b10b.rtlc_N182 enc_8b10b.L04
+11 1
+.names enc_8b10b.rtlc_N64 enc_8b10b.rtlc_N35 enc_8b10b.L13
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N50 enc_8b10b.rtlc_N75 enc_8b10b.L31
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N104 enc_8b10b.rtlc_N109 enc_8b10b.L22
+1- 1
+-1 1
+.names tmp_F4_63 tmp_F4_64 transformNet_0 enc_8b10b.F4
+1-1 1
+-10 1
+.names tmp_G4_66 tmp_G4_67 transformNet_0 enc_8b10b.G4
+1-1 1
+-10 1
+.names tmp_H4_69 tmp_H4_70 transformNet_0 enc_8b10b.H4
+1-1 1
+-10 1
+.names tmp_K4_72 tmp_K4_73 transformNet_0 enc_8b10b.K4
+1-1 1
+-10 1
+.names Supply0 tmp_S_78 enc_8b10b.LRESET enc_8b10b.S
+1-1 1
+-10 1
+.names enc_8b10b.F4 enc_8b10b.G4 enc_8b10b.FNEG
+10 1
+01 1
+.names enc_8b10b.rtlc_N125 enc_8b10b.K4 enc_8b10b.ND1S6
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N129 enc_8b10b.K4 enc_8b10b.PD0S6
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N134 enc_8b10b.rtlc_N173 enc_8b10b.ND0S6
+1- 1
+-1 1
+.names enc_8b10b.F4 enc_8b10b.G4 enc_8b10b.ND1S4
+11 1
+.names enc_8b10b.rtlc_N198 enc_8b10b.rtlc_N199 enc_8b10b.ND0S4
+11 1
+.names enc_8b10b.ND0S4 enc_8b10b.rtlc_N142 enc_8b10b.PD1S4
+1- 1
+-1 1
+.names enc_8b10b.ND1S4 enc_8b10b.H4 enc_8b10b.PD0S4
+11 1
+.names enc_8b10b.rtlc_N161 enc_8b10b.rtlc_N162 enc_8b10b.COMPLS4
+10 1
+01 1
+.names enc_8b10b.rtlc_N163 enc_8b10b.rtlc_N165 enc_8b10b.COMPLS6
+10 1
+01 1
+.names enc_8b10b.PDL6 enc_8b10b.NDL6
+0 1
+.names enc_8b10b.rtlc_N147 enc_8b10b.rtlc_N151 enc_8b10b.PDL6
+1- 1
+-1 1
+.names Supply0 tmp_LPDL6_83 enc_8b10b.LRESET enc_8b10b.LPDL6
+1-1 1
+-10 1
+.names enc_8b10b.rtlc_N157 enc_8b10b.rtlc_N159 enc_8b10b.PDL4
+1- 1
+-1 1
+.names Supply0 tmp_LPDL4_88 enc_8b10b.LRESET enc_8b10b.LPDL4
+1-1 1
+-10 1
+.names enc_8b10b.L04 enc_8b10b.rtlc_N167 enc_8b10b.NBO
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N168 enc_8b10b.rtlc_N173 enc_8b10b.NCO
+1- 1
+-1 1
+.names enc_8b10b.DI enc_8b10b.rtlc_N171 enc_8b10b.NDO
+11 1
+.names enc_8b10b.rtlc_N175 enc_8b10b.rtlc_N177 enc_8b10b.NEO
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N187 enc_8b10b.rtlc_N188 enc_8b10b.NIO
+1- 1
+-1 1
+.names enc_8b10b.F4 enc_8b10b.rtlc_N196 enc_8b10b.NFO
+11 1
+.names enc_8b10b.G4 enc_8b10b.rtlc_N202 enc_8b10b.NGO
+1- 1
+-1 1
+.names enc_8b10b.SINT enc_8b10b.rtlc_N205 enc_8b10b.NJO
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N191 enc_8b10b.rtlc_N194 enc_8b10b.SINT
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N5 enc_8b10b.rtlc_N9 enc_8b10b.rtlc_N10
+1- 1
+-1 1
+.names enc_8b10b.PDL6 enc_8b10b.L31 enc_8b10b.rtlc_N2
+11 1
+.names enc_8b10b.rtlc_N2 enc_8b10b.DI enc_8b10b.rtlc_N3
+11 1
+.names enc_8b10b.rtlc_N3 enc_8b10b.rtlc_N178 enc_8b10b.rtlc_N5
+11 1
+.names enc_8b10b.NDL6 enc_8b10b.L13 enc_8b10b.rtlc_N6
+11 1
+.names enc_8b10b.rtlc_N6 enc_8b10b.EI enc_8b10b.rtlc_N7
+11 1
+.names enc_8b10b.rtlc_N7 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N9
+11 1
+.names enc_8b10b.COMPLS6 enc_8b10b.AI enc_8b10b.rtlc_N26
+10 1
+01 1
+.names enc_8b10b.COMPLS6 enc_8b10b.NBO enc_8b10b.rtlc_N27
+10 1
+01 1
+.names enc_8b10b.COMPLS6 enc_8b10b.NCO enc_8b10b.rtlc_N28
+10 1
+01 1
+.names enc_8b10b.COMPLS6 enc_8b10b.NDO enc_8b10b.rtlc_N29
+10 1
+01 1
+.names enc_8b10b.COMPLS6 enc_8b10b.NEO enc_8b10b.rtlc_N30
+10 1
+01 1
+.names enc_8b10b.COMPLS6 enc_8b10b.NIO enc_8b10b.rtlc_N31
+10 1
+01 1
+.names enc_8b10b.SBYTECLK enc_8b10b.rtlc_N39
+0 1
+.names enc_8b10b.COMPLS4 enc_8b10b.NFO enc_8b10b.rtlc_N40
+10 1
+01 1
+.names enc_8b10b.COMPLS4 enc_8b10b.NGO enc_8b10b.rtlc_N41
+10 1
+01 1
+.names enc_8b10b.COMPLS4 enc_8b10b.H4 enc_8b10b.rtlc_N42
+10 1
+01 1
+.names enc_8b10b.COMPLS4 enc_8b10b.NJO enc_8b10b.rtlc_N43
+10 1
+01 1
+.names enc_8b10b.rtlc_N78 enc_8b10b.rtlc_N101 enc_8b10b.rtlc_N14
+11 1
+.names enc_8b10b.rtlc_N14 enc_8b10b.DI enc_8b10b.rtlc_N15
+11 1
+.names enc_8b10b.rtlc_N79 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N21
+11 1
+.names enc_8b10b.rtlc_N15 enc_8b10b.rtlc_N21 enc_8b10b.rtlc_N22
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N102 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N63
+11 1
+.names enc_8b10b.rtlc_N22 enc_8b10b.rtlc_N63 enc_8b10b.rtlc_N64
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N96 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N35
+11 1
+.names enc_8b10b.rtlc_N87 enc_8b10b.CI enc_8b10b.rtlc_N38
+11 1
+.names enc_8b10b.rtlc_N38 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N68
+11 1
+.names enc_8b10b.rtlc_N89 enc_8b10b.DI enc_8b10b.rtlc_N44
+11 1
+.names enc_8b10b.rtlc_N68 enc_8b10b.rtlc_N44 enc_8b10b.rtlc_N45
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N107 enc_8b10b.DI enc_8b10b.rtlc_N49
+11 1
+.names enc_8b10b.rtlc_N45 enc_8b10b.rtlc_N49 enc_8b10b.rtlc_N50
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N83 enc_8b10b.DI enc_8b10b.rtlc_N75
+11 1
+.names enc_8b10b.rtlc_N99 enc_8b10b.rtlc_N105 enc_8b10b.rtlc_N78
+11 1
+.names enc_8b10b.rtlc_N78 enc_8b10b.CI enc_8b10b.rtlc_N79
+11 1
+.names enc_8b10b.rtlc_N79 enc_8b10b.DI enc_8b10b.rtlc_N80
+11 1
+.names enc_8b10b.rtlc_N100 enc_8b10b.CI enc_8b10b.rtlc_N83
+11 1
+.names enc_8b10b.rtlc_N83 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N85
+11 1
+.names enc_8b10b.rtlc_N80 enc_8b10b.rtlc_N85 enc_8b10b.rtlc_N86
+1- 1
+-1 1
+.names enc_8b10b.AI enc_8b10b.BI enc_8b10b.rtlc_N87
+11 1
+.names enc_8b10b.rtlc_N87 enc_8b10b.rtlc_N101 enc_8b10b.rtlc_N89
+11 1
+.names enc_8b10b.rtlc_N89 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N91
+11 1
+.names enc_8b10b.rtlc_N86 enc_8b10b.rtlc_N91 enc_8b10b.rtlc_N92
+1- 1
+-1 1
+.names enc_8b10b.rtlc_N106 enc_8b10b.rtlc_N101 enc_8b10b.rtlc_N96
+11 1
+.names enc_8b10b.rtlc_N96 enc_8b10b.DI enc_8b10b.rtlc_N97
+11 1
+.names enc_8b10b.rtlc_N92 enc_8b10b.rtlc_N97 enc_8b10b.rtlc_N98
+1- 1
+-1 1
+.names enc_8b10b.AI enc_8b10b.rtlc_N99
+0 1
+.names enc_8b10b.rtlc_N99 enc_8b10b.BI enc_8b10b.rtlc_N100
+11 1
+.names enc_8b10b.CI enc_8b10b.rtlc_N101
+0 1
+.names enc_8b10b.rtlc_N100 enc_8b10b.rtlc_N101 enc_8b10b.rtlc_N102
+11 1
+.names enc_8b10b.rtlc_N102 enc_8b10b.DI enc_8b10b.rtlc_N103
+11 1
+.names enc_8b10b.rtlc_N98 enc_8b10b.rtlc_N103 enc_8b10b.rtlc_N104
+1- 1
+-1 1
+.names enc_8b10b.BI enc_8b10b.rtlc_N105
+0 1
+.names enc_8b10b.AI enc_8b10b.rtlc_N105 enc_8b10b.rtlc_N106
+11 1
+.names enc_8b10b.rtlc_N106 enc_8b10b.CI enc_8b10b.rtlc_N107
+11 1
+.names enc_8b10b.rtlc_N107 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N109
+11 1
+.names enc_8b10b.L31 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N118
+11 1
+.names enc_8b10b.rtlc_N118 enc_8b10b.rtlc_N178 enc_8b10b.rtlc_N120
+11 1
+.names enc_8b10b.EI enc_8b10b.rtlc_N130 enc_8b10b.rtlc_N122
+11 1
+.names enc_8b10b.rtlc_N122 enc_8b10b.rtlc_N127 enc_8b10b.rtlc_N124
+11 1
+.names enc_8b10b.rtlc_N120 enc_8b10b.rtlc_N124 enc_8b10b.rtlc_N125
+1- 1
+-1 1
+.names enc_8b10b.L13 enc_8b10b.rtlc_N127
+0 1
+.names enc_8b10b.rtlc_N130 enc_8b10b.rtlc_N127 enc_8b10b.rtlc_N128
+11 1
+.names enc_8b10b.rtlc_N128 enc_8b10b.EI enc_8b10b.rtlc_N129
+11 1
+.names enc_8b10b.L22 enc_8b10b.rtlc_N130
+0 1
+.names enc_8b10b.L31 enc_8b10b.rtlc_N131
+0 1
+.names enc_8b10b.rtlc_N130 enc_8b10b.rtlc_N131 enc_8b10b.rtlc_N132
+11 1
+.names enc_8b10b.rtlc_N132 enc_8b10b.rtlc_N178 enc_8b10b.rtlc_N134
+11 1
+.names enc_8b10b.FNEG enc_8b10b.K4 enc_8b10b.rtlc_N142
+11 1
+.names enc_8b10b.COMPLS6 enc_8b10b.rtlc_N144
+0 1
+.names enc_8b10b.PD0S6 enc_8b10b.rtlc_N144 enc_8b10b.rtlc_N145
+11 1
+.names enc_8b10b.COMPLS6 enc_8b10b.ND0S6 enc_8b10b.rtlc_N146
+11 1
+.names enc_8b10b.rtlc_N145 enc_8b10b.rtlc_N146 enc_8b10b.rtlc_N147
+1- 1
+-1 1
+.names enc_8b10b.ND0S6 enc_8b10b.rtlc_N148
+0 1
+.names enc_8b10b.PD0S6 enc_8b10b.rtlc_N149
+0 1
+.names enc_8b10b.rtlc_N148 enc_8b10b.rtlc_N149 enc_8b10b.rtlc_N150
+11 1
+.names enc_8b10b.rtlc_N150 enc_8b10b.LPDL4 enc_8b10b.rtlc_N151
+11 1
+.names enc_8b10b.PD0S4 enc_8b10b.rtlc_N152
+0 1
+.names enc_8b10b.LPDL6 enc_8b10b.rtlc_N152 enc_8b10b.rtlc_N153
+11 1
+.names enc_8b10b.ND0S4 enc_8b10b.rtlc_N154
+0 1
+.names enc_8b10b.rtlc_N153 enc_8b10b.rtlc_N154 enc_8b10b.rtlc_N155
+11 1
+.names enc_8b10b.ND0S4 enc_8b10b.COMPLS4 enc_8b10b.rtlc_N156
+11 1
+.names enc_8b10b.rtlc_N155 enc_8b10b.rtlc_N156 enc_8b10b.rtlc_N157
+1- 1
+-1 1
+.names enc_8b10b.COMPLS4 enc_8b10b.rtlc_N158
+0 1
+.names enc_8b10b.rtlc_N158 enc_8b10b.PD0S4 enc_8b10b.rtlc_N159
+11 1
+.names enc_8b10b.LPDL6 enc_8b10b.rtlc_N160
+0 1
+.names enc_8b10b.PD1S4 enc_8b10b.rtlc_N160 enc_8b10b.rtlc_N161
+11 1
+.names enc_8b10b.ND1S4 enc_8b10b.LPDL6 enc_8b10b.rtlc_N162
+11 1
+.names enc_8b10b.ND1S6 enc_8b10b.LPDL4 enc_8b10b.rtlc_N163
+11 1
+.names enc_8b10b.LPDL4 enc_8b10b.rtlc_N164
+0 1
+.names enc_8b10b.ND0S6 enc_8b10b.rtlc_N164 enc_8b10b.rtlc_N165
+11 1
+.names enc_8b10b.BI enc_8b10b.rtlc_N171 enc_8b10b.rtlc_N167
+11 1
+.names enc_8b10b.CI enc_8b10b.L04 enc_8b10b.rtlc_N168
+1- 1
+-1 1
+.names enc_8b10b.L40 enc_8b10b.rtlc_N171
+0 1
+.names enc_8b10b.L13 enc_8b10b.DI enc_8b10b.rtlc_N172
+11 1
+.names enc_8b10b.rtlc_N172 enc_8b10b.EI enc_8b10b.rtlc_N173
+11 1
+.names enc_8b10b.rtlc_N173 enc_8b10b.rtlc_N174
+0 1
+.names enc_8b10b.EI enc_8b10b.rtlc_N174 enc_8b10b.rtlc_N175
+11 1
+.names enc_8b10b.L13 enc_8b10b.rtlc_N178 enc_8b10b.rtlc_N177
+11 1
+.names enc_8b10b.EI enc_8b10b.rtlc_N178
+0 1
+.names enc_8b10b.L22 enc_8b10b.rtlc_N178 enc_8b10b.rtlc_N179
+11 1
+.names enc_8b10b.L04 enc_8b10b.EI enc_8b10b.rtlc_N180
+11 1
+.names enc_8b10b.rtlc_N179 enc_8b10b.rtlc_N180 enc_8b10b.rtlc_N181
+1- 1
+-1 1
+.names enc_8b10b.DI enc_8b10b.rtlc_N182
+0 1
+.names enc_8b10b.L13 enc_8b10b.rtlc_N182 enc_8b10b.rtlc_N183
+11 1
+.names enc_8b10b.rtlc_N183 enc_8b10b.EI enc_8b10b.rtlc_N184
+11 1
+.names enc_8b10b.rtlc_N181 enc_8b10b.rtlc_N184 enc_8b10b.rtlc_N185
+1- 1
+-1 1
+.names enc_8b10b.L40 enc_8b10b.EI enc_8b10b.rtlc_N186
+11 1
+.names enc_8b10b.rtlc_N185 enc_8b10b.rtlc_N186 enc_8b10b.rtlc_N187
+1- 1
+-1 1
+.names enc_8b10b.L22 enc_8b10b.KI enc_8b10b.rtlc_N188
+11 1
+.names enc_8b10b.S enc_8b10b.F4 enc_8b10b.rtlc_N189
+11 1
+.names enc_8b10b.rtlc_N189 enc_8b10b.G4 enc_8b10b.rtlc_N190
+11 1
+.names enc_8b10b.rtlc_N190 enc_8b10b.H4 enc_8b10b.rtlc_N191
+11 1
+.names enc_8b10b.K4 enc_8b10b.F4 enc_8b10b.rtlc_N192
+11 1
+.names enc_8b10b.rtlc_N192 enc_8b10b.G4 enc_8b10b.rtlc_N193
+11 1
+.names enc_8b10b.rtlc_N193 enc_8b10b.H4 enc_8b10b.rtlc_N194
+11 1
+.names enc_8b10b.SINT enc_8b10b.rtlc_N196
+0 1
+.names enc_8b10b.F4 enc_8b10b.rtlc_N198
+0 1
+.names enc_8b10b.G4 enc_8b10b.rtlc_N199
+0 1
+.names enc_8b10b.ND0S4 enc_8b10b.rtlc_N204 enc_8b10b.rtlc_N202
+11 1
+.names enc_8b10b.H4 enc_8b10b.rtlc_N204
+0 1
+.names enc_8b10b.FNEG enc_8b10b.rtlc_N204 enc_8b10b.rtlc_N205
+11 1
+.names Supply1 enc_8b10b.rtlc_N39 periscope_single_clock transformNet_0
+1-1 1
+-10 1
+.names enc_8b10b.rtlc_N39 transformNet_1
+0 1
+.names Supply1 transformNet_1 periscope_single_clock transformNet_2
+1-1 1
+-10 1
+.names Supply0 tmp_JO_5 enc_8b10b.LRESET tmp_JO_3
+1-1 1
+-10 1
+.latch tmp_JO_3 tmp_JO_4 0
+.names enc_8b10b.rtlc_N43 tmp_JO_4 transformNet_2 tmp_JO_5
+1-1 1
+-10 1
+.latch enc_8b10b.JO tmp_JO_6 0
+.names tmp_JO_4 tmp_JO_6 transformNet_0 tmp_JO_7
+1-1 1
+-10 1
+.names Supply0 tmp_HO_10 enc_8b10b.LRESET tmp_HO_8
+1-1 1
+-10 1
+.latch tmp_HO_8 tmp_HO_9 0
+.names enc_8b10b.rtlc_N42 tmp_HO_9 transformNet_2 tmp_HO_10
+1-1 1
+-10 1
+.latch enc_8b10b.HO tmp_HO_11 0
+.names tmp_HO_9 tmp_HO_11 transformNet_0 tmp_HO_12
+1-1 1
+-10 1
+.names Supply0 tmp_GO_15 enc_8b10b.LRESET tmp_GO_13
+1-1 1
+-10 1
+.latch tmp_GO_13 tmp_GO_14 0
+.names enc_8b10b.rtlc_N41 tmp_GO_14 transformNet_2 tmp_GO_15
+1-1 1
+-10 1
+.latch enc_8b10b.GO tmp_GO_16 0
+.names tmp_GO_14 tmp_GO_16 transformNet_0 tmp_GO_17
+1-1 1
+-10 1
+.names Supply0 tmp_FO_20 enc_8b10b.LRESET tmp_FO_18
+1-1 1
+-10 1
+.latch tmp_FO_18 tmp_FO_19 0
+.names enc_8b10b.rtlc_N40 tmp_FO_19 transformNet_2 tmp_FO_20
+1-1 1
+-10 1
+.latch enc_8b10b.FO tmp_FO_21 0
+.names tmp_FO_19 tmp_FO_21 transformNet_0 tmp_FO_22
+1-1 1
+-10 1
+.names Supply1 enc_8b10b.SBYTECLK periscope_single_clock transformNet_23
+1-1 1
+-10 1
+.names enc_8b10b.SBYTECLK transformNet_24
+0 1
+.names Supply1 transformNet_24 periscope_single_clock transformNet_25
+1-1 1
+-10 1
+.names Supply0 tmp_IO_28 enc_8b10b.LRESET tmp_IO_26
+1-1 1
+-10 1
+.latch tmp_IO_26 tmp_IO_27 0
+.names enc_8b10b.rtlc_N31 tmp_IO_27 transformNet_25 tmp_IO_28
+1-1 1
+-10 1
+.latch enc_8b10b.IO tmp_IO_29 0
+.names tmp_IO_27 tmp_IO_29 transformNet_23 tmp_IO_30
+1-1 1
+-10 1
+.names Supply0 tmp_EO_33 enc_8b10b.LRESET tmp_EO_31
+1-1 1
+-10 1
+.latch tmp_EO_31 tmp_EO_32 0
+.names enc_8b10b.rtlc_N30 tmp_EO_32 transformNet_25 tmp_EO_33
+1-1 1
+-10 1
+.latch enc_8b10b.EO tmp_EO_34 0
+.names tmp_EO_32 tmp_EO_34 transformNet_23 tmp_EO_35
+1-1 1
+-10 1
+.names Supply0 tmp_DO_38 enc_8b10b.LRESET tmp_DO_36
+1-1 1
+-10 1
+.latch tmp_DO_36 tmp_DO_37 0
+.names enc_8b10b.rtlc_N29 tmp_DO_37 transformNet_25 tmp_DO_38
+1-1 1
+-10 1
+.latch enc_8b10b.DO tmp_DO_39 0
+.names tmp_DO_37 tmp_DO_39 transformNet_23 tmp_DO_40
+1-1 1
+-10 1
+.names Supply0 tmp_CO_43 enc_8b10b.LRESET tmp_CO_41
+1-1 1
+-10 1
+.latch tmp_CO_41 tmp_CO_42 0
+.names enc_8b10b.rtlc_N28 tmp_CO_42 transformNet_25 tmp_CO_43
+1-1 1
+-10 1
+.latch enc_8b10b.CO tmp_CO_44 0
+.names tmp_CO_42 tmp_CO_44 transformNet_23 tmp_CO_45
+1-1 1
+-10 1
+.names Supply0 tmp_BO_48 enc_8b10b.LRESET tmp_BO_46
+1-1 1
+-10 1
+.latch tmp_BO_46 tmp_BO_47 0
+.names enc_8b10b.rtlc_N27 tmp_BO_47 transformNet_25 tmp_BO_48
+1-1 1
+-10 1
+.latch enc_8b10b.BO tmp_BO_49 0
+.names tmp_BO_47 tmp_BO_49 transformNet_23 tmp_BO_50
+1-1 1
+-10 1
+.names Supply0 tmp_AO_53 enc_8b10b.LRESET tmp_AO_51
+1-1 1
+-10 1
+.latch tmp_AO_51 tmp_AO_52 0
+.names enc_8b10b.rtlc_N26 tmp_AO_52 transformNet_25 tmp_AO_53
+1-1 1
+-10 1
+.latch enc_8b10b.AO tmp_AO_54 0
+.names tmp_AO_52 tmp_AO_54 transformNet_23 tmp_AO_55
+1-1 1
+-10 1
+.names enc_8b10b.RESET tmp_XLRESET_57 transformNet_25 tmp_XLRESET_56
+1-1 1
+-10 1
+.latch tmp_XLRESET_56 tmp_XLRESET_57 1
+.latch enc_8b10b.XLRESET tmp_XLRESET_58 1
+.names enc_8b10b.XLRESET tmp_LRESET_60 transformNet_2 tmp_LRESET_59
+1-1 1
+-10 1
+.latch tmp_LRESET_59 tmp_LRESET_60 1
+.latch enc_8b10b.LRESET tmp_LRESET_61 1
+.names enc_8b10b.FI tmp_F4_63 transformNet_2 tmp_F4_62
+1-1 1
+-10 1
+.latch tmp_F4_62 tmp_F4_63 0
+.latch enc_8b10b.F4 tmp_F4_64 0
+.names enc_8b10b.GI tmp_G4_66 transformNet_2 tmp_G4_65
+1-1 1
+-10 1
+.latch tmp_G4_65 tmp_G4_66 0
+.latch enc_8b10b.G4 tmp_G4_67 0
+.names enc_8b10b.HI tmp_H4_69 transformNet_2 tmp_H4_68
+1-1 1
+-10 1
+.latch tmp_H4_68 tmp_H4_69 0
+.latch enc_8b10b.H4 tmp_H4_70 0
+.names enc_8b10b.KI tmp_K4_72 transformNet_2 tmp_K4_71
+1-1 1
+-10 1
+.latch tmp_K4_71 tmp_K4_72 0
+.latch enc_8b10b.K4 tmp_K4_73 0
+.names Supply0 tmp_S_76 enc_8b10b.LRESET tmp_S_74
+1-1 1
+-10 1
+.latch tmp_S_74 tmp_S_75 0
+.names enc_8b10b.rtlc_N10 tmp_S_75 transformNet_25 tmp_S_76
+1-1 1
+-10 1
+.latch enc_8b10b.S tmp_S_77 0
+.names tmp_S_75 tmp_S_77 transformNet_23 tmp_S_78
+1-1 1
+-10 1
+.names Supply0 tmp_LPDL6_81 enc_8b10b.LRESET tmp_LPDL6_79
+1-1 1
+-10 1
+.latch tmp_LPDL6_79 tmp_LPDL6_80 0
+.names enc_8b10b.PDL6 tmp_LPDL6_80 transformNet_25 tmp_LPDL6_81
+1-1 1
+-10 1
+.latch enc_8b10b.LPDL6 tmp_LPDL6_82 0
+.names tmp_LPDL6_80 tmp_LPDL6_82 transformNet_23 tmp_LPDL6_83
+1-1 1
+-10 1
+.names Supply0 tmp_LPDL4_86 enc_8b10b.LRESET tmp_LPDL4_84
+1-1 1
+-10 1
+.latch tmp_LPDL4_84 tmp_LPDL4_85 0
+.names enc_8b10b.PDL4 tmp_LPDL4_85 transformNet_2 tmp_LPDL4_86
+1-1 1
+-10 1
+.latch enc_8b10b.LPDL4 tmp_LPDL4_87 0
+.names tmp_LPDL4_85 tmp_LPDL4_87 transformNet_0 tmp_LPDL4_88
+1-1 1
+-10 1
+.names expnNet_1 transformNet_89
+0 1
+.names transformNet_91 transformNet_90
+0 1
+.latch transformNet_92 transformNet_91 0
+.names transformNet_90 transformNet_89 transformNet_92
+11 1
+.names transformNet_91 Supply1 expnNet_0
+00 1
+11 1
+.names expnNet_0 expnNet_1
+1 1
+.end

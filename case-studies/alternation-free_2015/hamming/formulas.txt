@@ -1,0 +1,543 @@
+
+Experiment Hamm1: Are there two inputs that have the same code word? Yes, see experiment1.cex.
+
+./../../../mchyper.py -f "Exists (Exists \
+    (And \
+        (F (Neg \
+            (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                 (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        (G  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+    ))" ./ham_7_4_enc.aag -pdr -cex
+    
+    
+Experiment Hamm2: Also without using resets? Yes. experiment2.cex
+
+./../../../mchyper.py -f "Exists (Exists \
+    (And (G (And (Neg (AP \"ham_7_4_enc.reset\" 0)) (Neg (AP \"ham_7_4_enc.reset\" 1)))) \
+    (And \
+        (F (Neg \
+            (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                 (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        (G  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+    )))" ./ham_7_4_enc.aag -pdr -cex
+    
+    
+Experiment Hamm3: Also when dvin is set? No!. (Minor discovery: documentation of the reset symbol is incorrect. It is active high, not active low.) experiment3.inv
+
+./../../../mchyper.py -f "Exists (Exists \
+    (And (G (And (Neg (AP \"ham_7_4_enc.reset\" 0)) (Neg (AP \"ham_7_4_enc.reset\" 1)))) \
+    (And (G (And (Neg (AP \"ham_7_4_enc.dvin\" 0)) (Neg (AP \"ham_7_4_enc.dvin\" 1)))) \
+    (And \
+        (F (Neg \
+            (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                 (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        (G  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+            (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+    ))))" ./ham_7_4_enc.aag -pdr -cex
+    
+
+
+
+Experiment Hamm4: Do they have a hamming distance of at least 1? Yes. experiment4.inv
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (G (And (Neg (AP \"ham_7_4_enc.reset\" 0)) (Neg (AP \"ham_7_4_enc.reset\" 1)))) \
+        (And (G (And (Neg (AP \"ham_7_4_enc.dvin\" 0)) (Neg (AP \"ham_7_4_enc.dvin\" 1)))) \
+             (F (Neg \
+                (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                     (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        )) \
+        (F (Neg \
+                 (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                 (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                 (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                 (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                 (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                 (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                      (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+            ) \
+    ))" \
+    ./ham_7_4_enc.aag -pdr -cex
+
+
+
+Experiment Hamm5: Do they have a hamming distance of at least 2? Yes! experiment5.inv
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (G (And (Neg (AP \"ham_7_4_enc.reset\" 0)) (Neg (AP \"ham_7_4_enc.reset\" 1)))) \
+        (And (G (And (Neg (AP \"ham_7_4_enc.dvin\" 0)) (Neg (AP \"ham_7_4_enc.dvin\" 1)))) \
+             (F (Neg \
+                (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                     (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        )) \
+        (F (Or \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                 ) \
+                 (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) 
+                 ) \
+            )))))))))))))))))))) \
+            (And \
+                (Or \
+                     (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                     (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                    )))))) \
+                 (X (F (Neg \
+                    (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                         (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+                    )) \
+                ) \
+            ) \
+        )))" ./ham_7_4_enc.aag -pdr -cex
+        
+        
+
+Experiment Hamm6: More compact version of check for hamming distance 2.
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (G (And (Neg (AP \"ham_7_4_enc.reset\" 0)) (Neg (AP \"ham_7_4_enc.reset\" 1)))) \
+        (And (G (And (Neg (AP \"ham_7_4_enc.dvin\" 0)) (Neg (AP \"ham_7_4_enc.dvin\" 1)))) \
+             (F (Neg \
+                (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                     (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        )) \
+        (F (Or \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                      ))))) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    )))) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    ))) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    )) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    ) \
+                 ) \
+                 (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) 
+                 ) \
+            ))))) \
+            (And \
+                (Or \
+                     (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                (Or  (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                     (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                     (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) \
+                    )))))) \
+                 (X (F (Neg \
+                    (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                         (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+                    )) \
+                ) \
+            ) \
+        )))" ./ham_7_4_enc.aag -pdr -cex
+        
+        
+        
+        
+Experiment Hamm7: Now hamming distance 3: Works too! experiment7.inv
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (And (G (And (Neg (AP \"ham_7_4_enc.reset\" 0)) (Neg (AP \"ham_7_4_enc.reset\" 1)))) \
+        (And (G (And (Neg (AP \"ham_7_4_enc.dvin\" 0)) (Neg (AP \"ham_7_4_enc.dvin\" 1)))) \
+             (F (Neg \
+                (And (Eq (AP \"ham_7_4_enc.data_in[0]\" 0) (AP \"ham_7_4_enc.data_in[0]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[1]\" 0) (AP \"ham_7_4_enc.data_in[1]\" 1)) \
+                (And (Eq (AP \"ham_7_4_enc.data_in[2]\" 0) (AP \"ham_7_4_enc.data_in[2]\" 1)) \
+                     (Eq (AP \"ham_7_4_enc.data_in[3]\" 0) (AP \"ham_7_4_enc.data_in[3]\" 1)) ))) )) \
+        )) \
+        (F  (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              )))) \
+                           ) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              ))) \
+                           ) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              )) \
+                           ) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              ) \
+                           ) \
+                           (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                           ) \
+                      )))) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              ))) \
+                           ) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              )) \
+                           ) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              ) \
+                           ) \
+                           (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                           ) \
+                      ))) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              )) \
+                           ) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              ) \
+                           ) \
+                           (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                           ) \
+                      )) \
+                 ) \
+            (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                                (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                    (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                              ) \
+                           ) \
+                           (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                                (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                           ) \
+                      ) \
+                 ) \
+                 (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                 (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                 )) \
+            )))) \
+        )))" ./ham_7_4_enc.aag -pdr -cex
+
+
+
+
+
+
+
+The not strictly needed parts for distance 3:
+
+
+        (Or \
+            (And \
+                (Or  (And (Neq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                      ))))) \
+                 ) \
+                 (Or  (And (Neq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    )))) \
+                 ) \
+                 (Or  (And (Neq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    ))) \
+                 ) \
+                 (Or  (And (Neq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    )) \
+                 ) \
+                 (Or  (And (Neq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                      (Or (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                          (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) \
+                    ) \
+                 ) \
+                 (And (Neq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                      (Neq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) 
+                 ) \
+                 ))))) \
+                 (X (F (Neg \
+                    (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                         (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+                    )) \
+                ) \
+            (And (Neg \
+                    (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                    (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                         (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+                (X (F 
+                    (And (Neg \
+                        (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                             (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+                    (X (F (Neg \
+                        (And (Eq (AP \"ham_7_4_enc.code[0]\" 0) (AP \"ham_7_4_enc.code[0]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[1]\" 0) (AP \"ham_7_4_enc.code[1]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[2]\" 0) (AP \"ham_7_4_enc.code[2]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[3]\" 0) (AP \"ham_7_4_enc.code[3]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[4]\" 0) (AP \"ham_7_4_enc.code[4]\" 1)) \
+                        (And (Eq (AP \"ham_7_4_enc.code[5]\" 0) (AP \"ham_7_4_enc.code[5]\" 1)) \
+                             (Eq (AP \"ham_7_4_enc.code[6]\" 0) (AP \"ham_7_4_enc.code[6]\" 1)) )))))) ) \
+                        )) \
+                    )) \
+                ) \
+            )) \

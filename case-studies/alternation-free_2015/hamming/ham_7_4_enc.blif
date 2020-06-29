@@ -1,0 +1,213 @@
+.model BLIF
+.inputs ham_7_4_enc.reset
+.inputs ham_7_4_enc.data_in[0]
+.inputs ham_7_4_enc.data_in[1]
+.inputs ham_7_4_enc.data_in[2]
+.inputs ham_7_4_enc.data_in[3]
+.inputs ham_7_4_enc.dvin
+.outputs ham_7_4_enc.code[0]
+.outputs ham_7_4_enc.code[1]
+.outputs ham_7_4_enc.code[2]
+.outputs ham_7_4_enc.code[3]
+.outputs ham_7_4_enc.code[4]
+.outputs ham_7_4_enc.code[5]
+.outputs ham_7_4_enc.code[6]
+.outputs ham_7_4_enc.dvout
+.names periscope_single_clock
+1
+.names Supply1
+1
+.names transformNet_50 ham_7_4_enc.clk
+1 1
+.names tmp_code[0]_4 tmp_code[0]_5 transformNet_0 ham_7_4_enc.code[0]
+1-1 1
+-10 1
+.names tmp_code[1]_7 tmp_code[1]_8 transformNet_0 ham_7_4_enc.code[1]
+1-1 1
+-10 1
+.names tmp_code[2]_10 tmp_code[2]_11 transformNet_0 ham_7_4_enc.code[2]
+1-1 1
+-10 1
+.names tmp_code[3]_13 tmp_code[3]_14 transformNet_0 ham_7_4_enc.code[3]
+1-1 1
+-10 1
+.names tmp_code[4]_16 tmp_code[4]_17 transformNet_0 ham_7_4_enc.code[4]
+1-1 1
+-10 1
+.names tmp_code[5]_19 tmp_code[5]_20 transformNet_0 ham_7_4_enc.code[5]
+1-1 1
+-10 1
+.names tmp_code[6]_22 tmp_code[6]_23 transformNet_0 ham_7_4_enc.code[6]
+1-1 1
+-10 1
+.names tmp_dvout_25 tmp_dvout_26 transformNet_0 ham_7_4_enc.dvout
+1-1 1
+-10 1
+.names tmp_datareg[0]_29 tmp_datareg[0]_30 transformNet_0 ham_7_4_enc.datareg[0]
+1-1 1
+-10 1
+.names tmp_datareg[1]_33 tmp_datareg[1]_34 transformNet_0 ham_7_4_enc.datareg[1]
+1-1 1
+-10 1
+.names tmp_datareg[2]_37 tmp_datareg[2]_38 transformNet_0 ham_7_4_enc.datareg[2]
+1-1 1
+-10 1
+.names tmp_datareg[3]_41 tmp_datareg[3]_42 transformNet_0 ham_7_4_enc.datareg[3]
+1-1 1
+-10 1
+.names Supply1 tmp_dvinreg_47 ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.dvinreg
+1-1 1
+-10 1
+.names ham_7_4_enc.rtlc_N35 ham_7_4_enc.datareg[0] ham_7_4_enc.c0
+10 1
+01 1
+.names ham_7_4_enc.rtlc_N2 ham_7_4_enc.datareg[0] ham_7_4_enc.c1
+10 1
+01 1
+.names ham_7_4_enc.rtlc_N4 ham_7_4_enc.datareg[0] ham_7_4_enc.c3
+10 1
+01 1
+.names ham_7_4_enc.reset ham_7_4_enc.rtlc_PS7_G30
+0 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.data_in[0] ham_7_4_enc.rtlc_datareg_0_G22_SS_4
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.data_in[1] ham_7_4_enc.rtlc_datareg_1_G23_SS_4
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.data_in[2] ham_7_4_enc.rtlc_datareg_2_G24_SS_4
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.data_in[3] ham_7_4_enc.rtlc_datareg_3_G25_SS_4
+11 1
+.names ham_7_4_enc.dvin ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.rtlc_G36
+11 1
+.names ham_7_4_enc.rtlc_G36 ham_7_4_enc.rtlc_N36
+0 1
+.names ham_7_4_enc.reset ham_7_4_enc.dvinreg ham_7_4_enc.dvout_SS_6
+1- 1
+-1 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.c0 ham_7_4_enc.rtlc_code_0_G53_SS_8
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.c1 ham_7_4_enc.rtlc_code_1_G54_SS_8
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.datareg[3] ham_7_4_enc.rtlc_code_2_G55_SS_8
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.c3 ham_7_4_enc.rtlc_code_3_G56_SS_8
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.datareg[2] ham_7_4_enc.rtlc_code_4_G57_SS_8
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.datareg[1] ham_7_4_enc.rtlc_code_5_G58_SS_8
+11 1
+.names ham_7_4_enc.rtlc_PS7_G30 ham_7_4_enc.datareg[0] ham_7_4_enc.rtlc_code_6_G59_SS_8
+11 1
+.names ham_7_4_enc.datareg[3] ham_7_4_enc.datareg[2] ham_7_4_enc.rtlc_N35
+10 1
+01 1
+.names ham_7_4_enc.datareg[3] ham_7_4_enc.datareg[1] ham_7_4_enc.rtlc_N2
+10 1
+01 1
+.names ham_7_4_enc.datareg[2] ham_7_4_enc.datareg[1] ham_7_4_enc.rtlc_N4
+10 1
+01 1
+.names Supply1 ham_7_4_enc.clk periscope_single_clock transformNet_0
+1-1 1
+-10 1
+.names ham_7_4_enc.clk transformNet_1
+0 1
+.names Supply1 transformNet_1 periscope_single_clock transformNet_2
+1-1 1
+-10 1
+.names ham_7_4_enc.rtlc_code_0_G53_SS_8 tmp_code[0]_4 transformNet_2 tmp_code[0]_3
+1-1 1
+-10 1
+.latch tmp_code[0]_3 tmp_code[0]_4 0
+.latch ham_7_4_enc.code[0] tmp_code[0]_5 0
+.names ham_7_4_enc.rtlc_code_1_G54_SS_8 tmp_code[1]_7 transformNet_2 tmp_code[1]_6
+1-1 1
+-10 1
+.latch tmp_code[1]_6 tmp_code[1]_7 0
+.latch ham_7_4_enc.code[1] tmp_code[1]_8 0
+.names ham_7_4_enc.rtlc_code_2_G55_SS_8 tmp_code[2]_10 transformNet_2 tmp_code[2]_9
+1-1 1
+-10 1
+.latch tmp_code[2]_9 tmp_code[2]_10 0
+.latch ham_7_4_enc.code[2] tmp_code[2]_11 0
+.names ham_7_4_enc.rtlc_code_3_G56_SS_8 tmp_code[3]_13 transformNet_2 tmp_code[3]_12
+1-1 1
+-10 1
+.latch tmp_code[3]_12 tmp_code[3]_13 0
+.latch ham_7_4_enc.code[3] tmp_code[3]_14 0
+.names ham_7_4_enc.rtlc_code_4_G57_SS_8 tmp_code[4]_16 transformNet_2 tmp_code[4]_15
+1-1 1
+-10 1
+.latch tmp_code[4]_15 tmp_code[4]_16 0
+.latch ham_7_4_enc.code[4] tmp_code[4]_17 0
+.names ham_7_4_enc.rtlc_code_5_G58_SS_8 tmp_code[5]_19 transformNet_2 tmp_code[5]_18
+1-1 1
+-10 1
+.latch tmp_code[5]_18 tmp_code[5]_19 0
+.latch ham_7_4_enc.code[5] tmp_code[5]_20 0
+.names ham_7_4_enc.rtlc_code_6_G59_SS_8 tmp_code[6]_22 transformNet_2 tmp_code[6]_21
+1-1 1
+-10 1
+.latch tmp_code[6]_21 tmp_code[6]_22 0
+.latch ham_7_4_enc.code[6] tmp_code[6]_23 0
+.names ham_7_4_enc.dvout_SS_6 tmp_dvout_25 transformNet_2 tmp_dvout_24
+1-1 1
+-10 1
+.latch tmp_dvout_24 tmp_dvout_25 1
+.latch ham_7_4_enc.dvout tmp_dvout_26 1
+.names ham_7_4_enc.rtlc_datareg_0_G22_SS_4 ham_7_4_enc.datareg[0] ham_7_4_enc.rtlc_N36 tmp_datareg[0]_27
+1-1 1
+-10 1
+.names tmp_datareg[0]_27 tmp_datareg[0]_29 transformNet_2 tmp_datareg[0]_28
+1-1 1
+-10 1
+.latch tmp_datareg[0]_28 tmp_datareg[0]_29 0
+.latch ham_7_4_enc.datareg[0] tmp_datareg[0]_30 0
+.names ham_7_4_enc.rtlc_datareg_1_G23_SS_4 ham_7_4_enc.datareg[1] ham_7_4_enc.rtlc_N36 tmp_datareg[1]_31
+1-1 1
+-10 1
+.names tmp_datareg[1]_31 tmp_datareg[1]_33 transformNet_2 tmp_datareg[1]_32
+1-1 1
+-10 1
+.latch tmp_datareg[1]_32 tmp_datareg[1]_33 0
+.latch ham_7_4_enc.datareg[1] tmp_datareg[1]_34 0
+.names ham_7_4_enc.rtlc_datareg_2_G24_SS_4 ham_7_4_enc.datareg[2] ham_7_4_enc.rtlc_N36 tmp_datareg[2]_35
+1-1 1
+-10 1
+.names tmp_datareg[2]_35 tmp_datareg[2]_37 transformNet_2 tmp_datareg[2]_36
+1-1 1
+-10 1
+.latch tmp_datareg[2]_36 tmp_datareg[2]_37 0
+.latch ham_7_4_enc.datareg[2] tmp_datareg[2]_38 0
+.names ham_7_4_enc.rtlc_datareg_3_G25_SS_4 ham_7_4_enc.datareg[3] ham_7_4_enc.rtlc_N36 tmp_datareg[3]_39
+1-1 1
+-10 1
+.names tmp_datareg[3]_39 tmp_datareg[3]_41 transformNet_2 tmp_datareg[3]_40
+1-1 1
+-10 1
+.latch tmp_datareg[3]_40 tmp_datareg[3]_41 0
+.latch ham_7_4_enc.datareg[3] tmp_datareg[3]_42 0
+.names Supply1 tmp_dvinreg_45 ham_7_4_enc.rtlc_PS7_G30 tmp_dvinreg_43
+1-1 1
+-10 1
+.latch tmp_dvinreg_43 tmp_dvinreg_44 1
+.names ham_7_4_enc.dvin tmp_dvinreg_44 transformNet_2 tmp_dvinreg_45
+1-1 1
+-10 1
+.latch ham_7_4_enc.dvinreg tmp_dvinreg_46 1
+.names tmp_dvinreg_44 tmp_dvinreg_46 transformNet_0 tmp_dvinreg_47
+1-1 1
+-10 1
+.names expnNet_1 transformNet_48
+0 1
+.names transformNet_50 transformNet_49
+0 1
+.latch transformNet_51 transformNet_50 0
+.names transformNet_49 transformNet_48 transformNet_51
+11 1
+.names transformNet_50 Supply1 expnNet_0
+00 1
+11 1
+.names expnNet_0 expnNet_1
+1 1
+.end

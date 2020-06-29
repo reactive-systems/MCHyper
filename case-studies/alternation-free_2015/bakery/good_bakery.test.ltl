@@ -1,0 +1,15 @@
+#PASS: Absence of starvation.  Requires fairness constraints.
+G(pc<*0*>=L1 -> F(pc<*0*>=L9));
+G(pc<*1*>=L1 -> F(pc<*1*>=L9));
+G(pc<*2*>=L1 -> F(pc<*2*>=L9));
+#PASS: Processes do not stay in the critical and noncritical regions forever.
+# If these fail, we forgot to read the fairness constraints.
+G(pc<*0*>=L9 -> F(pc<*0*>=L1));
+G(pc<*1*>=L9 -> F(pc<*1*>=L1));
+G(pc<*2*>=L9 -> F(pc<*2*>=L1));
+#PASS: Mutual exclusion.
+G(!(pc<*0*>=L9 * pc<*1*>=L9));
+G(!(pc<*0*>=L9 * pc<*2*>=L9));
+G(!(pc<*1*>=L9 * pc<*2*>=L9));
+
+G(!(pc<*1*>=L7 * pc<*2*>=L7));

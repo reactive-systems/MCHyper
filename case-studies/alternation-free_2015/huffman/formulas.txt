@@ -1,0 +1,36 @@
+
+
+[Not used as experiment in the paper:] Not true (e.g. because addresses are not read every step)
+./../../../mchyper.py -f "Forall (Forall (Eq (G (And (Eq (AP \"addr<0>\" 0) (AP \"addr<0>\" 1)) (And (Eq (AP \"addr<1>\" 0) (AP \"addr<1>\" 1)) (And (Eq (AP \"addr<2>\" 0) (AP \"addr<2>\" 1)) (And (Eq (AP \"addr<3>\" 0) (AP \"addr<3>\" 1)) (Eq (AP \"addr<4>\" 0) (AP \"addr<4>\" 1)) )))) ) (G (Eq (AP \"cipher\" 0) (AP \"cipher\" 1))) ))" ./huffenc.aag -pdr -cex
+
+[Not used as experiment in the paper:] Same inputs mean same outputs:
+./../../../mchyper.py -f "Forall (Forall (Implies (G (And (Eq (AP \"addr<0>\" 0) (AP \"addr<0>\" 1)) (And (Eq (AP \"addr<1>\" 0) (AP \"addr<1>\" 1)) (And (Eq (AP \"addr<2>\" 0) (AP \"addr<2>\" 1)) (And (Eq (AP \"addr<3>\" 0) (AP \"addr<3>\" 1)) (Eq (AP \"addr<4>\" 0) (AP \"addr<4>\" 1)) )))) ) (G (Eq (AP \"cipher\" 0) (AP \"cipher\" 1))) ))" ./huffenc.aag -pdr -cex
+
+Experiment Huff1: Different outputs mean different inputs, equivalent to a minimal hamming distance of the code words:
+./../../../mchyper.py -f "Forall (Forall (Implies (F (Neq (AP \"cipher\" 0) (AP \"cipher\" 1))) (F (Neg (And (Eq (AP \"addr<0>\" 0) (AP \"addr<0>\" 1)) (And (Eq (AP \"addr<1>\" 0) (AP \"addr<1>\" 1)) (And (Eq (AP \"addr<2>\" 0) (AP \"addr<2>\" 1)) (And (Eq (AP \"addr<3>\" 0) (AP \"addr<3>\" 1)) (Eq (AP \"addr<4>\" 0) (AP \"addr<4>\" 1)) )))) ) ) ))" ./huffenc.aag -pdr -cex
+
+[Not used as experiment in the paper:] Exact characterization of the dependency of the output: We have to consider that inputs may be different when they are not read and that no non-existing addresses are being read.
+./../../../mchyper.py -f "Forall (Forall (Implies (G (Neg (AP \"addr<4>\" 0))) (Eq (And (And (Eq (AP \"addr<0>\" 0) (AP \"addr<0>\" 1)) (And (Eq (AP \"addr<1>\" 0) (AP \"addr<1>\" 1)) (And (Eq (AP \"addr<2>\" 0) (AP \"addr<2>\" 1)) (And (Eq (AP \"addr<3>\" 0) (AP \"addr<3>\" 1)) (Eq (AP \"addr<4>\" 0) (AP \"addr<4>\" 1)) )))) (G (Implies (And ( (AP \"huffmanEnc|shiftreg<1>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<2>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<3>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<4>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<5>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<6>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<7>_out\" 0)) (And (Neg (AP \"huffmanEnc|shiftreg<8>_out\" 0)) (Neg (AP \"huffmanEnc|shiftreg<9>_out\" 0))))))))))  (And (Eq (AP \"addr<0>\" 0) (AP \"addr<0>\" 1)) (And (Eq (AP \"addr<1>\" 0) (AP \"addr<1>\" 1)) (And (Eq (AP \"addr<2>\" 0) (AP \"addr<2>\" 1)) (And (Eq (AP \"addr<3>\" 0) (AP \"addr<3>\" 1)) (Eq (AP \"addr<4>\" 0) (AP \"addr<4>\" 1)) )))) ) )) (G (Eq (AP \"cipher\" 0) (AP \"cipher\" 1))) ) ))" ./huffenc.aag -pdr -cex
+
+Experiment Huff2: Hamming distance of 2 is not granted, we forbid to misuse nonexisting addresses (via addr<4>)
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+            (And \
+                (G (And (Neg (AP \"addr<4>\" 0)) (Neg (AP \"addr<4>\" 1)))) \
+                (Neg (G \
+                    (And (Eq (AP \"addr<0>\" 0) (AP \"addr<0>\" 1)) \
+                    (And (Eq (AP \"addr<1>\" 0) (AP \"addr<1>\" 1)) \
+                    (And (Eq (AP \"addr<2>\" 0) (AP \"addr<2>\" 1)) \
+                         (Eq (AP \"addr<3>\" 0) (AP \"addr<3>\" 1)) \
+                    )))))) \
+            (Until \
+              (Eq (AP \"cipher\" 0) (AP \"cipher\" 0)) \
+              (And (Neg (Eq (AP \"cipher\" 0) (AP \"cipher\" 0))) \
+                   (X (Until 
+                        (Eq (AP \"cipher\" 0) (AP \"cipher\" 0)) \
+                        (Neq (AP \"cipher\" 0) (AP \"cipher\" 0)) \
+                    )))) \
+    ))" ./huffenc.aag -pdr -cex
+            
+
+

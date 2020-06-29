@@ -1,0 +1,134 @@
+aag 80 6 27 8 47
+2
+4
+6
+8
+10
+12
+14 80
+16 14
+18 94
+20 18
+22 96
+24 22
+26 110
+28 26
+30 112
+32 30
+34 114
+36 34
+38 116
+40 38
+42 122
+44 42
+46 133
+48 46
+50 141
+52 50
+54 149
+56 54
+58 157
+60 58
+62 160
+64 120
+66 67
+14
+18
+22
+26
+30
+34
+38
+43
+68 58 55
+70 59 54
+72 71 69
+74 73 47
+76 72 46
+78 77 75
+80 79 3
+82 58 51
+84 59 50
+86 85 83
+88 87 47
+90 86 46
+92 91 89
+94 93 3
+96 58 3
+98 54 51
+100 55 50
+102 101 99
+104 103 47
+106 102 46
+108 107 105
+110 109 3
+112 54 3
+114 50 3
+116 46 3
+118 63 2
+120 119 2
+122 120 3
+124 4 3
+126 12 3
+128 126 46
+130 127 124
+132 131 129
+134 6 3
+136 126 50
+138 134 127
+140 139 137
+142 8 3
+144 126 54
+146 142 127
+148 147 145
+150 10 3
+152 126 58
+154 150 127
+156 155 153
+158 12 2
+160 159 2
+i0 ham_7_4_enc.reset
+i1 ham_7_4_enc.data_in[0]
+i2 ham_7_4_enc.data_in[1]
+i3 ham_7_4_enc.data_in[2]
+i4 ham_7_4_enc.data_in[3]
+i5 ham_7_4_enc.dvin
+l0 tmp_code[0]_4
+l1 tmp_code[0]_5
+l2 tmp_code[1]_7
+l3 tmp_code[1]_8
+l4 tmp_code[2]_10
+l5 tmp_code[2]_11
+l6 tmp_code[3]_13
+l7 tmp_code[3]_14
+l8 tmp_code[4]_16
+l9 tmp_code[4]_17
+l10 tmp_code[5]_19
+l11 tmp_code[5]_20
+l12 tmp_code[6]_22
+l13 tmp_code[6]_23
+l14 n59_inv
+l15 tmp_dvout_26
+l16 tmp_datareg[0]_29
+l17 tmp_datareg[0]_30
+l18 tmp_datareg[1]_33
+l19 tmp_datareg[1]_34
+l20 tmp_datareg[2]_37
+l21 tmp_datareg[2]_38
+l22 tmp_datareg[3]_41
+l23 tmp_datareg[3]_42
+l24 tmp_dvinreg_44
+l25 tmp_dvinreg_46
+l26 transformNet_50
+o0 ham_7_4_enc.code[0]
+o1 ham_7_4_enc.code[1]
+o2 ham_7_4_enc.code[2]
+o3 ham_7_4_enc.code[3]
+o4 ham_7_4_enc.code[4]
+o5 ham_7_4_enc.code[5]
+o6 ham_7_4_enc.code[6]
+o7 ham_7_4_enc.dvout
+c
+BLIF
+This file was written by ABC on Mon Dec  1 21:32:53 2014
+For information about AIGER format, refer to http://fmv.jku.at/aiger

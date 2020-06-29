@@ -1,0 +1,24 @@
+
+Experiment IF 9: A simple information flow property, can we transmit data:  ?/155.77/6.27
+
+./../../../mchyper.py -f "Forall (Forall \
+    (Implies \
+        (G \
+            (SameInputsExcept 0 1 [\"eth_top.wb_dat_i[0]\",\"eth_top.wb_dat_i[1]\",\"eth_top.wb_dat_i[2],eth_top.wb_dat_i[3]\",\"eth_top.wb_dat_i[4]\",\"eth_top.wb_dat_i[5]\",\"eth_top.wb_dat_i[6],eth_top.wb_dat_i[7]\",\"eth_top.wb_dat_i[8]\",\"eth_top.wb_dat_i[9]\",\"eth_top.wb_dat_i[10],eth_top.wb_dat_i[11]\",\"eth_top.wb_dat_i[12]\",\"eth_top.wb_dat_i[13]\",\"eth_top.wb_dat_i[14],eth_top.wb_dat_i[15]\",\"eth_top.wb_dat_i[16]\",\"eth_top.wb_dat_i[17]\",\"eth_top.wb_dat_i[18],eth_top.wb_dat_i[19]\",\"eth_top.wb_dat_i[20]\",\"eth_top.wb_dat_i[21]\",\"eth_top.wb_dat_i[22],eth_top.wb_dat_i[23]\",\"eth_top.wb_dat_i[24]\",\"eth_top.wb_dat_i[25]\",\"eth_top.wb_dat_i[26],eth_top.wb_dat_i[27]\",\"eth_top.wb_dat_i[28]\",\"eth_top.wb_dat_i[29]\",\"eth_top.wb_dat_i[30],eth_top.wb_dat_i[31]\"]) \
+        ) \
+        (G \
+            (EqualOn 0 1 [\"eth_top.mtxd_pad_o[0]\",\"eth_top.mtxd_pad_o[1]\",\"eth_top.mtxd_pad_o[2]\",\"eth_top.mtxd_pad_o[3]\"]) \
+        ) \
+        ))" ./ethernet.aag -pdr -cex
+
+
+
+[Not used in the paper:] Simplified property    / 84.41 / 2.97
+
+./../../../mchyper.py -f "Forall (Forall \
+        (WUntil \
+            (EqualOn 0 1 [\"eth_top.mtxd_pad_o[0]\",\"eth_top.mtxd_pad_o[1]\",\"eth_top.mtxd_pad_o[2]\",\"eth_top.mtxd_pad_o[3]\"]) \
+            (Neg (SameInputsExcept 0 1 [\"eth_top.wb_dat_i[0]\",\"eth_top.wb_dat_i[1]\",\"eth_top.wb_dat_i[2],eth_top.wb_dat_i[3]\",\"eth_top.wb_dat_i[4]\",\"eth_top.wb_dat_i[5]\",\"eth_top.wb_dat_i[6],eth_top.wb_dat_i[7]\",\"eth_top.wb_dat_i[8]\",\"eth_top.wb_dat_i[9]\",\"eth_top.wb_dat_i[10],eth_top.wb_dat_i[11]\",\"eth_top.wb_dat_i[12]\",\"eth_top.wb_dat_i[13]\",\"eth_top.wb_dat_i[14],eth_top.wb_dat_i[15]\",\"eth_top.wb_dat_i[16]\",\"eth_top.wb_dat_i[17]\",\"eth_top.wb_dat_i[18],eth_top.wb_dat_i[19]\",\"eth_top.wb_dat_i[20]\",\"eth_top.wb_dat_i[21]\",\"eth_top.wb_dat_i[22],eth_top.wb_dat_i[23]\",\"eth_top.wb_dat_i[24]\",\"eth_top.wb_dat_i[25]\",\"eth_top.wb_dat_i[26],eth_top.wb_dat_i[27]\",\"eth_top.wb_dat_i[28]\",\"eth_top.wb_dat_i[29]\",\"eth_top.wb_dat_i[30],eth_top.wb_dat_i[31]\"])) \
+        ) \
+        )" ./ethernet.aag -pdr -cex
+

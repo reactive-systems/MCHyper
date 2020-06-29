@@ -1,0 +1,44 @@
+######################################################################
+# Properties of the decoder.
+######################################################################
+
+#PASS: The all-zero state is never re-entered.
+X G !decoder.state[9:0]=0;
+
+#PASS: The output is never 255.
+G !plain[7:0]=255;
+
+#PASS: No two consecutive states have plain != 0.
+G(plain[7:0]=0 + X plain[7:0]=0);
+
+#PASS: String 010 is decoded as E.
+G((decoder.state[9:0]=0 + decoder.leaf=1) ->
+  X(ci=0 -> X(ci=1 -> X(ci=0 -> plain[7:0]=69))));
+
+#FAIL: in this property, "plain" is strobed one clock cycle too late.
+G((decoder.state[9:0]=0 + decoder.leaf=1) ->
+  X(ci=0 -> X(ci=1 -> X(ci=0 -> X plain[7:0]=69))));
+
+#PASS: String 00000 is decoded as U.
+G((decoder.state[9:0]=0 + decoder.leaf=1) ->
+  X(ci=0 -> X(ci=0 -> X(ci=0 -> X(ci=0 -> X(ci=0 -> plain[7:0]=85))))));
+
+
+######################################################################
+# Properties of the encoder.
+######################################################################
+
+#PASS: The encoder shift register is never 0.
+G !encoder.shiftreg[9:0]=0;
+
+
+######################################################################
+# Global properties.
+######################################################################
+
+#PASS: When a new transmission begins, the decoder is ready.
+G(encoder.shiftreg[9:1]=1 -> X decoder.leaf=1);
+
+#PASS: Characters are successfully transmitted.  (Two equivalent forms.)
+G(decoder.leaf=1 -> plain[7:0]==ch[7:0]);
+G(plain[7:0]=0 + plain[7:0]==ch[7:0]);

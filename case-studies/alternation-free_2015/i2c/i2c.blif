@@ -1,0 +1,3707 @@
+.model BLIF
+.names i2c_master_top.byte_controller.bit_controller.VSS
+0
+.names i2c_master_top.byte_controller.bit_controller.VCC
+1
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1174[0]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1209[0]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1244[0]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1279[0]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1358[1]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1358[2]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1401[1]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N1405[1]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N192[0]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N192[2]
+.inputs i2c_master_top.byte_controller.bit_controller.rtlc_N192[3]
+.inputs i2c_master_top.byte_controller.bit_controller.SPG_OP_UNLOADED_0
+.inputs i2c_master_top.byte_controller.core_cmd[0]
+.inputs i2c_master_top.byte_controller.core_cmd[1]
+.inputs i2c_master_top.byte_controller.rtlc_N563[2]
+.inputs i2c_master_top.byte_controller.rtlc_N575[0]
+.inputs i2c_master_top.byte_controller.rtlc_N587[2]
+.inputs i2c_master_top.byte_controller.rtlc_N605[0]
+.inputs i2c_master_top.byte_controller.rtlc_N605[1]
+.inputs i2c_master_top.byte_controller.rtlc_N605[2]
+.inputs i2c_master_top.byte_controller.rtlc_N605[3]
+.inputs i2c_master_top.byte_controller.rtlc_N605[4]
+.inputs i2c_master_top.byte_controller.rtlc_N637[0]
+.inputs i2c_master_top.byte_controller.rtlc_N637[1]
+.inputs i2c_master_top.byte_controller.rtlc_N637[3]
+.inputs i2c_master_top.byte_controller.rtlc_N669[0]
+.inputs i2c_master_top.byte_controller.rtlc_N669[1]
+.inputs i2c_master_top.byte_controller.rtlc_N669[2]
+.inputs i2c_master_top.byte_controller.rtlc_N701[0]
+.inputs i2c_master_top.byte_controller.rtlc_N701[1]
+.inputs i2c_master_top.byte_controller.rtlc_N701[4]
+.inputs i2c_master_top.byte_controller.rtlc_N701[5]
+.inputs i2c_master_top.byte_controller.rtlc_N733[0]
+.inputs i2c_master_top.byte_controller.rtlc_N733[2]
+.inputs i2c_master_top.byte_controller.rtlc_N733[3]
+.inputs i2c_master_top.byte_controller.rtlc_N733[4]
+.inputs i2c_master_top.wb_rst_i
+.inputs i2c_master_top.arst_i
+.inputs i2c_master_top.wb_adr_i[0]
+.inputs i2c_master_top.wb_adr_i[1]
+.inputs i2c_master_top.wb_adr_i[2]
+.inputs i2c_master_top.wb_dat_i[0]
+.inputs i2c_master_top.wb_dat_i[1]
+.inputs i2c_master_top.wb_dat_i[2]
+.inputs i2c_master_top.wb_dat_i[3]
+.inputs i2c_master_top.wb_dat_i[4]
+.inputs i2c_master_top.wb_dat_i[5]
+.inputs i2c_master_top.wb_dat_i[6]
+.inputs i2c_master_top.wb_dat_i[7]
+.outputs i2c_master_top.wb_dat_o[0]
+.outputs i2c_master_top.wb_dat_o[1]
+.outputs i2c_master_top.wb_dat_o[2]
+.outputs i2c_master_top.wb_dat_o[3]
+.outputs i2c_master_top.wb_dat_o[4]
+.outputs i2c_master_top.wb_dat_o[5]
+.outputs i2c_master_top.wb_dat_o[6]
+.outputs i2c_master_top.wb_dat_o[7]
+.inputs i2c_master_top.wb_we_i
+.inputs i2c_master_top.wb_stb_i
+.inputs i2c_master_top.wb_cyc_i
+.outputs i2c_master_top.wb_ack_o
+.outputs i2c_master_top.wb_inta_o
+.inputs i2c_master_top.scl_pad_i
+.outputs i2c_master_top.scl_pad_o
+.outputs i2c_master_top.scl_padoen_o
+.inputs i2c_master_top.sda_pad_i
+.outputs i2c_master_top.sda_pad_o
+.outputs i2c_master_top.sda_padoen_o
+.inputs i2c_master_top.rtlc_N44[0]
+.inputs i2c_master_top.rtlc_N66[0]
+.inputs i2c_master_top.rtlc_N88[0]
+.inputs i2c_master_top.rtlc_N88[3]
+.inputs i2c_master_top.rtlc_N110[0]
+.inputs i2c_master_top.rtlc_N110[3]
+.inputs i2c_master_top.rtlc_N132[0]
+.inputs i2c_master_top.rtlc_N132[3]
+.inputs i2c_master_top.rtlc_N154[0]
+.inputs i2c_master_top.rtlc_N176[0]
+.inputs i2c_master_top.rtlc_N198[0]
+.inputs i2c_master_top.rtlc_N954[1]
+.inputs i2c_master_top.rtlc_N986[1]
+.inputs i2c_master_top.rtlc_N998[1]
+.inputs i2c_master_top.rtlc_N1050[1]
+.inputs i2c_master_top.rtlc_N182[0]
+.names periscope_single_clock
+1
+.names Supply1
+1
+.names Supply0
+0
+.names i2c_master_top.byte_controller.bit_controller.cnt[1] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N218
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N6[0] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N218 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N148
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N148 i2c_master_top.byte_controller.bit_controller.cnt[2] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N151
+00 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[3] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N232
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N151 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N232 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N156
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N156 i2c_master_top.byte_controller.bit_controller.cnt[4] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N159
+00 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[5] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N246
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N159 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N246 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N164
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N164 i2c_master_top.byte_controller.bit_controller.cnt[6] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N167
+00 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[7] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N260
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N167 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N260 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N172
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N172 i2c_master_top.byte_controller.bit_controller.cnt[8] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N175
+00 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[9] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N274
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N175 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N274 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N180
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N180 i2c_master_top.byte_controller.bit_controller.cnt[10] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N183
+00 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[11] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N288
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N183 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N288 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N188
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N188 i2c_master_top.byte_controller.bit_controller.cnt[12] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N191
+00 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[13] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N302
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N191 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N302 i2c_master_top.byte_controller.bit_controller.rtlc_I219.N196
+0- 1
+-0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N196 i2c_master_top.byte_controller.bit_controller.cnt[14] i2c_master_top.byte_controller.bit_controller.rtlc_I219.N199
+00 1
+.names Supply1 tmp_sSCL_7 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.sSCL
+1-1 1
+-10 1
+.names Supply1 tmp_sSDA_12 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.sSDA
+1-1 1
+-10 1
+.names tmp_dscl_oen_14 tmp_dscl_oen_15 transformNet_0 i2c_master_top.byte_controller.bit_controller.dscl_oen
+1-1 1
+-10 1
+.names Supply0 tmp_sda_chk_21 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.sda_chk
+1-1 1
+-10 1
+.names Supply1 tmp_clk_en_26 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.clk_en
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.dscl_oen i2c_master_top.byte_controller.bit_controller.rtlc_N184 i2c_master_top.byte_controller.bit_controller.slave_wait
+11 1
+.names Supply0 tmp_cnt[0]_32 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[0]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[1]_38 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[1]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[2]_44 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[2]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[3]_50 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[3]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[4]_56 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[4]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[5]_62 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[5]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[6]_68 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[6]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[7]_74 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[7]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[8]_80 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[8]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[9]_86 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[9]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[10]_92 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[10]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[11]_98 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[11]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[12]_104 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[12]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[13]_110 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[13]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[14]_116 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[14]
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[15]_122 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cnt[15]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[0]_128 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[0]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[1]_134 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[1]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[2]_140 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[2]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[3]_146 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[3]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[4]_152 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[4]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[5]_158 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[5]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[6]_164 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[6]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[7]_170 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[7]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[8]_176 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[8]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[9]_182 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[9]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[10]_188 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[10]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[11]_194 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[11]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[12]_200 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[12]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[13]_206 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[13]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[14]_212 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[14]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[15]_218 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[15]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[16]_224 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.c_state[16]
+1-1 1
+-10 1
+.names Supply1 tmp_dSCL_229 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.dSCL
+1-1 1
+-10 1
+.names Supply1 tmp_dSDA_234 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.dSDA
+1-1 1
+-10 1
+.names Supply0 tmp_sta_condition_239 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.sta_condition
+1-1 1
+-10 1
+.names Supply0 tmp_sto_condition_244 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.sto_condition
+1-1 1
+-10 1
+.names Supply0 tmp_cmd_stop_250 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.bit_controller.cmd_stop
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.slave_wait i2c_master_top.byte_controller.bit_controller.rtlc_N5
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N310 i2c_master_top.byte_controller.bit_controller.rtlc_N324 i2c_master_top.byte_controller.bit_controller.rtlc_N1
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1 i2c_master_top.byte_controller.bit_controller.rtlc_N2
+0 1
+.names i2c_master_top.ctr[7] i2c_master_top.byte_controller.bit_controller.rtlc_N3
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2 i2c_master_top.byte_controller.bit_controller.rtlc_N3 i2c_master_top.byte_controller.bit_controller.rtlc_N4
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_N5 i2c_master_top.byte_controller.bit_controller.clk_en_SS_3
+11 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[0] i2c_master_top.byte_controller.bit_controller.rtlc_N6[0]
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N6[0] i2c_master_top.byte_controller.bit_controller.cnt[1] i2c_master_top.byte_controller.bit_controller.rtlc_N6[1]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N148 i2c_master_top.byte_controller.bit_controller.cnt[2] i2c_master_top.byte_controller.bit_controller.rtlc_N6[2]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N151 i2c_master_top.byte_controller.bit_controller.cnt[3] i2c_master_top.byte_controller.bit_controller.rtlc_N6[3]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N156 i2c_master_top.byte_controller.bit_controller.cnt[4] i2c_master_top.byte_controller.bit_controller.rtlc_N6[4]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N159 i2c_master_top.byte_controller.bit_controller.cnt[5] i2c_master_top.byte_controller.bit_controller.rtlc_N6[5]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N164 i2c_master_top.byte_controller.bit_controller.cnt[6] i2c_master_top.byte_controller.bit_controller.rtlc_N6[6]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N167 i2c_master_top.byte_controller.bit_controller.cnt[7] i2c_master_top.byte_controller.bit_controller.rtlc_N6[7]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N172 i2c_master_top.byte_controller.bit_controller.cnt[8] i2c_master_top.byte_controller.bit_controller.rtlc_N6[8]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N175 i2c_master_top.byte_controller.bit_controller.cnt[9] i2c_master_top.byte_controller.bit_controller.rtlc_N6[9]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N180 i2c_master_top.byte_controller.bit_controller.cnt[10] i2c_master_top.byte_controller.bit_controller.rtlc_N6[10]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N183 i2c_master_top.byte_controller.bit_controller.cnt[11] i2c_master_top.byte_controller.bit_controller.rtlc_N6[11]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N188 i2c_master_top.byte_controller.bit_controller.cnt[12] i2c_master_top.byte_controller.bit_controller.rtlc_N6[12]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N191 i2c_master_top.byte_controller.bit_controller.cnt[13] i2c_master_top.byte_controller.bit_controller.rtlc_N6[13]
+10 1
+01 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N196 i2c_master_top.byte_controller.bit_controller.cnt[14] i2c_master_top.byte_controller.bit_controller.rtlc_N6[14]
+00 1
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_I219.N199 i2c_master_top.byte_controller.bit_controller.cnt[15] i2c_master_top.byte_controller.bit_controller.rtlc_N6[15]
+10 1
+01 1
+.names i2c_master_top.prer[0] i2c_master_top.byte_controller.bit_controller.rtlc_N6[0] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_0_G40_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[1] i2c_master_top.byte_controller.bit_controller.rtlc_N6[1] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_1_G41_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[2] i2c_master_top.byte_controller.bit_controller.rtlc_N6[2] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_2_G42_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[3] i2c_master_top.byte_controller.bit_controller.rtlc_N6[3] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_3_G43_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[4] i2c_master_top.byte_controller.bit_controller.rtlc_N6[4] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_4_G44_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[5] i2c_master_top.byte_controller.bit_controller.rtlc_N6[5] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_5_G45_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[6] i2c_master_top.byte_controller.bit_controller.rtlc_N6[6] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_6_G46_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[7] i2c_master_top.byte_controller.bit_controller.rtlc_N6[7] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_7_G47_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[8] i2c_master_top.byte_controller.bit_controller.rtlc_N6[8] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_8_G48_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[9] i2c_master_top.byte_controller.bit_controller.rtlc_N6[9] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_9_G49_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[10] i2c_master_top.byte_controller.bit_controller.rtlc_N6[10] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_10_G50_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[11] i2c_master_top.byte_controller.bit_controller.rtlc_N6[11] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_11_G51_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[12] i2c_master_top.byte_controller.bit_controller.rtlc_N6[12] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_12_G52_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[13] i2c_master_top.byte_controller.bit_controller.rtlc_N6[13] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_13_G53_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[14] i2c_master_top.byte_controller.bit_controller.rtlc_N6[14] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_14_G54_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.prer[15] i2c_master_top.byte_controller.bit_controller.rtlc_N6[15] i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_15_G55_SS_3
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.slave_wait i2c_master_top.byte_controller.bit_controller.rtlc_N4 i2c_master_top.byte_controller.bit_controller.rtlc_G98
+11 1
+.names i2c_master_top.wb_rst_i i2c_master_top.byte_controller.bit_controller.clk_en_SS_3 i2c_master_top.byte_controller.bit_controller.clk_en_SS_4
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_0_G40_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_0_G40_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_1_G41_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_1_G41_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_2_G42_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_2_G42_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_3_G43_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_3_G43_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_4_G44_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_4_G44_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_5_G45_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_5_G45_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_6_G46_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_6_G46_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_7_G47_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_7_G47_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_8_G48_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_8_G48_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_9_G49_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_9_G49_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_10_G50_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_10_G50_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_11_G51_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_11_G51_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G98 i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_G110
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_12_G52_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_12_G52_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_13_G53_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_13_G53_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_14_G54_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_14_G54_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_15_G55_SS_3 i2c_master_top.byte_controller.bit_controller.rtlc_cnt_15_G55_SS_4
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G110 i2c_master_top.byte_controller.bit_controller.rtlc_N294
+0 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[0] i2c_master_top.byte_controller.bit_controller.cnt[1] i2c_master_top.byte_controller.bit_controller.rtlc_N298
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[2] i2c_master_top.byte_controller.bit_controller.cnt[3] i2c_master_top.byte_controller.bit_controller.rtlc_N300
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N298 i2c_master_top.byte_controller.bit_controller.rtlc_N300 i2c_master_top.byte_controller.bit_controller.rtlc_N302
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[4] i2c_master_top.byte_controller.bit_controller.cnt[5] i2c_master_top.byte_controller.bit_controller.rtlc_N304
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[6] i2c_master_top.byte_controller.bit_controller.cnt[7] i2c_master_top.byte_controller.bit_controller.rtlc_N306
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N304 i2c_master_top.byte_controller.bit_controller.rtlc_N306 i2c_master_top.byte_controller.bit_controller.rtlc_N308
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N302 i2c_master_top.byte_controller.bit_controller.rtlc_N308 i2c_master_top.byte_controller.bit_controller.rtlc_N310
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[8] i2c_master_top.byte_controller.bit_controller.cnt[9] i2c_master_top.byte_controller.bit_controller.rtlc_N312
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[10] i2c_master_top.byte_controller.bit_controller.cnt[11] i2c_master_top.byte_controller.bit_controller.rtlc_N314
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N312 i2c_master_top.byte_controller.bit_controller.rtlc_N314 i2c_master_top.byte_controller.bit_controller.rtlc_N316
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[12] i2c_master_top.byte_controller.bit_controller.cnt[13] i2c_master_top.byte_controller.bit_controller.rtlc_N318
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.cnt[14] i2c_master_top.byte_controller.bit_controller.cnt[15] i2c_master_top.byte_controller.bit_controller.rtlc_N320
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N318 i2c_master_top.byte_controller.bit_controller.rtlc_N320 i2c_master_top.byte_controller.bit_controller.rtlc_N322
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N316 i2c_master_top.byte_controller.bit_controller.rtlc_N322 i2c_master_top.byte_controller.bit_controller.rtlc_N324
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.byte_controller.bit_controller.sSCL i2c_master_top.byte_controller.bit_controller.dSCL_SS_7
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.byte_controller.bit_controller.sSDA i2c_master_top.byte_controller.bit_controller.dSDA_SS_7
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.scl_pad_i i2c_master_top.byte_controller.bit_controller.sSCL_SS_7
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.sda_pad_i i2c_master_top.byte_controller.bit_controller.sSDA_SS_7
+1- 1
+-1 1
+.names i2c_master_top.arst_i i2c_master_top.byte_controller.bit_controller.rtlc_N7
+0 1
+.names i2c_master_top.byte_controller.bit_controller.sSDA i2c_master_top.byte_controller.bit_controller.rtlc_N13
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N13 i2c_master_top.byte_controller.bit_controller.dSDA i2c_master_top.byte_controller.bit_controller.rtlc_N14
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N14 i2c_master_top.byte_controller.bit_controller.sSCL i2c_master_top.byte_controller.bit_controller.rtlc_N15
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_N15 i2c_master_top.byte_controller.bit_controller.sta_condition_SS_10
+11 1
+.names i2c_master_top.byte_controller.bit_controller.dSDA i2c_master_top.byte_controller.bit_controller.rtlc_N16
+0 1
+.names i2c_master_top.byte_controller.bit_controller.sSDA i2c_master_top.byte_controller.bit_controller.rtlc_N16 i2c_master_top.byte_controller.bit_controller.rtlc_N17
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N17 i2c_master_top.byte_controller.bit_controller.sSCL i2c_master_top.byte_controller.bit_controller.rtlc_N18
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_N18 i2c_master_top.byte_controller.bit_controller.sto_condition_SS_10
+11 1
+.names i2c_master_top.byte_controller.bit_controller.sta_condition i2c_master_top.i2c_busy i2c_master_top.byte_controller.bit_controller.rtlc_N27
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.sto_condition i2c_master_top.byte_controller.bit_controller.rtlc_N28
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N27 i2c_master_top.byte_controller.bit_controller.rtlc_N28 i2c_master_top.byte_controller.bit_controller.rtlc_N29
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_N29 i2c_master_top.byte_controller.bit_controller.busy_SS_13
+11 1
+.names i2c_master_top.byte_controller.bit_controller.clk_en i2c_master_top.byte_controller.bit_controller.rtlc_PS37_G156
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N32 i2c_master_top.byte_controller.bit_controller.rtlc_N34 i2c_master_top.byte_controller.bit_controller.rtlc_N56
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_N56 i2c_master_top.byte_controller.bit_controller.cmd_stop_SS_17
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS37_G156 i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_G157
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G157 i2c_master_top.byte_controller.bit_controller.rtlc_N23
+0 1
+.names i2c_master_top.byte_controller.c_state[0] i2c_master_top.byte_controller.bit_controller.rtlc_N26
+0 1
+.names i2c_master_top.byte_controller.core_cmd[2] i2c_master_top.byte_controller.bit_controller.rtlc_N58
+0 1
+.names i2c_master_top.byte_controller.core_cmd[3] i2c_master_top.byte_controller.bit_controller.rtlc_N59
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N26 i2c_master_top.byte_controller.c_state[4] i2c_master_top.byte_controller.bit_controller.rtlc_N32
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N58 i2c_master_top.byte_controller.bit_controller.rtlc_N59 i2c_master_top.byte_controller.bit_controller.rtlc_N34
+11 1
+.names i2c_master_top.wb_rst_i i2c_master_top.byte_controller.bit_controller.rtlc_N37
+0 1
+.names i2c_master_top.byte_controller.bit_controller.sda_chk i2c_master_top.byte_controller.bit_controller.rtlc_N13 i2c_master_top.byte_controller.bit_controller.rtlc_N85
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N85 i2c_master_top.sda_padoen_o i2c_master_top.byte_controller.bit_controller.rtlc_N86
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N47 i2c_master_top.byte_controller.bit_controller.rtlc_N63 i2c_master_top.byte_controller.bit_controller.rtlc_N87
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N87 i2c_master_top.byte_controller.bit_controller.sto_condition i2c_master_top.byte_controller.bit_controller.rtlc_N88
+11 1
+.names i2c_master_top.byte_controller.bit_controller.cmd_stop i2c_master_top.byte_controller.bit_controller.rtlc_N89
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N88 i2c_master_top.byte_controller.bit_controller.rtlc_N89 i2c_master_top.byte_controller.bit_controller.rtlc_N90
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N86 i2c_master_top.byte_controller.bit_controller.rtlc_N90 i2c_master_top.byte_controller.bit_controller.rtlc_N8
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N37 i2c_master_top.byte_controller.bit_controller.rtlc_N8 i2c_master_top.byte_controller.bit_controller.al_SS_20
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[0] i2c_master_top.byte_controller.bit_controller.c_state[1] i2c_master_top.byte_controller.bit_controller.rtlc_N35
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[2] i2c_master_top.byte_controller.bit_controller.c_state[3] i2c_master_top.byte_controller.bit_controller.rtlc_N92
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N35 i2c_master_top.byte_controller.bit_controller.rtlc_N92 i2c_master_top.byte_controller.bit_controller.rtlc_N39
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[4] i2c_master_top.byte_controller.bit_controller.c_state[5] i2c_master_top.byte_controller.bit_controller.rtlc_N41
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[6] i2c_master_top.byte_controller.bit_controller.c_state[7] i2c_master_top.byte_controller.bit_controller.rtlc_N93
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N41 i2c_master_top.byte_controller.bit_controller.rtlc_N93 i2c_master_top.byte_controller.bit_controller.rtlc_N45
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N39 i2c_master_top.byte_controller.bit_controller.rtlc_N45 i2c_master_top.byte_controller.bit_controller.rtlc_N47
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[8] i2c_master_top.byte_controller.bit_controller.c_state[9] i2c_master_top.byte_controller.bit_controller.rtlc_N49
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[10] i2c_master_top.byte_controller.bit_controller.c_state[11] i2c_master_top.byte_controller.bit_controller.rtlc_N51
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N49 i2c_master_top.byte_controller.bit_controller.rtlc_N51 i2c_master_top.byte_controller.bit_controller.rtlc_N53
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[12] i2c_master_top.byte_controller.bit_controller.c_state[13] i2c_master_top.byte_controller.bit_controller.rtlc_N55
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[15] i2c_master_top.byte_controller.bit_controller.c_state[16] i2c_master_top.byte_controller.bit_controller.rtlc_N94
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[14] i2c_master_top.byte_controller.bit_controller.rtlc_N94 i2c_master_top.byte_controller.bit_controller.rtlc_N95
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N55 i2c_master_top.byte_controller.bit_controller.rtlc_N95 i2c_master_top.byte_controller.bit_controller.rtlc_N61
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N53 i2c_master_top.byte_controller.bit_controller.rtlc_N61 i2c_master_top.byte_controller.bit_controller.rtlc_N63
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.dSCL i2c_master_top.byte_controller.bit_controller.rtlc_N127
+0 1
+.names i2c_master_top.byte_controller.bit_controller.sSCL i2c_master_top.byte_controller.bit_controller.rtlc_N127 i2c_master_top.byte_controller.bit_controller.rtlc_N128
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N193 i2c_master_top.byte_controller.bit_controller.rtlc_N34 i2c_master_top.byte_controller.bit_controller.rtlc_N135
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N200 i2c_master_top.byte_controller.bit_controller.rtlc_N199 i2c_master_top.byte_controller.bit_controller.rtlc_N138
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N200 i2c_master_top.byte_controller.bit_controller.rtlc_N201 i2c_master_top.byte_controller.bit_controller.rtlc_N11
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N146
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1511 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N147
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1542 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N20
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1573 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N21
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1604 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N22
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1635 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N148
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1666 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N149
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1697 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N25
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1728 i2c_master_top.byte_controller.bit_controller.rtlc_N1744 i2c_master_top.byte_controller.bit_controller.rtlc_N150
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1775 i2c_master_top.byte_controller.bit_controller.rtlc_N151
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1806 i2c_master_top.byte_controller.bit_controller.rtlc_N152
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1837 i2c_master_top.byte_controller.bit_controller.rtlc_N153
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1868 i2c_master_top.byte_controller.bit_controller.rtlc_N154
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1899 i2c_master_top.byte_controller.bit_controller.rtlc_N31
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1930 i2c_master_top.byte_controller.bit_controller.rtlc_N155
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1961 i2c_master_top.byte_controller.bit_controller.rtlc_N33
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N1992 i2c_master_top.byte_controller.bit_controller.rtlc_N156
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2007 i2c_master_top.byte_controller.bit_controller.rtlc_N2023 i2c_master_top.byte_controller.bit_controller.rtlc_N157
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1138 i2c_master_top.byte_controller.bit_controller.rtlc_N1140 i2c_master_top.byte_controller.bit_controller.rtlc_N158
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N156 i2c_master_top.byte_controller.bit_controller.rtlc_N33 i2c_master_top.byte_controller.bit_controller.rtlc_N160
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1289 i2c_master_top.byte_controller.bit_controller.rtlc_N1297 i2c_master_top.byte_controller.bit_controller.rtlc_N221
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N146 i2c_master_top.byte_controller.bit_controller.rtlc_N147 i2c_master_top.byte_controller.bit_controller.rtlc_G267
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1333 i2c_master_top.byte_controller.bit_controller.rtlc_N1335 i2c_master_top.byte_controller.bit_controller.rtlc_N228
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1349 i2c_master_top.byte_controller.bit_controller.rtlc_N1355 i2c_master_top.byte_controller.bit_controller.rtlc_N234
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1358[0] i2c_master_top.byte_controller.bit_controller.rtlc_N234 i2c_master_top.byte_controller.bit_controller.sda_oen_SS_26
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.clk_en i2c_master_top.byte_controller.bit_controller.rtlc_N158 i2c_master_top.byte_controller.bit_controller.cmd_ack_SS_27
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1401[0] i2c_master_top.byte_controller.bit_controller.rtlc_PS37_G156 i2c_master_top.byte_controller.bit_controller.rtlc_G272
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1405[0] i2c_master_top.byte_controller.bit_controller.rtlc_PS37_G156 i2c_master_top.byte_controller.bit_controller.rtlc_G273
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.i2c_al i2c_master_top.byte_controller.bit_controller.rtlc_N161
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N161 i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.cmd_ack_SS_27 i2c_master_top.byte_controller.bit_controller.cmd_ack_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N160 i2c_master_top.byte_controller.bit_controller.sda_chk_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N1174[1] i2c_master_top.byte_controller.bit_controller.rtlc_c_state_0_G214_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N147 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_1_G215_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N20 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_2_G216_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N21 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_3_G217_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N22 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_4_G218_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N1209[1] i2c_master_top.byte_controller.bit_controller.rtlc_c_state_5_G219_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N149 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_6_G220_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N25 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_7_G221_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N150 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_8_G222_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N1244[1] i2c_master_top.byte_controller.bit_controller.rtlc_c_state_9_G223_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N152 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_10_G224_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N153 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_11_G225_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N154 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_12_G226_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N1279[1] i2c_master_top.byte_controller.bit_controller.rtlc_c_state_13_G227_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS37_G156 i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_G288
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N155 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_14_G228_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N33 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_15_G229_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_N156 i2c_master_top.byte_controller.bit_controller.rtlc_c_state_16_G230_SS_28
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N161 i2c_master_top.byte_controller.bit_controller.rtlc_N221 i2c_master_top.byte_controller.bit_controller.scl_oen_SS_28
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G272 i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_G292
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N161 i2c_master_top.byte_controller.bit_controller.sda_oen_SS_26 i2c_master_top.byte_controller.bit_controller.sda_oen_SS_28
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G273 i2c_master_top.byte_controller.bit_controller.rtlc_PS53_G237 i2c_master_top.byte_controller.bit_controller.rtlc_G293
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G288 i2c_master_top.byte_controller.bit_controller.rtlc_N521
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G292 i2c_master_top.byte_controller.bit_controller.rtlc_N530
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G293 i2c_master_top.byte_controller.bit_controller.rtlc_N539
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[12] i2c_master_top.byte_controller.bit_controller.rtlc_N962
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[14] i2c_master_top.byte_controller.bit_controller.rtlc_N966
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[15] i2c_master_top.byte_controller.bit_controller.rtlc_N968
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[16] i2c_master_top.byte_controller.bit_controller.rtlc_N970
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[0] i2c_master_top.byte_controller.bit_controller.rtlc_N973
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[1] i2c_master_top.byte_controller.bit_controller.rtlc_N975
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[2] i2c_master_top.byte_controller.bit_controller.rtlc_N977
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[3] i2c_master_top.byte_controller.bit_controller.rtlc_N979
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[4] i2c_master_top.byte_controller.bit_controller.rtlc_N981
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[5] i2c_master_top.byte_controller.bit_controller.rtlc_N983
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[6] i2c_master_top.byte_controller.bit_controller.rtlc_N985
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[7] i2c_master_top.byte_controller.bit_controller.rtlc_N987
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[8] i2c_master_top.byte_controller.bit_controller.rtlc_N989
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[9] i2c_master_top.byte_controller.bit_controller.rtlc_N991
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[10] i2c_master_top.byte_controller.bit_controller.rtlc_N993
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[11] i2c_master_top.byte_controller.bit_controller.rtlc_N995
+0 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[13] i2c_master_top.byte_controller.bit_controller.rtlc_N997
+0 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N157 i2c_master_top.byte_controller.bit_controller.rtlc_N31 i2c_master_top.byte_controller.bit_controller.rtlc_N1138
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N151 i2c_master_top.byte_controller.bit_controller.rtlc_N148 i2c_master_top.byte_controller.bit_controller.rtlc_N1140
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N135 i2c_master_top.byte_controller.bit_controller.rtlc_N146 i2c_master_top.byte_controller.bit_controller.rtlc_N1174[1]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N56 i2c_master_top.byte_controller.bit_controller.rtlc_N146 i2c_master_top.byte_controller.bit_controller.rtlc_N1209[1]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N11 i2c_master_top.byte_controller.bit_controller.rtlc_N146 i2c_master_top.byte_controller.bit_controller.rtlc_N1244[1]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N138 i2c_master_top.byte_controller.bit_controller.rtlc_N146 i2c_master_top.byte_controller.bit_controller.rtlc_N1279[1]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N153 i2c_master_top.byte_controller.bit_controller.rtlc_N151 i2c_master_top.byte_controller.bit_controller.rtlc_N1285
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N154 i2c_master_top.byte_controller.bit_controller.rtlc_N1285 i2c_master_top.byte_controller.bit_controller.rtlc_N1287
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N160 i2c_master_top.byte_controller.bit_controller.rtlc_N1287 i2c_master_top.byte_controller.bit_controller.rtlc_N1289
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N150 i2c_master_top.byte_controller.bit_controller.rtlc_N25 i2c_master_top.byte_controller.bit_controller.rtlc_N1291
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N21 i2c_master_top.byte_controller.bit_controller.rtlc_N20 i2c_master_top.byte_controller.bit_controller.rtlc_N1293
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N22 i2c_master_top.byte_controller.bit_controller.rtlc_N1293 i2c_master_top.byte_controller.bit_controller.rtlc_N1295
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1291 i2c_master_top.byte_controller.bit_controller.rtlc_N1295 i2c_master_top.byte_controller.bit_controller.rtlc_N1297
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N157 i2c_master_top.byte_controller.bit_controller.rtlc_N156 i2c_master_top.byte_controller.bit_controller.rtlc_N1333
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N33 i2c_master_top.byte_controller.bit_controller.rtlc_N155 i2c_master_top.byte_controller.bit_controller.rtlc_N1335
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N154 i2c_master_top.byte_controller.bit_controller.rtlc_N153 i2c_master_top.byte_controller.bit_controller.rtlc_N1347
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N31 i2c_master_top.byte_controller.bit_controller.rtlc_N1347 i2c_master_top.byte_controller.bit_controller.rtlc_N1349
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N152 i2c_master_top.byte_controller.bit_controller.rtlc_N151 i2c_master_top.byte_controller.bit_controller.rtlc_N1351
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N20 i2c_master_top.byte_controller.bit_controller.rtlc_N147 i2c_master_top.byte_controller.bit_controller.rtlc_N1353
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1351 i2c_master_top.byte_controller.bit_controller.rtlc_N1353 i2c_master_top.byte_controller.bit_controller.rtlc_N1355
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.core_txd i2c_master_top.byte_controller.bit_controller.rtlc_N228 i2c_master_top.byte_controller.bit_controller.rtlc_N1358[0]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_G267 i2c_master_top.byte_controller.bit_controller.clk_en i2c_master_top.byte_controller.bit_controller.rtlc_N1401[0]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N146 i2c_master_top.byte_controller.bit_controller.clk_en i2c_master_top.byte_controller.bit_controller.rtlc_N1405[0]
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[0] i2c_master_top.byte_controller.bit_controller.rtlc_N975 i2c_master_top.byte_controller.bit_controller.rtlc_N1499
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1499 i2c_master_top.byte_controller.bit_controller.rtlc_N1997 i2c_master_top.byte_controller.bit_controller.rtlc_N1503
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1503 i2c_master_top.byte_controller.bit_controller.rtlc_N2005 i2c_master_top.byte_controller.bit_controller.rtlc_N1511
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N973 i2c_master_top.byte_controller.bit_controller.c_state[1] i2c_master_top.byte_controller.bit_controller.rtlc_N1530
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1530 i2c_master_top.byte_controller.bit_controller.rtlc_N1997 i2c_master_top.byte_controller.bit_controller.rtlc_N1534
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1534 i2c_master_top.byte_controller.bit_controller.rtlc_N2005 i2c_master_top.byte_controller.bit_controller.rtlc_N1542
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[2] i2c_master_top.byte_controller.bit_controller.rtlc_N979 i2c_master_top.byte_controller.bit_controller.rtlc_N1563
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1995 i2c_master_top.byte_controller.bit_controller.rtlc_N1563 i2c_master_top.byte_controller.bit_controller.rtlc_N1565
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1565 i2c_master_top.byte_controller.bit_controller.rtlc_N2005 i2c_master_top.byte_controller.bit_controller.rtlc_N1573
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N977 i2c_master_top.byte_controller.bit_controller.c_state[3] i2c_master_top.byte_controller.bit_controller.rtlc_N1594
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1995 i2c_master_top.byte_controller.bit_controller.rtlc_N1594 i2c_master_top.byte_controller.bit_controller.rtlc_N1596
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1596 i2c_master_top.byte_controller.bit_controller.rtlc_N2005 i2c_master_top.byte_controller.bit_controller.rtlc_N1604
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[4] i2c_master_top.byte_controller.bit_controller.rtlc_N983 i2c_master_top.byte_controller.bit_controller.rtlc_N1629
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1629 i2c_master_top.byte_controller.bit_controller.rtlc_N2003 i2c_master_top.byte_controller.bit_controller.rtlc_N1633
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1999 i2c_master_top.byte_controller.bit_controller.rtlc_N1633 i2c_master_top.byte_controller.bit_controller.rtlc_N1635
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N981 i2c_master_top.byte_controller.bit_controller.c_state[5] i2c_master_top.byte_controller.bit_controller.rtlc_N1660
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1660 i2c_master_top.byte_controller.bit_controller.rtlc_N2003 i2c_master_top.byte_controller.bit_controller.rtlc_N1664
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1999 i2c_master_top.byte_controller.bit_controller.rtlc_N1664 i2c_master_top.byte_controller.bit_controller.rtlc_N1666
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[6] i2c_master_top.byte_controller.bit_controller.rtlc_N987 i2c_master_top.byte_controller.bit_controller.rtlc_N1693
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2001 i2c_master_top.byte_controller.bit_controller.rtlc_N1693 i2c_master_top.byte_controller.bit_controller.rtlc_N1695
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1999 i2c_master_top.byte_controller.bit_controller.rtlc_N1695 i2c_master_top.byte_controller.bit_controller.rtlc_N1697
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N985 i2c_master_top.byte_controller.bit_controller.c_state[7] i2c_master_top.byte_controller.bit_controller.rtlc_N1724
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2001 i2c_master_top.byte_controller.bit_controller.rtlc_N1724 i2c_master_top.byte_controller.bit_controller.rtlc_N1726
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1999 i2c_master_top.byte_controller.bit_controller.rtlc_N1726 i2c_master_top.byte_controller.bit_controller.rtlc_N1728
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2013 i2c_master_top.byte_controller.bit_controller.rtlc_N1866 i2c_master_top.byte_controller.bit_controller.rtlc_N1744
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[8] i2c_master_top.byte_controller.bit_controller.rtlc_N991 i2c_master_top.byte_controller.bit_controller.rtlc_N1761
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1761 i2c_master_top.byte_controller.bit_controller.rtlc_N2011 i2c_master_top.byte_controller.bit_controller.rtlc_N1765
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1765 i2c_master_top.byte_controller.bit_controller.rtlc_N1866 i2c_master_top.byte_controller.bit_controller.rtlc_N1775
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N989 i2c_master_top.byte_controller.bit_controller.c_state[9] i2c_master_top.byte_controller.bit_controller.rtlc_N1792
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1792 i2c_master_top.byte_controller.bit_controller.rtlc_N2011 i2c_master_top.byte_controller.bit_controller.rtlc_N1796
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1796 i2c_master_top.byte_controller.bit_controller.rtlc_N1866 i2c_master_top.byte_controller.bit_controller.rtlc_N1806
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[10] i2c_master_top.byte_controller.bit_controller.rtlc_N995 i2c_master_top.byte_controller.bit_controller.rtlc_N1825
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2009 i2c_master_top.byte_controller.bit_controller.rtlc_N1825 i2c_master_top.byte_controller.bit_controller.rtlc_N1827
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1827 i2c_master_top.byte_controller.bit_controller.rtlc_N1866 i2c_master_top.byte_controller.bit_controller.rtlc_N1837
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N993 i2c_master_top.byte_controller.bit_controller.c_state[11] i2c_master_top.byte_controller.bit_controller.rtlc_N1856
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2009 i2c_master_top.byte_controller.bit_controller.rtlc_N1856 i2c_master_top.byte_controller.bit_controller.rtlc_N1858
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2015 i2c_master_top.byte_controller.bit_controller.rtlc_N1926 i2c_master_top.byte_controller.bit_controller.rtlc_N1866
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1858 i2c_master_top.byte_controller.bit_controller.rtlc_N1866 i2c_master_top.byte_controller.bit_controller.rtlc_N1868
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[12] i2c_master_top.byte_controller.bit_controller.rtlc_N997 i2c_master_top.byte_controller.bit_controller.rtlc_N1891
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1891 i2c_master_top.byte_controller.bit_controller.rtlc_N1926 i2c_master_top.byte_controller.bit_controller.rtlc_N1897
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2013 i2c_master_top.byte_controller.bit_controller.rtlc_N1897 i2c_master_top.byte_controller.bit_controller.rtlc_N1899
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N962 i2c_master_top.byte_controller.bit_controller.c_state[13] i2c_master_top.byte_controller.bit_controller.rtlc_N1922
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N966 i2c_master_top.byte_controller.bit_controller.rtlc_N1955 i2c_master_top.byte_controller.bit_controller.rtlc_N1926
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1922 i2c_master_top.byte_controller.bit_controller.rtlc_N1926 i2c_master_top.byte_controller.bit_controller.rtlc_N1928
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2013 i2c_master_top.byte_controller.bit_controller.rtlc_N1928 i2c_master_top.byte_controller.bit_controller.rtlc_N1930
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N968 i2c_master_top.byte_controller.bit_controller.rtlc_N970 i2c_master_top.byte_controller.bit_controller.rtlc_N1955
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[14] i2c_master_top.byte_controller.bit_controller.rtlc_N1955 i2c_master_top.byte_controller.bit_controller.rtlc_N1957
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2015 i2c_master_top.byte_controller.bit_controller.rtlc_N1957 i2c_master_top.byte_controller.bit_controller.rtlc_N1959
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2013 i2c_master_top.byte_controller.bit_controller.rtlc_N1959 i2c_master_top.byte_controller.bit_controller.rtlc_N1961
+11 1
+.names i2c_master_top.byte_controller.bit_controller.c_state[15] i2c_master_top.byte_controller.bit_controller.rtlc_N970 i2c_master_top.byte_controller.bit_controller.rtlc_N1986
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N966 i2c_master_top.byte_controller.bit_controller.rtlc_N1986 i2c_master_top.byte_controller.bit_controller.rtlc_N1988
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2015 i2c_master_top.byte_controller.bit_controller.rtlc_N1988 i2c_master_top.byte_controller.bit_controller.rtlc_N1990
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2013 i2c_master_top.byte_controller.bit_controller.rtlc_N1990 i2c_master_top.byte_controller.bit_controller.rtlc_N1992
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N973 i2c_master_top.byte_controller.bit_controller.rtlc_N975 i2c_master_top.byte_controller.bit_controller.rtlc_N1995
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N977 i2c_master_top.byte_controller.bit_controller.rtlc_N979 i2c_master_top.byte_controller.bit_controller.rtlc_N1997
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1995 i2c_master_top.byte_controller.bit_controller.rtlc_N1997 i2c_master_top.byte_controller.bit_controller.rtlc_N1999
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N981 i2c_master_top.byte_controller.bit_controller.rtlc_N983 i2c_master_top.byte_controller.bit_controller.rtlc_N2001
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N985 i2c_master_top.byte_controller.bit_controller.rtlc_N987 i2c_master_top.byte_controller.bit_controller.rtlc_N2003
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2001 i2c_master_top.byte_controller.bit_controller.rtlc_N2003 i2c_master_top.byte_controller.bit_controller.rtlc_N2005
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N1999 i2c_master_top.byte_controller.bit_controller.rtlc_N2005 i2c_master_top.byte_controller.bit_controller.rtlc_N2007
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N989 i2c_master_top.byte_controller.bit_controller.rtlc_N991 i2c_master_top.byte_controller.bit_controller.rtlc_N2009
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N993 i2c_master_top.byte_controller.bit_controller.rtlc_N995 i2c_master_top.byte_controller.bit_controller.rtlc_N2011
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2009 i2c_master_top.byte_controller.bit_controller.rtlc_N2011 i2c_master_top.byte_controller.bit_controller.rtlc_N2013
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N962 i2c_master_top.byte_controller.bit_controller.rtlc_N997 i2c_master_top.byte_controller.bit_controller.rtlc_N2015
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N968 i2c_master_top.byte_controller.bit_controller.c_state[16] i2c_master_top.byte_controller.bit_controller.rtlc_N2017
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N966 i2c_master_top.byte_controller.bit_controller.rtlc_N2017 i2c_master_top.byte_controller.bit_controller.rtlc_N2019
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2015 i2c_master_top.byte_controller.bit_controller.rtlc_N2019 i2c_master_top.byte_controller.bit_controller.rtlc_N2021
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N2013 i2c_master_top.byte_controller.bit_controller.rtlc_N2021 i2c_master_top.byte_controller.bit_controller.rtlc_N2023
+11 1
+.names i2c_master_top.byte_controller.bit_controller.sSCL i2c_master_top.byte_controller.bit_controller.rtlc_N184
+0 1
+.names i2c_master_top.byte_controller.c_state[4] i2c_master_top.byte_controller.bit_controller.rtlc_N192[1]
+0 1
+.names i2c_master_top.byte_controller.c_state[0] i2c_master_top.byte_controller.bit_controller.rtlc_N192[1] i2c_master_top.byte_controller.bit_controller.rtlc_N193
+11 1
+.names i2c_master_top.byte_controller.core_cmd[2] i2c_master_top.byte_controller.bit_controller.rtlc_N59 i2c_master_top.byte_controller.bit_controller.rtlc_N199
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N26 i2c_master_top.byte_controller.bit_controller.rtlc_N192[1] i2c_master_top.byte_controller.bit_controller.rtlc_N200
+11 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_N58 i2c_master_top.byte_controller.core_cmd[3] i2c_master_top.byte_controller.bit_controller.rtlc_N201
+11 1
+.names Supply0 tmp_core_cmd[2]_256 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.core_cmd[2]
+1-1 1
+-10 1
+.names Supply0 tmp_core_cmd[3]_262 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.core_cmd[3]
+1-1 1
+-10 1
+.names Supply0 tmp_core_txd_267 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.core_txd
+1-1 1
+-10 1
+.names Supply0 tmp_core_ack_272 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.byte_controller.core_ack
+1-1 1
+-10 1
+.names tmp_core_rxd_275 tmp_core_rxd_276 transformNet_0 i2c_master_top.byte_controller.core_rxd
+1-1 1
+-10 1
+.names Supply0 tmp_sr[0]_282 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[0]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[1]_288 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[1]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[2]_294 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[2]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[3]_300 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[3]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[4]_306 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[4]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[5]_312 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[5]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[6]_318 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[6]
+1-1 1
+-10 1
+.names Supply0 tmp_sr[7]_324 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.sr[7]
+1-1 1
+-10 1
+.names Supply0 tmp_shift_329 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.shift
+1-1 1
+-10 1
+.names Supply0 tmp_ld_334 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.ld
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_N57 i2c_master_top.byte_controller.rtlc_N58 i2c_master_top.byte_controller.go
+11 1
+.names Supply0 tmp_dcnt[0]_340 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.dcnt[0]
+1-1 1
+-10 1
+.names Supply0 tmp_dcnt[1]_346 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.dcnt[1]
+1-1 1
+-10 1
+.names Supply0 tmp_dcnt[2]_352 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.dcnt[2]
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_N59 i2c_master_top.byte_controller.cnt_done
+0 1
+.names Supply0 tmp_c_state[0]_358 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.c_state[0]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[1]_364 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.c_state[1]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[2]_370 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.c_state[2]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[3]_376 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.c_state[3]
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[4]_382 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.byte_controller.c_state[4]
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_PS7_G82
+0 1
+.names i2c_master_top.txr[0] i2c_master_top.byte_controller.core_rxd i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_0_G66_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[1] i2c_master_top.byte_controller.sr[0] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_1_G67_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[2] i2c_master_top.byte_controller.sr[1] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_2_G68_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[3] i2c_master_top.byte_controller.sr[2] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_3_G69_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[4] i2c_master_top.byte_controller.sr[3] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_4_G70_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[5] i2c_master_top.byte_controller.sr[4] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_5_G71_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[6] i2c_master_top.byte_controller.sr[5] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_6_G72_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.txr[7] i2c_master_top.byte_controller.sr[6] i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_sr_7_G73_SS_2
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_PS19_G122 i2c_master_top.byte_controller.rtlc_PS7_G82 i2c_master_top.byte_controller.rtlc_G92
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_0_G66_SS_2 i2c_master_top.byte_controller.rtlc_sr_0_G66_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_1_G67_SS_2 i2c_master_top.byte_controller.rtlc_sr_1_G67_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_2_G68_SS_2 i2c_master_top.byte_controller.rtlc_sr_2_G68_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_3_G69_SS_2 i2c_master_top.byte_controller.rtlc_sr_3_G69_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_4_G70_SS_2 i2c_master_top.byte_controller.rtlc_sr_4_G70_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_5_G71_SS_2 i2c_master_top.byte_controller.rtlc_sr_5_G71_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_6_G72_SS_2 i2c_master_top.byte_controller.rtlc_sr_6_G72_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_sr_7_G73_SS_2 i2c_master_top.byte_controller.rtlc_sr_7_G73_SS_3
+11 1
+.names i2c_master_top.byte_controller.rtlc_G92 i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_G100
+11 1
+.names i2c_master_top.arst_i i2c_master_top.byte_controller.rtlc_N0
+0 1
+.names i2c_master_top.byte_controller.rtlc_G100 i2c_master_top.byte_controller.rtlc_N91
+0 1
+.names i2c_master_top.byte_controller.shift i2c_master_top.byte_controller.rtlc_PS19_G122
+0 1
+.names i2c_master_top.byte_controller.dcnt[0] i2c_master_top.byte_controller.rtlc_N1[0]
+0 1
+.names i2c_master_top.byte_controller.rtlc_N1[0] i2c_master_top.byte_controller.dcnt[1] i2c_master_top.byte_controller.rtlc_N1[1]
+10 1
+01 1
+.names i2c_master_top.byte_controller.N57 i2c_master_top.byte_controller.dcnt[2] i2c_master_top.byte_controller.rtlc_N1[2]
+00 1
+11 1
+.names i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_N1[0] i2c_master_top.byte_controller.rtlc_dcnt_0_G106_SS_7
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_N1[1] i2c_master_top.byte_controller.rtlc_dcnt_1_G107_SS_7
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.ld i2c_master_top.byte_controller.rtlc_N1[2] i2c_master_top.byte_controller.rtlc_dcnt_2_G108_SS_7
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_dcnt_0_G106_SS_7 i2c_master_top.byte_controller.rtlc_dcnt_0_G106_SS_8
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_dcnt_1_G107_SS_7 i2c_master_top.byte_controller.rtlc_dcnt_1_G107_SS_8
+11 1
+.names i2c_master_top.byte_controller.rtlc_N72 i2c_master_top.byte_controller.rtlc_dcnt_2_G108_SS_7 i2c_master_top.byte_controller.rtlc_dcnt_2_G108_SS_8
+11 1
+.names i2c_master_top.wb_rst_i i2c_master_top.byte_controller.rtlc_N72
+0 1
+.names i2c_master_top.cr[4] i2c_master_top.byte_controller.rtlc_PS33_G171
+0 1
+.names i2c_master_top.byte_controller.rtlc_N337 i2c_master_top.cr[4] i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_12
+11 1
+.names i2c_master_top.byte_controller.rtlc_N337 i2c_master_top.byte_controller.rtlc_PS33_G171 i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_12
+11 1
+.names i2c_master_top.byte_controller.rtlc_N355 i2c_master_top.cr[5] i2c_master_top.byte_controller.rtlc_c_state_1_G153_SS_13
+11 1
+.names i2c_master_top.byte_controller.rtlc_N355 i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_12 i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_13
+11 1
+.names i2c_master_top.byte_controller.rtlc_N355 i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_12 i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_13
+11 1
+.names i2c_master_top.byte_controller.go i2c_master_top.byte_controller.rtlc_PS34_G172
+0 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.rtlc_N59 i2c_master_top.byte_controller.shift_SS_18
+11 1
+.names i2c_master_top.cr[3] i2c_master_top.byte_controller.sr[7] i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.core_txd_SS_20
+1-1 1
+-10 1
+.names i2c_master_top.cr[6] i2c_master_top.byte_controller.rtlc_PS53_G191
+0 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.rtlc_PS54_G192
+0 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.cr[3] i2c_master_top.byte_controller.core_txd_SS_22
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.rtlc_PS53_G191 i2c_master_top.byte_controller.cmd_ack_SS_22
+11 1
+.names i2c_master_top.byte_controller.rtlc_N842 i2c_master_top.byte_controller.rtlc_N832 i2c_master_top.byte_controller.rtlc_N2
+11 1
+.names i2c_master_top.byte_controller.rtlc_N814 i2c_master_top.byte_controller.rtlc_N832 i2c_master_top.byte_controller.rtlc_N3
+11 1
+.names i2c_master_top.byte_controller.rtlc_N842 i2c_master_top.byte_controller.rtlc_N825 i2c_master_top.byte_controller.rtlc_N4
+11 1
+.names i2c_master_top.byte_controller.rtlc_N828 i2c_master_top.byte_controller.rtlc_N832 i2c_master_top.byte_controller.rtlc_N12
+11 1
+.names i2c_master_top.byte_controller.rtlc_N842 i2c_master_top.byte_controller.rtlc_N839 i2c_master_top.byte_controller.rtlc_N6
+11 1
+.names i2c_master_top.byte_controller.rtlc_N842 i2c_master_top.byte_controller.rtlc_N846 i2c_master_top.byte_controller.rtlc_N7
+11 1
+.names i2c_master_top.byte_controller.rtlc_N491 i2c_master_top.byte_controller.rtlc_N680 i2c_master_top.byte_controller.rtlc_core_cmd_2_G150_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N523 i2c_master_top.byte_controller.rtlc_N648 i2c_master_top.byte_controller.rtlc_core_cmd_3_G151_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N546 i2c_master_top.byte_controller.rtlc_N598 i2c_master_top.byte_controller.rtlc_N121
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N555 i2c_master_top.byte_controller.rtlc_N551[2] i2c_master_top.byte_controller.core_txd_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N575[1] i2c_master_top.byte_controller.rtlc_N575[2] i2c_master_top.byte_controller.ld_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N749[4] i2c_master_top.byte_controller.rtlc_G201 i2c_master_top.byte_controller.rtlc_G200
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N598 i2c_master_top.byte_controller.rtlc_N602 i2c_master_top.byte_controller.rtlc_G201
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N637[2] i2c_master_top.byte_controller.rtlc_N648 i2c_master_top.byte_controller.rtlc_c_state_1_G153_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N669[3] i2c_master_top.byte_controller.rtlc_N680 i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N733[1] i2c_master_top.byte_controller.rtlc_N733[5] i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N762 i2c_master_top.byte_controller.rtlc_N760 i2c_master_top.byte_controller.rtlc_G206
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.i2c_al i2c_master_top.byte_controller.rtlc_N13
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_core_cmd_2_G150_SS_24 i2c_master_top.byte_controller.rtlc_core_cmd_2_G150_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_core_cmd_3_G151_SS_24 i2c_master_top.byte_controller.rtlc_core_cmd_3_G151_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.core_txd_SS_24 i2c_master_top.byte_controller.core_txd_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_N567 i2c_master_top.byte_controller.shift_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.ld_SS_24 i2c_master_top.byte_controller.ld_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_N591 i2c_master_top.byte_controller.cmd_ack_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.core_rxd i2c_master_top.byte_controller.ack_out_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_G200 i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_G211
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_N605[5] i2c_master_top.byte_controller.rtlc_c_state_0_G152_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_c_state_1_G153_SS_24 i2c_master_top.byte_controller.rtlc_c_state_1_G153_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_24 i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_N710 i2c_master_top.byte_controller.rtlc_c_state_3_G155_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_24 i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_25
+11 1
+.names i2c_master_top.byte_controller.rtlc_G206 i2c_master_top.byte_controller.rtlc_N804 i2c_master_top.byte_controller.rtlc_G216
+11 1
+.names i2c_master_top.byte_controller.rtlc_G211 i2c_master_top.byte_controller.rtlc_N280
+0 1
+.names i2c_master_top.byte_controller.rtlc_G216 i2c_master_top.byte_controller.rtlc_N325
+0 1
+.names i2c_master_top.cr[5] i2c_master_top.byte_controller.rtlc_N337
+0 1
+.names i2c_master_top.cr[7] i2c_master_top.byte_controller.rtlc_N355
+0 1
+.names i2c_master_top.byte_controller.c_state[4] i2c_master_top.byte_controller.rtlc_N406
+0 1
+.names i2c_master_top.byte_controller.c_state[0] i2c_master_top.byte_controller.rtlc_N409
+0 1
+.names i2c_master_top.byte_controller.c_state[1] i2c_master_top.byte_controller.rtlc_N411
+0 1
+.names i2c_master_top.byte_controller.c_state[2] i2c_master_top.byte_controller.rtlc_N413
+0 1
+.names i2c_master_top.byte_controller.c_state[3] i2c_master_top.byte_controller.rtlc_N415
+0 1
+.names i2c_master_top.byte_controller.rtlc_N701[2] i2c_master_top.byte_controller.rtlc_N669[3] i2c_master_top.byte_controller.rtlc_N491
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N637[2] i2c_master_top.byte_controller.rtlc_N701[3] i2c_master_top.byte_controller.rtlc_N523
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N7 i2c_master_top.byte_controller.rtlc_N4 i2c_master_top.byte_controller.rtlc_N546
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.core_txd_SS_22 i2c_master_top.byte_controller.rtlc_N6 i2c_master_top.byte_controller.rtlc_N551[0]
+11 1
+.names i2c_master_top.byte_controller.core_txd_SS_20 i2c_master_top.byte_controller.rtlc_N12 i2c_master_top.byte_controller.rtlc_N551[1]
+11 1
+.names i2c_master_top.byte_controller.sr[7] i2c_master_top.byte_controller.rtlc_N121 i2c_master_top.byte_controller.rtlc_N551[2]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N551[0] i2c_master_top.byte_controller.rtlc_N551[1] i2c_master_top.byte_controller.rtlc_N555
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.rtlc_N12 i2c_master_top.byte_controller.rtlc_N563[0]
+11 1
+.names i2c_master_top.byte_controller.shift_SS_18 i2c_master_top.byte_controller.rtlc_N4 i2c_master_top.byte_controller.rtlc_N563[1]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N563[0] i2c_master_top.byte_controller.rtlc_N563[1] i2c_master_top.byte_controller.rtlc_N567
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.rtlc_N3 i2c_master_top.byte_controller.rtlc_N575[1]
+11 1
+.names i2c_master_top.byte_controller.go i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N575[2]
+11 1
+.names i2c_master_top.byte_controller.core_ack i2c_master_top.byte_controller.rtlc_N7 i2c_master_top.byte_controller.rtlc_N587[0]
+11 1
+.names i2c_master_top.byte_controller.cmd_ack_SS_22 i2c_master_top.byte_controller.rtlc_N6 i2c_master_top.byte_controller.rtlc_N587[1]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N587[0] i2c_master_top.byte_controller.rtlc_N587[1] i2c_master_top.byte_controller.rtlc_N591
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N3 i2c_master_top.byte_controller.rtlc_N598
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N12 i2c_master_top.byte_controller.rtlc_N7 i2c_master_top.byte_controller.rtlc_N600
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N4 i2c_master_top.byte_controller.rtlc_N600 i2c_master_top.byte_controller.rtlc_N602
+1- 1
+-1 1
+.names i2c_master_top.cr[7] i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N605[5]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N59 i2c_master_top.byte_controller.rtlc_N12 i2c_master_top.byte_controller.rtlc_N637[2]
+11 1
+.names i2c_master_top.cr[5] i2c_master_top.byte_controller.rtlc_N3 i2c_master_top.byte_controller.rtlc_N637[4]
+11 1
+.names i2c_master_top.byte_controller.rtlc_c_state_1_G153_SS_13 i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N637[5]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N637[4] i2c_master_top.byte_controller.rtlc_N637[5] i2c_master_top.byte_controller.rtlc_N648
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N59 i2c_master_top.byte_controller.rtlc_N4 i2c_master_top.byte_controller.rtlc_N669[3]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N337 i2c_master_top.byte_controller.rtlc_N3 i2c_master_top.byte_controller.rtlc_N669[4]
+11 1
+.names i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_13 i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N669[5]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N669[4] i2c_master_top.byte_controller.rtlc_N669[5] i2c_master_top.byte_controller.rtlc_N680
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.cnt_done i2c_master_top.byte_controller.rtlc_N12 i2c_master_top.byte_controller.rtlc_N701[2]
+11 1
+.names i2c_master_top.byte_controller.cnt_done i2c_master_top.byte_controller.rtlc_N4 i2c_master_top.byte_controller.rtlc_N701[3]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N701[2] i2c_master_top.byte_controller.rtlc_N701[3] i2c_master_top.byte_controller.rtlc_N710
+1- 1
+-1 1
+.names i2c_master_top.cr[6] i2c_master_top.byte_controller.rtlc_N6 i2c_master_top.byte_controller.rtlc_N733[1]
+11 1
+.names i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_13 i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N733[5]
+11 1
+.names i2c_master_top.byte_controller.rtlc_PS34_G172 i2c_master_top.byte_controller.rtlc_N2 i2c_master_top.byte_controller.rtlc_N749[0]
+11 1
+.names i2c_master_top.byte_controller.rtlc_PS54_G192 i2c_master_top.byte_controller.rtlc_N3 i2c_master_top.byte_controller.rtlc_N749[1]
+11 1
+.names i2c_master_top.byte_controller.rtlc_PS54_G192 i2c_master_top.byte_controller.rtlc_N4 i2c_master_top.byte_controller.rtlc_N749[2]
+11 1
+.names i2c_master_top.byte_controller.rtlc_PS54_G192 i2c_master_top.byte_controller.rtlc_N12 i2c_master_top.byte_controller.rtlc_N749[3]
+11 1
+.names i2c_master_top.byte_controller.rtlc_PS54_G192 i2c_master_top.byte_controller.rtlc_N6 i2c_master_top.byte_controller.rtlc_N749[4]
+11 1
+.names i2c_master_top.byte_controller.rtlc_PS54_G192 i2c_master_top.byte_controller.rtlc_N7 i2c_master_top.byte_controller.rtlc_N749[5]
+11 1
+.names i2c_master_top.byte_controller.rtlc_N749[0] i2c_master_top.byte_controller.rtlc_N749[1] i2c_master_top.byte_controller.rtlc_N756
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N749[2] i2c_master_top.byte_controller.rtlc_N749[3] i2c_master_top.byte_controller.rtlc_N758
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N749[4] i2c_master_top.byte_controller.rtlc_N749[5] i2c_master_top.byte_controller.rtlc_N760
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N756 i2c_master_top.byte_controller.rtlc_N758 i2c_master_top.byte_controller.rtlc_N762
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N13 i2c_master_top.byte_controller.rtlc_N804
+0 1
+.names i2c_master_top.byte_controller.c_state[0] i2c_master_top.byte_controller.rtlc_N411 i2c_master_top.byte_controller.rtlc_N814
+11 1
+.names i2c_master_top.byte_controller.c_state[2] i2c_master_top.byte_controller.rtlc_N830 i2c_master_top.byte_controller.rtlc_N825
+11 1
+.names i2c_master_top.byte_controller.rtlc_N409 i2c_master_top.byte_controller.c_state[1] i2c_master_top.byte_controller.rtlc_N828
+11 1
+.names i2c_master_top.byte_controller.rtlc_N415 i2c_master_top.byte_controller.rtlc_N406 i2c_master_top.byte_controller.rtlc_N830
+11 1
+.names i2c_master_top.byte_controller.rtlc_N413 i2c_master_top.byte_controller.rtlc_N830 i2c_master_top.byte_controller.rtlc_N832
+11 1
+.names i2c_master_top.byte_controller.c_state[3] i2c_master_top.byte_controller.rtlc_N406 i2c_master_top.byte_controller.rtlc_N837
+11 1
+.names i2c_master_top.byte_controller.rtlc_N413 i2c_master_top.byte_controller.rtlc_N837 i2c_master_top.byte_controller.rtlc_N839
+11 1
+.names i2c_master_top.byte_controller.rtlc_N409 i2c_master_top.byte_controller.rtlc_N411 i2c_master_top.byte_controller.rtlc_N842
+11 1
+.names i2c_master_top.byte_controller.rtlc_N415 i2c_master_top.byte_controller.c_state[4] i2c_master_top.byte_controller.rtlc_N844
+11 1
+.names i2c_master_top.byte_controller.rtlc_N413 i2c_master_top.byte_controller.rtlc_N844 i2c_master_top.byte_controller.rtlc_N846
+11 1
+.names i2c_master_top.cr[5] i2c_master_top.cr[4] i2c_master_top.byte_controller.rtlc_N56
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.rtlc_N56 i2c_master_top.cr[6] i2c_master_top.byte_controller.rtlc_N57
+1- 1
+-1 1
+.names i2c_master_top.done i2c_master_top.byte_controller.rtlc_N58
+0 1
+.names i2c_master_top.byte_controller.dcnt[0] i2c_master_top.byte_controller.rtlc_N24 i2c_master_top.byte_controller.rtlc_N59
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.dcnt[1] i2c_master_top.byte_controller.dcnt[2] i2c_master_top.byte_controller.rtlc_N24
+1- 1
+-1 1
+.names i2c_master_top.byte_controller.dcnt[1] i2c_master_top.byte_controller.N77
+0 1
+.names i2c_master_top.byte_controller.rtlc_N1[0] i2c_master_top.byte_controller.N77 i2c_master_top.byte_controller.N57
+0- 1
+-0 1
+.names transformNet_710 i2c_master_top.wb_clk_i
+1 1
+.names tmp_wb_dat_o[0]_384 tmp_wb_dat_o[0]_385 transformNet_0 i2c_master_top.wb_dat_o[0]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[1]_387 tmp_wb_dat_o[1]_388 transformNet_0 i2c_master_top.wb_dat_o[1]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[2]_390 tmp_wb_dat_o[2]_391 transformNet_0 i2c_master_top.wb_dat_o[2]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[3]_393 tmp_wb_dat_o[3]_394 transformNet_0 i2c_master_top.wb_dat_o[3]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[4]_396 tmp_wb_dat_o[4]_397 transformNet_0 i2c_master_top.wb_dat_o[4]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[5]_399 tmp_wb_dat_o[5]_400 transformNet_0 i2c_master_top.wb_dat_o[5]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[6]_402 tmp_wb_dat_o[6]_403 transformNet_0 i2c_master_top.wb_dat_o[6]
+1-1 1
+-10 1
+.names tmp_wb_dat_o[7]_405 tmp_wb_dat_o[7]_406 transformNet_0 i2c_master_top.wb_dat_o[7]
+1-1 1
+-10 1
+.names tmp_wb_ack_o_408 tmp_wb_ack_o_409 transformNet_0 i2c_master_top.wb_ack_o
+1-1 1
+-10 1
+.names Supply0 tmp_wb_inta_o_414 i2c_master_top.rtlc_N40 i2c_master_top.wb_inta_o
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.VSS i2c_master_top.scl_pad_o
+1 1
+.names Supply1 tmp_scl_padoen_o_420 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.scl_padoen_o
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.VSS i2c_master_top.sda_pad_o
+1 1
+.names Supply1 tmp_sda_padoen_o_426 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.sda_padoen_o
+1-1 1
+-10 1
+.names Supply1 tmp_prer[0]_432 i2c_master_top.rtlc_N40 i2c_master_top.prer[0]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[1]_438 i2c_master_top.rtlc_N40 i2c_master_top.prer[1]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[2]_444 i2c_master_top.rtlc_N40 i2c_master_top.prer[2]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[3]_450 i2c_master_top.rtlc_N40 i2c_master_top.prer[3]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[4]_456 i2c_master_top.rtlc_N40 i2c_master_top.prer[4]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[5]_462 i2c_master_top.rtlc_N40 i2c_master_top.prer[5]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[6]_468 i2c_master_top.rtlc_N40 i2c_master_top.prer[6]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[7]_474 i2c_master_top.rtlc_N40 i2c_master_top.prer[7]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[8]_480 i2c_master_top.rtlc_N40 i2c_master_top.prer[8]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[9]_486 i2c_master_top.rtlc_N40 i2c_master_top.prer[9]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[10]_492 i2c_master_top.rtlc_N40 i2c_master_top.prer[10]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[11]_498 i2c_master_top.rtlc_N40 i2c_master_top.prer[11]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[12]_504 i2c_master_top.rtlc_N40 i2c_master_top.prer[12]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[13]_510 i2c_master_top.rtlc_N40 i2c_master_top.prer[13]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[14]_516 i2c_master_top.rtlc_N40 i2c_master_top.prer[14]
+1-1 1
+-10 1
+.names Supply1 tmp_prer[15]_522 i2c_master_top.rtlc_N40 i2c_master_top.prer[15]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[0]_528 i2c_master_top.rtlc_N40 i2c_master_top.ctr[0]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[1]_534 i2c_master_top.rtlc_N40 i2c_master_top.ctr[1]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[2]_540 i2c_master_top.rtlc_N40 i2c_master_top.ctr[2]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[3]_546 i2c_master_top.rtlc_N40 i2c_master_top.ctr[3]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[4]_552 i2c_master_top.rtlc_N40 i2c_master_top.ctr[4]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[5]_558 i2c_master_top.rtlc_N40 i2c_master_top.ctr[5]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[6]_564 i2c_master_top.rtlc_N40 i2c_master_top.ctr[6]
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[7]_570 i2c_master_top.rtlc_N40 i2c_master_top.ctr[7]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[0]_576 i2c_master_top.rtlc_N40 i2c_master_top.txr[0]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[1]_582 i2c_master_top.rtlc_N40 i2c_master_top.txr[1]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[2]_588 i2c_master_top.rtlc_N40 i2c_master_top.txr[2]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[3]_594 i2c_master_top.rtlc_N40 i2c_master_top.txr[3]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[4]_600 i2c_master_top.rtlc_N40 i2c_master_top.txr[4]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[5]_606 i2c_master_top.rtlc_N40 i2c_master_top.txr[5]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[6]_612 i2c_master_top.rtlc_N40 i2c_master_top.txr[6]
+1-1 1
+-10 1
+.names Supply0 tmp_txr[7]_618 i2c_master_top.rtlc_N40 i2c_master_top.txr[7]
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.sr[0] i2c_master_top.rxr[0]
+1 1
+.names i2c_master_top.byte_controller.sr[1] i2c_master_top.rxr[1]
+1 1
+.names i2c_master_top.byte_controller.sr[2] i2c_master_top.rxr[2]
+1 1
+.names i2c_master_top.byte_controller.sr[3] i2c_master_top.rxr[3]
+1 1
+.names i2c_master_top.byte_controller.sr[4] i2c_master_top.rxr[4]
+1 1
+.names i2c_master_top.byte_controller.sr[5] i2c_master_top.rxr[5]
+1 1
+.names i2c_master_top.byte_controller.sr[6] i2c_master_top.rxr[6]
+1 1
+.names i2c_master_top.byte_controller.sr[7] i2c_master_top.rxr[7]
+1 1
+.names Supply0 tmp_cr[0]_624 i2c_master_top.rtlc_N40 i2c_master_top.cr[0]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[1]_630 i2c_master_top.rtlc_N40 i2c_master_top.cr[1]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[2]_636 i2c_master_top.rtlc_N40 i2c_master_top.cr[2]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[3]_642 i2c_master_top.rtlc_N40 i2c_master_top.cr[3]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[4]_648 i2c_master_top.rtlc_N40 i2c_master_top.cr[4]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[5]_654 i2c_master_top.rtlc_N40 i2c_master_top.cr[5]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[6]_660 i2c_master_top.rtlc_N40 i2c_master_top.cr[6]
+1-1 1
+-10 1
+.names Supply0 tmp_cr[7]_666 i2c_master_top.rtlc_N40 i2c_master_top.cr[7]
+1-1 1
+-10 1
+.names Supply0 tmp_done_671 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.done
+1-1 1
+-10 1
+.names Supply0 tmp_irxack_677 i2c_master_top.byte_controller.rtlc_N0 i2c_master_top.irxack
+1-1 1
+-10 1
+.names Supply0 tmp_rxack_682 i2c_master_top.rtlc_N40 i2c_master_top.rxack
+1-1 1
+-10 1
+.names Supply0 tmp_tip_687 i2c_master_top.rtlc_N40 i2c_master_top.tip
+1-1 1
+-10 1
+.names Supply0 tmp_irq_flag_692 i2c_master_top.rtlc_N40 i2c_master_top.irq_flag
+1-1 1
+-10 1
+.names Supply0 tmp_i2c_busy_697 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.i2c_busy
+1-1 1
+-10 1
+.names Supply0 tmp_i2c_al_702 i2c_master_top.byte_controller.bit_controller.rtlc_N7 i2c_master_top.i2c_al
+1-1 1
+-10 1
+.names Supply0 tmp_al_707 i2c_master_top.rtlc_N40 i2c_master_top.al
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_N0 i2c_master_top.wb_we_i i2c_master_top.wb_wacc
+11 1
+.names i2c_master_top.rtlc_N0 i2c_master_top.rtlc_N1 i2c_master_top.rtlc_N2
+11 1
+.names i2c_master_top.wb_cyc_i i2c_master_top.wb_stb_i i2c_master_top.rtlc_N0
+11 1
+.names i2c_master_top.wb_ack_o i2c_master_top.rtlc_N1
+0 1
+.names i2c_master_top.rtlc_N302 i2c_master_top.rtlc_N301 i2c_master_top.rtlc_N11
+11 1
+.names i2c_master_top.rtlc_N302 i2c_master_top.wb_adr_i[0] i2c_master_top.rtlc_N12
+11 1
+.names i2c_master_top.rtlc_N303 i2c_master_top.rtlc_N301 i2c_master_top.rtlc_N13
+11 1
+.names i2c_master_top.rtlc_N303 i2c_master_top.wb_adr_i[0] i2c_master_top.rtlc_N3
+11 1
+.names i2c_master_top.rtlc_N304 i2c_master_top.rtlc_N301 i2c_master_top.rtlc_N4
+11 1
+.names i2c_master_top.rtlc_N304 i2c_master_top.wb_adr_i[0] i2c_master_top.rtlc_N5
+11 1
+.names i2c_master_top.rtlc_N305 i2c_master_top.rtlc_N301 i2c_master_top.rtlc_N6
+11 1
+.names i2c_master_top.rtlc_N61 i2c_master_top.rtlc_N63 i2c_master_top.rtlc_wb_dat_o_0_G139_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N83 i2c_master_top.rtlc_N85 i2c_master_top.rtlc_wb_dat_o_1_G140_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N105 i2c_master_top.rtlc_N107 i2c_master_top.rtlc_wb_dat_o_2_G141_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N127 i2c_master_top.rtlc_N129 i2c_master_top.rtlc_wb_dat_o_3_G142_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N149 i2c_master_top.rtlc_N151 i2c_master_top.rtlc_wb_dat_o_4_G143_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N171 i2c_master_top.rtlc_N173 i2c_master_top.rtlc_wb_dat_o_5_G144_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N193 i2c_master_top.rtlc_N195 i2c_master_top.rtlc_wb_dat_o_6_G145_SS_2
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N215 i2c_master_top.rtlc_N217 i2c_master_top.rtlc_wb_dat_o_7_G146_SS_2
+1- 1
+-1 1
+.names i2c_master_top.cr[0] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N44[1]
+11 1
+.names i2c_master_top.txr[0] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N44[2]
+11 1
+.names i2c_master_top.irq_flag i2c_master_top.rtlc_N4 i2c_master_top.rtlc_N44[3]
+11 1
+.names i2c_master_top.rxr[0] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N44[4]
+11 1
+.names i2c_master_top.ctr[0] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N44[5]
+11 1
+.names i2c_master_top.prer[8] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N44[6]
+11 1
+.names i2c_master_top.prer[0] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N44[7]
+11 1
+.names i2c_master_top.rtlc_N44[2] i2c_master_top.rtlc_N44[3] i2c_master_top.rtlc_N55
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N44[4] i2c_master_top.rtlc_N44[5] i2c_master_top.rtlc_N57
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N44[6] i2c_master_top.rtlc_N44[7] i2c_master_top.rtlc_N59
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N44[1] i2c_master_top.rtlc_N55 i2c_master_top.rtlc_N61
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N57 i2c_master_top.rtlc_N59 i2c_master_top.rtlc_N63
+1- 1
+-1 1
+.names i2c_master_top.cr[1] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N66[1]
+11 1
+.names i2c_master_top.txr[1] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N66[2]
+11 1
+.names i2c_master_top.tip i2c_master_top.rtlc_N4 i2c_master_top.rtlc_N66[3]
+11 1
+.names i2c_master_top.rxr[1] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N66[4]
+11 1
+.names i2c_master_top.ctr[1] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N66[5]
+11 1
+.names i2c_master_top.prer[9] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N66[6]
+11 1
+.names i2c_master_top.prer[1] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N66[7]
+11 1
+.names i2c_master_top.rtlc_N66[2] i2c_master_top.rtlc_N66[3] i2c_master_top.rtlc_N77
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N66[4] i2c_master_top.rtlc_N66[5] i2c_master_top.rtlc_N79
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N66[6] i2c_master_top.rtlc_N66[7] i2c_master_top.rtlc_N81
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N66[1] i2c_master_top.rtlc_N77 i2c_master_top.rtlc_N83
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N79 i2c_master_top.rtlc_N81 i2c_master_top.rtlc_N85
+1- 1
+-1 1
+.names i2c_master_top.cr[2] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N88[1]
+11 1
+.names i2c_master_top.txr[2] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N88[2]
+11 1
+.names i2c_master_top.rxr[2] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N88[4]
+11 1
+.names i2c_master_top.ctr[2] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N88[5]
+11 1
+.names i2c_master_top.prer[10] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N88[6]
+11 1
+.names i2c_master_top.prer[2] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N88[7]
+11 1
+.names i2c_master_top.rtlc_N88[4] i2c_master_top.rtlc_N88[5] i2c_master_top.rtlc_N101
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N88[6] i2c_master_top.rtlc_N88[7] i2c_master_top.rtlc_N103
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N88[1] i2c_master_top.rtlc_N88[2] i2c_master_top.rtlc_N105
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N101 i2c_master_top.rtlc_N103 i2c_master_top.rtlc_N107
+1- 1
+-1 1
+.names i2c_master_top.cr[3] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N110[1]
+11 1
+.names i2c_master_top.txr[3] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N110[2]
+11 1
+.names i2c_master_top.rxr[3] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N110[4]
+11 1
+.names i2c_master_top.ctr[3] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N110[5]
+11 1
+.names i2c_master_top.prer[11] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N110[6]
+11 1
+.names i2c_master_top.prer[3] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N110[7]
+11 1
+.names i2c_master_top.rtlc_N110[4] i2c_master_top.rtlc_N110[5] i2c_master_top.rtlc_N123
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N110[6] i2c_master_top.rtlc_N110[7] i2c_master_top.rtlc_N125
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N110[1] i2c_master_top.rtlc_N110[2] i2c_master_top.rtlc_N127
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N123 i2c_master_top.rtlc_N125 i2c_master_top.rtlc_N129
+1- 1
+-1 1
+.names i2c_master_top.cr[4] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N132[1]
+11 1
+.names i2c_master_top.txr[4] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N132[2]
+11 1
+.names i2c_master_top.rxr[4] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N132[4]
+11 1
+.names i2c_master_top.ctr[4] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N132[5]
+11 1
+.names i2c_master_top.prer[12] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N132[6]
+11 1
+.names i2c_master_top.prer[4] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N132[7]
+11 1
+.names i2c_master_top.rtlc_N132[4] i2c_master_top.rtlc_N132[5] i2c_master_top.rtlc_N145
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N132[6] i2c_master_top.rtlc_N132[7] i2c_master_top.rtlc_N147
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N132[1] i2c_master_top.rtlc_N132[2] i2c_master_top.rtlc_N149
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N145 i2c_master_top.rtlc_N147 i2c_master_top.rtlc_N151
+1- 1
+-1 1
+.names i2c_master_top.cr[5] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N154[1]
+11 1
+.names i2c_master_top.txr[5] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N154[2]
+11 1
+.names i2c_master_top.al i2c_master_top.rtlc_N4 i2c_master_top.rtlc_N154[3]
+11 1
+.names i2c_master_top.rxr[5] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N154[4]
+11 1
+.names i2c_master_top.ctr[5] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N154[5]
+11 1
+.names i2c_master_top.prer[13] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N154[6]
+11 1
+.names i2c_master_top.prer[5] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N154[7]
+11 1
+.names i2c_master_top.rtlc_N154[2] i2c_master_top.rtlc_N154[3] i2c_master_top.rtlc_N165
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N154[4] i2c_master_top.rtlc_N154[5] i2c_master_top.rtlc_N167
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N154[6] i2c_master_top.rtlc_N154[7] i2c_master_top.rtlc_N169
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N154[1] i2c_master_top.rtlc_N165 i2c_master_top.rtlc_N171
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N167 i2c_master_top.rtlc_N169 i2c_master_top.rtlc_N173
+1- 1
+-1 1
+.names i2c_master_top.cr[6] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N176[1]
+11 1
+.names i2c_master_top.txr[6] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N176[2]
+11 1
+.names i2c_master_top.i2c_busy i2c_master_top.rtlc_N4 i2c_master_top.rtlc_N176[3]
+11 1
+.names i2c_master_top.rxr[6] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N176[4]
+11 1
+.names i2c_master_top.ctr[6] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N176[5]
+11 1
+.names i2c_master_top.prer[14] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N176[6]
+11 1
+.names i2c_master_top.prer[6] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N176[7]
+11 1
+.names i2c_master_top.rtlc_N176[2] i2c_master_top.rtlc_N176[3] i2c_master_top.rtlc_N187
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N176[4] i2c_master_top.rtlc_N176[5] i2c_master_top.rtlc_N189
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N176[6] i2c_master_top.rtlc_N176[7] i2c_master_top.rtlc_N191
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N176[1] i2c_master_top.rtlc_N187 i2c_master_top.rtlc_N193
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N189 i2c_master_top.rtlc_N191 i2c_master_top.rtlc_N195
+1- 1
+-1 1
+.names i2c_master_top.cr[7] i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N198[1]
+11 1
+.names i2c_master_top.txr[7] i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N198[2]
+11 1
+.names i2c_master_top.rxack i2c_master_top.rtlc_N4 i2c_master_top.rtlc_N198[3]
+11 1
+.names i2c_master_top.rxr[7] i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N198[4]
+11 1
+.names i2c_master_top.ctr[7] i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N198[5]
+11 1
+.names i2c_master_top.prer[15] i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N198[6]
+11 1
+.names i2c_master_top.prer[7] i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N198[7]
+11 1
+.names i2c_master_top.rtlc_N198[2] i2c_master_top.rtlc_N198[3] i2c_master_top.rtlc_N209
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N198[4] i2c_master_top.rtlc_N198[5] i2c_master_top.rtlc_N211
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N198[6] i2c_master_top.rtlc_N198[7] i2c_master_top.rtlc_N213
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N198[1] i2c_master_top.rtlc_N209 i2c_master_top.rtlc_N215
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N211 i2c_master_top.rtlc_N213 i2c_master_top.rtlc_N217
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N4 i2c_master_top.rtlc_N5 i2c_master_top.rtlc_N9
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N9 i2c_master_top.rtlc_N6 i2c_master_top.rtlc_N10
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N10 i2c_master_top.rtlc_N29 i2c_master_top.rtlc_N27
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N705 i2c_master_top.rtlc_N851 i2c_master_top.rtlc_G263
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N777 i2c_master_top.rtlc_N851 i2c_master_top.rtlc_G279
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N921 i2c_master_top.rtlc_N851 i2c_master_top.rtlc_G295
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N921 i2c_master_top.rtlc_N923 i2c_master_top.rtlc_G311
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N954[0] i2c_master_top.rtlc_PS34_G416 i2c_master_top.rtlc_G320
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N986[0] i2c_master_top.rtlc_PS34_G416 i2c_master_top.rtlc_G328
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N998[0] i2c_master_top.rtlc_PS34_G416 i2c_master_top.rtlc_G330
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N1050[0] i2c_master_top.rtlc_PS34_G416 i2c_master_top.rtlc_G344
+1- 1
+-1 1
+.names i2c_master_top.rtlc_G320 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G345
+11 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[0] i2c_master_top.rtlc_prer_8_G211_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[1] i2c_master_top.rtlc_prer_9_G212_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[2] i2c_master_top.rtlc_prer_10_G213_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[3] i2c_master_top.rtlc_prer_11_G214_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[4] i2c_master_top.rtlc_prer_12_G215_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[5] i2c_master_top.rtlc_prer_13_G216_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[6] i2c_master_top.rtlc_prer_14_G217_SS_6
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.wb_dat_i[7] i2c_master_top.rtlc_prer_15_G218_SS_6
+1- 1
+-1 1
+.names i2c_master_top.rtlc_G328 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G360
+11 1
+.names i2c_master_top.rtlc_G330 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G368
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[0] i2c_master_top.rtlc_txr_0_G227_SS_6
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[1] i2c_master_top.rtlc_txr_1_G228_SS_6
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[2] i2c_master_top.rtlc_txr_2_G229_SS_6
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[4] i2c_master_top.rtlc_txr_4_G231_SS_6
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[5] i2c_master_top.rtlc_txr_5_G232_SS_6
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[6] i2c_master_top.rtlc_txr_6_G233_SS_6
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[7] i2c_master_top.rtlc_txr_7_G234_SS_6
+11 1
+.names i2c_master_top.rtlc_G344 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G376
+11 1
+.names i2c_master_top.rtlc_G345 i2c_master_top.rtlc_N419
+0 1
+.names i2c_master_top.rtlc_G360 i2c_master_top.rtlc_N491
+0 1
+.names i2c_master_top.rtlc_G368 i2c_master_top.rtlc_N563
+0 1
+.names i2c_master_top.rtlc_G376 i2c_master_top.rtlc_N635
+0 1
+.names i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N705
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N777
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N3 i2c_master_top.rtlc_N27 i2c_master_top.rtlc_N851
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N11 i2c_master_top.rtlc_N12 i2c_master_top.rtlc_N921
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N13 i2c_master_top.rtlc_N27 i2c_master_top.rtlc_N923
+1- 1
+-1 1
+.names i2c_master_top.rtlc_G263 i2c_master_top.wb_wacc i2c_master_top.rtlc_N954[0]
+11 1
+.names i2c_master_top.rtlc_G279 i2c_master_top.wb_wacc i2c_master_top.rtlc_N986[0]
+11 1
+.names i2c_master_top.rtlc_G295 i2c_master_top.wb_wacc i2c_master_top.rtlc_N998[0]
+11 1
+.names i2c_master_top.rtlc_G311 i2c_master_top.wb_wacc i2c_master_top.rtlc_N1050[0]
+11 1
+.names i2c_master_top.rtlc_N156 i2c_master_top.wb_adr_i[2] i2c_master_top.rtlc_N37
+11 1
+.names i2c_master_top.ctr[7] i2c_master_top.rtlc_N37 i2c_master_top.rtlc_N38
+11 1
+.names i2c_master_top.rtlc_N38 i2c_master_top.rtlc_PS33_G415
+0 1
+.names i2c_master_top.done i2c_master_top.i2c_al i2c_master_top.rtlc_N39
+1- 1
+-1 1
+.names i2c_master_top.rtlc_N39 i2c_master_top.rtlc_PS36_G418
+0 1
+.names i2c_master_top.wb_wacc i2c_master_top.rtlc_PS34_G416
+0 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[0] i2c_master_top.rtlc_cr_0_G398_SS_11
+11 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[1] i2c_master_top.rtlc_cr_1_G399_SS_11
+11 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[2] i2c_master_top.rtlc_cr_2_G400_SS_11
+11 1
+.names i2c_master_top.rtlc_PS33_G415 i2c_master_top.wb_wacc i2c_master_top.rtlc_G421
+11 1
+.names i2c_master_top.rtlc_G421 i2c_master_top.rtlc_PS34_G416 i2c_master_top.rtlc_G422
+1- 1
+-1 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[4] i2c_master_top.rtlc_cr_4_G402_SS_11
+11 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[5] i2c_master_top.rtlc_cr_5_G403_SS_11
+11 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[6] i2c_master_top.rtlc_cr_6_G404_SS_11
+11 1
+.names i2c_master_top.wb_wacc i2c_master_top.wb_dat_i[7] i2c_master_top.rtlc_cr_7_G405_SS_11
+11 1
+.names i2c_master_top.rtlc_G421 i2c_master_top.rtlc_N182[1] i2c_master_top.rtlc_G426
+1- 1
+-1 1
+.names i2c_master_top.wb_rst_i i2c_master_top.rtlc_PS30_G412
+0 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_0_G398_SS_11 i2c_master_top.rtlc_cr_0_G398_SS_12
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_1_G399_SS_11 i2c_master_top.rtlc_cr_1_G399_SS_12
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_2_G400_SS_11 i2c_master_top.rtlc_cr_2_G400_SS_12
+11 1
+.names i2c_master_top.rtlc_G421 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G429
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.wb_dat_i[3] i2c_master_top.rtlc_cr_3_G401_SS_12
+11 1
+.names i2c_master_top.rtlc_G422 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G430
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_4_G402_SS_11 i2c_master_top.rtlc_cr_4_G402_SS_12
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_5_G403_SS_11 i2c_master_top.rtlc_cr_5_G403_SS_12
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_6_G404_SS_11 i2c_master_top.rtlc_cr_6_G404_SS_12
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_cr_7_G405_SS_11 i2c_master_top.rtlc_cr_7_G405_SS_12
+11 1
+.names i2c_master_top.rtlc_G426 i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_G434
+11 1
+.names i2c_master_top.arst_i i2c_master_top.rtlc_N40
+0 1
+.names i2c_master_top.rtlc_G429 i2c_master_top.rtlc_N95
+0 1
+.names i2c_master_top.rtlc_G430 i2c_master_top.rtlc_N113
+0 1
+.names i2c_master_top.rtlc_G434 i2c_master_top.rtlc_N140
+0 1
+.names i2c_master_top.rtlc_N301 i2c_master_top.rtlc_N300 i2c_master_top.rtlc_N156
+11 1
+.names i2c_master_top.rtlc_PS36_G418 i2c_master_top.rtlc_PS34_G416 i2c_master_top.rtlc_N182[1]
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.irxack i2c_master_top.rxack_SS_15
+11 1
+.names i2c_master_top.cr[5] i2c_master_top.cr[4] i2c_master_top.rtlc_N227
+1- 1
+-1 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_N227 i2c_master_top.tip_SS_15
+11 1
+.names i2c_master_top.cr[7] i2c_master_top.rtlc_N228
+0 1
+.names i2c_master_top.al i2c_master_top.rtlc_N228 i2c_master_top.rtlc_N229
+11 1
+.names i2c_master_top.i2c_al i2c_master_top.rtlc_N229 i2c_master_top.rtlc_N230
+1- 1
+-1 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_N230 i2c_master_top.al_SS_15
+11 1
+.names i2c_master_top.rtlc_N39 i2c_master_top.irq_flag i2c_master_top.rtlc_N232
+1- 1
+-1 1
+.names i2c_master_top.cr[0] i2c_master_top.rtlc_N233
+0 1
+.names i2c_master_top.rtlc_N232 i2c_master_top.rtlc_N233 i2c_master_top.rtlc_N234
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_N234 i2c_master_top.irq_flag_SS_15
+11 1
+.names i2c_master_top.irq_flag i2c_master_top.ctr[6] i2c_master_top.rtlc_N267
+11 1
+.names i2c_master_top.rtlc_PS30_G412 i2c_master_top.rtlc_N267 i2c_master_top.wb_inta_o_SS_18
+11 1
+.names i2c_master_top.wb_adr_i[2] i2c_master_top.rtlc_N299
+0 1
+.names i2c_master_top.wb_adr_i[1] i2c_master_top.rtlc_N300
+0 1
+.names i2c_master_top.wb_adr_i[0] i2c_master_top.rtlc_N301
+0 1
+.names i2c_master_top.rtlc_N299 i2c_master_top.rtlc_N300 i2c_master_top.rtlc_N302
+11 1
+.names i2c_master_top.rtlc_N299 i2c_master_top.wb_adr_i[1] i2c_master_top.rtlc_N303
+11 1
+.names i2c_master_top.wb_adr_i[2] i2c_master_top.rtlc_N300 i2c_master_top.rtlc_N304
+11 1
+.names i2c_master_top.wb_adr_i[2] i2c_master_top.wb_adr_i[1] i2c_master_top.rtlc_N305
+11 1
+.names i2c_master_top.rtlc_N305 i2c_master_top.wb_adr_i[0] i2c_master_top.rtlc_N29
+11 1
+.names Supply1 i2c_master_top.wb_clk_i periscope_single_clock transformNet_0
+1-1 1
+-10 1
+.names i2c_master_top.wb_clk_i transformNet_1
+0 1
+.names Supply1 transformNet_1 periscope_single_clock transformNet_2
+1-1 1
+-10 1
+.names Supply1 tmp_sSCL_5 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_sSCL_3
+1-1 1
+-10 1
+.latch tmp_sSCL_3 tmp_sSCL_4 1
+.names i2c_master_top.byte_controller.bit_controller.sSCL_SS_7 tmp_sSCL_4 transformNet_2 tmp_sSCL_5
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.sSCL tmp_sSCL_6 1
+.names tmp_sSCL_4 tmp_sSCL_6 transformNet_0 tmp_sSCL_7
+1-1 1
+-10 1
+.names Supply1 tmp_sSDA_10 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_sSDA_8
+1-1 1
+-10 1
+.latch tmp_sSDA_8 tmp_sSDA_9 1
+.names i2c_master_top.byte_controller.bit_controller.sSDA_SS_7 tmp_sSDA_9 transformNet_2 tmp_sSDA_10
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.sSDA tmp_sSDA_11 1
+.names tmp_sSDA_9 tmp_sSDA_11 transformNet_0 tmp_sSDA_12
+1-1 1
+-10 1
+.names i2c_master_top.scl_padoen_o tmp_dscl_oen_14 transformNet_2 tmp_dscl_oen_13
+1-1 1
+-10 1
+.latch tmp_dscl_oen_13 tmp_dscl_oen_14 1
+.latch i2c_master_top.byte_controller.bit_controller.dscl_oen tmp_dscl_oen_15 1
+.names i2c_master_top.byte_controller.bit_controller.sda_chk_SS_28 i2c_master_top.byte_controller.bit_controller.sda_chk i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_sda_chk_16
+1-1 1
+-10 1
+.names Supply0 tmp_sda_chk_19 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_sda_chk_17
+1-1 1
+-10 1
+.latch tmp_sda_chk_17 tmp_sda_chk_18 0
+.names tmp_sda_chk_16 tmp_sda_chk_18 transformNet_2 tmp_sda_chk_19
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.sda_chk tmp_sda_chk_20 0
+.names tmp_sda_chk_18 tmp_sda_chk_20 transformNet_0 tmp_sda_chk_21
+1-1 1
+-10 1
+.names Supply1 tmp_clk_en_24 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_clk_en_22
+1-1 1
+-10 1
+.latch tmp_clk_en_22 tmp_clk_en_23 1
+.names i2c_master_top.byte_controller.bit_controller.clk_en_SS_4 tmp_clk_en_23 transformNet_2 tmp_clk_en_24
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.clk_en tmp_clk_en_25 1
+.names tmp_clk_en_23 tmp_clk_en_25 transformNet_0 tmp_clk_en_26
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_0_G40_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[0] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[0]_27
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[0]_30 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[0]_28
+1-1 1
+-10 1
+.latch tmp_cnt[0]_28 tmp_cnt[0]_29 0
+.names tmp_cnt[0]_27 tmp_cnt[0]_29 transformNet_2 tmp_cnt[0]_30
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[0] tmp_cnt[0]_31 0
+.names tmp_cnt[0]_29 tmp_cnt[0]_31 transformNet_0 tmp_cnt[0]_32
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_1_G41_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[1] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[1]_33
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[1]_36 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[1]_34
+1-1 1
+-10 1
+.latch tmp_cnt[1]_34 tmp_cnt[1]_35 0
+.names tmp_cnt[1]_33 tmp_cnt[1]_35 transformNet_2 tmp_cnt[1]_36
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[1] tmp_cnt[1]_37 0
+.names tmp_cnt[1]_35 tmp_cnt[1]_37 transformNet_0 tmp_cnt[1]_38
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_2_G42_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[2] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[2]_39
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[2]_42 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[2]_40
+1-1 1
+-10 1
+.latch tmp_cnt[2]_40 tmp_cnt[2]_41 0
+.names tmp_cnt[2]_39 tmp_cnt[2]_41 transformNet_2 tmp_cnt[2]_42
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[2] tmp_cnt[2]_43 0
+.names tmp_cnt[2]_41 tmp_cnt[2]_43 transformNet_0 tmp_cnt[2]_44
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_3_G43_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[3] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[3]_45
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[3]_48 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[3]_46
+1-1 1
+-10 1
+.latch tmp_cnt[3]_46 tmp_cnt[3]_47 0
+.names tmp_cnt[3]_45 tmp_cnt[3]_47 transformNet_2 tmp_cnt[3]_48
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[3] tmp_cnt[3]_49 0
+.names tmp_cnt[3]_47 tmp_cnt[3]_49 transformNet_0 tmp_cnt[3]_50
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_4_G44_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[4] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[4]_51
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[4]_54 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[4]_52
+1-1 1
+-10 1
+.latch tmp_cnt[4]_52 tmp_cnt[4]_53 0
+.names tmp_cnt[4]_51 tmp_cnt[4]_53 transformNet_2 tmp_cnt[4]_54
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[4] tmp_cnt[4]_55 0
+.names tmp_cnt[4]_53 tmp_cnt[4]_55 transformNet_0 tmp_cnt[4]_56
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_5_G45_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[5] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[5]_57
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[5]_60 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[5]_58
+1-1 1
+-10 1
+.latch tmp_cnt[5]_58 tmp_cnt[5]_59 0
+.names tmp_cnt[5]_57 tmp_cnt[5]_59 transformNet_2 tmp_cnt[5]_60
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[5] tmp_cnt[5]_61 0
+.names tmp_cnt[5]_59 tmp_cnt[5]_61 transformNet_0 tmp_cnt[5]_62
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_6_G46_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[6] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[6]_63
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[6]_66 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[6]_64
+1-1 1
+-10 1
+.latch tmp_cnt[6]_64 tmp_cnt[6]_65 0
+.names tmp_cnt[6]_63 tmp_cnt[6]_65 transformNet_2 tmp_cnt[6]_66
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[6] tmp_cnt[6]_67 0
+.names tmp_cnt[6]_65 tmp_cnt[6]_67 transformNet_0 tmp_cnt[6]_68
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_7_G47_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[7] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[7]_69
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[7]_72 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[7]_70
+1-1 1
+-10 1
+.latch tmp_cnt[7]_70 tmp_cnt[7]_71 0
+.names tmp_cnt[7]_69 tmp_cnt[7]_71 transformNet_2 tmp_cnt[7]_72
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[7] tmp_cnt[7]_73 0
+.names tmp_cnt[7]_71 tmp_cnt[7]_73 transformNet_0 tmp_cnt[7]_74
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_8_G48_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[8] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[8]_75
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[8]_78 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[8]_76
+1-1 1
+-10 1
+.latch tmp_cnt[8]_76 tmp_cnt[8]_77 0
+.names tmp_cnt[8]_75 tmp_cnt[8]_77 transformNet_2 tmp_cnt[8]_78
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[8] tmp_cnt[8]_79 0
+.names tmp_cnt[8]_77 tmp_cnt[8]_79 transformNet_0 tmp_cnt[8]_80
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_9_G49_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[9] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[9]_81
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[9]_84 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[9]_82
+1-1 1
+-10 1
+.latch tmp_cnt[9]_82 tmp_cnt[9]_83 0
+.names tmp_cnt[9]_81 tmp_cnt[9]_83 transformNet_2 tmp_cnt[9]_84
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[9] tmp_cnt[9]_85 0
+.names tmp_cnt[9]_83 tmp_cnt[9]_85 transformNet_0 tmp_cnt[9]_86
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_10_G50_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[10] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[10]_87
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[10]_90 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[10]_88
+1-1 1
+-10 1
+.latch tmp_cnt[10]_88 tmp_cnt[10]_89 0
+.names tmp_cnt[10]_87 tmp_cnt[10]_89 transformNet_2 tmp_cnt[10]_90
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[10] tmp_cnt[10]_91 0
+.names tmp_cnt[10]_89 tmp_cnt[10]_91 transformNet_0 tmp_cnt[10]_92
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_11_G51_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[11] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[11]_93
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[11]_96 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[11]_94
+1-1 1
+-10 1
+.latch tmp_cnt[11]_94 tmp_cnt[11]_95 0
+.names tmp_cnt[11]_93 tmp_cnt[11]_95 transformNet_2 tmp_cnt[11]_96
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[11] tmp_cnt[11]_97 0
+.names tmp_cnt[11]_95 tmp_cnt[11]_97 transformNet_0 tmp_cnt[11]_98
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_12_G52_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[12] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[12]_99
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[12]_102 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[12]_100
+1-1 1
+-10 1
+.latch tmp_cnt[12]_100 tmp_cnt[12]_101 0
+.names tmp_cnt[12]_99 tmp_cnt[12]_101 transformNet_2 tmp_cnt[12]_102
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[12] tmp_cnt[12]_103 0
+.names tmp_cnt[12]_101 tmp_cnt[12]_103 transformNet_0 tmp_cnt[12]_104
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_13_G53_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[13] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[13]_105
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[13]_108 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[13]_106
+1-1 1
+-10 1
+.latch tmp_cnt[13]_106 tmp_cnt[13]_107 0
+.names tmp_cnt[13]_105 tmp_cnt[13]_107 transformNet_2 tmp_cnt[13]_108
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[13] tmp_cnt[13]_109 0
+.names tmp_cnt[13]_107 tmp_cnt[13]_109 transformNet_0 tmp_cnt[13]_110
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_14_G54_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[14] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[14]_111
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[14]_114 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[14]_112
+1-1 1
+-10 1
+.latch tmp_cnt[14]_112 tmp_cnt[14]_113 0
+.names tmp_cnt[14]_111 tmp_cnt[14]_113 transformNet_2 tmp_cnt[14]_114
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[14] tmp_cnt[14]_115 0
+.names tmp_cnt[14]_113 tmp_cnt[14]_115 transformNet_0 tmp_cnt[14]_116
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_cnt_15_G55_SS_4 i2c_master_top.byte_controller.bit_controller.cnt[15] i2c_master_top.byte_controller.bit_controller.rtlc_N294 tmp_cnt[15]_117
+1-1 1
+-10 1
+.names Supply0 tmp_cnt[15]_120 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cnt[15]_118
+1-1 1
+-10 1
+.latch tmp_cnt[15]_118 tmp_cnt[15]_119 0
+.names tmp_cnt[15]_117 tmp_cnt[15]_119 transformNet_2 tmp_cnt[15]_120
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cnt[15] tmp_cnt[15]_121 0
+.names tmp_cnt[15]_119 tmp_cnt[15]_121 transformNet_0 tmp_cnt[15]_122
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_0_G214_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[0] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[0]_123
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[0]_126 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[0]_124
+1-1 1
+-10 1
+.latch tmp_c_state[0]_124 tmp_c_state[0]_125 0
+.names tmp_c_state[0]_123 tmp_c_state[0]_125 transformNet_2 tmp_c_state[0]_126
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[0] tmp_c_state[0]_127 0
+.names tmp_c_state[0]_125 tmp_c_state[0]_127 transformNet_0 tmp_c_state[0]_128
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_1_G215_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[1] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[1]_129
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[1]_132 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[1]_130
+1-1 1
+-10 1
+.latch tmp_c_state[1]_130 tmp_c_state[1]_131 0
+.names tmp_c_state[1]_129 tmp_c_state[1]_131 transformNet_2 tmp_c_state[1]_132
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[1] tmp_c_state[1]_133 0
+.names tmp_c_state[1]_131 tmp_c_state[1]_133 transformNet_0 tmp_c_state[1]_134
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_2_G216_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[2] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[2]_135
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[2]_138 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[2]_136
+1-1 1
+-10 1
+.latch tmp_c_state[2]_136 tmp_c_state[2]_137 0
+.names tmp_c_state[2]_135 tmp_c_state[2]_137 transformNet_2 tmp_c_state[2]_138
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[2] tmp_c_state[2]_139 0
+.names tmp_c_state[2]_137 tmp_c_state[2]_139 transformNet_0 tmp_c_state[2]_140
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_3_G217_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[3] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[3]_141
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[3]_144 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[3]_142
+1-1 1
+-10 1
+.latch tmp_c_state[3]_142 tmp_c_state[3]_143 0
+.names tmp_c_state[3]_141 tmp_c_state[3]_143 transformNet_2 tmp_c_state[3]_144
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[3] tmp_c_state[3]_145 0
+.names tmp_c_state[3]_143 tmp_c_state[3]_145 transformNet_0 tmp_c_state[3]_146
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_4_G218_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[4] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[4]_147
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[4]_150 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[4]_148
+1-1 1
+-10 1
+.latch tmp_c_state[4]_148 tmp_c_state[4]_149 0
+.names tmp_c_state[4]_147 tmp_c_state[4]_149 transformNet_2 tmp_c_state[4]_150
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[4] tmp_c_state[4]_151 0
+.names tmp_c_state[4]_149 tmp_c_state[4]_151 transformNet_0 tmp_c_state[4]_152
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_5_G219_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[5] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[5]_153
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[5]_156 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[5]_154
+1-1 1
+-10 1
+.latch tmp_c_state[5]_154 tmp_c_state[5]_155 0
+.names tmp_c_state[5]_153 tmp_c_state[5]_155 transformNet_2 tmp_c_state[5]_156
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[5] tmp_c_state[5]_157 0
+.names tmp_c_state[5]_155 tmp_c_state[5]_157 transformNet_0 tmp_c_state[5]_158
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_6_G220_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[6] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[6]_159
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[6]_162 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[6]_160
+1-1 1
+-10 1
+.latch tmp_c_state[6]_160 tmp_c_state[6]_161 0
+.names tmp_c_state[6]_159 tmp_c_state[6]_161 transformNet_2 tmp_c_state[6]_162
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[6] tmp_c_state[6]_163 0
+.names tmp_c_state[6]_161 tmp_c_state[6]_163 transformNet_0 tmp_c_state[6]_164
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_7_G221_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[7] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[7]_165
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[7]_168 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[7]_166
+1-1 1
+-10 1
+.latch tmp_c_state[7]_166 tmp_c_state[7]_167 0
+.names tmp_c_state[7]_165 tmp_c_state[7]_167 transformNet_2 tmp_c_state[7]_168
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[7] tmp_c_state[7]_169 0
+.names tmp_c_state[7]_167 tmp_c_state[7]_169 transformNet_0 tmp_c_state[7]_170
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_8_G222_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[8] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[8]_171
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[8]_174 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[8]_172
+1-1 1
+-10 1
+.latch tmp_c_state[8]_172 tmp_c_state[8]_173 0
+.names tmp_c_state[8]_171 tmp_c_state[8]_173 transformNet_2 tmp_c_state[8]_174
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[8] tmp_c_state[8]_175 0
+.names tmp_c_state[8]_173 tmp_c_state[8]_175 transformNet_0 tmp_c_state[8]_176
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_9_G223_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[9] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[9]_177
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[9]_180 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[9]_178
+1-1 1
+-10 1
+.latch tmp_c_state[9]_178 tmp_c_state[9]_179 0
+.names tmp_c_state[9]_177 tmp_c_state[9]_179 transformNet_2 tmp_c_state[9]_180
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[9] tmp_c_state[9]_181 0
+.names tmp_c_state[9]_179 tmp_c_state[9]_181 transformNet_0 tmp_c_state[9]_182
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_10_G224_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[10] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[10]_183
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[10]_186 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[10]_184
+1-1 1
+-10 1
+.latch tmp_c_state[10]_184 tmp_c_state[10]_185 0
+.names tmp_c_state[10]_183 tmp_c_state[10]_185 transformNet_2 tmp_c_state[10]_186
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[10] tmp_c_state[10]_187 0
+.names tmp_c_state[10]_185 tmp_c_state[10]_187 transformNet_0 tmp_c_state[10]_188
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_11_G225_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[11] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[11]_189
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[11]_192 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[11]_190
+1-1 1
+-10 1
+.latch tmp_c_state[11]_190 tmp_c_state[11]_191 0
+.names tmp_c_state[11]_189 tmp_c_state[11]_191 transformNet_2 tmp_c_state[11]_192
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[11] tmp_c_state[11]_193 0
+.names tmp_c_state[11]_191 tmp_c_state[11]_193 transformNet_0 tmp_c_state[11]_194
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_12_G226_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[12] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[12]_195
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[12]_198 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[12]_196
+1-1 1
+-10 1
+.latch tmp_c_state[12]_196 tmp_c_state[12]_197 0
+.names tmp_c_state[12]_195 tmp_c_state[12]_197 transformNet_2 tmp_c_state[12]_198
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[12] tmp_c_state[12]_199 0
+.names tmp_c_state[12]_197 tmp_c_state[12]_199 transformNet_0 tmp_c_state[12]_200
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_13_G227_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[13] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[13]_201
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[13]_204 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[13]_202
+1-1 1
+-10 1
+.latch tmp_c_state[13]_202 tmp_c_state[13]_203 0
+.names tmp_c_state[13]_201 tmp_c_state[13]_203 transformNet_2 tmp_c_state[13]_204
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[13] tmp_c_state[13]_205 0
+.names tmp_c_state[13]_203 tmp_c_state[13]_205 transformNet_0 tmp_c_state[13]_206
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_14_G228_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[14] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[14]_207
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[14]_210 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[14]_208
+1-1 1
+-10 1
+.latch tmp_c_state[14]_208 tmp_c_state[14]_209 0
+.names tmp_c_state[14]_207 tmp_c_state[14]_209 transformNet_2 tmp_c_state[14]_210
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[14] tmp_c_state[14]_211 0
+.names tmp_c_state[14]_209 tmp_c_state[14]_211 transformNet_0 tmp_c_state[14]_212
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_15_G229_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[15] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[15]_213
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[15]_216 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[15]_214
+1-1 1
+-10 1
+.latch tmp_c_state[15]_214 tmp_c_state[15]_215 0
+.names tmp_c_state[15]_213 tmp_c_state[15]_215 transformNet_2 tmp_c_state[15]_216
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[15] tmp_c_state[15]_217 0
+.names tmp_c_state[15]_215 tmp_c_state[15]_217 transformNet_0 tmp_c_state[15]_218
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.rtlc_c_state_16_G230_SS_28 i2c_master_top.byte_controller.bit_controller.c_state[16] i2c_master_top.byte_controller.bit_controller.rtlc_N521 tmp_c_state[16]_219
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[16]_222 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_c_state[16]_220
+1-1 1
+-10 1
+.latch tmp_c_state[16]_220 tmp_c_state[16]_221 0
+.names tmp_c_state[16]_219 tmp_c_state[16]_221 transformNet_2 tmp_c_state[16]_222
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.c_state[16] tmp_c_state[16]_223 0
+.names tmp_c_state[16]_221 tmp_c_state[16]_223 transformNet_0 tmp_c_state[16]_224
+1-1 1
+-10 1
+.names Supply1 tmp_dSCL_227 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_dSCL_225
+1-1 1
+-10 1
+.latch tmp_dSCL_225 tmp_dSCL_226 1
+.names i2c_master_top.byte_controller.bit_controller.dSCL_SS_7 tmp_dSCL_226 transformNet_2 tmp_dSCL_227
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.dSCL tmp_dSCL_228 1
+.names tmp_dSCL_226 tmp_dSCL_228 transformNet_0 tmp_dSCL_229
+1-1 1
+-10 1
+.names Supply1 tmp_dSDA_232 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_dSDA_230
+1-1 1
+-10 1
+.latch tmp_dSDA_230 tmp_dSDA_231 1
+.names i2c_master_top.byte_controller.bit_controller.dSDA_SS_7 tmp_dSDA_231 transformNet_2 tmp_dSDA_232
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.dSDA tmp_dSDA_233 1
+.names tmp_dSDA_231 tmp_dSDA_233 transformNet_0 tmp_dSDA_234
+1-1 1
+-10 1
+.names Supply0 tmp_sta_condition_237 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_sta_condition_235
+1-1 1
+-10 1
+.latch tmp_sta_condition_235 tmp_sta_condition_236 0
+.names i2c_master_top.byte_controller.bit_controller.sta_condition_SS_10 tmp_sta_condition_236 transformNet_2 tmp_sta_condition_237
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.sta_condition tmp_sta_condition_238 0
+.names tmp_sta_condition_236 tmp_sta_condition_238 transformNet_0 tmp_sta_condition_239
+1-1 1
+-10 1
+.names Supply0 tmp_sto_condition_242 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_sto_condition_240
+1-1 1
+-10 1
+.latch tmp_sto_condition_240 tmp_sto_condition_241 0
+.names i2c_master_top.byte_controller.bit_controller.sto_condition_SS_10 tmp_sto_condition_241 transformNet_2 tmp_sto_condition_242
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.sto_condition tmp_sto_condition_243 0
+.names tmp_sto_condition_241 tmp_sto_condition_243 transformNet_0 tmp_sto_condition_244
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.cmd_stop_SS_17 i2c_master_top.byte_controller.bit_controller.cmd_stop i2c_master_top.byte_controller.bit_controller.rtlc_N23 tmp_cmd_stop_245
+1-1 1
+-10 1
+.names Supply0 tmp_cmd_stop_248 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_cmd_stop_246
+1-1 1
+-10 1
+.latch tmp_cmd_stop_246 tmp_cmd_stop_247 0
+.names tmp_cmd_stop_245 tmp_cmd_stop_247 transformNet_2 tmp_cmd_stop_248
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.bit_controller.cmd_stop tmp_cmd_stop_249 0
+.names tmp_cmd_stop_247 tmp_cmd_stop_249 transformNet_0 tmp_cmd_stop_250
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_core_cmd_2_G150_SS_25 i2c_master_top.byte_controller.core_cmd[2] i2c_master_top.byte_controller.rtlc_N325 tmp_core_cmd[2]_251
+1-1 1
+-10 1
+.names Supply0 tmp_core_cmd[2]_254 i2c_master_top.byte_controller.rtlc_N0 tmp_core_cmd[2]_252
+1-1 1
+-10 1
+.latch tmp_core_cmd[2]_252 tmp_core_cmd[2]_253 0
+.names tmp_core_cmd[2]_251 tmp_core_cmd[2]_253 transformNet_2 tmp_core_cmd[2]_254
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.core_cmd[2] tmp_core_cmd[2]_255 0
+.names tmp_core_cmd[2]_253 tmp_core_cmd[2]_255 transformNet_0 tmp_core_cmd[2]_256
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_core_cmd_3_G151_SS_25 i2c_master_top.byte_controller.core_cmd[3] i2c_master_top.byte_controller.rtlc_N325 tmp_core_cmd[3]_257
+1-1 1
+-10 1
+.names Supply0 tmp_core_cmd[3]_260 i2c_master_top.byte_controller.rtlc_N0 tmp_core_cmd[3]_258
+1-1 1
+-10 1
+.latch tmp_core_cmd[3]_258 tmp_core_cmd[3]_259 0
+.names tmp_core_cmd[3]_257 tmp_core_cmd[3]_259 transformNet_2 tmp_core_cmd[3]_260
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.core_cmd[3] tmp_core_cmd[3]_261 0
+.names tmp_core_cmd[3]_259 tmp_core_cmd[3]_261 transformNet_0 tmp_core_cmd[3]_262
+1-1 1
+-10 1
+.names Supply0 tmp_core_txd_265 i2c_master_top.byte_controller.rtlc_N0 tmp_core_txd_263
+1-1 1
+-10 1
+.latch tmp_core_txd_263 tmp_core_txd_264 0
+.names i2c_master_top.byte_controller.core_txd_SS_25 tmp_core_txd_264 transformNet_2 tmp_core_txd_265
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.core_txd tmp_core_txd_266 0
+.names tmp_core_txd_264 tmp_core_txd_266 transformNet_0 tmp_core_txd_267
+1-1 1
+-10 1
+.names Supply0 tmp_core_ack_270 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_core_ack_268
+1-1 1
+-10 1
+.latch tmp_core_ack_268 tmp_core_ack_269 0
+.names i2c_master_top.byte_controller.bit_controller.cmd_ack_SS_28 tmp_core_ack_269 transformNet_2 tmp_core_ack_270
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.core_ack tmp_core_ack_271 0
+.names tmp_core_ack_269 tmp_core_ack_271 transformNet_0 tmp_core_ack_272
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.sSDA i2c_master_top.byte_controller.core_rxd i2c_master_top.byte_controller.bit_controller.rtlc_N128 tmp_core_rxd_273
+1-1 1
+-10 1
+.names tmp_core_rxd_273 tmp_core_rxd_275 transformNet_2 tmp_core_rxd_274
+1-1 1
+-10 1
+.latch tmp_core_rxd_274 tmp_core_rxd_275 2
+.latch i2c_master_top.byte_controller.core_rxd tmp_core_rxd_276 2
+.names i2c_master_top.byte_controller.rtlc_sr_0_G66_SS_3 i2c_master_top.byte_controller.sr[0] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[0]_277
+1-1 1
+-10 1
+.names Supply0 tmp_sr[0]_280 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[0]_278
+1-1 1
+-10 1
+.latch tmp_sr[0]_278 tmp_sr[0]_279 0
+.names tmp_sr[0]_277 tmp_sr[0]_279 transformNet_2 tmp_sr[0]_280
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[0] tmp_sr[0]_281 0
+.names tmp_sr[0]_279 tmp_sr[0]_281 transformNet_0 tmp_sr[0]_282
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_1_G67_SS_3 i2c_master_top.byte_controller.sr[1] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[1]_283
+1-1 1
+-10 1
+.names Supply0 tmp_sr[1]_286 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[1]_284
+1-1 1
+-10 1
+.latch tmp_sr[1]_284 tmp_sr[1]_285 0
+.names tmp_sr[1]_283 tmp_sr[1]_285 transformNet_2 tmp_sr[1]_286
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[1] tmp_sr[1]_287 0
+.names tmp_sr[1]_285 tmp_sr[1]_287 transformNet_0 tmp_sr[1]_288
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_2_G68_SS_3 i2c_master_top.byte_controller.sr[2] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[2]_289
+1-1 1
+-10 1
+.names Supply0 tmp_sr[2]_292 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[2]_290
+1-1 1
+-10 1
+.latch tmp_sr[2]_290 tmp_sr[2]_291 0
+.names tmp_sr[2]_289 tmp_sr[2]_291 transformNet_2 tmp_sr[2]_292
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[2] tmp_sr[2]_293 0
+.names tmp_sr[2]_291 tmp_sr[2]_293 transformNet_0 tmp_sr[2]_294
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_3_G69_SS_3 i2c_master_top.byte_controller.sr[3] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[3]_295
+1-1 1
+-10 1
+.names Supply0 tmp_sr[3]_298 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[3]_296
+1-1 1
+-10 1
+.latch tmp_sr[3]_296 tmp_sr[3]_297 0
+.names tmp_sr[3]_295 tmp_sr[3]_297 transformNet_2 tmp_sr[3]_298
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[3] tmp_sr[3]_299 0
+.names tmp_sr[3]_297 tmp_sr[3]_299 transformNet_0 tmp_sr[3]_300
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_4_G70_SS_3 i2c_master_top.byte_controller.sr[4] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[4]_301
+1-1 1
+-10 1
+.names Supply0 tmp_sr[4]_304 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[4]_302
+1-1 1
+-10 1
+.latch tmp_sr[4]_302 tmp_sr[4]_303 0
+.names tmp_sr[4]_301 tmp_sr[4]_303 transformNet_2 tmp_sr[4]_304
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[4] tmp_sr[4]_305 0
+.names tmp_sr[4]_303 tmp_sr[4]_305 transformNet_0 tmp_sr[4]_306
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_5_G71_SS_3 i2c_master_top.byte_controller.sr[5] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[5]_307
+1-1 1
+-10 1
+.names Supply0 tmp_sr[5]_310 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[5]_308
+1-1 1
+-10 1
+.latch tmp_sr[5]_308 tmp_sr[5]_309 0
+.names tmp_sr[5]_307 tmp_sr[5]_309 transformNet_2 tmp_sr[5]_310
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[5] tmp_sr[5]_311 0
+.names tmp_sr[5]_309 tmp_sr[5]_311 transformNet_0 tmp_sr[5]_312
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_6_G72_SS_3 i2c_master_top.byte_controller.sr[6] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[6]_313
+1-1 1
+-10 1
+.names Supply0 tmp_sr[6]_316 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[6]_314
+1-1 1
+-10 1
+.latch tmp_sr[6]_314 tmp_sr[6]_315 0
+.names tmp_sr[6]_313 tmp_sr[6]_315 transformNet_2 tmp_sr[6]_316
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[6] tmp_sr[6]_317 0
+.names tmp_sr[6]_315 tmp_sr[6]_317 transformNet_0 tmp_sr[6]_318
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_sr_7_G73_SS_3 i2c_master_top.byte_controller.sr[7] i2c_master_top.byte_controller.rtlc_N91 tmp_sr[7]_319
+1-1 1
+-10 1
+.names Supply0 tmp_sr[7]_322 i2c_master_top.byte_controller.rtlc_N0 tmp_sr[7]_320
+1-1 1
+-10 1
+.latch tmp_sr[7]_320 tmp_sr[7]_321 0
+.names tmp_sr[7]_319 tmp_sr[7]_321 transformNet_2 tmp_sr[7]_322
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.sr[7] tmp_sr[7]_323 0
+.names tmp_sr[7]_321 tmp_sr[7]_323 transformNet_0 tmp_sr[7]_324
+1-1 1
+-10 1
+.names Supply0 tmp_shift_327 i2c_master_top.byte_controller.rtlc_N0 tmp_shift_325
+1-1 1
+-10 1
+.latch tmp_shift_325 tmp_shift_326 0
+.names i2c_master_top.byte_controller.shift_SS_25 tmp_shift_326 transformNet_2 tmp_shift_327
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.shift tmp_shift_328 0
+.names tmp_shift_326 tmp_shift_328 transformNet_0 tmp_shift_329
+1-1 1
+-10 1
+.names Supply0 tmp_ld_332 i2c_master_top.byte_controller.rtlc_N0 tmp_ld_330
+1-1 1
+-10 1
+.latch tmp_ld_330 tmp_ld_331 0
+.names i2c_master_top.byte_controller.ld_SS_25 tmp_ld_331 transformNet_2 tmp_ld_332
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.ld tmp_ld_333 0
+.names tmp_ld_331 tmp_ld_333 transformNet_0 tmp_ld_334
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_dcnt_0_G106_SS_8 i2c_master_top.byte_controller.dcnt[0] i2c_master_top.byte_controller.rtlc_N91 tmp_dcnt[0]_335
+1-1 1
+-10 1
+.names Supply0 tmp_dcnt[0]_338 i2c_master_top.byte_controller.rtlc_N0 tmp_dcnt[0]_336
+1-1 1
+-10 1
+.latch tmp_dcnt[0]_336 tmp_dcnt[0]_337 0
+.names tmp_dcnt[0]_335 tmp_dcnt[0]_337 transformNet_2 tmp_dcnt[0]_338
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.dcnt[0] tmp_dcnt[0]_339 0
+.names tmp_dcnt[0]_337 tmp_dcnt[0]_339 transformNet_0 tmp_dcnt[0]_340
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_dcnt_1_G107_SS_8 i2c_master_top.byte_controller.dcnt[1] i2c_master_top.byte_controller.rtlc_N91 tmp_dcnt[1]_341
+1-1 1
+-10 1
+.names Supply0 tmp_dcnt[1]_344 i2c_master_top.byte_controller.rtlc_N0 tmp_dcnt[1]_342
+1-1 1
+-10 1
+.latch tmp_dcnt[1]_342 tmp_dcnt[1]_343 0
+.names tmp_dcnt[1]_341 tmp_dcnt[1]_343 transformNet_2 tmp_dcnt[1]_344
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.dcnt[1] tmp_dcnt[1]_345 0
+.names tmp_dcnt[1]_343 tmp_dcnt[1]_345 transformNet_0 tmp_dcnt[1]_346
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_dcnt_2_G108_SS_8 i2c_master_top.byte_controller.dcnt[2] i2c_master_top.byte_controller.rtlc_N91 tmp_dcnt[2]_347
+1-1 1
+-10 1
+.names Supply0 tmp_dcnt[2]_350 i2c_master_top.byte_controller.rtlc_N0 tmp_dcnt[2]_348
+1-1 1
+-10 1
+.latch tmp_dcnt[2]_348 tmp_dcnt[2]_349 0
+.names tmp_dcnt[2]_347 tmp_dcnt[2]_349 transformNet_2 tmp_dcnt[2]_350
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.dcnt[2] tmp_dcnt[2]_351 0
+.names tmp_dcnt[2]_349 tmp_dcnt[2]_351 transformNet_0 tmp_dcnt[2]_352
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_c_state_0_G152_SS_25 i2c_master_top.byte_controller.c_state[0] i2c_master_top.byte_controller.rtlc_N325 tmp_c_state[0]_353
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[0]_356 i2c_master_top.byte_controller.rtlc_N0 tmp_c_state[0]_354
+1-1 1
+-10 1
+.latch tmp_c_state[0]_354 tmp_c_state[0]_355 0
+.names tmp_c_state[0]_353 tmp_c_state[0]_355 transformNet_2 tmp_c_state[0]_356
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.c_state[0] tmp_c_state[0]_357 0
+.names tmp_c_state[0]_355 tmp_c_state[0]_357 transformNet_0 tmp_c_state[0]_358
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_c_state_1_G153_SS_25 i2c_master_top.byte_controller.c_state[1] i2c_master_top.byte_controller.rtlc_N325 tmp_c_state[1]_359
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[1]_362 i2c_master_top.byte_controller.rtlc_N0 tmp_c_state[1]_360
+1-1 1
+-10 1
+.latch tmp_c_state[1]_360 tmp_c_state[1]_361 0
+.names tmp_c_state[1]_359 tmp_c_state[1]_361 transformNet_2 tmp_c_state[1]_362
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.c_state[1] tmp_c_state[1]_363 0
+.names tmp_c_state[1]_361 tmp_c_state[1]_363 transformNet_0 tmp_c_state[1]_364
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_c_state_2_G154_SS_25 i2c_master_top.byte_controller.c_state[2] i2c_master_top.byte_controller.rtlc_N325 tmp_c_state[2]_365
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[2]_368 i2c_master_top.byte_controller.rtlc_N0 tmp_c_state[2]_366
+1-1 1
+-10 1
+.latch tmp_c_state[2]_366 tmp_c_state[2]_367 0
+.names tmp_c_state[2]_365 tmp_c_state[2]_367 transformNet_2 tmp_c_state[2]_368
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.c_state[2] tmp_c_state[2]_369 0
+.names tmp_c_state[2]_367 tmp_c_state[2]_369 transformNet_0 tmp_c_state[2]_370
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_c_state_3_G155_SS_25 i2c_master_top.byte_controller.c_state[3] i2c_master_top.byte_controller.rtlc_N325 tmp_c_state[3]_371
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[3]_374 i2c_master_top.byte_controller.rtlc_N0 tmp_c_state[3]_372
+1-1 1
+-10 1
+.latch tmp_c_state[3]_372 tmp_c_state[3]_373 0
+.names tmp_c_state[3]_371 tmp_c_state[3]_373 transformNet_2 tmp_c_state[3]_374
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.c_state[3] tmp_c_state[3]_375 0
+.names tmp_c_state[3]_373 tmp_c_state[3]_375 transformNet_0 tmp_c_state[3]_376
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.rtlc_c_state_4_G156_SS_25 i2c_master_top.byte_controller.c_state[4] i2c_master_top.byte_controller.rtlc_N325 tmp_c_state[4]_377
+1-1 1
+-10 1
+.names Supply0 tmp_c_state[4]_380 i2c_master_top.byte_controller.rtlc_N0 tmp_c_state[4]_378
+1-1 1
+-10 1
+.latch tmp_c_state[4]_378 tmp_c_state[4]_379 0
+.names tmp_c_state[4]_377 tmp_c_state[4]_379 transformNet_2 tmp_c_state[4]_380
+1-1 1
+-10 1
+.latch i2c_master_top.byte_controller.c_state[4] tmp_c_state[4]_381 0
+.names tmp_c_state[4]_379 tmp_c_state[4]_381 transformNet_0 tmp_c_state[4]_382
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_wb_dat_o_0_G139_SS_2 tmp_wb_dat_o[0]_384 transformNet_2 tmp_wb_dat_o[0]_383
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[0]_383 tmp_wb_dat_o[0]_384 1
+.latch i2c_master_top.wb_dat_o[0] tmp_wb_dat_o[0]_385 1
+.names i2c_master_top.rtlc_wb_dat_o_1_G140_SS_2 tmp_wb_dat_o[1]_387 transformNet_2 tmp_wb_dat_o[1]_386
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[1]_386 tmp_wb_dat_o[1]_387 1
+.latch i2c_master_top.wb_dat_o[1] tmp_wb_dat_o[1]_388 1
+.names i2c_master_top.rtlc_wb_dat_o_2_G141_SS_2 tmp_wb_dat_o[2]_390 transformNet_2 tmp_wb_dat_o[2]_389
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[2]_389 tmp_wb_dat_o[2]_390 1
+.latch i2c_master_top.wb_dat_o[2] tmp_wb_dat_o[2]_391 1
+.names i2c_master_top.rtlc_wb_dat_o_3_G142_SS_2 tmp_wb_dat_o[3]_393 transformNet_2 tmp_wb_dat_o[3]_392
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[3]_392 tmp_wb_dat_o[3]_393 1
+.latch i2c_master_top.wb_dat_o[3] tmp_wb_dat_o[3]_394 1
+.names i2c_master_top.rtlc_wb_dat_o_4_G143_SS_2 tmp_wb_dat_o[4]_396 transformNet_2 tmp_wb_dat_o[4]_395
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[4]_395 tmp_wb_dat_o[4]_396 1
+.latch i2c_master_top.wb_dat_o[4] tmp_wb_dat_o[4]_397 1
+.names i2c_master_top.rtlc_wb_dat_o_5_G144_SS_2 tmp_wb_dat_o[5]_399 transformNet_2 tmp_wb_dat_o[5]_398
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[5]_398 tmp_wb_dat_o[5]_399 1
+.latch i2c_master_top.wb_dat_o[5] tmp_wb_dat_o[5]_400 1
+.names i2c_master_top.rtlc_wb_dat_o_6_G145_SS_2 tmp_wb_dat_o[6]_402 transformNet_2 tmp_wb_dat_o[6]_401
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[6]_401 tmp_wb_dat_o[6]_402 1
+.latch i2c_master_top.wb_dat_o[6] tmp_wb_dat_o[6]_403 1
+.names i2c_master_top.rtlc_wb_dat_o_7_G146_SS_2 tmp_wb_dat_o[7]_405 transformNet_2 tmp_wb_dat_o[7]_404
+1-1 1
+-10 1
+.latch tmp_wb_dat_o[7]_404 tmp_wb_dat_o[7]_405 1
+.latch i2c_master_top.wb_dat_o[7] tmp_wb_dat_o[7]_406 1
+.names i2c_master_top.rtlc_N2 tmp_wb_ack_o_408 transformNet_2 tmp_wb_ack_o_407
+1-1 1
+-10 1
+.latch tmp_wb_ack_o_407 tmp_wb_ack_o_408 0
+.latch i2c_master_top.wb_ack_o tmp_wb_ack_o_409 0
+.names Supply0 tmp_wb_inta_o_412 i2c_master_top.rtlc_N40 tmp_wb_inta_o_410
+1-1 1
+-10 1
+.latch tmp_wb_inta_o_410 tmp_wb_inta_o_411 0
+.names i2c_master_top.wb_inta_o_SS_18 tmp_wb_inta_o_411 transformNet_2 tmp_wb_inta_o_412
+1-1 1
+-10 1
+.latch i2c_master_top.wb_inta_o tmp_wb_inta_o_413 0
+.names tmp_wb_inta_o_411 tmp_wb_inta_o_413 transformNet_0 tmp_wb_inta_o_414
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.scl_oen_SS_28 i2c_master_top.scl_padoen_o i2c_master_top.byte_controller.bit_controller.rtlc_N530 tmp_scl_padoen_o_415
+1-1 1
+-10 1
+.names Supply1 tmp_scl_padoen_o_418 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_scl_padoen_o_416
+1-1 1
+-10 1
+.latch tmp_scl_padoen_o_416 tmp_scl_padoen_o_417 1
+.names tmp_scl_padoen_o_415 tmp_scl_padoen_o_417 transformNet_2 tmp_scl_padoen_o_418
+1-1 1
+-10 1
+.latch i2c_master_top.scl_padoen_o tmp_scl_padoen_o_419 1
+.names tmp_scl_padoen_o_417 tmp_scl_padoen_o_419 transformNet_0 tmp_scl_padoen_o_420
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.bit_controller.sda_oen_SS_28 i2c_master_top.sda_padoen_o i2c_master_top.byte_controller.bit_controller.rtlc_N539 tmp_sda_padoen_o_421
+1-1 1
+-10 1
+.names Supply1 tmp_sda_padoen_o_424 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_sda_padoen_o_422
+1-1 1
+-10 1
+.latch tmp_sda_padoen_o_422 tmp_sda_padoen_o_423 1
+.names tmp_sda_padoen_o_421 tmp_sda_padoen_o_423 transformNet_2 tmp_sda_padoen_o_424
+1-1 1
+-10 1
+.latch i2c_master_top.sda_padoen_o tmp_sda_padoen_o_425 1
+.names tmp_sda_padoen_o_423 tmp_sda_padoen_o_425 transformNet_0 tmp_sda_padoen_o_426
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_8_G211_SS_6 i2c_master_top.prer[0] i2c_master_top.rtlc_N419 tmp_prer[0]_427
+1-1 1
+-10 1
+.names Supply1 tmp_prer[0]_430 i2c_master_top.rtlc_N40 tmp_prer[0]_428
+1-1 1
+-10 1
+.latch tmp_prer[0]_428 tmp_prer[0]_429 1
+.names tmp_prer[0]_427 tmp_prer[0]_429 transformNet_2 tmp_prer[0]_430
+1-1 1
+-10 1
+.latch i2c_master_top.prer[0] tmp_prer[0]_431 1
+.names tmp_prer[0]_429 tmp_prer[0]_431 transformNet_0 tmp_prer[0]_432
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_9_G212_SS_6 i2c_master_top.prer[1] i2c_master_top.rtlc_N419 tmp_prer[1]_433
+1-1 1
+-10 1
+.names Supply1 tmp_prer[1]_436 i2c_master_top.rtlc_N40 tmp_prer[1]_434
+1-1 1
+-10 1
+.latch tmp_prer[1]_434 tmp_prer[1]_435 1
+.names tmp_prer[1]_433 tmp_prer[1]_435 transformNet_2 tmp_prer[1]_436
+1-1 1
+-10 1
+.latch i2c_master_top.prer[1] tmp_prer[1]_437 1
+.names tmp_prer[1]_435 tmp_prer[1]_437 transformNet_0 tmp_prer[1]_438
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_10_G213_SS_6 i2c_master_top.prer[2] i2c_master_top.rtlc_N419 tmp_prer[2]_439
+1-1 1
+-10 1
+.names Supply1 tmp_prer[2]_442 i2c_master_top.rtlc_N40 tmp_prer[2]_440
+1-1 1
+-10 1
+.latch tmp_prer[2]_440 tmp_prer[2]_441 1
+.names tmp_prer[2]_439 tmp_prer[2]_441 transformNet_2 tmp_prer[2]_442
+1-1 1
+-10 1
+.latch i2c_master_top.prer[2] tmp_prer[2]_443 1
+.names tmp_prer[2]_441 tmp_prer[2]_443 transformNet_0 tmp_prer[2]_444
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_11_G214_SS_6 i2c_master_top.prer[3] i2c_master_top.rtlc_N419 tmp_prer[3]_445
+1-1 1
+-10 1
+.names Supply1 tmp_prer[3]_448 i2c_master_top.rtlc_N40 tmp_prer[3]_446
+1-1 1
+-10 1
+.latch tmp_prer[3]_446 tmp_prer[3]_447 1
+.names tmp_prer[3]_445 tmp_prer[3]_447 transformNet_2 tmp_prer[3]_448
+1-1 1
+-10 1
+.latch i2c_master_top.prer[3] tmp_prer[3]_449 1
+.names tmp_prer[3]_447 tmp_prer[3]_449 transformNet_0 tmp_prer[3]_450
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_12_G215_SS_6 i2c_master_top.prer[4] i2c_master_top.rtlc_N419 tmp_prer[4]_451
+1-1 1
+-10 1
+.names Supply1 tmp_prer[4]_454 i2c_master_top.rtlc_N40 tmp_prer[4]_452
+1-1 1
+-10 1
+.latch tmp_prer[4]_452 tmp_prer[4]_453 1
+.names tmp_prer[4]_451 tmp_prer[4]_453 transformNet_2 tmp_prer[4]_454
+1-1 1
+-10 1
+.latch i2c_master_top.prer[4] tmp_prer[4]_455 1
+.names tmp_prer[4]_453 tmp_prer[4]_455 transformNet_0 tmp_prer[4]_456
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_13_G216_SS_6 i2c_master_top.prer[5] i2c_master_top.rtlc_N419 tmp_prer[5]_457
+1-1 1
+-10 1
+.names Supply1 tmp_prer[5]_460 i2c_master_top.rtlc_N40 tmp_prer[5]_458
+1-1 1
+-10 1
+.latch tmp_prer[5]_458 tmp_prer[5]_459 1
+.names tmp_prer[5]_457 tmp_prer[5]_459 transformNet_2 tmp_prer[5]_460
+1-1 1
+-10 1
+.latch i2c_master_top.prer[5] tmp_prer[5]_461 1
+.names tmp_prer[5]_459 tmp_prer[5]_461 transformNet_0 tmp_prer[5]_462
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_14_G217_SS_6 i2c_master_top.prer[6] i2c_master_top.rtlc_N419 tmp_prer[6]_463
+1-1 1
+-10 1
+.names Supply1 tmp_prer[6]_466 i2c_master_top.rtlc_N40 tmp_prer[6]_464
+1-1 1
+-10 1
+.latch tmp_prer[6]_464 tmp_prer[6]_465 1
+.names tmp_prer[6]_463 tmp_prer[6]_465 transformNet_2 tmp_prer[6]_466
+1-1 1
+-10 1
+.latch i2c_master_top.prer[6] tmp_prer[6]_467 1
+.names tmp_prer[6]_465 tmp_prer[6]_467 transformNet_0 tmp_prer[6]_468
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_15_G218_SS_6 i2c_master_top.prer[7] i2c_master_top.rtlc_N419 tmp_prer[7]_469
+1-1 1
+-10 1
+.names Supply1 tmp_prer[7]_472 i2c_master_top.rtlc_N40 tmp_prer[7]_470
+1-1 1
+-10 1
+.latch tmp_prer[7]_470 tmp_prer[7]_471 1
+.names tmp_prer[7]_469 tmp_prer[7]_471 transformNet_2 tmp_prer[7]_472
+1-1 1
+-10 1
+.latch i2c_master_top.prer[7] tmp_prer[7]_473 1
+.names tmp_prer[7]_471 tmp_prer[7]_473 transformNet_0 tmp_prer[7]_474
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_8_G211_SS_6 i2c_master_top.prer[8] i2c_master_top.rtlc_N491 tmp_prer[8]_475
+1-1 1
+-10 1
+.names Supply1 tmp_prer[8]_478 i2c_master_top.rtlc_N40 tmp_prer[8]_476
+1-1 1
+-10 1
+.latch tmp_prer[8]_476 tmp_prer[8]_477 1
+.names tmp_prer[8]_475 tmp_prer[8]_477 transformNet_2 tmp_prer[8]_478
+1-1 1
+-10 1
+.latch i2c_master_top.prer[8] tmp_prer[8]_479 1
+.names tmp_prer[8]_477 tmp_prer[8]_479 transformNet_0 tmp_prer[8]_480
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_9_G212_SS_6 i2c_master_top.prer[9] i2c_master_top.rtlc_N491 tmp_prer[9]_481
+1-1 1
+-10 1
+.names Supply1 tmp_prer[9]_484 i2c_master_top.rtlc_N40 tmp_prer[9]_482
+1-1 1
+-10 1
+.latch tmp_prer[9]_482 tmp_prer[9]_483 1
+.names tmp_prer[9]_481 tmp_prer[9]_483 transformNet_2 tmp_prer[9]_484
+1-1 1
+-10 1
+.latch i2c_master_top.prer[9] tmp_prer[9]_485 1
+.names tmp_prer[9]_483 tmp_prer[9]_485 transformNet_0 tmp_prer[9]_486
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_10_G213_SS_6 i2c_master_top.prer[10] i2c_master_top.rtlc_N491 tmp_prer[10]_487
+1-1 1
+-10 1
+.names Supply1 tmp_prer[10]_490 i2c_master_top.rtlc_N40 tmp_prer[10]_488
+1-1 1
+-10 1
+.latch tmp_prer[10]_488 tmp_prer[10]_489 1
+.names tmp_prer[10]_487 tmp_prer[10]_489 transformNet_2 tmp_prer[10]_490
+1-1 1
+-10 1
+.latch i2c_master_top.prer[10] tmp_prer[10]_491 1
+.names tmp_prer[10]_489 tmp_prer[10]_491 transformNet_0 tmp_prer[10]_492
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_11_G214_SS_6 i2c_master_top.prer[11] i2c_master_top.rtlc_N491 tmp_prer[11]_493
+1-1 1
+-10 1
+.names Supply1 tmp_prer[11]_496 i2c_master_top.rtlc_N40 tmp_prer[11]_494
+1-1 1
+-10 1
+.latch tmp_prer[11]_494 tmp_prer[11]_495 1
+.names tmp_prer[11]_493 tmp_prer[11]_495 transformNet_2 tmp_prer[11]_496
+1-1 1
+-10 1
+.latch i2c_master_top.prer[11] tmp_prer[11]_497 1
+.names tmp_prer[11]_495 tmp_prer[11]_497 transformNet_0 tmp_prer[11]_498
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_12_G215_SS_6 i2c_master_top.prer[12] i2c_master_top.rtlc_N491 tmp_prer[12]_499
+1-1 1
+-10 1
+.names Supply1 tmp_prer[12]_502 i2c_master_top.rtlc_N40 tmp_prer[12]_500
+1-1 1
+-10 1
+.latch tmp_prer[12]_500 tmp_prer[12]_501 1
+.names tmp_prer[12]_499 tmp_prer[12]_501 transformNet_2 tmp_prer[12]_502
+1-1 1
+-10 1
+.latch i2c_master_top.prer[12] tmp_prer[12]_503 1
+.names tmp_prer[12]_501 tmp_prer[12]_503 transformNet_0 tmp_prer[12]_504
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_13_G216_SS_6 i2c_master_top.prer[13] i2c_master_top.rtlc_N491 tmp_prer[13]_505
+1-1 1
+-10 1
+.names Supply1 tmp_prer[13]_508 i2c_master_top.rtlc_N40 tmp_prer[13]_506
+1-1 1
+-10 1
+.latch tmp_prer[13]_506 tmp_prer[13]_507 1
+.names tmp_prer[13]_505 tmp_prer[13]_507 transformNet_2 tmp_prer[13]_508
+1-1 1
+-10 1
+.latch i2c_master_top.prer[13] tmp_prer[13]_509 1
+.names tmp_prer[13]_507 tmp_prer[13]_509 transformNet_0 tmp_prer[13]_510
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_14_G217_SS_6 i2c_master_top.prer[14] i2c_master_top.rtlc_N491 tmp_prer[14]_511
+1-1 1
+-10 1
+.names Supply1 tmp_prer[14]_514 i2c_master_top.rtlc_N40 tmp_prer[14]_512
+1-1 1
+-10 1
+.latch tmp_prer[14]_512 tmp_prer[14]_513 1
+.names tmp_prer[14]_511 tmp_prer[14]_513 transformNet_2 tmp_prer[14]_514
+1-1 1
+-10 1
+.latch i2c_master_top.prer[14] tmp_prer[14]_515 1
+.names tmp_prer[14]_513 tmp_prer[14]_515 transformNet_0 tmp_prer[14]_516
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_prer_15_G218_SS_6 i2c_master_top.prer[15] i2c_master_top.rtlc_N491 tmp_prer[15]_517
+1-1 1
+-10 1
+.names Supply1 tmp_prer[15]_520 i2c_master_top.rtlc_N40 tmp_prer[15]_518
+1-1 1
+-10 1
+.latch tmp_prer[15]_518 tmp_prer[15]_519 1
+.names tmp_prer[15]_517 tmp_prer[15]_519 transformNet_2 tmp_prer[15]_520
+1-1 1
+-10 1
+.latch i2c_master_top.prer[15] tmp_prer[15]_521 1
+.names tmp_prer[15]_519 tmp_prer[15]_521 transformNet_0 tmp_prer[15]_522
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_0_G227_SS_6 i2c_master_top.ctr[0] i2c_master_top.rtlc_N563 tmp_ctr[0]_523
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[0]_526 i2c_master_top.rtlc_N40 tmp_ctr[0]_524
+1-1 1
+-10 1
+.latch tmp_ctr[0]_524 tmp_ctr[0]_525 0
+.names tmp_ctr[0]_523 tmp_ctr[0]_525 transformNet_2 tmp_ctr[0]_526
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[0] tmp_ctr[0]_527 0
+.names tmp_ctr[0]_525 tmp_ctr[0]_527 transformNet_0 tmp_ctr[0]_528
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_1_G228_SS_6 i2c_master_top.ctr[1] i2c_master_top.rtlc_N563 tmp_ctr[1]_529
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[1]_532 i2c_master_top.rtlc_N40 tmp_ctr[1]_530
+1-1 1
+-10 1
+.latch tmp_ctr[1]_530 tmp_ctr[1]_531 0
+.names tmp_ctr[1]_529 tmp_ctr[1]_531 transformNet_2 tmp_ctr[1]_532
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[1] tmp_ctr[1]_533 0
+.names tmp_ctr[1]_531 tmp_ctr[1]_533 transformNet_0 tmp_ctr[1]_534
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_2_G229_SS_6 i2c_master_top.ctr[2] i2c_master_top.rtlc_N563 tmp_ctr[2]_535
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[2]_538 i2c_master_top.rtlc_N40 tmp_ctr[2]_536
+1-1 1
+-10 1
+.latch tmp_ctr[2]_536 tmp_ctr[2]_537 0
+.names tmp_ctr[2]_535 tmp_ctr[2]_537 transformNet_2 tmp_ctr[2]_538
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[2] tmp_ctr[2]_539 0
+.names tmp_ctr[2]_537 tmp_ctr[2]_539 transformNet_0 tmp_ctr[2]_540
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_3_G401_SS_12 i2c_master_top.ctr[3] i2c_master_top.rtlc_N563 tmp_ctr[3]_541
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[3]_544 i2c_master_top.rtlc_N40 tmp_ctr[3]_542
+1-1 1
+-10 1
+.latch tmp_ctr[3]_542 tmp_ctr[3]_543 0
+.names tmp_ctr[3]_541 tmp_ctr[3]_543 transformNet_2 tmp_ctr[3]_544
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[3] tmp_ctr[3]_545 0
+.names tmp_ctr[3]_543 tmp_ctr[3]_545 transformNet_0 tmp_ctr[3]_546
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_4_G231_SS_6 i2c_master_top.ctr[4] i2c_master_top.rtlc_N563 tmp_ctr[4]_547
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[4]_550 i2c_master_top.rtlc_N40 tmp_ctr[4]_548
+1-1 1
+-10 1
+.latch tmp_ctr[4]_548 tmp_ctr[4]_549 0
+.names tmp_ctr[4]_547 tmp_ctr[4]_549 transformNet_2 tmp_ctr[4]_550
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[4] tmp_ctr[4]_551 0
+.names tmp_ctr[4]_549 tmp_ctr[4]_551 transformNet_0 tmp_ctr[4]_552
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_5_G232_SS_6 i2c_master_top.ctr[5] i2c_master_top.rtlc_N563 tmp_ctr[5]_553
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[5]_556 i2c_master_top.rtlc_N40 tmp_ctr[5]_554
+1-1 1
+-10 1
+.latch tmp_ctr[5]_554 tmp_ctr[5]_555 0
+.names tmp_ctr[5]_553 tmp_ctr[5]_555 transformNet_2 tmp_ctr[5]_556
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[5] tmp_ctr[5]_557 0
+.names tmp_ctr[5]_555 tmp_ctr[5]_557 transformNet_0 tmp_ctr[5]_558
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_6_G233_SS_6 i2c_master_top.ctr[6] i2c_master_top.rtlc_N563 tmp_ctr[6]_559
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[6]_562 i2c_master_top.rtlc_N40 tmp_ctr[6]_560
+1-1 1
+-10 1
+.latch tmp_ctr[6]_560 tmp_ctr[6]_561 0
+.names tmp_ctr[6]_559 tmp_ctr[6]_561 transformNet_2 tmp_ctr[6]_562
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[6] tmp_ctr[6]_563 0
+.names tmp_ctr[6]_561 tmp_ctr[6]_563 transformNet_0 tmp_ctr[6]_564
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_7_G234_SS_6 i2c_master_top.ctr[7] i2c_master_top.rtlc_N563 tmp_ctr[7]_565
+1-1 1
+-10 1
+.names Supply0 tmp_ctr[7]_568 i2c_master_top.rtlc_N40 tmp_ctr[7]_566
+1-1 1
+-10 1
+.latch tmp_ctr[7]_566 tmp_ctr[7]_567 0
+.names tmp_ctr[7]_565 tmp_ctr[7]_567 transformNet_2 tmp_ctr[7]_568
+1-1 1
+-10 1
+.latch i2c_master_top.ctr[7] tmp_ctr[7]_569 0
+.names tmp_ctr[7]_567 tmp_ctr[7]_569 transformNet_0 tmp_ctr[7]_570
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_0_G227_SS_6 i2c_master_top.txr[0] i2c_master_top.rtlc_N635 tmp_txr[0]_571
+1-1 1
+-10 1
+.names Supply0 tmp_txr[0]_574 i2c_master_top.rtlc_N40 tmp_txr[0]_572
+1-1 1
+-10 1
+.latch tmp_txr[0]_572 tmp_txr[0]_573 0
+.names tmp_txr[0]_571 tmp_txr[0]_573 transformNet_2 tmp_txr[0]_574
+1-1 1
+-10 1
+.latch i2c_master_top.txr[0] tmp_txr[0]_575 0
+.names tmp_txr[0]_573 tmp_txr[0]_575 transformNet_0 tmp_txr[0]_576
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_1_G228_SS_6 i2c_master_top.txr[1] i2c_master_top.rtlc_N635 tmp_txr[1]_577
+1-1 1
+-10 1
+.names Supply0 tmp_txr[1]_580 i2c_master_top.rtlc_N40 tmp_txr[1]_578
+1-1 1
+-10 1
+.latch tmp_txr[1]_578 tmp_txr[1]_579 0
+.names tmp_txr[1]_577 tmp_txr[1]_579 transformNet_2 tmp_txr[1]_580
+1-1 1
+-10 1
+.latch i2c_master_top.txr[1] tmp_txr[1]_581 0
+.names tmp_txr[1]_579 tmp_txr[1]_581 transformNet_0 tmp_txr[1]_582
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_2_G229_SS_6 i2c_master_top.txr[2] i2c_master_top.rtlc_N635 tmp_txr[2]_583
+1-1 1
+-10 1
+.names Supply0 tmp_txr[2]_586 i2c_master_top.rtlc_N40 tmp_txr[2]_584
+1-1 1
+-10 1
+.latch tmp_txr[2]_584 tmp_txr[2]_585 0
+.names tmp_txr[2]_583 tmp_txr[2]_585 transformNet_2 tmp_txr[2]_586
+1-1 1
+-10 1
+.latch i2c_master_top.txr[2] tmp_txr[2]_587 0
+.names tmp_txr[2]_585 tmp_txr[2]_587 transformNet_0 tmp_txr[2]_588
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_3_G401_SS_12 i2c_master_top.txr[3] i2c_master_top.rtlc_N635 tmp_txr[3]_589
+1-1 1
+-10 1
+.names Supply0 tmp_txr[3]_592 i2c_master_top.rtlc_N40 tmp_txr[3]_590
+1-1 1
+-10 1
+.latch tmp_txr[3]_590 tmp_txr[3]_591 0
+.names tmp_txr[3]_589 tmp_txr[3]_591 transformNet_2 tmp_txr[3]_592
+1-1 1
+-10 1
+.latch i2c_master_top.txr[3] tmp_txr[3]_593 0
+.names tmp_txr[3]_591 tmp_txr[3]_593 transformNet_0 tmp_txr[3]_594
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_4_G231_SS_6 i2c_master_top.txr[4] i2c_master_top.rtlc_N635 tmp_txr[4]_595
+1-1 1
+-10 1
+.names Supply0 tmp_txr[4]_598 i2c_master_top.rtlc_N40 tmp_txr[4]_596
+1-1 1
+-10 1
+.latch tmp_txr[4]_596 tmp_txr[4]_597 0
+.names tmp_txr[4]_595 tmp_txr[4]_597 transformNet_2 tmp_txr[4]_598
+1-1 1
+-10 1
+.latch i2c_master_top.txr[4] tmp_txr[4]_599 0
+.names tmp_txr[4]_597 tmp_txr[4]_599 transformNet_0 tmp_txr[4]_600
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_5_G232_SS_6 i2c_master_top.txr[5] i2c_master_top.rtlc_N635 tmp_txr[5]_601
+1-1 1
+-10 1
+.names Supply0 tmp_txr[5]_604 i2c_master_top.rtlc_N40 tmp_txr[5]_602
+1-1 1
+-10 1
+.latch tmp_txr[5]_602 tmp_txr[5]_603 0
+.names tmp_txr[5]_601 tmp_txr[5]_603 transformNet_2 tmp_txr[5]_604
+1-1 1
+-10 1
+.latch i2c_master_top.txr[5] tmp_txr[5]_605 0
+.names tmp_txr[5]_603 tmp_txr[5]_605 transformNet_0 tmp_txr[5]_606
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_6_G233_SS_6 i2c_master_top.txr[6] i2c_master_top.rtlc_N635 tmp_txr[6]_607
+1-1 1
+-10 1
+.names Supply0 tmp_txr[6]_610 i2c_master_top.rtlc_N40 tmp_txr[6]_608
+1-1 1
+-10 1
+.latch tmp_txr[6]_608 tmp_txr[6]_609 0
+.names tmp_txr[6]_607 tmp_txr[6]_609 transformNet_2 tmp_txr[6]_610
+1-1 1
+-10 1
+.latch i2c_master_top.txr[6] tmp_txr[6]_611 0
+.names tmp_txr[6]_609 tmp_txr[6]_611 transformNet_0 tmp_txr[6]_612
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_txr_7_G234_SS_6 i2c_master_top.txr[7] i2c_master_top.rtlc_N635 tmp_txr[7]_613
+1-1 1
+-10 1
+.names Supply0 tmp_txr[7]_616 i2c_master_top.rtlc_N40 tmp_txr[7]_614
+1-1 1
+-10 1
+.latch tmp_txr[7]_614 tmp_txr[7]_615 0
+.names tmp_txr[7]_613 tmp_txr[7]_615 transformNet_2 tmp_txr[7]_616
+1-1 1
+-10 1
+.latch i2c_master_top.txr[7] tmp_txr[7]_617 0
+.names tmp_txr[7]_615 tmp_txr[7]_617 transformNet_0 tmp_txr[7]_618
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_0_G398_SS_12 i2c_master_top.cr[0] i2c_master_top.rtlc_N95 tmp_cr[0]_619
+1-1 1
+-10 1
+.names Supply0 tmp_cr[0]_622 i2c_master_top.rtlc_N40 tmp_cr[0]_620
+1-1 1
+-10 1
+.latch tmp_cr[0]_620 tmp_cr[0]_621 0
+.names tmp_cr[0]_619 tmp_cr[0]_621 transformNet_2 tmp_cr[0]_622
+1-1 1
+-10 1
+.latch i2c_master_top.cr[0] tmp_cr[0]_623 0
+.names tmp_cr[0]_621 tmp_cr[0]_623 transformNet_0 tmp_cr[0]_624
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_1_G399_SS_12 i2c_master_top.cr[1] i2c_master_top.rtlc_N95 tmp_cr[1]_625
+1-1 1
+-10 1
+.names Supply0 tmp_cr[1]_628 i2c_master_top.rtlc_N40 tmp_cr[1]_626
+1-1 1
+-10 1
+.latch tmp_cr[1]_626 tmp_cr[1]_627 0
+.names tmp_cr[1]_625 tmp_cr[1]_627 transformNet_2 tmp_cr[1]_628
+1-1 1
+-10 1
+.latch i2c_master_top.cr[1] tmp_cr[1]_629 0
+.names tmp_cr[1]_627 tmp_cr[1]_629 transformNet_0 tmp_cr[1]_630
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_2_G400_SS_12 i2c_master_top.cr[2] i2c_master_top.rtlc_N95 tmp_cr[2]_631
+1-1 1
+-10 1
+.names Supply0 tmp_cr[2]_634 i2c_master_top.rtlc_N40 tmp_cr[2]_632
+1-1 1
+-10 1
+.latch tmp_cr[2]_632 tmp_cr[2]_633 0
+.names tmp_cr[2]_631 tmp_cr[2]_633 transformNet_2 tmp_cr[2]_634
+1-1 1
+-10 1
+.latch i2c_master_top.cr[2] tmp_cr[2]_635 0
+.names tmp_cr[2]_633 tmp_cr[2]_635 transformNet_0 tmp_cr[2]_636
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_3_G401_SS_12 i2c_master_top.cr[3] i2c_master_top.rtlc_N113 tmp_cr[3]_637
+1-1 1
+-10 1
+.names Supply0 tmp_cr[3]_640 i2c_master_top.rtlc_N40 tmp_cr[3]_638
+1-1 1
+-10 1
+.latch tmp_cr[3]_638 tmp_cr[3]_639 0
+.names tmp_cr[3]_637 tmp_cr[3]_639 transformNet_2 tmp_cr[3]_640
+1-1 1
+-10 1
+.latch i2c_master_top.cr[3] tmp_cr[3]_641 0
+.names tmp_cr[3]_639 tmp_cr[3]_641 transformNet_0 tmp_cr[3]_642
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_4_G402_SS_12 i2c_master_top.cr[4] i2c_master_top.rtlc_N140 tmp_cr[4]_643
+1-1 1
+-10 1
+.names Supply0 tmp_cr[4]_646 i2c_master_top.rtlc_N40 tmp_cr[4]_644
+1-1 1
+-10 1
+.latch tmp_cr[4]_644 tmp_cr[4]_645 0
+.names tmp_cr[4]_643 tmp_cr[4]_645 transformNet_2 tmp_cr[4]_646
+1-1 1
+-10 1
+.latch i2c_master_top.cr[4] tmp_cr[4]_647 0
+.names tmp_cr[4]_645 tmp_cr[4]_647 transformNet_0 tmp_cr[4]_648
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_5_G403_SS_12 i2c_master_top.cr[5] i2c_master_top.rtlc_N140 tmp_cr[5]_649
+1-1 1
+-10 1
+.names Supply0 tmp_cr[5]_652 i2c_master_top.rtlc_N40 tmp_cr[5]_650
+1-1 1
+-10 1
+.latch tmp_cr[5]_650 tmp_cr[5]_651 0
+.names tmp_cr[5]_649 tmp_cr[5]_651 transformNet_2 tmp_cr[5]_652
+1-1 1
+-10 1
+.latch i2c_master_top.cr[5] tmp_cr[5]_653 0
+.names tmp_cr[5]_651 tmp_cr[5]_653 transformNet_0 tmp_cr[5]_654
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_6_G404_SS_12 i2c_master_top.cr[6] i2c_master_top.rtlc_N140 tmp_cr[6]_655
+1-1 1
+-10 1
+.names Supply0 tmp_cr[6]_658 i2c_master_top.rtlc_N40 tmp_cr[6]_656
+1-1 1
+-10 1
+.latch tmp_cr[6]_656 tmp_cr[6]_657 0
+.names tmp_cr[6]_655 tmp_cr[6]_657 transformNet_2 tmp_cr[6]_658
+1-1 1
+-10 1
+.latch i2c_master_top.cr[6] tmp_cr[6]_659 0
+.names tmp_cr[6]_657 tmp_cr[6]_659 transformNet_0 tmp_cr[6]_660
+1-1 1
+-10 1
+.names i2c_master_top.rtlc_cr_7_G405_SS_12 i2c_master_top.cr[7] i2c_master_top.rtlc_N140 tmp_cr[7]_661
+1-1 1
+-10 1
+.names Supply0 tmp_cr[7]_664 i2c_master_top.rtlc_N40 tmp_cr[7]_662
+1-1 1
+-10 1
+.latch tmp_cr[7]_662 tmp_cr[7]_663 0
+.names tmp_cr[7]_661 tmp_cr[7]_663 transformNet_2 tmp_cr[7]_664
+1-1 1
+-10 1
+.latch i2c_master_top.cr[7] tmp_cr[7]_665 0
+.names tmp_cr[7]_663 tmp_cr[7]_665 transformNet_0 tmp_cr[7]_666
+1-1 1
+-10 1
+.names Supply0 tmp_done_669 i2c_master_top.byte_controller.rtlc_N0 tmp_done_667
+1-1 1
+-10 1
+.latch tmp_done_667 tmp_done_668 0
+.names i2c_master_top.byte_controller.cmd_ack_SS_25 tmp_done_668 transformNet_2 tmp_done_669
+1-1 1
+-10 1
+.latch i2c_master_top.done tmp_done_670 0
+.names tmp_done_668 tmp_done_670 transformNet_0 tmp_done_671
+1-1 1
+-10 1
+.names i2c_master_top.byte_controller.ack_out_SS_25 i2c_master_top.irxack i2c_master_top.byte_controller.rtlc_N280 tmp_irxack_672
+1-1 1
+-10 1
+.names Supply0 tmp_irxack_675 i2c_master_top.byte_controller.rtlc_N0 tmp_irxack_673
+1-1 1
+-10 1
+.latch tmp_irxack_673 tmp_irxack_674 0
+.names tmp_irxack_672 tmp_irxack_674 transformNet_2 tmp_irxack_675
+1-1 1
+-10 1
+.latch i2c_master_top.irxack tmp_irxack_676 0
+.names tmp_irxack_674 tmp_irxack_676 transformNet_0 tmp_irxack_677
+1-1 1
+-10 1
+.names Supply0 tmp_rxack_680 i2c_master_top.rtlc_N40 tmp_rxack_678
+1-1 1
+-10 1
+.latch tmp_rxack_678 tmp_rxack_679 0
+.names i2c_master_top.rxack_SS_15 tmp_rxack_679 transformNet_2 tmp_rxack_680
+1-1 1
+-10 1
+.latch i2c_master_top.rxack tmp_rxack_681 0
+.names tmp_rxack_679 tmp_rxack_681 transformNet_0 tmp_rxack_682
+1-1 1
+-10 1
+.names Supply0 tmp_tip_685 i2c_master_top.rtlc_N40 tmp_tip_683
+1-1 1
+-10 1
+.latch tmp_tip_683 tmp_tip_684 0
+.names i2c_master_top.tip_SS_15 tmp_tip_684 transformNet_2 tmp_tip_685
+1-1 1
+-10 1
+.latch i2c_master_top.tip tmp_tip_686 0
+.names tmp_tip_684 tmp_tip_686 transformNet_0 tmp_tip_687
+1-1 1
+-10 1
+.names Supply0 tmp_irq_flag_690 i2c_master_top.rtlc_N40 tmp_irq_flag_688
+1-1 1
+-10 1
+.latch tmp_irq_flag_688 tmp_irq_flag_689 0
+.names i2c_master_top.irq_flag_SS_15 tmp_irq_flag_689 transformNet_2 tmp_irq_flag_690
+1-1 1
+-10 1
+.latch i2c_master_top.irq_flag tmp_irq_flag_691 0
+.names tmp_irq_flag_689 tmp_irq_flag_691 transformNet_0 tmp_irq_flag_692
+1-1 1
+-10 1
+.names Supply0 tmp_i2c_busy_695 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_i2c_busy_693
+1-1 1
+-10 1
+.latch tmp_i2c_busy_693 tmp_i2c_busy_694 0
+.names i2c_master_top.byte_controller.bit_controller.busy_SS_13 tmp_i2c_busy_694 transformNet_2 tmp_i2c_busy_695
+1-1 1
+-10 1
+.latch i2c_master_top.i2c_busy tmp_i2c_busy_696 0
+.names tmp_i2c_busy_694 tmp_i2c_busy_696 transformNet_0 tmp_i2c_busy_697
+1-1 1
+-10 1
+.names Supply0 tmp_i2c_al_700 i2c_master_top.byte_controller.bit_controller.rtlc_N7 tmp_i2c_al_698
+1-1 1
+-10 1
+.latch tmp_i2c_al_698 tmp_i2c_al_699 0
+.names i2c_master_top.byte_controller.bit_controller.al_SS_20 tmp_i2c_al_699 transformNet_2 tmp_i2c_al_700
+1-1 1
+-10 1
+.latch i2c_master_top.i2c_al tmp_i2c_al_701 0
+.names tmp_i2c_al_699 tmp_i2c_al_701 transformNet_0 tmp_i2c_al_702
+1-1 1
+-10 1
+.names Supply0 tmp_al_705 i2c_master_top.rtlc_N40 tmp_al_703
+1-1 1
+-10 1
+.latch tmp_al_703 tmp_al_704 0
+.names i2c_master_top.al_SS_15 tmp_al_704 transformNet_2 tmp_al_705
+1-1 1
+-10 1
+.latch i2c_master_top.al tmp_al_706 0
+.names tmp_al_704 tmp_al_706 transformNet_0 tmp_al_707
+1-1 1
+-10 1
+.names expnNet_1 transformNet_708
+0 1
+.names transformNet_710 transformNet_709
+0 1
+.latch transformNet_711 transformNet_710 0
+.names transformNet_709 transformNet_708 transformNet_711
+11 1
+.names transformNet_710 Supply1 expnNet_0
+00 1
+11 1
+.names expnNet_0 expnNet_1
+1 1
+.end
