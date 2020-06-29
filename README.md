@@ -26,7 +26,7 @@ Try MCHyper without installation directly in our [online interface](https://www.
 	* [Aiger tools](http://fmv.jku.at/aiger/) (version 1.9.4): Compile using `./configure; make` in the directory aiger/.
 	* [ABC model checker](https://github.com/berkeley-abc/abc) (version 1.01): Compile using `make`. If necessary, install the readline package and a g++ compiler using, e.g., `sudo apt-get install libreadline-dev build-essential`. 
 1. Clone this repository: `git clone https://github.com/reactive-systems/MCHyper.git`
-1. Compile MCHyper: `ghc src/Main.hs`
+1. Compile MCHyper: `cd src; ghc Main.hs; cd ..`
 1. Update the paths in the Python script mchyper.py pointing to the mchyper binary, the Aiger tools and to ABC. (E.g. `abc_bin = os.path.dirname(sys.argv[0]) + '/../abc/abc'`)
 1. Try MCHyper by running `./mchyper.py -f "Forall (AP \"select<0>\" 0)" case-studies/quantifier-alternation_2019/bakery/good_bakery.atom.nondet2.aag -pdr -cex`. 
 
