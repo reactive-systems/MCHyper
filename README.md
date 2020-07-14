@@ -21,7 +21,7 @@ Try MCHyper without installation directly in our [online interface](https://www.
 
 1. Install and build the dependencies: 
 	* [GHC](https://www.haskell.org/platform/) (tested with versions 7.8.3, 8.4.4, and 8.10.1)
-	* Additional Haskell dependencies: the parsec compiler framework, packages hashable and MissingH. Install using `cabal update; cabal install parsec --lib; cabal install hashable --lib; cabal install MissingH --lib`. Make sure that ghc finds the dependencies when compiling. 
+	* Additional Haskell dependencies: the parsec compiler framework, packages hashable and MissingH. Install using `cabal update; cabal install parsec hashable MissingH`. Make sure that ghc finds the dependencies when compiling. 
 	* [Python](https://www.python.org) (tested with versions 2.7 and 3.7)
 	* [Aiger tools](http://fmv.jku.at/aiger/) (version 1.9.4): Compile using `./configure; make` in the directory aiger/.
 	* [ABC model checker](https://github.com/berkeley-abc/abc) (version 1.01): Compile using `make`. If necessary, install the readline package and a g++ compiler using, e.g., `sudo apt-get install libreadline-dev build-essential`. 
@@ -37,6 +37,10 @@ The last step should output:
 	
 	Counterexample found. Safety violation.
 	Writing counterexample to: tmp.cex.
+
+If you obtain `Error: Tool did not provide a model.` make sure you are using unix line endigs. 
+
+Please note that this tool is in a prototype stage. Thus, there may be bugs in the implementation. If you find one, please contact [Norine Coenen](https://www.react.uni-saarland.de/people/coenen.html). 
 
 ### Usage
 
@@ -69,7 +73,7 @@ Here, [Yosys](http://www.clifford.at/yosys/) is used to obtain the corresponding
 
 ### Other Related Publications
 
-* [DBBFH17]: [Is your Software on Dope?](https://www.react.uni-saarland.de/publications/DBBFH17.html), ESOP 2017,Pedro R. D'Argenio, Gilles Barthe, Sebastian Biewer, Bernd Finkbeiner, Holger Hermanns
+* [DBBFH17]: [Is your Software on Dope?](https://www.react.uni-saarland.de/publications/DBBFH17.html), ESOP 2017, Pedro R. D'Argenio, Gilles Barthe, Sebastian Biewer, Bernd Finkbeiner, Holger Hermanns
 * [The Linear-Hyper-Branching Spectrum of Temporal Logics](https://www.react.uni-saarland.de/publications/FR14.html), Information Technology 2014, Bernd Finkbeiner and Markus N. Rabe
 * [Temporal Logics for Hyperproperties](https://www.react.uni-saarland.de/publications/CFKMRS14.html), POST 2014, Michael Clarkson, Bernd Finkbeiner, Masoud Koleini, Kristopher K. Micinski, Markus N. Rabe, Cesar Sanchez
 * [Model Checking Information Flow in Reactive Systems](https://www.react.uni-saarland.de/publications/DFKRS12.html), VMCAI 2012, Rayna Dimitrova, Bernd Finkbeiner, Mate Kovacs, Markus N. Rabe, Helmut Seidl
