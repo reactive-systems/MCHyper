@@ -22,7 +22,7 @@ Try MCHyper without installation directly in our [online interface](https://www.
 1. Install and build the dependencies: 
 	* [GHC](https://www.haskell.org/platform/) (tested with versions 7.8.3, 8.4.4, and 8.10.1)
 	* Additional Haskell dependencies: the parsec compiler framework, packages hashable and MissingH. Install using `cabal update; cabal install parsec hashable MissingH`. Make sure that ghc finds the dependencies when compiling. 
-	* [Python](https://www.python.org) (tested with versions 2.7 and 3.7)
+	* [Python](https://www.python.org) (tested with version 2.7)
 	* [Aiger tools](http://fmv.jku.at/aiger/) (version 1.9.4): Compile using `./configure; make` in the directory aiger/.
 	* [ABC model checker](https://github.com/berkeley-abc/abc) (version 1.01): Compile using `make`. If necessary, install the readline package and a g++ compiler using, e.g., `sudo apt-get install libreadline-dev build-essential`. 
 1. Clone this repository: `git clone https://github.com/reactive-systems/MCHyper.git`
