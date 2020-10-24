@@ -20,6 +20,8 @@ usage_string = 'Usage: {}.py [OPTIONS] <bmc/pdr/dot/aig/show> <-f formula/-t fil
   \'-s strategy\'\t\t the strategy circuit as an .aag file to be used for forall-exists formulas\n\
   -h/--help \t\t print usage information\n\
   -o/--out_file file \t specify in which file to write for aag/dot output\n\
+  -cex \t write the counterexample in a file if one is found\n\
+  --cex_file file \t specify in which file to write the cex if -cex flag is set, default is tmp.cex\n\
   -v <num> \t\t set verbosity level (default 0)'.format(sys.argv[0]) 
 
 def fun():
@@ -30,6 +32,7 @@ def fun():
     out_file = ''
     only_mchyper = False
     cex_flag = False
+    cex_file = 'tmp.cex'
     verbosity = 0
     
     if len(sys.argv) == 1:
@@ -47,6 +50,10 @@ def fun():
             return 1;
         elif arg == '-cex':
             cex_flag = True
+        elif arg == '--cex_file':
+            assert(len(sys.argv)>i+1)
+            cex_file = sys.argv[i+1]
+            skip = 1
         elif arg == '-bmc':
             command += 'bmc -F 100;'
         elif arg == '-bmc2':
@@ -85,9 +92,9 @@ def fun():
             skip = 1
         elif arg == '-s': 
             assert(len(sys.argv)>i+1)
-	    strategy_arg = sys.argv[i+1]
-	    skip = 1
-	    #print strategy_arg
+            strategy_arg = sys.argv[i+1]
+            skip = 1
+            #print strategy_arg
         elif arg == '-v':
             assert(len(sys.argv)>i+1)
             verbosity = int(sys.argv[i+1])
@@ -211,7 +218,7 @@ def fun():
     abc_command = 'read tmp.aig;' + command + ' ' + out_file
     if cex_flag:
         #abc_command += 'logic;undc;st;zero;write_cex -f tmp.cex'
-        abc_command += 'write_cex -f tmp.cex'
+        abc_command += 'write_cex -f ' + cex_file
     abc_command = "'" + abc_command + "'"
 
     abc = Popen(abc_bin + ' -q ' + abc_command, shell=True, stdout=PIPE, stderr=PIPE)
@@ -234,14 +241,14 @@ def fun():
         print 'Counterexample found. Liveness involved.'
         
     if cex and cex_flag:
-        print 'Writing counterexample to: tmp.cex.'
-        cex_file = open("tmp.cex", "r")
-        cex_file_content = cex_file.read()
-        cex_file.close()
+        print 'Writing counterexample to: ' + cex_file
+        cex_f = open(cex_file, "r")
+        cex_file_content = cex_f.read()
+        cex_f.close()
         cex_file_content = cex_file_content.replace('=0 ','=0 \n').replace('=1 ','=1 \n')
-        cex_file = open("tmp.cex",'w')
-        cex_file.write(cex_file_content)
-        cex_file.close()
+        cex_f = open(cex_file, "w")
+        cex_f.write(cex_file_content)
+        cex_f.close()
     
     print ""
     
