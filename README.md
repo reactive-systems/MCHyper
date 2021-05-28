@@ -73,6 +73,7 @@ Here, [Yosys](http://www.clifford.at/yosys/) is used to obtain the corresponding
 
 ### Other Related Publications
 
+* [BCBFS21]: A Temporal Logic for Asynchronous Hyperproperties, to appear at CAV 2021, Jan Baumeister, Norine Coenen, Borzoo Bonakdarpour, Bernd Finkbeiner, Cesar Sanchez
 * [DBBFH17]: [Is your Software on Dope?](https://www.react.uni-saarland.de/publications/DBBFH17.html), ESOP 2017, Pedro R. D'Argenio, Gilles Barthe, Sebastian Biewer, Bernd Finkbeiner, Holger Hermanns
 * [The Linear-Hyper-Branching Spectrum of Temporal Logics](https://www.react.uni-saarland.de/publications/FR14.html), Information Technology 2014, Bernd Finkbeiner and Markus N. Rabe
 * [Temporal Logics for Hyperproperties](https://www.react.uni-saarland.de/publications/CFKMRS14.html), POST 2014, Michael Clarkson, Bernd Finkbeiner, Masoud Koleini, Kristopher K. Micinski, Markus N. Rabe, Cesar Sanchez
