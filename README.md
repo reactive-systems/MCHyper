@@ -22,13 +22,13 @@ Try MCHyper without installation directly in our [online interface](https://www.
 1. Install and build the dependencies: 
 	* [GHC](https://www.haskell.org/platform/) (tested with versions 7.8.3, 8.4.4, and 8.10.1)
 	* Additional Haskell dependencies: the parsec compiler framework, packages hashable and MissingH. Install using `cabal update; cabal install parsec hashable MissingH`. Make sure that ghc finds the dependencies when compiling. 
-	* [Python](https://www.python.org) (tested with version 2.7)
+	* [Python 3](https://www.python.org)
 	* [Aiger tools](http://fmv.jku.at/aiger/) (version 1.9.4): Compile using `./configure; make` in the directory aiger/.
 	* [ABC model checker](https://github.com/berkeley-abc/abc) (version 1.01): Compile using `make`. If necessary, install the readline package and a g++ compiler using, e.g., `sudo apt-get install libreadline-dev build-essential`. 
-1. Clone this repository: `git clone https://github.com/reactive-systems/MCHyper.git`
-1. Compile MCHyper: `cd src; ghc Main.hs; cd ..`
-1. Update the paths in the Python script mchyper.py pointing to the mchyper binary, the Aiger tools and to ABC. (E.g. `abc_bin = os.path.dirname(sys.argv[0]) + '/../abc/abc'`)
-1. Try MCHyper by running `./mchyper.py -f "Forall (AP \"select<0>\" 0)" case-studies/quantifier-alternation_2019/bakery/good_bakery.atom.nondet2.aag -pdr -cex`. 
+2. Clone this repository: `git clone https://github.com/reactive-systems/MCHyper.git`
+3. Compile MCHyper: `cd src; ghc Main.hs; cd ..`
+4. Ensure that the Aiger tools and ABC binary are found. This typically means modifying your PATH variable or moving/linking the binaries to a directory on the search path.
+5. Try MCHyper by running `./mchyper.py -f "Forall (AP \"select<0>\" 0)" case-studies/quantifier-alternation_2019/bakery/good_bakery.atom.nondet2.aag -pdr -cex`. 
 
 The last step should output: 
 
@@ -38,7 +38,7 @@ The last step should output:
 	Counterexample found. Safety violation.
 	Writing counterexample to: tmp.cex.
 
-If you obtain `Error: Tool did not provide a model.` make sure you are using unix line endigs. 
+If you obtain `Error: Tool did not provide a model.` make sure you are using unix line endings. 
 
 Please note that this tool is in a prototype stage. Thus, there may be bugs in the implementation. If you find one, please contact [Norine Coenen](https://www.react.uni-saarland.de/people/coenen.html). 
 

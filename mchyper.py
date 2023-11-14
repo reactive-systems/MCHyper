@@ -1,261 +1,265 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # coding=utf-8
 
 # reads an aag or an aig file and a formula and a strategy.aag file. 
 
-# requires aig_tools to be available. Adapt variable 'aigertools', if necessary. 
+import sys, os
+from subprocess import Popen,PIPE,run
+import argparse
+from pathlib import Path
+from typing import IO
 
-import sys, os, re, itertools
-from subprocess import Popen,PIPE,check_output
-import subprocess
-from collections import deque
-
-aigertools = os.path.dirname(sys.argv[0]) + '/../aiger/'
 mchyper_tool = os.path.dirname(sys.argv[0]) + '/src/Main'
-abc_bin = os.path.dirname(sys.argv[0]) + '/../abc/abc'
 
-usage_string = 'Usage: {}.py [OPTIONS] <bmc/pdr/dot/aig/show> <-f formula/-t file> [file] [-s strategy]\n\
-  \'file\'\t\t can be an .aig file or an .aag file\n\
-  \'-f formula\'\t\t the formula to check\n\
-  \'-s strategy\'\t\t the strategy circuit as an .aag file to be used for forall-exists formulas\n\
-  -h/--help \t\t print usage information\n\
-  -o/--out_file file \t specify in which file to write for aag/dot output\n\
-  -cex \t write the counterexample in a file if one is found\n\
-  --cex_file file \t specify in which file to write the cex if -cex flag is set, default is tmp.cex\n\
-  -v <num> \t\t set verbosity level (default 0)'.format(sys.argv[0]) 
-
-def fun():
-    file_arg = ''
-    formula = ''
-    strategy_arg = '' 
-    command = ''
-    out_file = ''
-    only_mchyper = False
-    cex_flag = False
-    cex_file = 'tmp.cex'
-    verbosity = 0
+def is_valid_file_path(parser, arg):
+    path = Path(arg)
+    if not path.is_file():
+        parser.error("The file %s does not exist!" % arg)
+    else:
+        return path# return an open file handle
     
-    if len(sys.argv) == 1:
-        print usage_string
-        return 1;
+def is_valid_file(parser, arg):
+    path = Path(arg)
+    if not path.is_file():
+        parser.error("The file %s does not exist!" % arg)
+    else:
+        return arg# return an open file handle
 
-    skip = 0
-    for i in range(1,len(sys.argv)):
-        if skip>0:
-            skip -= 1
-            continue
-        arg = sys.argv[i]
-        if arg == '--help' or arg == '-h':
-            print usage_string
-            return 1;
-        elif arg == '-cex':
-            cex_flag = True
-        elif arg == '--cex_file':
-            assert(len(sys.argv)>i+1)
-            cex_file = sys.argv[i+1]
-            skip = 1
-        elif arg == '-bmc':
-            command += 'bmc -F 100;'
-        elif arg == '-bmc2':
-            command += 'bmc2 -F 100;'
-        elif arg == '-bmc3':
-            command += 'bmc3 -F 100;'
-        elif arg == '-pdr':
-            command += 'pdr;'
-        elif arg == '-int':
-            command += 'int;'
-        elif arg == '-dot':
-            command += 'write_dot;'
-            if out_file == '':
-                out_file = 'tmp'
-        elif arg == '-aig':
-            command += 'write_aiger;'
-            if out_file == '':
-                out_file = 'tmp'
-        elif arg == '-aag':
-            command = 'aag'
-            if out_file == '':
-                out_file = 'tmp'
-        elif arg == '-aagdot':
-            command = 'aagdot'
-            if out_file == '':
-                out_file = 'tmp'
-        elif arg == '-show':
-            command += 'show;'
-        elif arg == '--out_file' or arg == '-o':
-            assert(len(sys.argv)>i+1)
-            out_file = sys.argv[i+1]
-            skip = 1
-        elif arg == '-f':
-            assert(len(sys.argv)>i+1)
-            formula = sys.argv[i+1]
-            skip = 1
-        elif arg == '-s': 
-            assert(len(sys.argv)>i+1)
-            strategy_arg = sys.argv[i+1]
-            skip = 1
-            #print strategy_arg
-        elif arg == '-v':
-            assert(len(sys.argv)>i+1)
-            verbosity = int(sys.argv[i+1])
-            skip = 1
-        else:
-            file_arg = arg
+def mchyper():
+    parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers(title="subcommands",required=True,dest='command')
+
+    check_command = subparsers.add_parser("check")
+    check_command.add_argument('-f','--formula',type=str,required=True)
+    check_command.add_argument('-s','--strategy', type=lambda x: is_valid_file(parser, x))
+    check_command.add_argument('-m','--model', type=lambda x: is_valid_file_path(parser, x))
+    check_command.add_argument('-v','--verbosity',type=int,default=1)
+    check_command.add_argument('-r','--reduce-method', choices=['none','dfraig','ifraig','strash','rewrite','refactor','combination1','combination2','combination3','compress','compress2'],default='compress2')
+    check_command.add_argument('-c','--check-methods',nargs='*', choices=['bmc','bmc2','bmc3','pdr','int'],default=['bmc','pdr'])
+    check_command.add_argument('-b','--bound',type=int,default=100)
+    check_command.add_argument("-x", "--counter-example", type=str)
+    check_command.add_argument("-X", "--exit-code", action="store_true")
+
+    aag_command = subparsers.add_parser("aag")
+    aag_command.add_argument('-f','--formula',type=str,required=True)
+    aag_command.add_argument('-s','--strategy', type=lambda x: is_valid_file(parser, x))
+    aag_command.add_argument('-m','--model', type=lambda x: is_valid_file_path(parser, x))
+    aag_command.add_argument('-v','--verbosity',type=int,default=1)
+    aag_command.add_argument('-o','--output-file',type=Path)
+    aag_command.add_argument('-r','--reduce-method', choices=['none','dfraig','ifraig','strash','rewrite','refactor','combination1','combination2','combination3','compress','compress2'],default='compress2')
     
-    # parse formula file, if necessary
-    test_cases = []
-    if formula == '' and test_file != '':
-        tfile = open(test_file, 'r')
-        content = tfile.read()
-        tfile.close()
-        test_cases = content.split('\n')
-        
-    aigerfile = ''
-    if file_arg == '': # no file name given, reading stdin
-        aigerfile = sys.stdin.read()
-    else: # read file
-        af = open(file_arg, 'r')
+    aagdot_command = subparsers.add_parser("aagdot")
+    aagdot_command.add_argument('-f','--formula',type=str,required=True)
+    aagdot_command.add_argument('-s','--strategy', type=lambda x: is_valid_file(parser, x))
+    aagdot_command.add_argument('-m','--model', type=lambda x: is_valid_file_path(parser, x))
+    aagdot_command.add_argument('-v','--verbosity',type=int,default=1)
+    aagdot_command.add_argument('-o','--output-file',type=Path)
+    aagdot_command.add_argument('-r','--reduce-method', choices=['none','dfraig','ifraig','strash','rewrite','refactor','combination1','combination2','combination3','compress','compress2'],default='compress2')
+
+    args = parser.parse_args()
+
+    if args.command == 'check':
+        pass
+    elif args.command == 'aag':
+        pass
+    elif args.command == 'aagdot':
+        pass
+    else:
+        sys.exit('Unknown command')
+
+    
+    # read in the model in Aiger format 
+    aigerfile :bytes = b''
+    if args.model: # read file
+        af = open(args.model, 'rb')
         aigerfile = af.read()
         af.close()
+    else: 
+        # no file name given, reading stdin
+        aigerfile = sys.stdin.read().encode()
     
-    if file_arg.endswith('.aig') or aigerfile.startswith('aig'):
-        print 'Converting to Aiger ASCII format ...\n'
-        ps = Popen([aigertools + 'aigtoaig -a'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
-        (output,err) = ps.communicate(aigerfile)
-        aigerfile = output
-
-    #print aigerfile
+    # ensure that the model is in Aiger ASCII format
+    if aigerfile.startswith("aig".encode()):
+        if args.verbosity > 0:
+            print('Converting to Aiger ASCII format ...\n')
+        ps = Popen(['aigtoaig','-a'], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        (aigerfile,err) = ps.communicate(aigerfile)
+        if len(err) > 0:
+            sys.exit('Error (aigtoaig): ' + err.decode())
+    elif not aigerfile.startswith("aag".encode()):
+        sys.exit("Model is not in Aiger format.")
+    
 
     # run the main transformation
-    print 'Hyper Hyper!'
-    #print 'Formula: ' + formulas[0].replace('\"','\\\"')
+    if args.verbosity > 0:
+        print('Hyper Hyper!')
 
-    #print 'given strategy file: ' + strategy_arg
-    command_string = mchyper_tool + ' \"' + formula.replace('\"','\\\"') + '\"'
-    if strategy_arg != '':
-        command_string += ' -s ' + strategy_arg
-    #print 'generated command sting: ' + command_string + '\n---- run MCHyper ----'
+    command = [mchyper_tool, args.formula]
+    if args.strategy:
+        command.append('-s')
+        command.append(args.strategy)
 
-    ps = Popen(command_string, shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE) 
+    if args.verbosity > 0:
+        print('Running the construction\n')
+    ps = Popen(command, stdin=PIPE, stdout=PIPE, stderr=PIPE) 
     (tool_output_raw,err) = ps.communicate(aigerfile)
-
-    #print 'Raw: \n' + tool_output_raw
+    tool_output:str =tool_output_raw.decode()
 
     #run aigtoaig twice to make sure that the output complies to the conventions regarding the literal order (smallest literals belong to outputs)
-    if (not 'no parse' in err) and (tool_output_raw.startswith('aag')):
+    aig_output = b''
+    if (not 'no parse' in err.decode()) and (tool_output_raw.startswith('aag'.encode())):
         # convert output from aag to aig
-        ps = Popen([aigertools + 'aigtoaig'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        ps = Popen(['aigtoaig'], stdin=PIPE, stdout=PIPE, stderr=PIPE)
         (aig_output,err) = ps.communicate(tool_output_raw)
-        
-        if err != '': 
-            print 'Error (aigtoaig): ' + err
+        if len(err) > 0:
+            sys.exit('Error (aigtoaig): ' + err.decode())
+
+        # reduce the AIG
+        if args.reduce_method != 'none':
+            aig_tmp_file = open("tmp.aig", "wb")
+            aig_tmp_file.write(aig_output)
+            aig_tmp_file.close()
+            mapping={'dfraig':'read tmp.aig; dfraig; write_aiger -s tmp.aig','ifraig':'read tmp.aig; ifraig; write_aiger -s tmp.aig','strash':'read tmp.aig; strash; write_aiger -s tmp.aig','rewrite':'read tmp.aig; rewrite -zl; write_aiger -s tmp.aig','refactor':'read tmp.aig; refactor -zl; write_aiger -s tmp.aig','combination1':'read tmp.aig; strash; refactor -zl; rewrite -zl; write_aiger -s tmp.aig','combination2':'read tmp.aig; strash; refactor -zl; rewrite -zl; strash; refactor -zl; rewrite -zl; write_aiger -s tmp.aig','combination3':'read tmp.aig; strash; refactor -zl; rewrite -zl; strash; refactor -zl; rewrite -zl; dfraig; rewrite -zl; dfraig; write_aiger -s tmp.aig','compress':'read tmp.aig; balance -l; rewrite -l; rewrite -lz; balance -l; rewrite -lz; balance -l; write_aiger -s tmp.aig','compress2':'read tmp.aig; balance -l; rewrite -l; refactor -l; balance -l; rewrite -l; rewrite -lz; balance -l; refactor -lz; rewrite -lz; balance -l; write_aiger -s tmp.aig'}
+            abc_reduce = run(['abc','-q',mapping[args.reduce_method]], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+            if len(abc_reduce.stderr) > 0:
+                sys.exit('Error (abc reduce): ' + abc_reduce.stderr.decode())
+            
+            aig_tmp_file = open("tmp.aig", "rb")
+            aig_output = aig_tmp_file.read()
+            aig_tmp_file.close()
 
         # convert output from aig to aag
-        ps = Popen([aigertools + 'aigtoaig -a'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
-        (tool_output,err) = ps.communicate(aig_output)
-        
-        if err != '': 
-            print 'Error (aigtoaig): ' + err
-    else:
-        tool_output = tool_output_raw
+        ps = Popen(['aigtoaig', '-a'], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        (tool_output_raw,err) = ps.communicate(aig_output)
+        tool_output = tool_output_raw.decode("utf-8", "strict")
+        if len(err) > 0:
+            sys.exit('Error (aigtoaig): ' + err.decode())
 
-    #print 'Output: \n' + tool_output 
 
-    if verbosity >= 3: print 'Tool output:\n' + tool_output + '------------\n' 
-    if verbosity >= 2 and err != '' and err != None: 
-        print 'Tool error: ' + err
-        #return 1
+    if args.verbosity >= 3: print('Tool output:\n' + tool_output + '------------\n') 
+    if args.verbosity >= 2 and len(err)>0: 
+        print('Tool error: ' + err.decode())
     
-    if 'no parse' in err: 
-        print 'Parsing error in the formula. Unfortunately, no more information is available at the moment.'
-        return 1
+    if 'no parse' in err.decode(): 
+        sys.exit('Parsing error in the formula. Unfortunately, no more information is available at the moment.')
     
     if not tool_output.startswith('aag'):
-        print 'Error: Tool did not provide a model.'
-        return 1
+        sys.exit('Error: Tool did not provide a model.')
 
     if tool_output.startswith('aag 0 0 0 0 0'):
-        print 'Error: Aiger for strategy could not be parsed correctly.'
-        return 1
+        sys.exit('Error: Aiger for strategy could not be parsed correctly.')
     
-    if command == 'aag':
-        print 'Tool output (-aag):\n' + tool_output + '-------------------\n' 
-        #out_f = open(out_file + '.aag', "w")
-        #out_f.write(tool_output)
-        #out_f.close
-        #print 'Raw aag output written to: ' + out_file + '.aag'
-        return 1
+    if args.command == 'check':
+        aig_tmp_file = open("tmp.aig", "wb")
+        aig_tmp_file.write(aig_output)
+        aig_tmp_file.close()
+        
+        subprocesses:list[tuple[Popen[bytes],str]] = []
+        for method in args.check_methods:
+            mapping = {'bmc':'bmc -F '+str(args.bound)+';','bmc2':'bmc2 -F '+str(args.bound)+';','bmc3':'bmc3 -F '+str(args.bound)+';','pdr':'pdr;','int':'int;'}
+            abc_command = 'read tmp.aig; ' + mapping[method]
+            cex = ''
+            if args.counter_example:
+                cex = args.counter_example + '_'+method+'.aig'
+                abc_command += 'write_cex -f ' + cex + ';'
+            subprocesses.append((Popen(['abc', '-q', abc_command], stdout=PIPE, stderr=PIPE),cex))
+            
+        if args.verbosity == 1:
+            print("ABC is running (use '-v 2' to see output of ABC)\n")
 
-    if command == 'aagdot':
-        ps = Popen([aigertools + 'aigtodot'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
-        (dot_output,err) = ps.communicate(tool_output)
-    
+
+        while True:
+            if len(subprocesses) == 0:
+                if args.verbosity > 0:
+                    print("Result: UNKNOWN")
+                if args.exit_code:
+                    sys.exit(30)
+                else:
+                    sys.exit(1)
+            index = 0
+            while index < len(subprocesses):
+                returncode = subprocesses[index][0].poll()
+                if returncode is None:
+                    index +=1
+                else:
+                    stdout : IO[bytes] = subprocesses[index][0].stdout # type: ignore
+                    abc_output = stdout.read().decode()
+                    if args.verbosity >= 1: 
+                        print("---\n" + abc_output + "---\n")
+
+                    success = False
+                    if ('was successful' in abc_output):
+                        success = True
+                        if args.verbosity >= 1: 
+                            print('Property proven.')
+
+                    cex = False
+                    if ('Output 0 of miter \"tmp\" was asserted in frame' in abc_output):
+                        cex = True
+                        if args.verbosity >= 1: 
+                            print('Counterexample found. Safety violation.')
+                        
+                    if ('Output 1 of miter \"tmp\" was asserted in frame' in abc_output) :
+                        cex = True
+                        if args.verbosity >= 1: 
+                            print('Counterexample found. Liveness involved.')
+                        
+                    if cex and args.counter_example:
+                        cex_file = subprocesses[index][1]
+                        if args.verbosity >= 1: 
+                            print('Writing counterexample to: ' + cex_file)
+                        cex_f = open(cex_file, "r")
+                        cex_file_content = cex_f.read()
+                        cex_f.close()
+                        cex_file_content = cex_file_content.replace('=0 ','=0 \n').replace('=1 ','=1 \n')
+                        cex_f = open(cex_file, "w")
+                        cex_f.write(cex_file_content)
+                        cex_f.close()
+
+                    del subprocesses[index]
+
+                    if success or cex:
+                        for (sub,_) in subprocesses:
+                            sub.kill()
+                        if args.exit_code:
+                            if success:
+                                sys.exit(10)
+                            else:
+                                sys.exit(20)
+                        else:
+                            return
+
+    elif args.command == 'aag':
+        if args.output_file:
+            out_f = open(args.output_file, "wb")
+            out_f.write(tool_output_raw)
+            out_f.close
+            print('Aiger written to: ' + str(args.output_file) )
+        else:
+            # print('Tool output (-aag):\n' + tool_output + '-------------------\n') 
+            print(tool_output)
+        return 0
+    elif args.command == 'aagdot':
+        ps = Popen(['aigtodot'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        (dot_output_raw,err_raw) = ps.communicate(tool_output_raw)
+        err = err_raw.decode("utf-8", "strict") 
         if err != '': 
-            print 'Error: ' + err
-            return
-        out_f = open(out_file + '.dot', "w")
-        
-        out_f.write(dot_output)
-        out_f.close
-        print 'Raw dot output written to: ' + out_file + '.dot'
-        return 1
-    
-    
-    # convert output from aag to aig
-    ps = Popen([aigertools + 'aigtoaig'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
-    (aig_output,err) = ps.communicate(tool_output)
-    
-    if err != '': 
-        print 'Error (aigtoaig): ' + err
-        return
-        
-    #sys.stdout.write(aig_output)
-    aig_tmp_file = open("tmp.aig", "w")
-    aig_tmp_file.write(aig_output)
-    aig_tmp_file.close()
-    
-    
-    abc_command = 'read tmp.aig;' + command + ' ' + out_file
-    if cex_flag:
-        #abc_command += 'logic;undc;st;zero;write_cex -f tmp.cex'
-        abc_command += 'write_cex -f ' + cex_file
-    abc_command = "'" + abc_command + "'"
-
-    abc = Popen(abc_bin + ' -q ' + abc_command, shell=True, stdout=PIPE, stderr=PIPE)
-
-    print "ABC is running (use '-v 1' to see output of ABC)\n"
-    
-    (abc_output1,abc_err1) = abc.communicate()
-    
-    if verbosity >= 1: print "---\n" + abc_output1 + "---\n"
-    
-    cex = False
-    liveness_involved = False
-    if ('Output 0 of miter \"tmp\" was asserted in frame' in abc_output1):
-        cex = True
-        print 'Counterexample found. Safety violation.'
-        
-    if ('Output 1 of miter \"tmp\" was asserted in frame' in abc_output1) :
-        cex = True
-        liveness_involved = True
-        print 'Counterexample found. Liveness involved.'
-        
-    if cex and cex_flag:
-        print 'Writing counterexample to: ' + cex_file
-        cex_f = open(cex_file, "r")
-        cex_file_content = cex_f.read()
-        cex_f.close()
-        cex_file_content = cex_file_content.replace('=0 ','=0 \n').replace('=1 ','=1 \n')
-        cex_f = open(cex_file, "w")
-        cex_f.write(cex_file_content)
-        cex_f.close()
-    
-    print ""
+            sys.exit('Error: ' + err)
+        if args.output_file:
+            out_f = open(args.output_file, "wb")
+            out_f.write(dot_output_raw)
+            out_f.close
+            print('Raw dot output written to: ' + str(args.output_file) )
+        else:
+            print(dot_output_raw.decode())
+        return 0
+    else:
+        sys.exit('Unknown command')
     
     return 0
     
     
         
 if __name__ == "__main__":
-    fun()
+    mchyper()
     
