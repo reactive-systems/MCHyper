@@ -1,11 +1,11 @@
 # MCHyper
 A hardware model checker for hyperproperties 
 
-See also [https://www.react.uni-saarland.de/tools/mchyper/](https://www.react.uni-saarland.de/tools/mchyper/). 
+See also [https://finkbeiner.groups.cispa.de/tools/mchyper/](https://finkbeiner.groups.cispa.de/tools/mchyper/). 
 
 ### Introduction
 
-Hyperproperties specify relations between multiple system exectuions and thereby genearalize trace properties. 
+Hyperproperties specify relations between multiple system executions and thereby generalize trace properties. 
 HyperLTL is a temporal logic capable of expressing hyperproperties. 
 It is an extension of the linear-time temporal logic (LTL) with quantification over trace variables. 
 With HyperLTL, we can formalize many interesting hyperproperties including information-flow policies and symmetry requirements. 
@@ -15,7 +15,7 @@ To do this, MCHyper builds on the standard verification techniques from hardware
 
 ### Online Interface and Tutorial
 
-Try MCHyper without installation directly in our [online interface](https://www.react.uni-saarland.de/tools/online/MCHyper/) and check out the [tutorial](https://www.react.uni-saarland.de/tools/online/MCHyper/help.html). 
+Try MCHyper without installation directly in our [online interface](https://finkbeiner.groups.cispa.de/tools/online/MCHyper/) and check out the [tutorial](https://finkbeiner.groups.cispa.de/tools/online/MCHyper/help.html). 
 
 ### Installation 
 
@@ -40,7 +40,7 @@ The last step should output:
 
 If you obtain `Error: Tool did not provide a model.` make sure you are using unix line endigs. 
 
-Please note that this tool is in a prototype stage. Thus, there may be bugs in the implementation. If you find one, please contact [Norine Coenen](https://www.react.uni-saarland.de/people/coenen.html). 
+Please note that this tool is in a prototype stage. Thus, there may be bugs in the implementation. If you find one, please contact [Norine Coenen](https://finkbeiner.groups.cispa.de/people/coenen.html). 
 
 ### Usage
 
@@ -50,6 +50,7 @@ You can run MCHyper on your own inputs or execute our case studies:
 * The alternation-free case studies [FRS15] provide formulas.txt files containing the MCHyper calls that should be executed. 
 * The quantifier-alternation case studies [CFST19] provide shell scripts that run the respective experiments. 
 More information on the software doping case study can be found in the corresponding paper [DBBFH17]. 
+* The A-HyperLTL case studies [BCBFS21] provide shell scripts as well running the respective experiments. 
 
 To use MCHyper, execute the Python script and give formula, system circuit, strategy circuit (if necessary) and further options as arguments. 
 The formula (following option `-f`) needs to be fully parenthesized, the operators are Forall, Exists, X (Next), Until, G, F, Neg, And, Or, Eq, Implies (amongst others, the full list of operators can be found in src/Logic.hs) and an atomic proposition ap is given as AP \"ap\" i, where i is the index of the quantifier it belongs to. 
@@ -63,22 +64,19 @@ Here, [Yosys](http://www.clifford.at/yosys/) is used to obtain the corresponding
 
 ## Contributors
 
-* [Markus N. Rabe](https://www.react.uni-saarland.de/people/rabe.html) - Initial version handeling the alternation-free fragment
-* [Norine Coenen](https://www.react.uni-saarland.de/people/coenen.html) - Extension to one quantifier alternation
+* [Markus N. Rabe](https://finkbeiner.groups.cispa.de/people/rabe.html) - Initial version handling the alternation-free fragment
+* [Norine Coenen](https://finkbeiner.groups.cispa.de/people/coenen.html) - Extension to one quantifier alternation
+* [Norine Coenen](https://finkbeiner.groups.cispa.de/people/coenen.html) and [Jan Baumeister](https://finkbeiner.groups.cispa.de/people/baumeister.html) - Case study for A-HyperLTL
 
 ## Publications
 
-* [FRS15]: [Algorithms for Model Checking HyperLTL and HyperCTL\*](https://www.react.uni-saarland.de/publications/FRS15.html), CAV 2015, Bernd Finkbeiner, Markus N. Rabe, Cesar Sanchez
-* [CFST19]: [Verifying Hyperliveness](https://www.react.uni-saarland.de/publications/CFST19.html), CAV 2019, Norine Coenen, Bernd Finkbeiner, Cesar Sanchez, Leander Tentrup
+* [FRS15]: [Algorithms for Model Checking HyperLTL and HyperCTL\*](https://finkbeiner.groups.cispa.de/publications/FRS15.html), CAV 2015, Bernd Finkbeiner, Markus N. Rabe, Cesar Sanchez
+* [CFST19]: [Verifying Hyperliveness](https://finkbeiner.groups.cispa.de/publications/CFST19.html), CAV 2019, Norine Coenen, Bernd Finkbeiner, Cesar Sanchez, Leander Tentrup
+* [BCBFS21]: [A Temporal Logic for Asynchronous Hyperproperties](https://finkbeiner.groups.cispa.de/publications/BCBFS21.html), CAV 2021, Jan Baumeister, Norine Coenen, Borzoo Bonakdarpour, Bernd Finkbeiner, Cesar Sanchez
 
-### Other Related Publications
+### Some Other Related Publications 
 
-* [BCBFS21]: A Temporal Logic for Asynchronous Hyperproperties, to appear at CAV 2021, Jan Baumeister, Norine Coenen, Borzoo Bonakdarpour, Bernd Finkbeiner, Cesar Sanchez
-* [DBBFH17]: [Is your Software on Dope?](https://www.react.uni-saarland.de/publications/DBBFH17.html), ESOP 2017, Pedro R. D'Argenio, Gilles Barthe, Sebastian Biewer, Bernd Finkbeiner, Holger Hermanns
-* [The Linear-Hyper-Branching Spectrum of Temporal Logics](https://www.react.uni-saarland.de/publications/FR14.html), Information Technology 2014, Bernd Finkbeiner and Markus N. Rabe
-* [Temporal Logics for Hyperproperties](https://www.react.uni-saarland.de/publications/CFKMRS14.html), POST 2014, Michael Clarkson, Bernd Finkbeiner, Masoud Koleini, Kristopher K. Micinski, Markus N. Rabe, Cesar Sanchez
-* [Model Checking Information Flow in Reactive Systems](https://www.react.uni-saarland.de/publications/DFKRS12.html), VMCAI 2012, Rayna Dimitrova, Bernd Finkbeiner, Mate Kovacs, Markus N. Rabe, Helmut Seidl
-
-## Hyper
-
-[Hyper](https://www.youtube.com/watch?v=RHVSshgPlQs&feature=youtu.be)
+* [DFKRS12]: [Model Checking Information Flow in Reactive Systems](https://finkbeiner.groups.cispa.de/publications/DFKRS12.html), VMCAI 2012, Rayna Dimitrova, Bernd Finkbeiner, Mate Kovacs, Markus N. Rabe, Helmut Seidl
+* [CFKMRS14]: [Temporal Logics for Hyperproperties](https://finkbeiner.groups.cispa.de/publications/CFKMRS14.html), POST 2014, Michael Clarkson, Bernd Finkbeiner, Masoud Koleini, Kristopher K. Micinski, Markus N. Rabe, Cesar Sanchez
+* [FR14]: [The Linear-Hyper-Branching Spectrum of Temporal Logics](https://finkbeiner.groups.cispa.de/publications/FR14.html), Information Technology 2014, Bernd Finkbeiner and Markus N. Rabe
+* [DBBFH17]: [Is your Software on Dope?](https://finkbeiner.groups.cispa.de/publications/DBBFH17.html), ESOP 2017, Pedro R. D'Argenio, Gilles Barthe, Sebastian Biewer, Bernd Finkbeiner, Holger Hermanns
